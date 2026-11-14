@@ -20,6 +20,7 @@ import os
 import re
 import shutil
 import sys
+import unicodedata
 from pathlib import Path
 
 SITE_DIR = Path(__file__).resolve().parent
@@ -44,11 +45,16 @@ PUBLIC_FIELDS = (
     "Install notes",
     "Last checked",
 )
+VERDICTS = {"safe", "caution", "unreviewed", "avoid"}
 NO_YOLO_VERDICTS = {"avoid", "unreviewed"}
 ALLOWED_YOLO_FOR_NO_YOLO = {"", "Not offered."}
 # Links to the private workspace tool. Escaped on purpose: the literal
 # domains must not appear in this public repo.
-NOTION_LINK = re.compile(r"(?<![a-z0-9-])(?:www\.)?notion\.so\b|app\.notion\.com", re.I)
+NOTION_LINK = re.compile(
+    r"(?<![a-z0-9-])(?:www\.)?notion\.so\b|app\.notion\.com|notion\.site\b", re.I
+)
+# Dots that browsers treat as a normal dot in a host name.
+DOT_LOOKALIKES = str.maketrans({"\u3002": ".", "\uff0e": ".", "\uff61": "."})
 
 CSP = "default-src 'self'"
 
@@ -87,9 +93,14 @@ def gate(data):
         problems.append("'tools' is missing or not a list")
         tools = []
 
+    if not tools:
+        problems.append("'tools' is empty: refusing to publish an empty site")
+
     count = data.get("count")
-    if count is not None and count != len(tools):
-        problems.append("count is %r but tools has %d entries" % (count, len(tools)))
+    if type(count) is not int:
+        problems.append("count is missing or not a whole number: %r" % (count,))
+    elif count != len(tools):
+        problems.append("count is %d but tools has %d entries" % (count, len(tools)))
 
     for i, tool in enumerate(tools):
         label = "tools[%d]" % i
@@ -108,13 +119,18 @@ def gate(data):
                 problems.append("%s: field %r is not text" % (label, field))
         verdict = tool.get("Safety verdict", "")
         yolo = tool.get("YOLO install", "")
+        if verdict not in VERDICTS:
+            problems.append(
+                "%s: Safety verdict %r is not one of %s" % (label, verdict, ", ".join(sorted(VERDICTS)))
+            )
         if verdict in NO_YOLO_VERDICTS and yolo not in ALLOWED_YOLO_FOR_NO_YOLO:
             problems.append(
                 "%s: YOLO install on an %s tool (only empty or 'Not offered.' allowed)" % (label, verdict)
             )
 
     for path, text in iter_strings(data, "$"):
-        if NOTION_LINK.search(text):
+        normal = unicodedata.normalize("NFKC", text).translate(DOT_LOOKALIKES)
+        if NOTION_LINK.search(normal):
             problems.append("%s: contains a link to the private workspace" % path)
 
     if problems:
@@ -139,14 +155,14 @@ def slugify(name, used):
 
 
 def safe_url(text):
-    """Return an http(s) URL from a plain URL or a [label](url) Markdown link, else ''."""
+    """Return the leading http(s) URL of a value, or of a leading [label](url)
+    Markdown link, else ''. Trailing notes such as "@ abc123 (MIT)" are ignored."""
     text = (text or "").strip()
-    match = re.fullmatch(r"\[[^\]]*\]\((https?://[^)\s]+)\)", text)
+    match = re.match(r"\[[^\]]*\]\((https?://[^)\s]+)\)", text)
     if match:
         text = match.group(1)
-    if re.fullmatch(r"https?://[^\s<>\"']+", text):
-        return text
-    return ""
+    match = re.match(r"https?://[^\s<>\"'()\[\]]+", text)
+    return match.group(0) if match else ""
 
 
 def esc(text):

@@ -29,21 +29,22 @@ Third-party copies (for example a pinned skill folder) get the same check before
 
 Run all of it before the owner sees a pull request, and fix what it finds first.
 
-1. `python3 -I site/build.py` passes on today's data, and `python3 -I site/test_gate.py` passes (the gate fails on broken copies).
+1. `python3 -I site/build.py` passes on today's data, and `python3 -I site/test_gate.py` passes (the gate fails on broken copies). Add a test for every new gate rule.
 2. The private-terms check above finds nothing.
 3. Playwright screenshots of the built pages at 360, 768 and 1280 px wide, with zero console errors, plus a keyboard focus walk (every link and control reachable with Tab, with a visible focus ring). Use the preinstalled Playwright; never run `playwright install`. Never commit screenshots.
 4. Page-weight budget: the home page under 100 KB before the search index, all JavaScript under 20 KB.
 5. One independent reviewer agent reads the diff against these rules and the work rules; fix its findings.
 
-Put the screenshot result, the budget line and, once Cloudflare is connected, the preview link in the pull request description. Log each gate run as one appended line in the project's QA log.
+Put the screenshot result, the budget line and, once Cloudflare is connected, the preview link in the pull request description. Log each gate run as one appended line in the project's QA log (`qa-log.csv` in the project's shared files, outside this repo; never rewrite it).
 
 ## Build gate (in `site/build.py`)
 
 The build stops, and nothing is published, on any of these:
 
-- a top-level key other than `count` and `tools`, or a `count` that does not match the number of tools;
-- a tool field outside the 14 public fields;
+- a top-level key other than `count` and `tools`, an empty tool list, or a `count` that is missing, not a whole number or does not match the number of tools;
+- a tool field outside the 14 public fields, or a field that is not text;
+- a Safety verdict other than `safe`, `caution`, `unreviewed` or `avoid`;
 - a YOLO install on an avoid or unreviewed tool other than empty or exactly `Not offered.`;
-- a link to the private workspace tool anywhere in the data.
+- a link to the private workspace tool (including its public-page domain) anywhere in the data, keys included, after Unicode normalization and with lookalike dots read as dots.
 
 An empty Decision is allowed and renders as "Not decided".

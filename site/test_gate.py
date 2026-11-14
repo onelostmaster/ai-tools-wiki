@@ -81,6 +81,34 @@ class GateTests(unittest.TestCase):
             d["tools"][0]["Install notes"] = "See " + PRIVATE_LINK
         self.assert_fails(self.broken_copy("private_link", change), "link to the private workspace")
 
+    def test_odd_verdict_fails(self):
+        def change(d):
+            tool = next(t for t in d["tools"] if t["Safety verdict"] == "avoid")
+            tool["Safety verdict"] = "Avoid"
+            tool["YOLO install"] = "run it with every default"
+        self.assert_fails(self.broken_copy("odd_verdict", change), "is not one of")
+
+    def test_public_page_link_fails(self):
+        def change(d):
+            d["tools"][1]["Official URL"] = "https://x." + "notion" + ".site/page"
+        self.assert_fails(self.broken_copy("public_page", change), "link to the private workspace")
+
+    def test_lookalike_dot_link_fails(self):
+        def change(d):
+            d["tools"][2]["Safety reason"] = "see app." + "notion" + "\u3002com/p/1"
+        self.assert_fails(self.broken_copy("lookalike_dot", change), "link to the private workspace")
+
+    def test_empty_tools_fails(self):
+        def change(d):
+            d["tools"] = []
+            d["count"] = 0
+        self.assert_fails(self.broken_copy("empty", change), "refusing to publish an empty site")
+
+    def test_bad_count_fails(self):
+        def change(d):
+            d["count"] = True
+        self.assert_fails(self.broken_copy("bad_count", change), "not a whole number")
+
     def test_not_offered_on_unreviewed_passes(self):
         def change(d):
             tool = next(t for t in d["tools"] if t["Safety verdict"] == "unreviewed")
