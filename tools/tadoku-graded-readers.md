@@ -1,0 +1,28 @@
+# Tadoku graded readers
+
+- **Type:** dataset
+- **Category:** a project
+- **Official URL:** https://tadoku.org/japanese/en/free-books-en/
+- **GitHub repo:** unknown
+- **Price:** Free (`tadoku.org`, checked 2026-10-31)
+- **Decision:** Try
+- **Safety verdict:** unreviewed
+- **Safety basis:** Inferred (unreviewed)
+- **Last checked:** 2026-11-01
+
+## Safety reason
+
+Not code-reviewed. Free Japanese graded readers (PDF, some with MP3 audio) from `tadoku.org`. a project rated it Later and left the license unverified because `tadoku.org` is blocked there; the site's book pages state CC BY-NC-ND 4.0 (no changes, non-commercial; `tadoku.org`, checked 2026-10-31).
+
+## Safe install
+
+Not written yet: use Install notes and the fixes in the Safety reason.
+
+## YOLO install
+
+Not offered.
+
+## Install notes
+
+Not code-reviewed yet: ask a review bot or Claude to review it before installing.
+Claude Code: `tadoku.org` is blocked in a project's cloud sandbox; allow the host in the environment's network settings or upload the PDFs to the project (a project tool scout). Official docs: [https://tadoku.org/japanese/en/free-books-en/note-en/](https://tadoku.org/japanese/en/free-books-en/note-en/)

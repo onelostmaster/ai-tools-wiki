@@ -1,0 +1,28 @@
+# pro-motion-editor-skill (iamajmeena)
+
+- **Type:** skill
+- **Category:** generating videos, editing
+- **Official URL:** https://github.com/iamajmeena/pro-motion-editor-skill
+- **GitHub repo:** https://github.com/iamajmeena/pro-motion-editor-skill @ 21fcc3a (github.com license API reported NOASSERTION; check the repo for a LICENSE before reuse)
+- **Price:** Free; license unknown (github.com license API reported NOASSERTION; check the repo for a LICENSE before reuse, checked 2026-11-09)
+- **Decision:** Skip
+- **Safety verdict:** unreviewed
+- **Safety basis:** Inferred (unreviewed)
+- **Last checked:** 2026-11-09
+
+## Safety reason
+
+Not code-reviewed for safety. The a project Tool Scout (Claude, 2026-11-09) rated it ❌ ★½☆☆☆ 1.5. Repo and commit confirmed from github.com metadata, 2026-11-09.
+
+## Safe install
+
+Not written yet: use Install notes and the fixes in the Safety reason.
+
+## YOLO install
+
+Not offered.
+
+## Install notes
+
+Not code-reviewed yet: ask a review bot or Claude to review it before installing.
+Not recommended for a project (scout ❌ 1.5).
