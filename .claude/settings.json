@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash(npm i -g *)", "Bash(npm install -g *)", "Bash(npm install --global *)", "Bash(npm i --global *)",
+      "Bash(pnpm add -g *)", "Bash(pnpm add --global *)", "Bash(yarn global add *)", "Bash(bun add -g *)",
+      "Bash(bun add --global *)", "Bash(sh)", "Bash(bash)", "Bash(zsh)", "Bash(sh -s *)", "Bash(bash -s *)",
+      "Bash(sudo sh)", "Bash(sudo bash)", "PowerShell(Invoke-Expression)", "PowerShell(Invoke-Expression *)",
+      "PowerShell(npm i -g *)", "PowerShell(npm install -g *)", "Bash(npm * -g)", "Bash(npm * -g *)",
+      "Bash(npm * --global)", "Bash(npm * --global *)", "Bash(pnpm * -g)", "Bash(pnpm * -g *)",
+      "Bash(pnpm * --global *)", "Bash(bun * -g)", "Bash(bun * -g *)", "Bash(sudo sh -s *)",
+      "Bash(sudo bash -s *)", "Bash(sudo -E sh)", "Bash(sudo -E bash)", "PowerShell(npm * -g *)"
+    ]
+  },
+  "env": { "DO_NOT_TRACK": "1", "NO_UPDATE_NOTIFIER": "1" }
+}
