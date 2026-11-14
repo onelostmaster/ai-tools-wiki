@@ -1,0 +1,3 @@
+# Build output (Cloudflare Pages builds it from source)
+site/dist/
+__pycache__/
