@@ -26,3 +26,4 @@ Not written yet.
 ## Install notes
 
 Android: git submodule under android/third_party/whisper.cpp, pin v1.9.5 (d1be6fd); build into the APK through JNI as a project does.
+Windows: follow the repo README for desktop builds.

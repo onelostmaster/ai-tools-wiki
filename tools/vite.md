@@ -26,4 +26,4 @@ YOLO (your own risk): skips the exact reviewed pin.
 
 ## Install notes
 
-Windows / Claude Code: npm devDependency vite@8.3.6 in bench/web (build time only).
+Windows / Claude Code: npm devDependency vite@8.3.6 in bench/web (build time only). Prefer the project pin.

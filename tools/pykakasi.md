@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-No network, subprocess or eval in the package; pickle loads only its own dictionaries built from bundled data at build time (`src/pykakasi/kanji.py:76,102`, `src/pykakasi/scripts.py:293`, `setup.py` build step). Dependencies jaconv and deprecated. Maintenance mode: no release since 2.3.0 (2024-06).
+a review bot: safe. No network, subprocess or eval in the package; pickle loads only its own dictionaries built from bundled data at build time (`src/pykakasi/kanji.py:76,102`, `src/pykakasi/scripts.py:293`, `setup.py` build step). Dependencies jaconv and deprecated. Maintenance mode: no release since 2.3.0 (2024-06).
 
 ## Safe install
 

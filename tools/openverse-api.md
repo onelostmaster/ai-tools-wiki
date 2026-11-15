@@ -24,5 +24,5 @@ Not written yet.
 
 ## Install notes
 
-Claude Code: no install; tell the agent to use `https://api.openverse.org/v1/audio/?q=...` and check each clip's licence . `api.openverse.org` is blocked in the a project cloud sandbox.
+Claude Code: no install; tell the agent to use `https://api.openverse.org/v1/audio/?q=...` and check each clip's licence . `api.openverse.org` is blocked in a project cloud sandbox.
 Hermes: no install; the same public API .

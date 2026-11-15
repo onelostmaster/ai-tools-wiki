@@ -16,7 +16,7 @@ Not code-reviewed. Claude's a project tool scout (2026-10-31) lists underthesea 
 
 ## Safe install
 
-Unreviewed: contain it: inside the a project container or a Python venv only, `pip install underthesea==9.5.0` (latest on PyPI 2026-11-14, Apache-2.0, Python >= 3.10), pinned in requirements.txt, no API keys in that environment. unverified: whether some functions download models at first use; allow network only while installing and when you choose to fetch a model. Get a review before real use.
+Unreviewed: contain it: inside a project container or a Python venv only, `pip install underthesea==9.5.0` (latest on PyPI 2026-11-14, Apache-2.0, Python >= 3.10), pinned in requirements.txt, no API keys in that environment. unverified: whether some functions download models at first use; allow network only while installing and when you choose to fetch a model. Get a review before real use.
 
 ## YOLO install
 
@@ -25,4 +25,4 @@ Not offered.
 ## Install notes
 
 Not code-reviewed yet: ask a review bot or Claude to review it before installing.
-Claude Code: `pip install underthesea` (PyPI); in the a project container, pip installs last one session.
+Claude Code: `pip install underthesea` (PyPI); in a project container, pip installs last one session.

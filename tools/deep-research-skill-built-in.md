@@ -11,7 +11,7 @@
 
 ## Safety reason
 
-Anthropic (built into Claude, first-party; not code-reviewed): safe. The a project scout lists it under Already have (nothing to install).
+Anthropic (built into Claude, first-party; not code-reviewed): safe. A project scout lists it under Already have (nothing to install).
 
 ## Safe install
 

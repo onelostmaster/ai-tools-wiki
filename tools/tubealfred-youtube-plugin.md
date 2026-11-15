@@ -16,7 +16,7 @@ Not code-reviewed. Claude's a project tool scout (2026-10-31) lists it as a plug
 ## Safe install
 
 Safe install (fixes applied):
-claude.ai: install it only from the in-app plugin directory (Customize > Plugins, the route the a project scout gives), never a copy found by search. unverified: its publisher, price and what it sends; contain it by turning it on only in chats where you need transcripts or keyword ideas and leaving it off otherwise. Windows and Android: use it through claude.ai. Claude Code and Hermes: no install path recorded.
+claude.ai: install it only from the in-app plugin directory (Customize > Plugins, the route a project scout gives), never a copy found by search. unverified: its publisher, price and what it sends; contain it by turning it on only in chats where you need transcripts or keyword ideas and leaving it off otherwise. Windows and Android: use it through claude.ai. Claude Code and Hermes: no install path recorded.
 
 ## YOLO install
 
@@ -25,4 +25,4 @@ Not written yet.
 ## Install notes
 
 Caution: read the Safety reason and ask the user before installing.
-[claude.ai](http://claude.ai): Customize > Plugins (the route the a project scout gives)
+[claude.ai](http://claude.ai): Customize > Plugins (the route a project scout gives)

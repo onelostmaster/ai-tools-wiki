@@ -17,7 +17,7 @@ Claude (a project and a project tool scouts, 2026-10-30 and 2026-10-31): Safe ('
 ## Safe install
 
 Safe install (fixes applied):
-Claude Code cloud / Hermes: preinstalled (ffmpeg + ffprobe n9.0. Windows: ffmpeg.org ships source only; use a Windows build linked from https://ffmpeg.org/download.html, only after the user OKs it for that PC. Android: not used.
+Claude Code cloud / Hermes: preinstalled, nothing to do. Windows: ffmpeg.org ships source only; use a Windows build linked from https://ffmpeg.org/download.html, only after the user OKs it for that PC. Android: not used.
 
 ## YOLO install
 

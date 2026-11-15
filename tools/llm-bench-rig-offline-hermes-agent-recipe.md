@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-a review bot (code read @7c302ca, Hermes a review, 2026-11-01): Looks safe as a recipe. Offline harness is stdlib Python; `bridge_host.py`/`bridge_ctr.0.0.1; containers run --network none, --cap-drop ALL, no-new-privileges, read-only mounts; no curl|bash, telemetry or secrets. The wider rig runs model-written code by design (`lib/agentic/sandbox.py:24` exec, `tools_repo.py:131-135` bash -c) and needs the author's private scripts, so it will not run as-is.
+a review bot (code read @7c302ca, Hermes a review, 2026-11-01): Looks safe as a recipe. Offline harness is stdlib Python; containers run --network none, --cap-drop ALL, no-new-privileges, read-only mounts; no curl|bash, telemetry or secrets. The wider rig runs model-written code by design (`lib/agentic/sandbox.py:24` exec, `tools_repo.py:131-135` bash -c) and needs the author's private scripts, so it will not run as-is.
 
 ## Safe install
 

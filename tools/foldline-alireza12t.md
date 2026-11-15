@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-Not code-reviewed for safety. The a project Tool Scout (Claude, 2026-11-09) rated it ❌ ★☆☆☆☆ 1. Repo and commit confirmed from github.com metadata, 2026-11-09.
+Not code-reviewed for safety. A project Tool Scout (Claude, 2026-11-09) rated it ❌ ★☆☆☆☆ 1. Repo and commit confirmed from github.com metadata, 2026-11-09.
 
 ## Safe install
 

@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-Not reviewed (website and API, no code to read). The a project Tool Scout (Claude, 2026-11-03) noted the API needs a key and commercial use is paid (unconfirmed here).
+Not reviewed (website and API, no code to read). A project Tool Scout (Claude, 2026-11-03) noted the API needs a key and commercial use is paid (unconfirmed here).
 
 ## Safe install
 

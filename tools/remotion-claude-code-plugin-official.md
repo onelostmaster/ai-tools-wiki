@@ -25,5 +25,5 @@ Not written yet.
 
 ## Install notes
 
-Claude Code: in a project it is listed in the project's `.claude/settings.json` (PR #1), but the a project scout says it is not loading in new threads yet (marketplace not registered; a setup-script fix is pending).
+Claude Code: in a project it is listed in the project's `.claude/settings.json` (PR #1), but a project scout says it is not loading in new threads yet (marketplace not registered; a setup-script fix is pending).
 Claude Code: elsewhere, `claude plugin marketplace add remotion-dev/claude-code-plugin`, then `claude plugin install remotion@remotion`, then restart Claude Code (Remotion's docs: [https://www.remotion.dev/docs/ai/claude-code-plugin](https://www.remotion.dev/docs/ai/claude-code-plugin)).

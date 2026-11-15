@@ -27,5 +27,5 @@ YOLO (your own risk): skips the commit pin and installs for your user in every p
 
 ## Install notes
 
-Claude Code (a project): listed in the project's `.claude/settings.json` (PR #5), but per the a project tool scout it does not load in new threads until the setup-script fix (`tool-scout/setup-script-plugins.sh`).
+Claude Code (a project): listed in the project's `.claude/settings.json` (PR #5), but per a project tool scout it does not load in new threads until the setup-script fix (`tool-scout/setup-script-plugins.sh`).
 Claude Code (other projects): no confirmed command yet; follow the official docs at [https://github.com/Jakeschincariol/instagram-agent-skill](https://github.com/Jakeschincariol/instagram-agent-skill)

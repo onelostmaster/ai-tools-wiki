@@ -25,4 +25,4 @@ Not offered.
 ## Install notes
 
 Not code-reviewed yet: ask a review bot or Claude to review it before installing.
-Official docs: [https://github.com/scriptin/jmdict-simplified](https://github.com/scriptin/jmdict-simplified) and [https://github.com/mifunetoshiro/kanjium](https://github.com/mifunetoshiro/kanjium) (GitHub release downloads were blocked in the a project sandbox).
+Official docs: [https://github.com/scriptin/jmdict-simplified](https://github.com/scriptin/jmdict-simplified) and [https://github.com/mifunetoshiro/kanjium](https://github.com/mifunetoshiro/kanjium) (GitHub release downloads were blocked in a project sandbox).

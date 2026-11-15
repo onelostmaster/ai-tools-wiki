@@ -26,3 +26,4 @@ Not written yet.
 
 Claude Code: `claude plugin install figma@claude-plugins-official`, restart Claude Code, then sign in from `/plugin` (Figma docs).
 Claude Code: if plugins are blocked: `claude mcp add --transport http figma https://mcp.figma.com/mcp`, then `/mcp` > Authenticate (Figma docs).
+Claude Code (cloud): the Figma server bundled in the account's marketing plugin fails to connect in cloud sessions.

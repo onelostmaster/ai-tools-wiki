@@ -11,7 +11,7 @@
 
 ## Safety reason
 
-Not code-reviewed. The a project tool scout (2026-10-31) only names it in passing; no URL or maker is recorded. Its Glama MCP listing (web search, 2026-10-31) says generating spends credits and needs a signed-in account.
+Not code-reviewed. A project tool scout (2026-10-31) only names it in passing; no URL or maker is recorded. Its Glama MCP listing (web search, 2026-10-31) says generating spends credits and needs a signed-in account.
 
 ## Safe install
 

@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-Official AGPL-3.0 project, signed MSI 1.5. It is full remote control, so: latest release only, permanent password plus 2FA, direct IP access limited to the Tailscale range. The '2026 CVEs' note is unconfirmed (no GitHub advisories) and is dropped; staying on the latest release covers it.
+Official AGPL-3.0 project, signed MSI 1.5.3; fix-mode 2026-11-14: safe with fixes. It is full remote control, so: latest release only, permanent password plus 2FA, direct IP access limited to the Tailscale range. The '2026 CVEs' note is unconfirmed (no GitHub advisories) and is dropped; staying on the latest release covers it.
 
 ## Safe install
 

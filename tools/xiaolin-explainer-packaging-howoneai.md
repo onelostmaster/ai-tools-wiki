@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-Not code-reviewed for safety. The a project Tool Scout (Claude, 2026-11-12) read it: backlog, 2/5. Repo, license and latest commit confirmed from github.com metadata, 2026-11-12.
+Not code-reviewed for safety. A project Tool Scout (Claude, 2026-11-12) read it: backlog, 2/5. Repo, license and latest commit confirmed from github.com metadata, 2026-11-12.
 
 ## Safe install
 

@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-Not code-reviewed. Web search (2026-10-31): Umanitek's Hermes catalog plugin; five Hermes hooks watch prompts, tool calls, commands, files, packages and skills; the one-line installer is `curl | bash`; setup adds Node, a local DKG node and a graph store, registers login services and joins a peer-to-peer network.
+Not code-reviewed. No source page names it. Web search (2026-10-31): Umanitek's Hermes catalog plugin; five Hermes hooks watch prompts, tool calls, commands, files, packages and skills; the one-line installer is `curl | bash`; setup adds Node, a local DKG node and a graph store, registers login services and joins a peer-to-peer network.
 
 ## Safe install
 

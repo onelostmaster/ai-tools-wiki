@@ -27,4 +27,4 @@ playwright install
 
 ## Install notes
 
-Claude Code: `pip install playwright` (PyPI), then `playwright install` to download the browsers (official Playwright docs); in the a project container, installs last one session.
+Claude Code: `pip install playwright` (PyPI), then `playwright install` to download the browsers (official Playwright docs); in a project container, installs last one session.

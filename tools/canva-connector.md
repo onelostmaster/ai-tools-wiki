@@ -24,5 +24,4 @@ Not written yet.
 
 ## Install notes
 
-`claude.ai`: add it at `claude.
 Android: nothing to install for the connector; tweak the designs in the Canva phone app

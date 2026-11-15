@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-Not code-reviewed for safety. The a project Tool Scout (Claude, 2026-11-12) read it: 1/5, overlaps Remotion, unpinned remote installer. Repo, license and latest commit confirmed from github.com metadata, 2026-11-12.
+Not code-reviewed for safety. A project Tool Scout (Claude, 2026-11-12) read it: 1/5, overlaps Remotion, unpinned remote installer. Repo, license and latest commit confirmed from github.com metadata, 2026-11-12.
 
 ## Safe install
 
@@ -26,4 +26,4 @@ Not offered.
 
 Not code-reviewed yet: ask a review bot or Claude to review it before installing.
 Follow the repo README; review first.
-Caution: The a project Tool Scout (Claude, 2026-11-12) read it: 1/5, overlaps Remotion, unpinned remote installer.
+Caution: A project Tool Scout (Claude, 2026-11-12) read it: 1/5, overlaps Remotion, unpinned remote installer.

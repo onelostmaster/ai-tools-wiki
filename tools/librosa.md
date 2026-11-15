@@ -17,7 +17,7 @@ Claude (a project tool scout, read before use, v1.0.0, 2026-10-30): safe. Local 
 ## Safe install
 
 Safe install (fixes applied):
-Windows/Claude Code: inside the project's virtual environment `pip install librosa==1.0. Android: not used.
+Windows/Claude Code: inside the project's virtual environment `pip install librosa==1.0.0`. Android: not used.
 
 ## YOLO install
 

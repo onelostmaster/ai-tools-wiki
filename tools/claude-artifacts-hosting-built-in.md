@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-Anthropic (first-party, built into Claude; not code-reviewed): safe. Artifacts start private to you (Anthropic docs); the a project app app is a private Artifact (LL hub). a project ships its ElevenLabs audio as artifact files so the API key never goes into the page (LL Lessons, 2026-10-26).
+Anthropic (first-party, built into Claude; not code-reviewed): safe. Artifacts start private to you (Anthropic docs); a project app app is a private Artifact (LL hub). a project ships its ElevenLabs audio as artifact files so the API key never goes into the page (LL Lessons, 2026-10-26).
 
 ## Safe install
 

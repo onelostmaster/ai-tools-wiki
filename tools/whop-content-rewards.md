@@ -24,4 +24,4 @@ Not written yet.
 
 ## Install notes
 
-Web: no install; sign in at [https://contentrewards.com](https://contentrewards.com) (Content Rewards started on Whop and now has its own site, per `contentrewards.com`).md`).
+Web: no install; sign in at [https://contentrewards.com](https://contentrewards.com) (Content Rewards started on Whop and now has its own site, per `contentrewards.com`).

@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-a review bot (code read @5cef0d3, a review, 2026-11-02): mixed.tsx:228-232`). Caution: `npx claude-code-mods@latest` is unpinned and pulls the mod list from main (`cli/src/catalog.js:6,16`); community mods are others' code; switchboard, openai-balance, openrouter-balance, now-playing send data to outside APIs. No telemetry, eval or curl|bash.
+a review bot (code read @5cef0d3, a review, 2026-11-02): mixed. Safe: context-bar, blast-radius, agent-radar. Caution: `npx claude-code-mods@latest` is unpinned and pulls the mod list from main (`cli/src/catalog.js:6,16`); community mods are others' code; switchboard, openai-balance, openrouter-balance, now-playing send data to outside APIs. No telemetry, eval or curl|bash.
 
 ## Safe install
 

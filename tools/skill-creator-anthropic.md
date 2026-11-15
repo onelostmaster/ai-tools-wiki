@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-Claude (a project tool scout, 2026-10-31): safe ('Yes: already enabled').ai` account; no risks recorded.
+Claude (a project tool scout, 2026-10-31): safe ('Yes: already enabled').; no risks recorded.
 
 ## Safe install
 

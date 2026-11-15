@@ -25,4 +25,4 @@ Not written yet.
 ## Install notes
 
 Claude Code: `/plugin marketplace add TheNoumanDev/zero-dollar-studio` then `/plugin install make-video@zero-dollar-studio` (snipshorts and cartoonsmith are add-ons in the same marketplace).
-Windows: not supported as shipped. The skill checks for macOS on Apple Silicon first (make-video SKILL.md:16) and its setup uses Homebrew and the Apple GPU (tools/setup. Setup downloads about 6 GB of models from Hugging Face (Chatterbox, Whisper small.en). snipshorts needs a logged-in Claude Code CLI and yt-dlp.
+Windows: not supported as shipped. Setup downloads about 6 GB of models from Hugging Face (Chatterbox, Whisper small.en). snipshorts needs a logged-in Claude Code CLI and yt-dlp.

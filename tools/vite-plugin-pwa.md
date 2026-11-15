@@ -25,4 +25,4 @@ Not offered.
 ## Install notes
 
 Not code-reviewed yet: ask a review bot or Claude to review it before installing.
-Claude Code: `npm i vite-plugin-pwa -D` inside a Vite project (npm README); in the a project container, npm installs last one session.
+Claude Code: `npm i vite-plugin-pwa -D` inside a Vite project (npm README); in a project container, npm installs last one session.

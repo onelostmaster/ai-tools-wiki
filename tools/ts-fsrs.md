@@ -24,5 +24,5 @@ Not written yet.
 
 ## Install notes
 
-Claude Code: `npm install ts-fsrs` (npm); in the a project container, npm installs last one session.
+Claude Code: `npm install ts-fsrs` (npm); in a project container, npm installs last one session.
 Note: the reviewed code is ts-fsrs 6.0.0 (npm latest on 2026-11-02) plus its one dependency @open-spaced-repetition/srs-kit 1.0.0. The optional native optimizer (@open-spaced-repetition/binding, Rust) is a separate package and was not reviewed.

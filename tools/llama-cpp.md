@@ -26,3 +26,4 @@ Not written yet.
 ## Install notes
 
 Android: git submodule under android/third_party/llama.cpp, pin b12164 (67107ac); build through JNI as a project does.
+Windows: follow the repo README for desktop builds.

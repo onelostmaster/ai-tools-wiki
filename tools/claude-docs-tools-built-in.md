@@ -25,5 +25,5 @@ Not written yet.
 
 ## Install notes
 
-[claude.ai](http://claude.
+[claude.ai](http://claude.ai): built in; nothing to install.
 Claude Code: built in; nothing to install.

@@ -24,5 +24,5 @@ Not written yet.
 
 ## Install notes
 
-[claude.ai](http://claude.ai`.
+Plugins are added under Customize on `claude.ai`.
 Claude Code: `claude plugin install frontend-design@claude-plugins-official` (from the official plugin page `claude.com/plugins/frontend-design`), or `/plugin install frontend-design@claude-plugins-official` inside a session.

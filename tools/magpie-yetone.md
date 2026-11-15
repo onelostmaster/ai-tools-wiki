@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-Not code-reviewed by a review bot. The a project Tool Scout (Claude, 2026-11-11, README only) rated it 0.5/5 and said avoid for us: it reads Claude Code sign-ins and pings home daily (scout claim, not checked by a review bot). The README confirms it edits each agent's config, stores provider keys and plan sign-ins, and its quick start pipes a downloaded script into the shell. Repo, licence and commit confirmed from github.com metadata, 2026-11-11.
+Not code-reviewed by a review bot. A project Tool Scout (Claude, 2026-11-11, README only) rated it 0.5/5 and said avoid for us: it reads Claude Code sign-ins and pings home daily (scout claim, not checked by a review bot). The README confirms it edits each agent's config, stores provider keys and plan sign-ins, and its quick start pipes a downloaded script into the shell. Repo, licence and commit confirmed from github.com metadata, 2026-11-11.
 
 ## Safe install
 

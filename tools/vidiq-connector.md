@@ -24,4 +24,4 @@ Not written yet.
 
 ## Install notes
 
-[claude.ai](http://claude.ai): add it at `claude.
+Only private setup notes here; see the Official URL.

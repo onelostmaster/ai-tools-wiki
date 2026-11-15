@@ -26,4 +26,4 @@ YOLO (your own risk): skips the source build at the reviewed commit c10c211.
 
 ## Install notes
 
-Windows / Claude Code: build from source at c10c211 with the a project `bench-web.yml` workflow (GitHub Actions, SHA-pinned). Do not install elsewhere without a fresh OK.
+Windows / Claude Code: build from source at c10c211 with a project `bench-web.yml` workflow (GitHub Actions, SHA-pinned). Do not install elsewhere without a fresh OK.

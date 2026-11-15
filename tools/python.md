@@ -25,4 +25,4 @@ Not written yet.
 
 ## Install notes
 
-python.org/downloads/](https://www.python.org/downloads/)
+Claude Code: preinstalled in the Claude Code cloud container; elsewhere no confirmed command yet; follow the official docs at [https://www.python.org/downloads/](https://www.python.org/downloads/)

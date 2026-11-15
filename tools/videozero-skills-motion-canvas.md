@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-Not code-reviewed by a review bot. The a project Tool Scout (Claude, 2026-11-11) read the code and called it safe, rated 1.5/5 (not the framework a project uses). Repo, licence and commit confirmed from github.com metadata, 2026-11-11.
+Not code-reviewed by a review bot. A project Tool Scout (Claude, 2026-11-11) read the code and called it safe, rated 1.5/5 (not the framework a project uses). Repo, licence and commit confirmed from github.com metadata, 2026-11-11.
 
 ## Safe install
 

@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-a review bot (code read, v5.3.3 on main, pushed 2026-10-29): safe. Hooks on SessionStart, SubagentStart and UserPromptSubmit run local node scripts (git ls-files repo map, mode flag, cost band). No telemetry or install scripts.config/ponytail`. Network only if you set its optional webhook URL. Install only from DietrichGebert/ponytail (copycats exist).
+a review bot (code read, v5.3.3 on main, pushed 2026-10-29): safe. Hooks on SessionStart, SubagentStart and UserPromptSubmit run local node scripts (git ls-files repo map, mode flag, cost band). No telemetry or install scripts. Network only if you set its optional webhook URL. Install only from DietrichGebert/ponytail (copycats exist).
 
 ## Safe install
 

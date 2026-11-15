@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-Not code-reviewed. Open-source Japanese text-to-speech, reading and accent library, a pyopenjtalk fork (MIT per PyPI). PyPI: the OpenJTalk dictionary ships in the wheel; the optional `tsqyomi` extra downloads ONNX models from Hugging Face at first use. The a project scout rejected it without a safety verdict.
+Not code-reviewed. Open-source Japanese text-to-speech, reading and accent library, a pyopenjtalk fork (MIT per PyPI). PyPI: the OpenJTalk dictionary ships in the wheel; the optional `tsqyomi` extra downloads ONNX models from Hugging Face at first use. A project scout rejected it without a safety verdict.
 
 ## Safe install
 
@@ -25,4 +25,4 @@ Not offered.
 ## Install notes
 
 Not code-reviewed yet: ask a review bot or Claude to review it before installing.
-Claude Code: `pip install pyopenjtalk-plus` (PyPI); `huggingface.co` is blocked in the a project sandbox.
+Claude Code: `pip install pyopenjtalk-plus` (PyPI); `huggingface.co` is blocked in a project sandbox.

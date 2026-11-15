@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-a review bot (code read @b8d67bf, v0.2. Pure numeric code, 509 lines in pyloudnorm/ (meter.py, iirfilter.py, normalize.py, util.py) importing only numpy, scipy.signal, warnings and textwrap; no network, file writes, subprocess, eval/exec, pickle, telemetry or hooks. Runtime dependencies are only scipy and numpy (`pyproject.toml:21-24`). Not used for loudness: Claude rejected it for accuracy (a mono downmix read about 3 dB too quiet), not safety.
+a review bot: Looks safe. Pure numeric code, 509 lines in pyloudnorm/ (meter.py, iirfilter.py, normalize.py, util.py) importing only numpy, scipy.signal, warnings and textwrap; no network, file writes, subprocess, eval/exec, pickle, telemetry or hooks. Runtime dependencies are only scipy and numpy (`pyproject.toml:21-24`). Not used for loudness: Claude rejected it for accuracy (a mono downmix read about 3 dB too quiet), not safety.
 
 ## Safe install
 

@@ -25,4 +25,4 @@ Not written yet.
 ## Install notes
 
 Caution: read the Safety reason and ask the user before installing.
-Windows: ships Windows launchers and DirectML for AMD/Intel GPUs (README.
+Windows: ships Windows launchers and DirectML for AMD/Intel GPUs (README.md:53).

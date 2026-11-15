@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-a review bot (code read @a0789af, v0.9. The Python layer only calls Shazam and Apple endpoints (shazamio/misc.py:10-59) through aiohttp; a song lookup sends the audio fingerprint, not the audio, with random UUIDs, the timezone and an empty geolocation (shazamio/converter.py:6-12, shazamio/api.py:498-514). No subprocess, eval/exec, pickle, telemetry or hooks. The Rust core (shazamio-core, pinned ==2.0.0 in pyproject.toml) decodes and fingerprints audio locally with no network or process code. Note: it uses an unofficial, reverse-engineered Shazam API, so it can break or be rate limited (HTTP 429) at any time.
+a review bot: Looks safe. The Python layer only calls Shazam and Apple endpoints (shazamio/misc.py:10-59) through aiohttp; a song lookup sends the audio fingerprint, not the audio, with random UUIDs, the timezone and an empty geolocation (shazamio/converter.py:6-12, shazamio/api.py:498-514). No subprocess, eval/exec, pickle, telemetry or hooks. The Rust core (shazamio-core, pinned ==2.0.0 in pyproject.toml) decodes and fingerprints audio locally with no network or process code. Note: it uses an unofficial, reverse-engineered Shazam API, so it can break or be rate limited (HTTP 429) at any time.
 
 ## Safe install
 

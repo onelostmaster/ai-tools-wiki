@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-Not code-reviewed for safety. Codex plugin with no licence on GitHub; the a project Tool Scout (Claude, 2026-11-03) rated it for fit only. Repo and homepage confirmed from github.com metadata, 2026-11-03.
+Not code-reviewed for safety. Codex plugin with no licence on GitHub; a project Tool Scout (Claude, 2026-11-03) rated it for fit only. Repo and homepage confirmed from github.com metadata, 2026-11-03.
 
 ## Safe install
 

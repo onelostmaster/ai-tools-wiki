@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-Not code-reviewed for safety. The a project Tool Scout (Claude, 2026-11-04) read it for fit only; a review bot could not confirm its official repo, so URL and repo stay unknown.
+Not code-reviewed for safety. A project Tool Scout (Claude, 2026-11-04) read it for fit only; a review bot could not confirm its official repo, so URL and repo stay unknown.
 
 ## Safe install
 

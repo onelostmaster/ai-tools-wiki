@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-a review bot (code read @ee5bfb5, v0.9. No usage-telemetry SDK found. Verified risks, each fixed: the official install pipes curl|sh or irm|iex (README.md:45; fix: download the release binary and check its SHA-256, which install.sh:41-114 and install.ps1:334 also require); background version and agent-detection manifest checks go to herdr.dev (src/update.rs:25-26, src/detect/manifest_update.rs:16; fix: `version_check = false` and `manifest_check = false` under [update] in config.toml, src/config/model.rs:35-44, honoured at src/app/runtime.rs:97-127); updates install only on a manual `herdr update` (src/update.rs:1-5); plugins, the socket API and remote SSH machines let agents spawn panes (fix: add no plugins and no machine profiles). Android/Termux is not supported (install.sh:24-26).
+a review bot: safe with the Install notes fixes. No usage-telemetry SDK found. Verified risks, each fixed: the official install pipes curl|sh or irm|iex (README.md:45; fix: download the release binary and check its SHA-256, which install.sh:41-114 and install.ps1:334 also require); background version and agent-detection manifest checks go to herdr.dev (src/update.rs:25-26, src/detect/manifest_update.rs:16; fix: `version_check = false` and `manifest_check = false` under [update] in config.toml, src/config/model.rs:35-44, honoured at src/app/runtime.rs:97-127); updates install only on a manual `herdr update` (src/update.rs:1-5); plugins, the socket API and remote SSH machines let agents spawn panes (fix: add no plugins and no machine profiles). Android/Termux is not supported (install.sh:24-26).
 
 ## Safe install
 

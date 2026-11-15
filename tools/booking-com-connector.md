@@ -24,6 +24,6 @@ Not written yet.
 
 ## Install notes
 
-claude.com/connectors`, find Booking.com and select Connect; no sign-in needed to search (official Booking.com developer docs).
+claude.ai: already connected on the Claude account; elsewhere open the connectors directory at `claude.com/connectors`, find Booking.com and select Connect; no sign-in needed to search (official Booking.com developer docs).
 Android: the Claude app uses the same connector once it is added (Booking.com docs list Claude Mobile).
 Claude Code: not supported (Booking.com docs).

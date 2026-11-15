@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-a review bot (code read of src/ @9b4a2ac, tag r186, published as three 0.186. No telemetry, eval, new Function, child_process or WebSocket in src/. Network use happens only when the app asks for it: FileLoader fetches the URL it is given (loaders/FileLoader.js:141) and ImageBitmapLoader likewise (loaders/ImageBitmapLoader.js:173); credentials are sent only if the app turns withCredentials on (loaders/Loader.js:35). The only globals touched are window.__THREE__ for a duplicate-copy warning (Three.Core.js:178-184) and an optional browser devtools hook that does nothing unless that extension is present (renderers/WebGLRenderer.js:3635). The npm package has no dependencies and no install scripts (package.json; scripts are build, lint and test only). MIT licence.
+a review bot: Looks safe. No telemetry, eval, new Function, child_process or WebSocket in src/. Network use happens only when the app asks for it: FileLoader fetches the URL it is given (loaders/FileLoader.js:141) and ImageBitmapLoader likewise (loaders/ImageBitmapLoader.js:173); credentials are sent only if the app turns withCredentials on (loaders/Loader.js:35). The only globals touched are window.__THREE__ for a duplicate-copy warning (Three.Core.js:178-184) and an optional browser devtools hook that does nothing unless that extension is present (renderers/WebGLRenderer.js:3635). The npm package has no dependencies and no install scripts (package.json; scripts are build, lint and test only). MIT licence.
 
 ## Safe install
 

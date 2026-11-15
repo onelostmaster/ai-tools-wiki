@@ -17,7 +17,7 @@ Node.js (official vendor, OpenJS Foundation; not code-reviewed: a review bot lis
 ## Safe install
 
 Safe install (fixes applied):
-Windows: the LTS release only, `winget install OpenJS.NodeJS.LTS` (the command in the Remotion Windows docs; the user has 26.13.0 LTS + npm 11.20.org/en/download. Claude Code cloud: preinstalled, nothing to do. Android: not used. Install project packages locally with exact pins, never `npm install -g`.
+Windows: the LTS release only, `winget install OpenJS.NodeJS.LTS` or the LTS installer from https://nodejs.org/en/download. Claude Code cloud: preinstalled, nothing to do. Android: not used. Install project packages locally with exact pins, never `npm install -g`.
 
 ## YOLO install
 
@@ -25,4 +25,4 @@ Not written yet.
 
 ## Install notes
 
-mjs`); elsewhere no confirmed command yet; follow the official docs at [https://nodejs.org/en/download](https://nodejs.org/en/download)
+Claude Code: preinstalled in the Claude Code cloud container; elsewhere no confirmed command yet; follow the official docs at [https://nodejs.org/en/download](https://nodejs.org/en/download)

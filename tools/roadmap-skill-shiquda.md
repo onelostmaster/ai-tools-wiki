@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-a review bot (code read @3bd7b07, a review, 2026-11-02): safe.0.0.1 only (`src/web/server.ts:531`); data is local JSON in ~/.roadmap-skill (`src/utils/path-helpers.ts:10`, `src/storage/index.ts:22`); no telemetry, hooks or install scripts found. The npm build was not compared with the repo.
+a review bot (code read @3bd7b07, a review, 2026-11-02): safe.; data is local JSON in ~/.roadmap-skill (`src/utils/path-helpers.ts:10`, `src/storage/index.ts:22`); no telemetry, hooks or install scripts found. The npm build was not compared with the repo.
 
 ## Safe install
 
@@ -25,4 +25,4 @@ Not written yet.
 ## Install notes
 
 Safe, but ask the user before installing.
-Windows: Claude Desktop or Claude Code MCP entry `npx -y roadmap-skill` (`README. claude.ai and Android: no (local MCP). Hermes: plain MCP server, untested.
+Windows: Claude Desktop or Claude Code MCP entry `npx -y roadmap-skill` (`README.md:87`), needs Node. claude.ai and Android: no (local MCP). Hermes: plain MCP server, untested.

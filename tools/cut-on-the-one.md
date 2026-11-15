@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-Not code-reviewed. The a project tool scout (2026-10-31) gave it only a fit rating (❌ ★½, overlaps what we have).
+Not code-reviewed. A project tool scout (2026-10-31) gave it only a fit rating (❌ ★½, overlaps what we have).
 
 ## Safe install
 

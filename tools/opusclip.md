@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-OpusClip (official vendor; not code-reviewed: a review bot recorded 'not vetted yet: closed hosted service, no repo to read', a project a review, 2026-10-30): safe. It holds connected social-account access and can post publicly; its official MCP signs in with OAuth (no API key).
+OpusClip (official vendor; not code-reviewed: a review bot recorded 'not vetted yet: closed hosted service, no repo to read', a project a review, 2026-10-30): safe. It holds connected social-account access and can post publicly; its official MCP signs in with OAuth (no API key).; a project: posts to all 3 apps since 2026-10-31; check each clip for overlays first (Claude, a review update, 2026-11-01).
 
 ## Safe install
 

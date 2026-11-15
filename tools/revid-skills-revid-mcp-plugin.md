@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-Not code-reviewed for safety. Front end for a paid hosted service that can post to social accounts (per the repo description); the a project Tool Scout (Claude, 2026-11-03) rated it for fit only. Repo and homepage confirmed from github.com metadata, 2026-11-03.
+Not code-reviewed for safety. Front end for a paid hosted service that can post to social accounts (per the repo description); a project Tool Scout (Claude, 2026-11-03) rated it for fit only. Repo and homepage confirmed from github.com metadata, 2026-11-03.
 
 ## Safe install
 

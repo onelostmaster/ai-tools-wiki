@@ -25,3 +25,4 @@ Not written yet.
 ## Install notes
 
 Claude Code: no confirmed command yet; follow the official docs at [https://developers.facebook.com/docs/instagram-platform/insights/](https://developers.facebook.com/docs/instagram-platform/insights/)
+Never paste access tokens into chat, add them as secrets/env vars.

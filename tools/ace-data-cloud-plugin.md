@@ -11,7 +11,7 @@
 
 ## Safety reason
 
-Not code-reviewed. Web search (2026-10-31): the Hermes plugin catalog's acedatacloud-media plugin spends Ace Data Cloud credits on your API key with no Hermes approval prompt.
+Not code-reviewed. No source page names it. Web search (2026-10-31): the Hermes plugin catalog's acedatacloud-media plugin spends Ace Data Cloud credits on your API key with no Hermes approval prompt.
 
 ## Safe install
 

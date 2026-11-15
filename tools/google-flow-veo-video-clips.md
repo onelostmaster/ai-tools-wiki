@@ -12,12 +12,12 @@
 
 ## Safety reason
 
-Official Google product, hosted, no code to install; used signed in to Google in a browser pane. Not code-reviewed (closed hosted app).
+Official Google product, hosted, no code to install; used signed in to Google in a browser pane.; AI labels on posts. Not code-reviewed (closed hosted app).
 
 ## Safe install
 
 Safe install (fixes applied):
-Windows/Android: nothing to install; open Flow in a browser signed in to the Google account with the Google AI plan.
+Windows/Android: nothing to install; open Flow in a browser signed in to the Google account with the Google AI plan. Never automate it and never route the Google sign-in through other tools; AI labels on posts.
 
 ## YOLO install
 

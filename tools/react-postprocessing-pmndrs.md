@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-Not code-reviewed for safety. Widely used pmndrs library; the a project Tool Scout (Claude, 2026-11-03) read it for fit only. Repo and commit confirmed from github.com metadata, 2026-11-03.
+Not code-reviewed for safety. Widely used pmndrs library; a project Tool Scout (Claude, 2026-11-03) read it for fit only. Repo and commit confirmed from github.com metadata, 2026-11-03.
 
 ## Safe install
 

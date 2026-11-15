@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-a review bot (code read @829d218, v4.1. Network use is only model download: named models come from the Hugging Face hub under the author's adefossez namespace as safetensors (demucs/hf.py:23, 91-104), falling back to Meta's dl.fbaipublicfiles.com with hash checking (demucs/pretrained.py:19, 60-80; demucs/repo.py:68-69). Subprocesses are only ffmpeg, ffprobe and soundstretch with list arguments, no shell (demucs/audio.py:21, 126, 274; demucs/repitch.py:70-81). No telemetry, eval/exec, hooks or auto-updates. Caveat: legacy .th checkpoints and local training checkpoints are loaded with pickle (torch.load weights_only=False in demucs/repo.py:69, states.py:59, solver.py:107), and safetensors metadata picks the class to import (demucs/hf.py:63-84), so only load models from the official sources.
+a review bot: Looks safe. Network use is only model download: named models come from the Hugging Face hub under the author's adefossez namespace as safetensors (demucs/hf.py:23, 91-104), falling back to Meta's dl.fbaipublicfiles.com with hash checking (demucs/pretrained.py:19, 60-80; demucs/repo.py:68-69). Subprocesses are only ffmpeg, ffprobe and soundstretch with list arguments, no shell (demucs/audio.py:21, 126, 274; demucs/repitch.py:70-81). No telemetry, eval/exec, hooks or auto-updates. Caveat: legacy .th checkpoints and local training checkpoints are loaded with pickle (torch.load weights_only=False in demucs/repo.py:69, states.py:59, solver.py:107), and safetensors metadata picks the class to import (demucs/hf.py:63-84), so only load models from the official sources.
 
 ## Safe install
 

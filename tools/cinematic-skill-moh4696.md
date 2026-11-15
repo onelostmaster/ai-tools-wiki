@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-Not code-reviewed by a review bot. The a project Tool Scout (Claude, 2026-11-10) read it and called it safe, rated 2/5 (different format: archive-photo documentaries). Repo and commit confirmed from github.com metadata, 2026-11-10.
+Not code-reviewed by a review bot. A project Tool Scout (Claude, 2026-11-10) read it and called it safe, rated 2/5 (different format: archive-photo documentaries). Repo and commit confirmed from github.com metadata, 2026-11-10.
 
 ## Safe install
 

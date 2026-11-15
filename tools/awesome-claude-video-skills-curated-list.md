@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-Not code-reviewed. A curated GitHub list of Claude video skills (385 entries), not code to run; the a project daily scout only diffs its `data/skills.json` and reads a listed repo's code before using it.
+Not code-reviewed. A curated GitHub list of Claude video skills (385 entries), not code to run; a project daily scout only diffs its `data/skills.json` and reads a listed repo's code before using it.
 
 ## Safe install
 
@@ -25,5 +25,5 @@ Not offered.
 ## Install notes
 
 Not code-reviewed yet: ask a review bot or Claude to review it before installing.
-Claude Code: nothing to install; it is a list that the a project daily scout diffs (`data/skills.json`)
+Claude Code: nothing to install; it is a list that a project daily scout diffs (`data/skills.json`)
 Official docs: [https://github.com/zhuyansen/awesome-claude-video-skills](https://github.com/zhuyansen/awesome-claude-video-skills)

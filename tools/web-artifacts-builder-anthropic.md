@@ -12,7 +12,7 @@
 
 ## Safety reason
 
-Anthropic (official first-party skill from `anthropics/skills`; already enabled in the a project project, 2026-10-31): safe. No security findings are recorded.
+Anthropic (official first-party skill from `anthropics/skills`; already enabled in a project project, 2026-10-31): safe. No security findings are recorded.
 
 ## Safe install
 
@@ -26,5 +26,5 @@ YOLO (your own risk): skips installing pnpm yourself first, so the script runs `
 
 ## Install notes
 
-claude.ai: built in; nothing to install (already enabled in the a project project).
+claude.ai: built in; nothing to install (already enabled in a project project).
 Claude Code: /plugin marketplace add anthropics/skills, then /plugin install example-skills@anthropic-agent-skills (anthropics/skills README:36-48, checked 2026-11-14). scripts/init-artifact.sh:34-36 runs npm install -g pnpm when pnpm is missing; install pnpm first to avoid the global install.

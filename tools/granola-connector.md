@@ -24,5 +24,5 @@ Not written yet.
 
 ## Install notes
 
-[claude.ai](http://claude.
+[claude.ai](http://claude.ai): already connected on the Claude account; elsewhere: Settings > Connectors, search Granola, connect (Granola docs).
 Claude Code: `claude mcp add granola --transport http https://mcp.granola.ai/mcp`, then `/mcp` > Authenticate (Granola docs).

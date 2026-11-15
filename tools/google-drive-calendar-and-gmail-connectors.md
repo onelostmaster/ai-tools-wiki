@@ -24,4 +24,4 @@ Not written yet.
 
 ## Install notes
 
-[claude.ai](http://claude.ai): add them at [claude.ai/customize/connectors](https://claude.
+[claude.ai](http://claude.ai): add them at [claude.ai/customize/connectors](https://claude.ai/customize/connectors) (or tap the Connect card Claude shows in chat).
