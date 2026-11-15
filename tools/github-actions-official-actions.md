@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ Official vendor (GitHub, MIT); a project Claude review (phase1-libraries.md §8,
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows/Claude Code: nothing to install locally. In `.github/workflows/*.yml` pin each action to its full release commit SHA (`uses: actions/checkout@<40-char sha> # v7.0.1`) and set `permissions: contents: read` at the top of the workflow, as a project does.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the SHA pins and the read-only token.
+`uses: actions/checkout@v7` with the repo's default token permissions.
 
 ## Install notes
 

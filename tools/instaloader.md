@@ -8,11 +8,11 @@
 - **Decision:** Avoid
 - **Safety verdict:** avoid
 - **Safety basis:** No source
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
-a review bot (own call, no traceable source, 2026-10-31): avoid. Logs in with your Instagram cookie or password through the private API; accounts can be rate-limited, challenged or disabled. No Notion source records the tool or a review.
+Claude fix-mode re-review (2026-11-14): avoid. No fix: it signs in with your Instagram cookie or password through the private API; Instagram's Terms of Use forbid automated access and the signed-in account carries the ban. For public reels use yt-dlp with --no-cookies (yt-dlp row).
 
 ## Safe install
 

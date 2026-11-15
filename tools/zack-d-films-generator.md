@@ -7,11 +7,11 @@
 - **Decision:** Avoid
 - **Safety verdict:** avoid
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
-Claude (a project tool scout repo review, 2026-10-30): Rejected ½☆☆☆☆. It sends everything to a paid third-party API (`muapi.ai`) and has no license. a review bot rated it avoid from these findings.
+Claude fix-mode re-review (2026-11-14): avoid. No fix: the repo has no licence, so there is no right to use or copy the code, and every generation goes to the paid third-party API muapi.ai. No setting changes either.
 
 ## Safe install
 

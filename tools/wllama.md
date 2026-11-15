@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a project Claude (phase1-libraries.md §3, 2026-11-06) @ c10c211: safe. MIT WASM
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows/Claude Code: build from source at commit c10c211 with a project's SHA-pinned bench-web.yml workflow (GitHub Actions); no local install.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the source build at the reviewed commit c10c211.
+`npm install @wllama/wllama` (official npm package, latest 3.13.0 on 2026-11-14).
 
 ## Install notes
 

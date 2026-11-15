@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Anthropic (first-party, built into Claude; not code-reviewed): safe. Artifacts s
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+claude.ai: built in; turn on "Create and edit files" in Settings > Capabilities (Anthropic docs). Claude Code: built in. Keep artifacts private (the default) and never put an API key in artifact code; ship generated audio or data as artifact files instead, as a project does.
 
 ## YOLO install
 

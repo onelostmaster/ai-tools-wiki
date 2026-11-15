@@ -8,11 +8,11 @@
 - **Decision:** Avoid
 - **Safety verdict:** avoid
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
-Claude : avoid. Rests on code lines already logged by a review bot (@1328feb, 2026-11-01): the real engine is prebuilt guiji2025 Docker images run privileged (`docker-compose.yml:41-45`), engine code not in the repo; custom licence with a 1,000-MAU cap (section 2) and reuse of your case studies (section 5c); face and voice cloning.
+Claude fix-mode re-review (2026-11-14): avoid. No fix: the engine is prebuilt guiji2025 Docker images (code not in the repo) that docker-compose.yml:41-45 runs privileged, and a privileged container has full access to the host. Without the engine source there is nothing to read before dropping that.
 
 ## Safe install
 

@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read of python/ @bd941da, tag v3.10. Network use is only (1) 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows/Claude Code: inside the project's virtual environment `pip install rapidocr==3.10.0 onnxruntime` (3.10.0 is the reviewed tag bd941da). Use the default pinned models (SHA256-checked on reuse) or files from the official model list only, and pass local image files, not URLs (a URL input is fetched with requests, utils/load_image.py:70). Don't use the legacy rapidocr_onnxruntime 1.x package (not reviewed). Android: not used.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the virtual environment and the exact pin.
+`pip install rapidocr onnxruntime`
 
 ## Install notes
 

@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot (code read, a project a review and Hermes a review, 2026-10-28): Lo
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Hermes: `hermes plugins install xchat` (hermes-official-plugins README:147, checked 2026-11-14), then `hermes xchat setup` (README:148) to see which account it runs as. Leave XCHAT_ALLOW_ALL_USERS unset so only your self-chat can prompt the agent. Use a separate X account if you do not want Hermes acting as your main account. Needs an X developer app with chat API access (README:148). Other platforms: Hermes only.
 
 ## YOLO install
 

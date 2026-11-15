@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot (official announcement, claude.com, 2026-11-01): safe, first-party 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+claude.ai (Windows browser): join the waitlist only from the official page https://claude.com/resources/articles/claude-duet and use it on claude.ai once invited. Android: install the Claude Duet app only after the invite, from the official page link. Background checks run every few hours and use plan limits (official page): turn them off when you are not using it. Duet asks before sending, paying, signing or deleting (official page): read each request before approving.
 
 ## YOLO install
 

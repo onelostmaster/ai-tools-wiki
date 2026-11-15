@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ Claude (a project tool scout, 2026-10-30): safe ('Yes'). Version 0.7.2 runs loca
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows/Claude Code: inside the project's virtual environment `pip install scenedetect==0.7.2` (the version a project uses). Android: not used.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the virtual environment and the exact pin.
+`pip install --upgrade scenedetect`
 
 ## Install notes
 

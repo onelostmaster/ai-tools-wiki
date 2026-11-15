@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,7 @@ Not code-reviewed. Claude's a project tool scout (2026-10-31) lists vite-plugin-
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Unreviewed: contain it: inside a devcontainer or the project container only, `npm i -D vite-plugin-pwa@2.0.0` (latest on npm 2026-11-14, MIT) pinned with npm ci and the lockfile, no API keys in that project; it needs network only at install time. Get a review before real use.
 
 ## YOLO install
 

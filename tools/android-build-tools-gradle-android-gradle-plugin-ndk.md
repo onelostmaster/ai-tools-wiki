@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Official vendors (Gradle Inc., Apache-2.0; Google Android SDK licence for AGP an
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows/Claude Code: use the project's Gradle wrapper (`gradlew`), which checks the Gradle download's SHA-256; install AGP and the NDK through Android Studio's SDK Manager or the official SDK command-line tools. CI: the NDK preinstalled on ubuntu-24.04 runners, as a project does; build time only, nothing on the release runtime classpath.
 
 ## YOLO install
 

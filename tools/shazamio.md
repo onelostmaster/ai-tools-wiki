@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @a0789af, v0.9. The Python layer only calls Shazam and A
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows/Claude Code: inside the project's virtual environment `pip install shazamio==0.9.0` (the reviewed v0.9.0, a0789af; it pins shazamio-core==2.0.0). It sends only the audio fingerprint to Shazam (shazamio/api.py:498-514). It uses an unofficial Shazam API, so lookups will fail when Shazam changes it or rate-limits (HTTP 429); No fix: that is outside the library. Android: not used.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the virtual environment and the exact pin.
+`pip install shazamio`
 
 ## Install notes
 

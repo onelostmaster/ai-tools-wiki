@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot (vendor repo read @ca45fc4, a review, 2026-11-02): safe. Official A
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+claude.ai: nothing to install; built in on paid plans (anthropics/skills README.md:55). Claude Code: `/plugin marketplace add anthropics/skills` then `/plugin install document-skills@anthropic-agent-skills`. The LibreOffice LD_PRELOAD shim (skills/xlsx/scripts/office/soffice.py:33) is Linux-only and does nothing on Windows.
 
 ## YOLO install
 

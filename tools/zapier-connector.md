@@ -6,22 +6,24 @@
 - **GitHub repo:** unknown
 - **Price:** Included in every Zapier plan; each successful tool call uses 2 tasks. Free: 100 tasks/month; Professional from $19.99/month; Team from $69/month (`zapier.com`, checked 2026-10-31)
 - **Decision:** Skip
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
-a review bot : no verdict, but warns that Zapier gets broad account access. Zapier's docs: it lets your AI take real actions (send messages, create tasks, update records) in 9,000+ apps through your Zapier connections and can write and run code when no action fits; you choose which apps and actions it may use, and every action is logged.
+Zapier docs (checked 2026-11-14): safe with fixes, Skip (no need). It acts in your connected apps. Fix: switch the server to managed mode, which removes skills and code actions (docs.zapier.com/mcp/manage/switch-modes), so the write_code_action meta-tool is gone; enable only the actions you need (each is its own tool); every action is logged.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Zapier MCP in managed mode; enable only the needed actions; connect only the apps those actions use.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips managed mode, so it can write and run code.
+Agentic mode with all actions.
 
 ## Install notes
 
-No install steps: the source withholds them until the tool is rated safe. Read the Safety reason and ask the user first.
+Ask the user before installing. Zapier MCP in managed mode; enable only the needed actions; connect only the apps those actions use.

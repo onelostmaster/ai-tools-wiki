@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-09
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Claude (a project and a project tool scouts, 2026-10-30 and 2026-10-31): Safe ('
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code cloud / Hermes: preinstalled (ffmpeg + ffprobe n9.0. Windows: ffmpeg.org ships source only; use a Windows build linked from https://ffmpeg.org/download.html, only after the user OKs it for that PC. Android: not used.
 
 ## YOLO install
 

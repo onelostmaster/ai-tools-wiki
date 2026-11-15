@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @9e472ae, v1.2. The only network use is model download f
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows/Claude Code: inside the project's virtual environment `pip install faster-whisper==1.2.1` (the reviewed v1.2.1, 9e472ae). The first load downloads the model from Hugging Face (faster_whisper/utils.py:91-115); pass download_root to a project folder, and after that first download pass local_files_only=True so it never goes online again (transcribe.py:631-685). Android: not used.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the virtual environment, the exact pin and offline mode.
+`pip install faster-whisper`
 
 ## Install notes
 

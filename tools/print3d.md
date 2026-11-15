@@ -8,20 +8,23 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
-a review bot (code read, a project a review, 2026-10-28): Use with caution. No network or telemetry, but its MCP make tool runs model-written bpy Python in Blender with no approval step (`src/print3d/mcp_server.py:100-113`), i.e. code execution outside Hermes's terminal approvals.
+Claude code read @5ce50d5 (2026-11-14): caution. No network or telemetry. No fix: the MCP make tool runs model-written bpy Python in Blender (src/print3d/mcp_server.py:118-140) with no approval step and no setting to add one, so code runs outside Hermes's terminal approvals. Contain: run it only in the Hermes Docker backend, or skip the MCP and run the print3d CLI by hand after reading model.py.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Contain: Hermes Docker backend with Blender inside, or no MCP: read jobs/<slug>/model.py, then run the print3d CLI yourself.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the container.
+Add the print3d MCP to Hermes on your PC's local backend.
 
 ## Install notes
 
-No install steps: the source withholds them until the tool is rated safe. Read the Safety reason and ask the user first.
+Caution: read the Safety reason and ask the user before installing.
+Contain: Hermes Docker backend with Blender inside, or no MCP: read jobs/<slug>/model.py, then run the print3d CLI yourself.

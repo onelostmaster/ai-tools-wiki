@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ Official upstream (emscripten-core), MIT or UIUC/NCSA. a project Claude review (
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows/Claude Code: no local install; build in GitHub Actions with the emscripten/emsdk Docker image pinned by digest (`image: emscripten/emsdk@sha256:<digest>`), as a project's bench-web.yml does. Android: nothing needed.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the digest-pinned container.
+Local `./emsdk install latest` then `./emsdk activate latest` (emscripten.org).
 
 ## Install notes
 

@@ -8,11 +8,11 @@
 - **Decision:** Avoid
 - **Safety verdict:** avoid
 - **Safety basis:** No source
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
-a review bot (own call, no traceable source, 2026-10-31): avoid. Python library for Instagram's private API that logs in with your Instagram account; account-ban risk. No Notion source records the tool or a review.
+Claude fix-mode re-review (2026-11-14): avoid. No fix: it logs in through Instagram's private API with your password or session; Instagram's Terms of Use forbid automated access, and the account that logs in carries the ban. No setting removes that. For public reels use yt-dlp with --no-cookies (yt-dlp row).
 
 ## Safe install
 

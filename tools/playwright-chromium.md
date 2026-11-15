@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,11 +16,14 @@ Claude (a project tool scout, 2026-10-31): safe ('Yes: local'). Runs locally in 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): `py -m venv .venv`, `.venv\Scripts\pip install playwright==1.65.2` (PyPI latest, checked 2026-11-14), then `.venv\Scripts\playwright install chromium` so only Chromium downloads, not every browser (Playwright docs: `playwright install <browser>`). a project container: same commands inside the container; they last one session.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the venv and version pin, and downloads every browser.
+pip install playwright
+playwright install
 
 ## Install notes
 

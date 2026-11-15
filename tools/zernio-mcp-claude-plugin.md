@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,11 +16,14 @@ a review bot (code read, 5dfcbb5, a project a review, 2026-10-30): Looks safe (t
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): `/plugin marketplace add zernio-dev/zernio-claude-plugin` then `/plugin install zernio@zernio`, then untick the paid ads tools when Claude lists the Zernio MCP tools. The plugin is only .mcp.json pointing at https://mcp.zernio.com/mcp (checked at HEAD 5dfcbb5 on 2026-11-14, same as the reviewed commit), so nothing runs on your PC. Sign in with OAuth in the browser; never paste a token. unverified: the hosted server (it holds your social tokens); contain it by connecting only the social accounts you want it to post to. Hermes: unconfirmed route, a mcp_servers: entry with url https://mcp.zernio.com/mcp (OAuth), then /reload-mcp.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips unticking the paid ads tools.
+/plugin marketplace add zernio-dev/zernio-claude-plugin
+/plugin install zernio@zernio
 
 ## Install notes
 

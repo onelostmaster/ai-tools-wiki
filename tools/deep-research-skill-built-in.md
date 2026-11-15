@@ -7,7 +7,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -15,7 +15,8 @@ Anthropic (built into Claude, first-party; not code-reviewed): safe. The a proje
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+claude.ai (Windows browser and Android app): built in; nothing to install.
 
 ## YOLO install
 

@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-07
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a project Claude (phase1-libraries.md §2, 2026-11-06) @ 67107ac = b12164: safe.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Android: git submodule at android/third_party/llama.cpp checked out at 67107ac (b12164), built through JNI as a project does. Windows: no install; only a source build at that same commit, and only after the user OKs it for that PC.
 
 ## YOLO install
 

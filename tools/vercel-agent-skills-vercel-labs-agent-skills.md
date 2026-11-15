@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -27,3 +27,4 @@ Not written yet.
 Safe, but ask the user before installing.
 Claude Code: add the skills you need per its README.
 Windows: works in Claude Code on Windows. Android: no.
+web-design-guidelines fetches its rules from the main branch of vercel-labs/web-interface-guidelines at every run (its SKILL.md, Guidelines Source). Fix: before installing, replace `main` with commit `434b7f91364665f2f733b310ec54809bf8f37937` in that URL in SKILL.md, and re-review before moving the pin.

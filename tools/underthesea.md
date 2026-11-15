@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,7 @@ Not code-reviewed. Claude's a project tool scout (2026-10-31) lists underthesea 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Unreviewed: contain it: inside the a project container or a Python venv only, `pip install underthesea==9.5.0` (latest on PyPI 2026-11-14, Apache-2.0, Python >= 3.10), pinned in requirements.txt, no API keys in that environment. unverified: whether some functions download models at first use; allow network only while installing and when you choose to fetch a model. Get a review before real use.
 
 ## YOLO install
 

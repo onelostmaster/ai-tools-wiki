@@ -7,7 +7,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -15,7 +15,8 @@ Claude (a project scout, 2026-10-31): Safe ('Yes: already connected'). Official 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+claude.ai (Windows browser and Android app): add Google Drive, Google Calendar and Gmail at claude.ai/customize/connectors from Anthropic's official list only (or the Connect card in chat), signed in with the Google account the project needs; a new chat picks them up. Remove any you stop using from the same page.
 
 ## YOLO install
 

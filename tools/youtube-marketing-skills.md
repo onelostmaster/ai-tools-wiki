@@ -7,11 +7,11 @@
 - **Decision:** Avoid
 - **Safety verdict:** avoid
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
-Claude (a project tool scout repo review, 2026-10-30): Skip ★★½☆☆ 2.5, with no named safety verdict. Findings: it asks for write scopes on your YouTube account, installs with `curl|bash`, and stores tokens in plaintext. a review bot rated it avoid from these findings.
+Claude fix-mode re-review (2026-11-14): avoid. No fix: the repo link was never recorded (GitHub repo = unknown), so the 2026-10-30 findings (YouTube write scopes, curl|bash install, plaintext tokens) cannot be re-read for fixes. Re-review when someone finds the repo.
 
 ## Safe install
 

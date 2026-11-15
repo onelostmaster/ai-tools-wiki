@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-09
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @53eb5a2, 2026-11-09, no-intake review): Safe. 24 skills
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code on Windows: copy only the skill folders you need from skills/ at commit 53eb5a2 into %USERPROFILE%\.claude\\skills\\ (a project uses 7). Never copy code from the GPL-3.0 example folders into MIT projects.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the pinned commit and the hand-picked folders.
+`npx threejs-awesome-graphics-agent-skills install`
 
 ## Install notes
 

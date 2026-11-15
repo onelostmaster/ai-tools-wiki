@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read, 8d27ca1, a project a review, 2026-10-30): Looks safe. S
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Use the hosted server, not local npx: it refuses local file paths (src/tools/upload.ts:520, checked at HEAD 1844d6c on 2026-11-14), which removes the "upload any local file" risk of local mode. claude.ai: Customize > Connectors > + Add > Add custom connector, paste https://mcp.upload-post.com/mcp, sign in with OAuth (README.md:23). Claude Code (Windows): `claude mcp add --transport http upload-post https://mcp.upload-post.com/mcp` (README.md:23), then OAuth; never paste the API key into chat. Android: use it through claude.ai. Hermes: unconfirmed route, a mcp_servers: entry with url https://mcp.upload-post.com/mcp, then /reload-mcp. Connect only the social accounts you want it to post to.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the hosted-only rule (local npx mode can upload any absolute local file path, src/tools/upload.ts:625).
+Install the official Upload-Post plugin from the Claude directory (README.md:23).
 
 ## Install notes
 

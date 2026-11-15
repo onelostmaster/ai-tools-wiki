@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read of cli.js and src/ @f4fbfa2, 2026-11-02, hourly run with
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows/Claude Code: in its own tools folder `npm install -D -E gltfjsx@6.5.2` (package.json 6.5.2 at the reviewed f4fbfa2; npm latest 6.5.3 was not read), then `npx gltfjsx model.glb`. Run it only on model files from the project: a .gltf that names external buffer or texture URLs gets them fetched (src/bin/GLTFLoader.js:1504); .glb files keep everything inside. Skip --transform unless needed, since only that path uses the optional sharp, whose install downloads a prebuilt libvips. Android: not used.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the folder install and the exact reviewed version.
+`npx gltfjsx model.glb` (runs npm latest 6.5.3).
 
 ## Install notes
 

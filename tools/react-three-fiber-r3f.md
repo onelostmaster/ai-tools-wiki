@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read of packages/fiber/src @d74622e, tag v9.8. No telemetry, 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows/Claude Code: in the project folder `npm install -E @react-three/fiber@9.8.2 three@0.186.1` (the reviewed v9.8.2, d74622e; pairs with React 19). useLoader fetches any URL it is given (core/hooks.tsx:118, 139), so load models and textures only from project files. Android: runs in the browser, nothing to install.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the exact reviewed pins.
+`npm install three @react-three/fiber`
 
 ## Install notes
 

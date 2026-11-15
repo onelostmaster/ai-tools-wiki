@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-12
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Firecrawl (official vendor; not code-reviewed: a review bot listed it under 'not
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+claude.ai (Windows browser and Android app): add the native Firecrawl connector from Claude's connector list (Firecrawl docs). Claude Code (Windows): `claude mcp add --transport http firecrawl https://mcp.firecrawl.dev/v2/mcp-oauth` and sign in in the browser, so no API key is stored (docs.firecrawl.dev/mcp-server). Leave Alexandria People off unless you ask for it (shared key policy); use zero-data-retention mode to turn Alexandria off entirely. Set a monthly cap on pay-as-you-go credits in the Firecrawl dashboard (firecrawl.dev/pricing).
 
 ## YOLO install
 

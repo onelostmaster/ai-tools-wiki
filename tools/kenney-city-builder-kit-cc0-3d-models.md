@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Models only (GLB + colormap), no code used. Repo @ 4535092 (2026-03-12): README 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows/Claude Code: copy only the needed GLB files (plus the colormap) from the repo's models folder at commit 4535092 and keep LICENSE.md with them. No code runs; the Godot project is not needed.
 
 ## YOLO install
 

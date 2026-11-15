@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Claude, a project scout (integration check, 2026-10-31): safe. Official vendor A
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows or cloud projects): nothing to install; call api.elevenlabs.io from project code with the key in an environment variable, a project secret or the injecting proxy, never pasted into chat or a page. Hermes: built-in TTS provider; put the key in Hermes secrets. Android: the official ElevenLabs app from Google Play. claude. Every request sends your text or audio to ElevenLabs and spends plan credits (elevenlabs.io/pricing).
 
 ## YOLO install
 

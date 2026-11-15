@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-04
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ No network, subprocess or eval in the package; pickle loads only its own diction
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows/Claude Code: inside the project's virtual environment `pip install pykakasi==2.3.0` (the reviewed release; offline after install, no key). Android: not used.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the virtual environment and the exact pin.
+`pip install pykakasi`
 
 ## Install notes
 

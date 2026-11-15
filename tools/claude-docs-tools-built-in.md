@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Anthropic (first-party, built into Claude; not code-reviewed): safe. Anthropic's
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+claude.ai and Claude Code (Windows, Android app): built in; nothing to install. Deleting a doc is permanent (no trash, per Anthropic's Claude Docs help page), so ask Claude to delete a doc only when you mean it, and share by link only docs meant to be seen.
 
 ## YOLO install
 

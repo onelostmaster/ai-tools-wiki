@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Claude (a project tool scout, read before install, v4.0.539, 2026-10-30): safe (
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): `claude plugin marketplace add remotion-dev/claude-code-plugin`, then `claude plugin install remotion@remotion`, then restart Claude Code (remotion.dev/docs/ai/claude-code-plugin). Before using Remotion itself in a for-profit company with 4+ employees, get the paid company license (Remotion license).
 
 ## YOLO install
 

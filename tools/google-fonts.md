@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-04
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (official privacy FAQ developers.google.com/fonts/faq/privacy, read
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Any platform: self-host: download the font files from github.com/google/fonts, serve them from the app's own folder with an @font-face rule, and keep a system-font fallback. Then pages send nothing to Google (the privacy FAQ says each fonts.googleapis.com load sends the viewer IP, URL, user agent and referer).
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips self-hosting, so every page load sends the viewer's IP and the page URL to Google.
+A stylesheet link tag to fonts.googleapis.com in the page head.
 
 ## Install notes
 

@@ -5,23 +5,25 @@
 - **Official URL:** http://agenticseek.tech
 - **GitHub repo:** https://github.com/Fosowl/agenticSeek @ 4f5f924 (GPL-3.0)
 - **Price:** Free, open source (GPL-3.0) (github.com, checked 2026-11-01); needs a 12-24 GB VRAM GPU
-- **Decision:** Avoid
-- **Safety verdict:** avoid
+- **Decision:** Skip
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
-Claude : avoid. Rests on code lines already logged by a review bot (@4f5f924, 2026-11-01): model-written shell runs with shell=True (`BashInterpreter.py:61-68`); privilege drop only as root on Linux/Docker (`sandbox.py:55-56`); its own blocklist says it is not a security boundary (`safety.py:4-7`).
+Claude code read @4f5f924 (2026-11-14): safe with fixes, Skip (Hermes covers it). Model-written shell runs with shell=True (sources/tools/BashInterpreter.py:63), so run only the Docker backend: agent code runs as uid 1000 with write access only to WORK_DIR and /tmp, the API is on 127.0.0.1 only and loopback is blocked for agent code (docker-compose.yml:76-90). Outside Docker (not root) there is no privilege drop (sources/tools/sandbox.py:53-55).
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Docker only: docker compose --profile full up with WORK_DIR set to a new empty folder; keep the 127.0.0.1 port line; never run it outside Docker; keep API keys out of WORK_DIR.
 
 ## YOLO install
 
-Not offered.
+YOLO (your own risk): skips Docker, so model-written shell runs as you.
+python3 cli.py on the host with WORK_DIR set to your files.
 
 ## Install notes
 
-Do not install: flagged avoid (see Safety reason).
+Ask the user before installing. Docker only: docker compose --profile full up with WORK_DIR set to a new empty folder; keep the 127.0.0.1 port line; never run it outside Docker; keep API keys out of WORK_DIR.

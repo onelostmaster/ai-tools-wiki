@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read, a project a review, 2026-10-29; unchanged since 30d4553
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows, PowerShell): `$env:DISABLE_TELEMETRY=1; npx skills@1.8.1 add remotion-dev/skills` (README:12; pinned installer version, npm latest checked 2026-11-14; DISABLE_TELEMETRY stops the skills CLI install telemetry to skills.sh, a review, #70). The voiceover guide defaults to paid ElevenLabs: say which voice tool to use. For-profit company with 4+ employees: get the Remotion company license first.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the installer version pin and the telemetry switch.
+npx skills add remotion-dev/skills
 
 ## Install notes
 

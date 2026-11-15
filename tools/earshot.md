@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read, 591fa3e, 2026-10-31): Looks safe. No telemetry; models 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows (Claude Code, PowerShell): `git clone https://github.com/Leonxlnx/earshot; cd earshot; git checkout 591fa3e` (the reviewed commit); `python -m venv .venv`; `.venv\Scripts\python -m pip install torch --index-url https://download.pytorch.org/whl/cpu`; `.venv\Scripts\python -m pip install -e ".[mcp]"` (no llm extra); then `claude mcp add earshot --scope user -e EARSHOT_THREADS=3 -- C:\path\to\earshot\.venv\Scripts\python.exe -m earshot mcp`, and copy skills\\earshot into %USERPROFILE%\.claude\\skills\. Never set GEMINI_API_KEY (over MCP the agent gives consent for the Gemini upload itself). After the first run has downloaded the ~1.1 GB of pinned models, set EARSHOT_OFFLINE=1. Hermes: unconfirmed: the same MCP command under mcp_servers in ~/.hermes/config.yaml. Android: not used.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin, the CPU-only torch index and offline mode.
+`git clone https://github.com/Leonxlnx/earshot` then `pip install -e ".[mcp]"` and `claude mcp add earshot -- python -m earshot mcp` (still never set GEMINI_API_KEY).
 
 ## Install notes
 

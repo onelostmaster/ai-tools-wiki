@@ -6,25 +6,27 @@
 - **GitHub repo:** https://github.com/NousResearch/hermes-agent (MIT; latest release v0.22.6 on 2026-11-02 per Hermes a review; the wiki review @9a56be3; a review bot targeted reads of /learn, write approval and /personality @8468f3c)
 - **Price:** Free software (MIT, github.com, checked 2026-10-31). Optional Nous Portal plans: Free $0, Plus $20/month ($22 credits), Super $100, Ultra $200 (portal.nousresearch.com figures as quoted by gethermesagentai.com and jaymountconsulting.com; vendor page not readable without a browser, checked 2026-10-31). Update 2026-11-02 : Nous says every plan now includes one Cloud agent and more usage; the Portal page showed no plan prices today (portal.nousresearch.com, checked 2026-11-02), so the figures above may be out of date. Check the Portal before paying.
 - **Decision:** Try
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-12
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
-Claude (the wiki code review at commit 9a56be3, 2026-11-01): caution. Safety 8/10 in a container (Hermes Cloud agent or Hermes's Docker image), 5/10 on a PC's default local backend for any bot that reads web, X or YouTube content, because its own SECURITY.md says the OS is the only security boundary. Good: unknown chat users denied by default, dangerous commands denied in cron by default, no telemetry by default, explicit updates on the stable channel, locked dependencies. Risks: `hermes debug share` uploads message text to a public paste site; plugins.auto_apply; unreviewed third-party skills and plugins. Earlier, a review bot (official README, 2026-10-31): installs by piping a script into PowerShell (iex (irm …)) or bash; an autonomous agent with shell, file and browser tools; hermes setup can import other agents' configs (~/.claude, ~/.cursor); Nous Portal sign-in is OAuth with paid usage; its bundled uv.exe is often flagged by antivirus (vendor says false positive).
+Claude (code review @9a56be3, fix-mode 2026-11-14): safe with fixes. Its SECURITY.md makes the OS the only boundary: run web-reading bots in the Docker backend or Hermes Cloud, not the PC's local backend. Never run hermes debug share (uploads message text to a public paste site); keep plugins.auto_apply off; /skills approval on before /learn; read third-party skills first. Good: deny-by-default chat users, no telemetry.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Download install.ps1 (or install.sh), read it, then run it, or use the MSIX from the official docs. Docker backend for any bot that reads web, X or YouTube; one profile per bot; /skills approval on; plugins.auto_apply off; never hermes debug share.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the container, approvals and script read.
+iex (irm https://hermes-agent.nousresearch.com/install.ps1) on the local backend.
 
 ## Install notes
 
-Caution: read the Safety reason and ask the user before installing.
+Ask the user before installing.
 Windows: in PowerShell run `iex (irm https://hermes-agent.nousresearch.com/install.ps1)` (official README); it installs under `%LOCALAPPDATA%\hermes`. A separate MSIX package is in the official installation docs (https://hermes-agent.nousresearch.com/docs/getting-started/installation).
 Android: Termux only, from the signed APT repository in the official Termux guide (https://hermes-agent.nousresearch.com/docs/getting-started/termux), not the desktop installer.
 Hermes: after installing run `hermes setup`, or `hermes setup --portal` to sign in to Nous Portal.

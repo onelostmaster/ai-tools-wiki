@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @b8d67bf, v0.2. Pure numeric code, 509 lines in pyloudno
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows/Claude Code: inside the project's virtual environment `pip install pyloudnorm==0.2.0` (the reviewed v0.2.0, b8d67bf). Pure numeric code with no network or file writes (pyloudnorm/ read in full), so no other fix is needed. Android: not used.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the virtual environment and the exact pin.
+`pip install pyloudnorm`
 
 ## Install notes
 

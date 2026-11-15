@@ -6,23 +6,23 @@
 - **GitHub repo:** unknown
 - **Price:** Paid hosted service: a review bot noted $19+/mo . Higgsfield's own pages disagree on the Starter price ($19/mo or $15/mo, possibly annual billing), so unconfirmed (`higgsfield.ai`, checked 2026-10-31)
 - **Decision:** Skip
-- **Safety verdict:** caution
+- **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
-Not code-reviewed. a review bot gave no verdict: a closed hosted Higgsfield service with no repo to check, paid $19+/mo. The caution rating is a review bot's own and stays until someone reviews it.
+Claude fix-mode re-review (2026-11-14): unreviewed. Closed hosted Higgsfield service, nothing to read; the old caution was a review bot's own with no finding. Unverified: what Higgsfield keeps from uploaded videos -> Contain: send only videos already posted publicly, through the claude.ai Higgsfield connector (virality_predictor), and check the credit balance first. Paid plan.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Unreviewed: contain it: claude.ai Higgsfield connector's virality_predictor tool; only already-public videos; check balance before a run. Get a review before real use.
 
 ## YOLO install
 
-Not written yet.
+Not offered.
 
 ## Install notes
 
-No install steps: the source withholds them until the tool is rated safe. Read the Safety reason and ask the user first.
-Claude Code: a review bot lists nothing to install (closed hosted service, a review).
+Not code-reviewed yet: ask a review bot or Claude to review it before installing.
+Contain it: claude.ai Higgsfield connector's virality_predictor tool; only already-public videos; check balance before a run.

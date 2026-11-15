@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Claude (a project tool scout, official Higgsfield connector, 2026-10-31): safe. 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+claude.ai (Windows browser and Android app): add Higgsfield at claude.ai/customize/connectors from Anthropic's official list only (or the Connect card in chat). Every job spends Higgsfield credits: ask Claude to confirm before each image job, and remove the connector from the same page when you stop using it.
 
 ## YOLO install
 

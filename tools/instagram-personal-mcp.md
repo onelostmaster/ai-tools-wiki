@@ -7,11 +7,11 @@
 - **Decision:** Avoid
 - **Safety verdict:** avoid
 - **Safety basis:** No source
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
-a review bot (own call, no traceable source, 2026-10-31): avoid. An unofficial MCP that reads your personal Instagram Saved posts and DMs by scraping with your cookie or password; account-ban risk. No Notion source records the tool or a review.
+Claude fix-mode re-review (2026-11-14): avoid. No fix: it reads your Saved posts and DMs by scraping with your Instagram cookie or password; Instagram's Terms of Use forbid automated access, and the ban lands on your own account. No setting removes that.
 
 ## Safe install
 

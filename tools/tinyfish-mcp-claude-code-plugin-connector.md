@@ -6,23 +6,24 @@
 - **GitHub repo:** [https://github.com/tinyfish-io/tinyfish-mcp-server](https://github.com/tinyfish-io/tinyfish-mcp-server)
 - **Price:** Search and Fetch free; browser agent $0.016/step; $8 starting credit (tinyfish.ai, checked 2026-10-31)
 - **Decision:** Try
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-05
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
-a review bot (code read, b61e3df/78b7c33, a project a review, 2026-10-30): Use with caution. Local proxy is clean, but tools come from the hosted server and can change without notice; stealth browser and login cookies saved on TinyFish break IG/TikTok terms; `/tinyfish:doctor` runs unpinned `npx @tiny-fish/cli@latest`, reads `~/.claude` and `~/.hermes` and sends telemetry by default; docs list an agent-paid `top_up_wallet` tool.
+Claude code read of the MCP proxy @7517089 (2026-11-14): safe with fixes. The local proxy only forwards to the hosted server. Hosted tools include top_up_wallet (agent-paid): deny it. Unverified at current version: the plugin's /tinyfish:doctor (unpinned npx @tiny-fish/cli@latest, telemetry; a review bot @b61e3df) -> Contain: don't run doctor. Don't sign in to Instagram or TikTok through its browser (their terms).
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+claude.ai connector as connected. Claude Code: deny mcp__TinyFish__top_up_wallet and Bash(npx @tiny-fish/cli*) in settings.json; env DO_NOT_TRACK=1 (safe-defaults); never run /tinyfish:doctor; no IG/TikTok logins in its browser.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the wallet deny and the doctor block.
+Install the plugin as its README says and allow every tool.
 
 ## Install notes
 
-No install steps: the source withholds them until the tool is rated safe. Read the Safety reason and ask the user first.
-[claude.ai](http://claude.ai): already connected as a connector in the a project and a project projects; no setup steps are recorded.
+Ask the user before installing. claude.ai connector as connected. Claude Code: deny mcp__TinyFish__top_up_wallet and Bash(npx @tiny-fish/cli*) in settings.json; env DO_NOT_TRACK=1 (safe-defaults); never run /tinyfish:doctor; no IG/TikTok logins in its browser.

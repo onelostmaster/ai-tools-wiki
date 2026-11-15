@@ -7,11 +7,11 @@
 - **Decision:** Avoid
 - **Safety verdict:** avoid
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
-Claude (a project tool scout, 2026-10-31): Rejected, partly for safety. Privileged reach with no public source, so its code cannot be read, and that project's rules forbid unread code.
+Claude fix-mode re-review (2026-11-14): avoid. No fix: there is no public source to read, and it acts with your claude.ai account, so there is nothing to sandbox or pin. Re-review if a source repo appears.
 
 ## Safe install
 

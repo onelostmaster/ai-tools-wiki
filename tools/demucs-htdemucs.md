@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @829d218, v4.1. Network use is only model download: name
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows/Claude Code: inside the project's virtual environment `pip install demucs==4.1.0` (the reviewed v4.1.0, 829d218; needs ffmpeg on PATH). Use only the built-in model names (default htdemucs), which download from the author's Hugging Face namespace or Meta's hash-checked mirror (demucs/hf.py:91-104, pretrained.py:60-80). Never pass hf:// models from other namespaces, --repo folders or -s checkpoints you did not make: .th files are unpickled (repo.py:69) and safetensors metadata picks the class to import (hf.py:63-84). Android: not used.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the virtual environment and the exact pin (the built-in-models-only rule still applies).
+`pip install demucs`
 
 ## Install notes
 

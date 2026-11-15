@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ OpusClip (official vendor; not code-reviewed: a review bot recorded 'not vetted 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+claude.ai (Windows browser): Settings > Connectors > add custom connector https://mcp.opus.pro/mcp (official MCP, OAuth sign-in, no API key). Claude Code (Windows): `claude mcp add --transport http opusclip https://mcp.opus.pro/mcp`. Android: official OpusClip app from Google Play. It holds your connected social accounts and posts publicly: a project needs your OK before each post; a project auto-posts since 2026-10-31, so check each clip for overlays first. unverified: closed hosted service (no repo); contain it by connecting only the social accounts each project uses.
 
 ## YOLO install
 

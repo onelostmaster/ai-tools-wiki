@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Claude (a project tool scout, 2026-10-31): safe ('Yes: already enabled').ai` acc
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+claude.ai (Windows browser and Android app): built in and already enabled; nothing to install. Claude Code (Windows): `/plugin install skill-creator@claude-plugins-official` (Claude Code docs) from Anthropic's official marketplace only. Review each skill it writes before you keep it.
 
 ## YOLO install
 

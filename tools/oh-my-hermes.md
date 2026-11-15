@@ -6,23 +6,24 @@
 - **GitHub repo:** [https://github.com/rlaope/oh-my-hermes](https://github.com/rlaope/oh-my-hermes)
 - **Price:** Free (open-source code)
 - **Decision:** Try
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
-a review bot (targeted code read, a project a review, #50 at b906cb4, #58 at 812ec53): Use with caution. Too big to fully audit; no telemetry or data exfiltration found. Installer is `curl|sh` / `irm|iex` pulling latest main with no checksum; the plugin registers Hermes hooks on every session and tool call; self-update machinery (an 'auto' mode is offered in setup); optional `omh_jev_ask` sends your questions plus your key to `api.typesafe.ai` or `openrouter.ai`.
+Claude targeted read @7907622 (2026-11-14; too big to read fully): safe with fixes. The installer pulls the latest release wheel with no checksum; pin it with OMH_VERSION (install.sh:11-12). Update check off with omh update-check set --mode off (docs/INSTALLATION.md:543). Unverified: the full plugin hook code -> Contain: test in one spare Hermes profile first. Leave omh_jev_ask off (sends questions plus key to a third party).
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Download install.sh from commit 7907622, read it, run OMH_VERSION=4.0.7 sh install.sh; then omh update-check set --mode off; first in a spare Hermes profile; don't enable omh_jev_ask.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the pin, script read and test profile.
+curl -fsSL https://omher.app/install | sh with the auto update mode.
 
 ## Install notes
 
-No install steps: the source withholds them until the tool is rated safe. Read the Safety reason and ask the user first.
-Hermes: a review bot gave no steps (verdict isn't Looks safe); the project's own installer is `curl|sh` / `irm|iex` from latest main, which the Safety reason flags.
+Ask the user before installing. Download install.sh from commit 7907622, read it, run OMH_VERSION=4.0.7 sh install.sh; then omh update-check set --mode off; first in a spare Hermes profile; don't enable omh_jev_ask.

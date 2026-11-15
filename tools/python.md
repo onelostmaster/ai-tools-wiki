@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Python (official vendor, Python Software Foundation; not code-reviewed: a review
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: the installer from https://www.python.org/downloads/. Claude Code cloud / Hermes: preinstalled, nothing to do. Android: not used. Per project, `python -m venv .venv` and install packages only inside it with exact pins, never into the system Python.
 
 ## YOLO install
 

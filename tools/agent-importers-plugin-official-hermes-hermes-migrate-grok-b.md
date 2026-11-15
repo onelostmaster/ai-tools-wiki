@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-10
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot (code read @471acd3 + hermes-agent @5e7c2b25, Hermes a review, 2026
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Hermes (Windows or the a project container): `hermes plugins install agent-importers` once per profile (official docs, import-from-other-agents.md), then `hermes -p <profile> migrate grok-bot --dry-run` first (writes nothing). Check the export has no keys or personal details, run it again without --dry-run, read the preview and confirm. Imported routines come in paused: turn the Grok Bot routine off before `hermes cron resume <id>`.
 
 ## YOLO install
 

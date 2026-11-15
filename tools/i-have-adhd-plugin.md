@@ -7,7 +7,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -15,7 +15,8 @@ Claude (a project tool scout, read before install, v0.4.1, 2026-10-30): safe. Ma
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (a project only): already listed in .claude/settings.json (PR #1); it loads in new threads only after tool-scout/setup-script-plugins.sh runs from the environment setup script (a project tool scout). Keep the reviewed v0.4.1 and leave its opt-in hook off unless you want it (local-only, Claude review 2026-10-30). Other projects and platforms: no install path, because no official repo or marketplace name is recorded; do not install a copy found by search. unverified: the source repo; contain it by using only the a project marketplace entry Claude reviewed.
 
 ## YOLO install
 

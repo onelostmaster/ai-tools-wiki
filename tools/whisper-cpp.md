@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-07
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a project Claude (phase1-libraries.md §1, 2026-11-06) @ d1be6fd = v1.9.5: safe.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Android: git submodule at android/third_party/whisper.cpp checked out at d1be6fd (v1.9.5), built into the APK through JNI as a project does. Windows: no install; only a source build at that same commit, and only after the user OKs it for that PC.
 
 ## YOLO install
 

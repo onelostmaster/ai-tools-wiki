@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-13
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @f5b4c4a, 2026-11-13, no-intake review): Safe. One skill
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows, Git Bash): `git clone https://github.com/thuann-vn/claude-3d-animated-shorts "$USERPROFILE/.claude/skills/claude-3d-animated-shorts"`, then `git -C "$USERPROFILE/.claude/skills/claude-3d-animated-shorts" checkout f5b4c4a` (the reviewed commit), then `scripts/fetch-assets.sh` and `npm ci` (or `npm install`) in engine/. This folder installs it for your user in every project; clone into the project's `.claude/skills/` instead to keep it to one project. Set CHROME to your chrome.exe path (render.cjs:6 only checks Mac and Linux paths). Voice is optional: ELEVENLABS_API_KEY in an environment variable, and set LANG_CODE and VOICE, because tools/tts.mjs defaults to Vietnamese and the author's voice id.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin.
+git clone https://github.com/thuann-vn/claude-3d-animated-shorts %USERPROFILE%\.claude\\skills\\claude-3d-animated-shorts, then scripts/fetch-assets.sh and npm install in engine/
 
 ## Install notes
 

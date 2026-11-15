@@ -6,22 +6,24 @@
 - **GitHub repo:** [https://github.com/vercel-labs/skills](https://github.com/vercel-labs/skills)
 - **Price:** Free (open-source)
 - **Decision:** Skip
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
-a review bot (code read, 92a9a34): Use with caution. Its `SKILL.md` tells the agent it can install skills for you with `-g -y`, skipping confirmation. The skills CLI sends install/find events (including the search query) to `skills.sh` (off with `DISABLE_TELEMETRY` or `DO_NOT_TRACK`).
+Claude code read @b716f9d (2026-11-14): safe with fixes. Its SKILL.md:100 tells the agent to run npx skills add <owner/repo@skill> -g -y (global, no confirmation): delete that line in a hand copy and deny the command. The skills CLI sends install/find events with the query to skills.sh; off with DISABLE_TELEMETRY=1 or DO_NOT_TRACK=1 (src/telemetry.ts:76).
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Hand-copy the skill, delete SKILL.md line 100; deny Bash(npx skills add *) in settings.json; env DISABLE_TELEMETRY=1.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the deny and telemetry off.
+npx skills add vercel-labs/skills@find-skills -g -y.
 
 ## Install notes
 
-No install steps: the source withholds them until the tool is rated safe. Read the Safety reason and ask the user first.
+Ask the user before installing. Hand-copy the skill, delete SKILL.md line 100; deny Bash(npx skills add *) in settings.json; env DISABLE_TELEMETRY=1.

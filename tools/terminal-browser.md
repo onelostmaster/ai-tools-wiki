@@ -6,22 +6,24 @@
 - **GitHub repo:** [https://github.com/zenbu-labs/terminal-browser](https://github.com/zenbu-labs/terminal-browser) (read at ecc462f)
 - **Price:** Free (MIT open-source code)
 - **Decision:** Skip
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
-a review bot (code read, a review, ecc462f, 2026-10-31): Use with caution. MIT. Like all mods, it runs with your permissions. A real browser in a Claude Code pane. PostHog usage events and crash reports are on by default (telemetry; opt out with `DO_NOT_TRACK=1`). It installs via a `curl … | bash` script. Windows only via WSL plus a kitty-graphics terminal. The mod's agent tool is off by default.
+Claude code read @e459feb (2026-11-14): safe with fixes, Skip (no need). PostHog usage events and crash reports are on by default; off with DO_NOT_TRACK=1 or TERMINAL_BROWSER_NO_TELEMETRY=1 (shared/src/config/telemetry.ts:1, README telemetry section). Install with Homebrew (README:21) instead of the curl|bash script. The mod's agent tool stays off (default).
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+brew install terminal-browser (macOS/Linux; Windows only via WSL) with env DO_NOT_TRACK=1; leave the agent tool off.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips telemetry off and the script read.
+curl -fsSL https://terminal-browser.sh/install | bash.
 
 ## Install notes
 
-No install steps: the source withholds them until the tool is rated safe. Read the Safety reason and ask the user first.
+Ask the user before installing. brew install terminal-browser (macOS/Linux; Windows only via WSL) with env DO_NOT_TRACK=1; leave the agent tool off.

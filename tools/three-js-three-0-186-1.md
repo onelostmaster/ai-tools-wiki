@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read of src/ @9b4a2ac, tag r186, published as three 0.186. No
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows/Claude Code: in the project folder `npm install -E three@0.186.1` (the reviewed r186 build a project pins); load models and textures only from project files, since FileLoader fetches any URL it is given (loaders/FileLoader.js:141). Android: runs in the browser, nothing to install.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the exact reviewed pin.
+`npm install three`
 
 ## Install notes
 

@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Node.js (official vendor, OpenJS Foundation; not code-reviewed: a review bot lis
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: the LTS release only, `winget install OpenJS.NodeJS.LTS` (the command in the Remotion Windows docs; the user has 26.13.0 LTS + npm 11.20.org/en/download. Claude Code cloud: preinstalled, nothing to do. Android: not used. Install project packages locally with exact pins, never `npm install -g`.
 
 ## YOLO install
 

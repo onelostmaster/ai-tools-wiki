@@ -3,12 +3,12 @@
 - **Type:** plugin
 - **Category:** design, building a site
 - **Official URL:** https://claude.com/plugins/frontend-design
-- **GitHub repo:** [https://github.com/anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) (source linked from the official plugin page)
+- **GitHub repo:** https://github.com/anthropics/claude-plugins-official (source linked from the official plugin page); also anthropics/skills @ 2c5958e, folder skills/frontend-design
 - **Price:** Free (Apache-2.0)
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 

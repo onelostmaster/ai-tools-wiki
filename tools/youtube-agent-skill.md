@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-09
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot (code read, a2feb21, a project a review, 2026-10-31): Looks safe. N
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): `/plugin marketplace add Jakeschincariol/youtube-agent-skill`, then `/plugin install youtube-agent`. No dependencies, hooks or network code (code read a2feb21), so there is nothing else to switch off. It writes only ~/.claude/youtube/voice.md. Hermes: unconfirmed path: copy skills/yt-* into a folder under ~/.hermes/skills/ and start a new session.
 
 ## YOLO install
 

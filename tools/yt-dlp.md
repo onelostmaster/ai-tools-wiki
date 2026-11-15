@@ -8,19 +8,21 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-09
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
-Claude (code read, b77c930 = 2026.10.26, 2026-11-01): caution, 6/10. No telemetry; releases GPG-signed. Risks for agents: config files auto-load from the current folder, ~/.config and /etc (a config can set --exec, --proxy, plugin dirs) unless --ignore-config; Python plugins auto-import from site-packages/sys.path unless YTDLP_NO_PLUGINS=1; --cookies-from-browser decrypts every cookie in the browser, and yt-dlp's bot-check error tells agents to use it; 5 high-severity injection advisories in 2026 plus a certifi MITM warning for old executables, so stay current. Platform risk: YouTube ToS forbids downloading/automated access; account cookies risk bans; re-uploading others' clips brings strikes. Live test from a Claude cloud machine (2026-11-01): Instagram reels download without login; TikTok works with the curl_cffi extra; YouTube gives metadata and captions but the video download gets HTTP 403 (cloud-IP block). Earlier: a review bot inferred caution (Instagram/TikTok terms); Grok uses it in a project reel breakdowns (2026-10-30/31).
+Claude (code read b77c930 = 2026.10.26; fix-mode 2026-11-14): caution, 6/10. Every code risk has a fix in Install notes (--ignore-config, YTDLP_NO_PLUGINS=1, --no-cookies, --no-exec, pinned wheel hash, no -U from agents). No fix: YouTube's Terms forbid downloading and automated access, and no flag changes that; account cookies risk bans, so they stay off. Instagram and TikTok public reels work without cookies.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+The a download skill skill's pinned venv and the full 'Every run' command in Install notes. Never -U from agents, never cookies.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the pin, config and plugin blocks and the no-cookies rule.
+pip install -U yt-dlp then yt-dlp --cookies-from-browser chrome URL.
 
 ## Install notes
 

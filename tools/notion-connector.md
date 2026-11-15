@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-07
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Notion (official vendor connector; not code-reviewed, 2026-10-31): safe. a proje
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+claude.ai (Windows browser and Android app): add Notion at claude.ai/customize/connectors (or the Connect card in chat) and, on Notion's consent screen, pick only the pages each project needs instead of the whole workspace. Claude Code: uses the connector added in claude.ai; nothing extra to install. Android: the Claude app uses the same connector once added.
 
 ## YOLO install
 

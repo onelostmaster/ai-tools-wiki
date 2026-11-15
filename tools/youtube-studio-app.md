@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Google (official YouTube Studio app; not code-reviewed): safe. No security findi
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Android: YouTube Studio from Google Play only (official listing, needs Android 11 or later), signed in to the channel account. Windows: nothing to install; use studio.youtube.com in the browser (needed for Test & Compare thumbnails).
 
 ## YOLO install
 

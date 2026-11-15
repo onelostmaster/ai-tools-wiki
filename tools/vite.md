@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-07
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a project Claude (phase1-libraries.md §7, 2026-11-06) npm 8.3.6: safe. MIT; bui
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows/Claude Code: in the project folder `npm install -D -E vite@8.3.6` (build time only, as a project's bench/web does); no global install.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the exact reviewed pin.
+`npm create vite@latest` (vite.dev Getting Started).
 
 ## Install notes
 
