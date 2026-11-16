@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @9cfbb69, a review, 2026-11-02): safe. Telemetry i
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows (Python 3.10+, pyproject.toml:36): in a venv `pip install "ag2[openai]==1.2.2"` (the version at the reviewed 9cfbb69, pyproject.toml:38; on PyPI since 2026-10-27). Telemetry is OpenTelemetry spans that go only where you export them (ag2/network/hub/telemetry.py:5-20). Put model API keys in environment variables, not in committed config files. Agents that run code: keep code execution in Docker or off, not on your own machine. For old AutoGen code use ag2-classic instead (README). claude.ai, Claude Code, Hermes, Android: no direct install (it is a library).
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the version pin (gets 1.3.2 from 2026-11-15, unreviewed) and the venv.
+pip install ag2[openai]
 
 ## Install notes
 

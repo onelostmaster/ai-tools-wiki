@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Curated call-to-action design/reference gallery; safe verdict is limited to brow
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Nothing to install: open https://cta.gallery/ in a browser on Windows or Android. Use CTA layouts and copy patterns as reference only, rebuilt in your own code with your own form backend; don't copy brands or working forms. Claude Code, claude.ai and Hermes: no MCP or skill exists to install; describe the chosen reference or paste your own notes into the prompt. Don't click Submit, subscribe or sponsor links.
 
 ## YOLO install
 

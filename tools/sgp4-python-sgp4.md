@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-12
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot read-only scan @ 8e234f8 (2026-11-12, PyPI 2.27): pure maths packag
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows) or the project container: in a venv, `pip install sgp4==2.27` (the reviewed release, still the PyPI latest on 2026-11-15); the wheel ships the C++ extension, so nothing compiles and no network is used (code read @8e234f8). Feed it CelesTrak elements cached under the CelesTrak row's 2-hour rule. claude.ai, Hermes and Android: Python library, no install route.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the venv and the version pin.
+pip install sgp4
 
 ## Install notes
 

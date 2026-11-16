@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,13 +16,15 @@ a review bot (light code read @ec0b282, 2026-11-03): safe. Two anonymous counter
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: Blockbench_5.2.2.exe (or Blockbench_5.2.2_portable.exe) from the official GitHub release v5.2.2 (github.com/JannisX11/blockbench/releases), or blockbench.net. It will send two anonymous POSTs with empty bodies to blckbn.ch, on the 1st and 3rd launch; there is no setting for them in the code (js/boot_loader.js:105-126). Auto-update downloads only after you click allow (electron/main.js:299-310). Plugins run as full-access code (js/plugin_loader.ts:809; electron/main.js:80-81), so install none, or only ones you trust from the official plugin list. Android: web.blockbench.net in Chrome, no install; unverified: how usable it is on a phone screen. Not a Claude or Hermes tool.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the plugin restriction.
+Installer from blockbench.net, any plugins.
 
 ## Install notes
 
 Safe, but ask the user before installing.
-Windows: installer from blockbench.net, or use web.blockbench.net in the browser. Install only well-known plugins. Android: web app in a browser (touch support limited, not checked).
+Windows: installer from blockbench.net, or use web.blockbench.net in the browser. Install only well-known plugins. Android: web app in a browser; unverified: how usable it is on a phone screen.

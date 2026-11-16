@@ -6,22 +6,24 @@
 - **GitHub repo:** [https://github.com/karanb192/cache-tax](https://github.com/karanb192/cache-tax) (read at e4940af)
 - **Price:** Free (MIT open-source code); keepwarm pings spend your Claude usage
 - **Decision:** Skip
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
-a review bot (code read, a review, e4940af, 2026-10-31): Use with caution. MIT. Like all mods, it runs with your permissions. After any cold cache write it turns on 3 hours of 'keepwarm' automatically, sending background model pings every 50 min that spend your usage while you're away (its README says pings cost tokens, with uncapped output). Its default guard drops a cold send once; `/keepwarm off` stops it. No network beyond the model.
+Claude code read @771b3d8 (2026-11-15): safe with fixes, Skip. No network beyond the model. By default a paid cold write arms keepwarm for three hours of background pings that spend your usage. Fix: set the Auto keepwarm option to off in /config, so keepwarm runs only when you arm it with /keepwarm and a short window; /keepwarm off stops it.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+claude plugin marketplace add karanb192/claude-code-mods#fb1f9c0, claude plugin install cache-tax@claude-code-mods; then /config > cache-tax > Auto keepwarm = off. Arm by hand only, for example /keepwarm 90m.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the pin and Auto keepwarm off, so pings spend usage after every cold write.
+Install from the marketplace with defaults.
 
 ## Install notes
 
-No install steps: the source withholds them until the tool is rated safe. Read the Safety reason and ask the user first.
+Ask the user before installing. claude plugin marketplace add karanb192/claude-code-mods#fb1f9c0, claude plugin install cache-tax@claude-code-mods; then /config > cache-tax > Auto keepwarm = off. Arm by hand only, for example /keepwarm 90m.

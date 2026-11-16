@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ Safe verdict scoped to self-hosted reviewed SVG/React icon usage, not the full d
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows or Claude Code: `npm install --save-exact --save-dev --ignore-scripts @gravity-ui/icons@2.23.1` (npm latest on 2026-11-15; only dependency tslib), or copy SVGs from the repo svgs folder at commit d200295. Install from npm, not a git checkout: the husky `prepare` hook (package.json line 47) runs only in a source checkout, and from npm with --ignore-scripts nothing runs. Never set FIGMA_TOKEN or run src:download/build (scripts/download.mjs lines 14-16). Android and claude.ai: use the SVG files. Hermes: static files only.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the version pin and --ignore-scripts.
+npm install --save-dev @gravity-ui/icons
 
 ## Install notes
 

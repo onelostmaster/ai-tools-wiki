@@ -6,22 +6,24 @@
 - **GitHub repo:** [https://github.com/borealBytes/hermes-wearos](https://github.com/borealBytes/hermes-wearos)
 - **Price:** unknown
 - **Decision:** Try
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
-a review bot (code read, a project a review): Use with caution. Its watchkit daemon hands every profile's `API_SERVER_KEY` to any holder of the watchkit token over plain http on LAN/tailnet. Community app; the Wear OS build is sideloaded via `scripts/bootstrap.sh` downloads.
+Claude code read @50b65cd = v0.10.12 (2026-11-15): safe with fixes. Redesigned: API_SERVER_KEY now travels only over a tailnet-bound private lane after a one-time pairing secret, with anonymous calls refused (app/.../net/PrivateLane.kt:18-23). The watchkit daemon binds 127.0.0.1 by default (server/watchkit/watchkit.mjs:103). Fix: set its host to your tailnet IP, never a LAN or 0.0.0.0; keep Tailscale on.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Clone at 50b65cd; Tailscale on phone, watch host and PC; in server/watchkit config.json set host to the PC's 100.x tailnet IP; build and sideload with scripts/build.sh and install-watch.sh; never expose watchkit with Funnel.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the tailnet-only bind.
+Set watchkit host to 0.0.0.0 on your home LAN.
 
 ## Install notes
 
-No install steps: the source withholds them until the tool is rated safe. Read the Safety reason and ask the user first.
+Ask the user before installing. Clone at 50b65cd; Tailscale on phone, watch host and PC; in server/watchkit config.json set host to the PC's 100.x tailnet IP; build and sideload with scripts/build.sh and install-watch.sh; never expose watchkit with Funnel.

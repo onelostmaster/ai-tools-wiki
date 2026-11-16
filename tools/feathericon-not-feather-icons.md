@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ Safe only for copying reviewed static SVG/CSS/font assets locally. README.md:26-
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows or Claude Code: copy the SVG, sprite or font files you need from the repo at commit c60fd50 into your project, or `npm install --save-exact --ignore-scripts feathericon@1.0.2` (npm latest on 2026-11-15; no install hooks). Never run `npm run setup`, `webfont` or `start` (bin/setup.sh lines 3-9 installs Homebrew/Ruby tools and is not a Windows workflow). Self-host the files instead of the demo site, which loads Google Analytics (_analytics.pug line 5). Android and claude.ai: use the copied SVG files. Hermes: static files only, no install route.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the version pin and --ignore-scripts.
+npm install feathericon --save
 
 ## Install notes
 

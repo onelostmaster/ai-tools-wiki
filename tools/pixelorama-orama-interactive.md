@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,13 +16,15 @@ a review bot (light code read @f3cb9ab, 2026-11-03): safe. No telemetry or auto-
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: download Pixelorama_v1.2.4_setup.exe or Pixelorama-Windows-64bit.zip from the official GitHub release v1.2.4 (github.com/Orama-Interactive/Pixelorama/releases), or `winget install pixelorama`. Android: install Pixelorama.apk from the same official v1.2.4 release (sideload; allow unknown sources for your browser only while installing). There is no auto-updater or telemetry. Network use happens only when you import a Lospec palette, download an image from a URL, or open the extension store; extensions run as full-access Godot packs (src/HandleExtensions.gd:119), so install none, or only ones you trust. Not a Claude or Hermes tool.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the extension restriction.
+winget install pixelorama
 
 ## Install notes
 
 Safe, but ask the user before installing.
-Windows: GitHub releases, itch.io, Steam or `winget install pixelorama`; also runs in the browser. Video export uses your own ffmpeg. Install only known extensions. Android: no official download (an export preset exists, `export_presets.cfg:692`), so treat as no.
+Windows: GitHub releases, itch.io, Steam or winget install pixelorama; also runs in the browser. Video export uses your own ffmpeg. Install only known extensions. Android: official Pixelorama.apk in the GitHub release v1.2.4 (release assets checked 2026-11-15); sideload it.

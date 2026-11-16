@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @852b6c9, 2026-11-03): safe. No network, HTTPReque
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: in Godot 4, download Terrain3D_v1.1.0-stable.zip from the official GitHub release (github.com/TokisanGames/Terrain3D/releases) or the Godot Asset Library and copy addons/terrain_3d into your project. The source has no network or OS.execute calls (review @852b6c9). Unverified: the prebuilt GDExtension DLLs in the release zip, and v1.1.0-stable is on a release branch that diverged from the reviewed commit (GitHub compare: 10 ahead, 21 behind). Contain it: commit your project to git first and try it in a copy of the project. Android: only as a Godot export target. Not a Claude or Hermes tool.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the project backup.
+Install Terrain3D from the Godot Asset Library into your main project.
 
 ## Install notes
 

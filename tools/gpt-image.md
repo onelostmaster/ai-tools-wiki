@@ -5,23 +5,24 @@
 - **GitHub repo:** unknown
 - **Price:** Paid per use (not verified)
 - **Decision:** Skip
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
-Not code-reviewed. OpenAI's image generator, paid per use; a review bot listed it among official apps it did not audit . Caution is a review bot's conservative call.
+Claude fix-mode re-review (2026-11-15): safe with fixes, Skip. Official OpenAI image API, paid per image; the old caution was a review bot's own with no finding. Prompts and images go to OpenAI under your key. Fix: a dedicated project key with a monthly budget, kept in env, and ask before batches.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+A separate OpenAI project with a monthly budget; its key as OPENAI_API_KEY in env or secrets; ask the user before any batch of images.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the separate project and budget, so spend has no cap.
+Use your main API key.
 
 ## Install notes
 
-No install steps: the source withholds them until the tool is rated safe. Read the Safety reason and ask the user first.
-Claude Code: never paste API keys into chat; add them as secrets/env vars.
+Ask the user before installing. A separate OpenAI project with a monthly budget; its key as OPENAI_API_KEY in env or secrets; ask the user before any batch of images.

@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-10
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,11 +16,14 @@ a review bot (code read @991927b = 2.0.87, 2026-11-10, no-intake review): Safe f
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows (Python 3.11 to 3.13) or Claude Code: in a venv, `pip install "rembg[cpu]==2.0.87"` for the library or `pip install "rembg[cpu,cli]==2.0.87"` for the command (the reviewed release, still the PyPI latest on 2026-11-15). On first use the ONNX model downloads from the project's GitHub releases with an md5 check (sessions/u2net.py 66-76): never set MODEL_CHECKSUM_DISABLED. Web server only as `rembg s --host 127.0.0.1`, because it binds 0.0.0.0:7000 with no login by default (commands/s_command.py 276-286). Don't pick the atlascloud or withoutbg models: they upload the image to paid cloud APIs (sessions/atlascloud.py 15-17, sessions/withoutbg.py 13). claude.ai, Hermes and Android: no install route.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the venv, the version pin and the 127.0.0.1 server bind.
+pip install "rembg[cpu,cli]"
+rembg s
 
 ## Install notes
 

@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-11
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @1687e5e, 2026-11-11, no-intake review): Safe. The Pytho
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows Claude Code: `git clone https://github.com/aliangSSS/aliang-knowledge-video`, `git checkout 1687e5e` (the reviewed commit, still HEAD on 2026-11-15), copy the folder to %USERPROFILE%\.claude\\skills\\aliang-knowledge-video\\ and restart Claude Code. Install Node.js 18+ and Python 3.9+ yourself. Create projects with `python scripts/new_project.py <dir> --venv` so numpy, scipy, matplotlib and pillow go into the project's own .venv, never your global Python (scripts/new_project.py:87-91). npm install runs on project creation with exact top-level versions and no lockfile, so sub-dependencies float (scripts/new_project.py:101; template/package.json); after the first install, commit the generated package-lock.json and use `npm ci` for later projects. The first render downloads Chrome Headless Shell (about 270 MB) through Remotion. Replace assets/bgm/default.mp3 with your own track before posting publicly (it is not MIT, LICENSE:24-31). Not a claude.ai, Hermes or Android tool.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin, the per-project venv and the lockfile step.
+git clone https://github.com/aliangSSS/aliang-knowledge-video && python scripts/new_project.py <dir>
 
 ## Install notes
 

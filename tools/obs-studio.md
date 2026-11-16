@@ -4,11 +4,11 @@
 - **Category:** generating videos, design
 - **Official URL:** https://github.com/obsproject/obs-studio
 - **GitHub repo:** https://github.com/obsproject/obs-studio
-- **Price:** Source license checked in the official repository; no hosted-service price claimed. Compute/dependencies and third-party model or asset licenses may add costs. Price search performed 2026-11-07.
+- **Price:** Source license checked in the official repository; no hosted-service price claimed. Third-party models, assets and plugins are billed by their own providers if you use them. Price search performed 2026-11-07.
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-07
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Targeted source read, not a full dependency/binary audit; obsproject/obs-studio 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: install the official OBS Studio Windows build from the release page of the official repo (https://github.com/obsproject/obs-studio), reviewed source @7a25c3f. Its built-in update check contacts only the official OBS endpoints (OBSBasic_Updater.cpp:174-203, updater.cpp:41-42); approve updates yourself. Add only plugins and browser sources you trust, and read the log for private source names before sharing it. Not a claude.ai, Hermes or Android tool.
 
 ## YOLO install
 

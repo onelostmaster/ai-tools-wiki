@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Free easing-curve visual reference; not an agent skill or video engine. src/sw.j
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Nothing to install: open https://easings.net/ in any browser (Windows, Android) and copy the curve you want; the service worker only caches the site for offline use (src/sw.js lines 3-52). Claude Code, claude.ai and Hermes: paste the chosen curve name or cubic-bezier values into your prompt. Don't build the source (not needed, and GPL-3.0 if you copy the site).
 
 ## YOLO install
 

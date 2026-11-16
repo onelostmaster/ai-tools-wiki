@@ -4,11 +4,11 @@
 - **Category:** generating videos, design
 - **Official URL:** https://github.com/KDE/kdenlive
 - **GitHub repo:** https://github.com/KDE/kdenlive
-- **Price:** Source license checked in the official repository; no hosted-service price claimed. Compute/dependencies and third-party model or asset licenses may add costs. Price search performed 2026-11-07.
+- **Price:** Source license checked in the official repository; no hosted-service price claimed. Third-party models, assets and plugins are billed by their own providers if you use them. Price search performed 2026-11-07.
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-07
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Targeted source read, not a full dependency/binary audit; KDE/kdenlive @6d9453d.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: install the official Kdenlive Windows build from the KDE download page linked in the official repo (https://github.com/KDE/kdenlive), reviewed source @6d9453d. Keep the optional Python features (automask, speech-to-text) off until needed: they spawn Python processes and download models (abstractpythoninterface.cpp:209,273,830). Open only your own or trusted projects and effects. Not a claude.ai, Hermes or Android tool.
 
 ## YOLO install
 

@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-12
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot read-only scan @ 41632ca (2026-11-12): MIT; browser does the orbit 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Android and Windows: nothing to install, open https://www.watched.earth in the browser, no sign-up. The hosted site sends anonymous in-app events; a browser tracker blocker (for example uBlock Origin on Windows) stops them if you want none. Claude Code: read the repo as a reference only. claude.ai and Hermes: no install route.
 
 ## YOLO install
 

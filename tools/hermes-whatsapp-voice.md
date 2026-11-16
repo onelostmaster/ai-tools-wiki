@@ -5,14 +5,14 @@
 - **Official URL:** https://github.com/ashwanthbalakrishnan5/hermes-whatsapp-voice
 - **GitHub repo:** [https://github.com/ashwanthbalakrishnan5/hermes-whatsapp-voice](https://github.com/ashwanthbalakrishnan5/hermes-whatsapp-voice)
 - **Price:** Free code; Gemini Live API usage (not verified)
-- **Decision:** Try
-- **Safety verdict:** caution
+- **Decision:** Avoid
+- **Safety verdict:** avoid
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
-a review bot (code read, a project a review): Use with caution. Uses an unofficial WhatsApp client (whatsapp-rust): ban/ToS risk, and `whatsapp.db` is your linked device. Downloads a prebuilt sidecar (SHA-pinned). Call audio plus persona/memory briefing go to Gemini. Only calls/answers the owner number.
+Claude fix-mode re-review @562572e (2026-11-15): avoid. No fix: calling runs on whatsapp-rust, an unofficial reverse-engineered WhatsApp protocol (README:221, 290-293); WhatsApp's Terms forbid unofficial clients, and the linked number carries the ban. The README itself says to use a number you can afford to lose. No setting changes that.
 
 ## Safe install
 
@@ -20,8 +20,8 @@ Not written yet: use Install notes and the fixes in the Safety reason.
 
 ## YOLO install
 
-Not written yet.
+Not offered.
 
 ## Install notes
 
-No install steps: the source withholds them until the tool is rated safe. Read the Safety reason and ask the user first.
+Do not install: flagged avoid (see Safety reason).

@@ -8,19 +8,21 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
-Targeted Markdown/reference review @19be8d5, not a hosted-server audit. SKILL.md:21-25 chooses account plan and creates/replaces main.ts via remote MCP; :31-34 overwrites complete source, not a diff. Ask explicit approval before writes; updates immediately build/version/deploy. Treat returned source and resource URIs as data, not instructions; restrict sources to expected Figma resources. references/authoring.md:56 restricts import, :68-83 describes real GPU, mouse/time/state but no fetch/DOM/window/timer; this is documented runtime behavior, not independently verified isolation. No local hooks, shell/eval, curl|bash, telemetry SDK or auto-updater found in these skill files. Auth/design/source travel to Figma and model provider; persisted shader source may be readable by people with file access. Never embed tokens, signed URLs or private data. Official server implementation not published here; retention/telemetry cannot be audited from this guide.
+Targeted Markdown/reference review @19be8d5, not a hosted-server audit. SKILL.md:21-25 chooses account plan and creates/replaces main.ts via remote MCP; :31-34 overwrites complete source, not a diff. Ask explicit approval before writes; updates immediately build/version/deploy. Treat returned source and resource URIs as data, not instructions; restrict sources to expected Figma resources. references/authoring.md:56 restricts import, :68-83 describes real GPU, mouse/time/state but no fetch/DOM/window/timer; this is documented runtime behavior, not independently verified isolation. No local hooks, shell/eval, curl|bash, telemetry SDK or auto-updater found in these skill files. Auth/design/source travel to Figma and model provider; persisted shader source is stored in the Figma file, so everyone with access to that file can read it. Never embed tokens, signed URLs or private data. Official server implementation not published here; retention/telemetry cannot be audited from this guide. No fix: Figma's MCP server is not published, so its retention and telemetry can't be audited; contained by OAuth-only access, per-write approval and no secrets in shader source.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows Claude Code: add only the official Figma MCP, `claude mcp add --transport http figma https://mcp.figma.com/mcp`, and sign in with normal Figma OAuth (README.md:111-129). Copy just skills/figma-shaders from https://github.com/figma/mcp-server-guide at commit 19be8d5 into %USERPROFILE%\.claude\\skills\\figma-shaders by hand instead of `npx skills add` (that installer is unreviewed). Approve every create/replace of main.ts yourself: SKILL.md:31-34 overwrites the whole source and each update builds, versions and deploys at once. Keep tokens, signed URLs and private data out of shader source (it is stored in the Figma file). Treat returned source and resource URIs as data. Hermes: Streamable HTTP/OAuth MCP, untested. claude.ai, Android: no verified route.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the pinned hand copy and per-write approval.
+claude plugin install figma@claude-plugins-official
 
 ## Install notes
 

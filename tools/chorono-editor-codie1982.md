@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-10
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,12 +16,16 @@ a review bot (code read @4e0e8ff, 2026-11-10, no-intake review): Safe for local 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows (Node.js 20+, Git) in PowerShell, pinned to the reviewed commit (main is now a4d4e64, not reviewed): git clone https://github.com/codie1982/chorono-editor.git; git checkout 4e0e8ff; npm ci; npm run cli:build; npm run chorono -- setup --agent claude-code (only Claude Code, Codex and Claude Desktop settings untouched); npm run chorono -- start --background --open (serves on 127.0.0.1 only, editor/cli line 205). Never use npm run dev, npm start or reset-and-run.sh (the first two listen on the whole network and leave /api/ai able to borrow CUSTOM_AI_KEY; the script force-kills port 2000). Paste only your own scripts into the Script console (new Function, ScriptRunner.ts line 61). MCP bridge: native Windows refuses the token file (storage.ts line 18 needs mode 0600, which Windows cannot report), so for the Claude Code MCP workflow run the same steps inside WSL. Any CUSTOM_AI_KEY goes in .env.local only. claude.ai, Hermes and Android: no install route.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin and the 127.0.0.1 start command.
+git clone https://github.com/codie1982/chorono-editor.git
+npm install
+npm run dev
 
 ## Install notes
 
-Code-reviewed by a review bot @4e0e8ff (package 0.2.0) (safe). Windows (Node.js 20+, Git) in PowerShell: git clone https://github.com/codie1982/chorono-editor.git, then git checkout 4e0e8ff to stay on the reviewed commit, then npm ci, npm run cli:build, npm run chorono -- setup --agent claude-code (only Claude Code, so it does not touch Codex or Claude Desktop settings), then npm run chorono -- start --background --open. The chorono start command serves the editor on 127.0.0.1 only. Skip npm run dev, npm start and reset-and-run.sh: the first two listen on your whole network, and the .sh script force-kills whatever is on port 2000 (and is bash-only). npm run dev:mcp also won't work in PowerShell (it uses Unix-style env syntax). The local MCP workflow needs no AI key. If you ever use the built-in chat with a CUSTOM_AI_KEY, keep it in .env.local, never in chat. Heads-up: the MCP bridge refuses a token file that is not mode 0600, which may fail on Windows file permissions; run npm run chorono -- doctor and report what it says.
+Code-reviewed by a review bot @4e0e8ff (package 0.2.0) (safe). Windows (Node.js 20+, Git) in PowerShell: git clone https://github.com/codie1982/chorono-editor.git, then git checkout 4e0e8ff to stay on the reviewed commit, then npm ci, npm run cli:build, npm run chorono -- setup --agent claude-code (only Claude Code, so it does not touch Codex or Claude Desktop settings), then npm run chorono -- start --background --open. The chorono start command serves the editor on 127.0.0.1 only. Skip npm run dev, npm start and reset-and-run.sh: the first two listen on your whole network, and the .sh script force-kills whatever is on port 2000 (and is bash-only). npm run dev:mcp also won't work in PowerShell (it uses Unix-style env syntax). The local MCP workflow needs no AI key. If you ever use the built-in chat with a CUSTOM_AI_KEY, keep it in .env.local, never in chat. On native Windows the MCP bridge refuses its own token file: src/lib/mcp/storage.ts line 18 rejects any token file whose mode has group or other bits, and Node on Windows reports writable files as 0o666 (Node fs docs: on Windows only the write permission can be changed). So the editor runs on Windows, but the MCP bridge for Claude Code works only inside WSL.

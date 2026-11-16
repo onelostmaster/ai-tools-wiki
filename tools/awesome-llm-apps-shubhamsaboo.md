@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code scan of the whole repo @6c16b23, a review, 2026-11-02): safe 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: `git clone https://github.com/Shubhamsaboo/awesome-llm-apps` then `git checkout 6c16b23` (the reviewed commit), or just read folders in a browser. Run one folder at a time, each in its own venv or node_modules, with your own keys in that folder's untracked .env. Fixes for the 3 verified risks: in the 4 generative-UI apps use `npm install --ignore-scripts` (their postinstall runs `npm run install:agent`) and run that step yourself after reading it; in ai-shadcn-component-generator delete .claude/settings.json and .mcp.json before opening it in Claude Code (they add the Render plugin and an unpinned shadcn MCP); in beifong put only commands you wrote in its scheduler, because it runs stored commands with shell=True (beifong/scheduler.py:97-99). Claude Code: open a single folder, never the whole repo. Android: read only.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin, --ignore-scripts and the settings removal.
+git clone https://github.com/Shubhamsaboo/awesome-llm-apps
 
 ## Install notes
 

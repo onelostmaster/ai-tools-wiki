@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @600e5fd, 2026-11-03): safe for inference. Loads s
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: in a venv, install PyTorch (CUDA or CPU build from pytorch.org), then `pip install f5-tts==1.1.22` (latest on PyPI, 2026-11-15). Use the CLI or the inference Gradio app. If you run the socket server, start it with `--host 127.0.0.1` (default is 0.0.0.0, src/f5_tts/socket_server.py:210). In the finetune Gradio app, load only your own .pt files (it torch.loads without weights_only, src/f5_tts/train/finetune_gradio.py:981). Pre-trained weights are CC-BY-NC (README.md:278): it will be non-commercial unless you train your own, so not for a monetized channel. wandb logging is used only in training (src/f5_tts/model/trainer.py:43,59); pass a different logger or set WANDB_MODE=offline there. Not a claude.ai, Hermes or Android tool.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the venv, version pin and the 127.0.0.1 bind.
+pip install f5-tts
 
 ## Install notes
 

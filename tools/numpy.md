@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-12
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ Official NumPy project (numpy.org, PyPI 2.5.4 checked 2026-11-12); BSD-3-Clause 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows) or the project container: in a venv, `pip install numpy==2.5.4` (PyPI latest on 2026-11-15, needs Python 3.12+), pinned in the project requirements; it installs from the official binary wheel, so nothing is compiled. unverified: the NumPy source itself (too large for a review bot read; widely audited); containment: the pin plus the venv. claude.ai, Hermes and Android: Python library, use it inside a project, no install route.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the venv and the version pin.
+pip install numpy
 
 ## Install notes
 

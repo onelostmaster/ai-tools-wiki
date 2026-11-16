@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ JavaScript animation/timeline library, not an MP4 renderer by itself. package.js
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows or Claude Code: in your project, `npm install --save-exact gsap@3.15.1` (npm latest on 2026-11-15; no dependencies, no install scripts per package.json lines 1-75) and bundle it, so it is served from your own site instead of a CDN. Only pass your own callbacks to tweens (callbacks are executed JavaScript, src/gsap-core.js lines 88 and 2304). claude.ai: HTML drafts can import the same pinned version. Android: preview in the browser. Hermes: writes ordinary JS, no integration needed. For MP4 output pair it with a browser plus FFmpeg renderer.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the version pin and self-hosting.
+npm install gsap
 
 ## Install notes
 

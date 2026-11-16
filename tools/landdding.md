@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Curated landing-page/website/template inspiration gallery. Safe for browsing onl
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Nothing to install: open https://landdding.com/ in a browser on Windows or Android and browse without an account. Take layout ideas only: per its /terms, site content is for personal, non-commercial use, so don't copy screenshots or templates into a channel, client work or an asset library. Claude Code, claude.ai and Hermes: no MCP or skill exists to install; describe the chosen reference or paste your own notes into the prompt.
 
 ## YOLO install
 

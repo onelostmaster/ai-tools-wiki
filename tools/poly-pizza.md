@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,7 +16,7 @@ Not reviewed (website and API, no code to read). A project Tool Scout (Claude, 2
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Unreviewed: contain it: browser only: use poly.pizza in your normal browser with no account; for the API, keep the key in a local .env file (never in chat or a shared page) and call it only from your own script. Check each model's licence on its page before use. Get a review before real use.
 
 ## YOLO install
 

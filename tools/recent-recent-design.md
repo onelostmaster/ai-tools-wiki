@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Public multidisciplinary design inspiration feed: web, interface, branding, moti
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Nothing to install: open https://recent.design/ in a browser on Windows or Android; no login needed. Use references as inspiration only; the works and brands shown belong to their owners and no reuse license is granted. Claude Code, claude.ai and Hermes: no MCP or skill exists to install; describe the chosen reference or paste your own notes into the prompt. Linked tools and jobs are separate sites, not covered by this row.
 
 ## YOLO install
 

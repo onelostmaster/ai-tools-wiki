@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @3bd7b07, a review, 2026-11-02): safe.; data is local JS
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows Claude Code (needs Node.js): `claude mcp add roadmap -- cmd /c npx -y roadmap-skill@0.3.0` (README.md:87 gives `npx -y roadmap-skill` unpinned; 0.3.0 is the latest on npm, 2026-03-14, and matches package.json at the reviewed 3bd7b07). The npm package has no install scripts (package.json scripts). Unverified: that the npm build matches the repo; contained by the version pin. Claude Desktop: same command in the mcpServers entry. Hermes: plain stdio MCP server, not tested. claude.ai and Android: no (local MCP).
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the version pin.
+claude mcp add roadmap "npx -y roadmap-skill"
 
 ## Install notes
 

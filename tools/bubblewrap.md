@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Not code-reviewed. Official GoogleChromeLabs repo, Apache-2.0. Claude's a projec
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Unreviewed: contain it: only if a project PWA needs a Play Store listing. Windows: in a separate project folder, `npm install --save-exact @bubblewrap/cli@1.27.0` (npm latest on 2026-11-15, Node 18+) and run it with npx from that folder, not -g. `bubblewrap init` offers to download a JDK and the Android SDK into its own folder: accept only those official downloads. It creates your Android signing keystore: keep the keystore and its passwords out of git and out of chat, and back it up yourself. No other keys in the environment. Get a review before real use. claude.ai, Hermes and Android: no install route (the built app installs on Android).
 
 ## YOLO install
 

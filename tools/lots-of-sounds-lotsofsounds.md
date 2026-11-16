@@ -6,23 +6,24 @@
 - **GitHub repo:** https://github.com/lotsofsounds/agent-skills @ 342a2bf (MIT; the scout gave only the name; this is the vendor's own agent plugin, matching its "unpinned npx CLI")
 - **Price:** Free tier (10 downloads/day, no API); Pro $15/month or $150/year; Enterprise $49/month (lotsofsounds.com, checked 2026-10-31)
 - **Decision:** Skip
-- **Safety verdict:** caution
-- **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-10-31
+- **Safety verdict:** safe
+- **Safety basis:** Code read
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
-a project tool scout (2026-10-31): ❌ ★★: a hosted service with a login and an unpinned `npx` CLI. Not code-reviewed. Its README: `npx lotsofsounds login` opens a browser sign-in; the CLI saves your API key and email in `~/.config/lotsofsounds/config.json`; searches and the key go to `api.lotsofsounds.com`, which keeps usage records with your search words.
+Claude code read @342a2bf (2026-11-15): safe with fixes, Skip. Only a SKILL.md that runs npx -y lotsofsounds (skills/lotsofsounds/SKILL.md:28-54), unpinned. Fix: pin the CLI version. Login is a browser device-code flow that saves the key in ~/.config/lotsofsounds; search words go to api.lotsofsounds.com. Downloads need the $15/month plan.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Copy the skill at 342a2bf and change each npx -y lotsofsounds to npx -y lotsofsounds@0.1.0; sign in with the device-code login or set LOTSOFSOUNDS_API_KEY in env.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the pin.
+/plugin marketplace add lotsofsounds/agent-skills and /plugin install lotsofsounds@lotsofsounds.
 
 ## Install notes
 
-Caution: read the Safety reason and ask the user before installing.
-Claude Code: `/plugin marketplace add lotsofsounds/agent-skills` then `/plugin install lotsofsounds@lotsofsounds` (README); full search and downloads need an account (`npx lotsofsounds login`).
+Ask the user before installing. Copy the skill at 342a2bf and change each npx -y lotsofsounds to npx -y lotsofsounds@0.1.0; sign in with the device-code login or set LOTSOFSOUNDS_API_KEY in env.

@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-05
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,7 +16,7 @@ Not code-reviewed for safety. A project Tool Scout (Claude, 2026-11-04) read it 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Unreviewed: contain it: the official repo is unknown, so don't install it from a search result; once you have the exact repo link, open it only in a devcontainer or Windows Sandbox, pin the commit, run `npm ci` with no API keys in the environment, and serve it on 127.0.0.1 only. Get a review before real use.
 
 ## YOLO install
 

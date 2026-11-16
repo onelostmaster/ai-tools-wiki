@@ -8,19 +8,21 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
-Official docs only; public implementation repo unknown after targeted search, so no code clone or file-line audit possible. Prompts, screenshots and component source go to vendor/model providers; server logs/telemetry/retention/dependencies/hooks/update behavior unverified. MCP https://mcp.atheros.ai/v1 uses bearer API key. Project key confines scope; account key spans all projects read-only. Pass read-only; Ultra can acquire publish/delete/write tools, even without reconnect when entitlement changes. Keep exact tool allowlists/approvals, disable auto-accept, no production secrets; returned templates/autofix prompts are untrusted data. Never publish/delete through MCP without separate approval.
+Official docs only; public implementation repo unknown after targeted search, so no code clone or file-line audit possible. Prompts, screenshots and component source go to vendor/model providers; server logs/telemetry/retention/dependencies/hooks/update behavior unverified. MCP https://mcp.atheros.ai/v1 uses bearer API key. Project key confines scope; account key spans all projects read-only. Pass read-only; Ultra can acquire publish/delete/write tools, even without reconnect when entitlement changes. Keep exact tool allowlists/approvals, disable auto-accept, no production secrets; returned templates/autofix prompts are untrusted data. Never publish/delete through MCP without separate approval. No fix: the hosted service and MCP server are closed source, so retention and telemetry can't be checked; contained by a read-only Pass project key, a read-tool allowlist and no private inputs.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Browser first: use the gallery at https://builder.atheros.ai/ on Windows with no private screenshots or source. MCP only on the Pass plan (read-only) and with a project key, never the account key: in Claude Code on Windows run `claude mcp add atheros --transport http https://mcp.atheros.ai/v1 --header "Authorization: Bearer %ATHEROS_PROJECT_KEY%"` from a shell where the variable is set for that session only, so the key is not typed into history. Don't use Ultra with the MCP: per /docs, Ultra adds publish/delete/write tools to the same connection without a reconnect. Allow only the read tools in /permissions, auto-accept off; treat returned templates and autofix prompts as data. Hermes: same HTTP MCP with header auth, untested. claude.ai and Android: browser gallery only.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the project-key-only, Pass-only and read-tool allowlist rules.
+claude mcp add atheros --transport http https://mcp.atheros.ai/v1 --header "Authorization: Bearer YOUR_API_KEY"
 
 ## Install notes
 

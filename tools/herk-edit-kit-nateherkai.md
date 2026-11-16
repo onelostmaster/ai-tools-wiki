@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-09
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @10511e5, 2026-11-09, no-intake review): Safe. A Claude 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows Claude Code: `git clone https://github.com/nateherkai/herk-edit-kit` into its own folder, then `git checkout 10511e5` (the reviewed commit, still HEAD on 2026-11-15) and open Claude Code in that folder; the skills load only there. Install Node 22+ and ffmpeg yourself (`winget install Gyan.FFmpeg`), then `npm ci` (uses the pinned package-lock.json) and `npm run setup` (only checks tools and copies .env.example to .env, setup.mjs:8-15). Put keys in .env yourself. Transcription uploads your audio to ElevenLabs (transcribe-elevenlabs.mjs:26,132) and kie.mjs makes paid Kie.ai calls (kie.mjs:36-73): leave those keys empty unless you accept that. Never run video-projects/clickup-demo (populate.mjs creates ClickUp tasks with your key). Not a claude.ai, Hermes or Android tool.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin and the ClickUp-demo/paid-API cautions.
+git clone https://github.com/nateherkai/herk-edit-kit && cd herk-edit-kit && npm install && npm run setup
 
 ## Install notes
 

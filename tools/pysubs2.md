@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-10
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @6371ae8 = 1.9.1, 2026-11-10, no-intake review): Safe. P
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows (Python 3.12 or newer) or Claude Code: in a venv, `pip install pysubs2==1.9.1` (the reviewed release, still the PyPI latest on 2026-11-15; no dependencies, nothing else installs). Command-line tool: always pass `-o <folder>` (or --to), because without it the CLI writes the result back over your input file (cli.py lines 172-186). Open only TTML files you made or trust (plain xml.etree parser, formats/ttml.py line 103). claude.ai, Hermes and Android: Python library, no install route.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the venv, the version pin and the -o output folder.
+pip install pysubs2
 
 ## Install notes
 

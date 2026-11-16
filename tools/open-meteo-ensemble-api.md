@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-12
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Official Open-Meteo API, read-only, no key on the free tier; server code AGPL-3.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Nothing to install: plain HTTPS GET to the Ensemble API (https://open-meteo.com/en/docs/ensemble-api), no key, on any platform (claude.ai, Claude Code, Hermes, Android, Windows). Credit Open-Meteo in anything you publish (data CC BY 4.0). The free tier is non-commercial only (open-meteo.com/en/pricing, checked 2026-11-12): if the project earns money, switch to the paid Professional plan before using it, because Standard does not include the Ensemble API.
 
 ## YOLO install
 

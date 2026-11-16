@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,11 +16,15 @@ a review bot (code read @afa8da9, plugin 2.0.0, 2026-11-08, no-intake review): L
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (works on Windows): inside Claude Code run /plugin marketplace add addyosmani/web-quality-skills, then /plugin install web-quality-skills@addy-web-quality-skills (README lines 64-73); the plugin declares only skills, no hooks or MCP (.claude-plugin/plugin.json @afa8da9). Use the plugin route, not npx skills add (third-party installer). For live audits run `npx lighthouse@<version> <url>` with an exact version instead of the skill's `npm install @axe-core/cli -g` (accessibility/SKILL.md 413-417), so nothing installs globally. analyze.sh needs Git Bash plus jq and only reads local .html files. claude.ai: upload a skill folder as a custom skill; Hermes and Android: no install route.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the exact npx versions and uses the skill's global install.
+/plugin marketplace add addyosmani/web-quality-skills
+/plugin install web-quality-skills@addy-web-quality-skills
+npm install -g @axe-core/cli
 
 ## Install notes
 

@@ -6,23 +6,23 @@
 - **GitHub repo:** unknown
 - **Price:** $10/week or $48/mo, no free tier (ootto.ai, checked 2026-10-31)
 - **Decision:** Skip
-- **Safety verdict:** caution
+- **Safety verdict:** unreviewed
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
-a review bot (review of a closed hosted service, no code to read; a project a review and #80, 2026-10-31): Use with caution. Paid hosted MCP (`mcp.ootto.ai/mcp`) that reads and posts to your Instagram via Meta OAuth; stores the OAuth token, request logs and leads; can publish and send DMs when enabled; it logs connector requests and data is not auto-deleted (deletion by email). Promoted by Ootto's founder.
+Claude fix-mode re-review (2026-11-15): unreviewed. Paid closed hosted MCP (mcp.ootto.ai/mcp) with Meta OAuth to your Instagram; it logs requests and keeps data until you ask by email. Unverified: its retention and access controls -> Contain: leave publishing and DMs off, use a business account you can lose, and email for deletion when you stop. $10/week or $48/month.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Unreviewed: contain it: business account only; publishing and DMs off; email Ootto for deletion when done. Get a review before real use.
 
 ## YOLO install
 
-Not written yet.
+Not offered.
 
 ## Install notes
 
-Caution: read the Safety reason and ask the user before installing.
-claude.ai / Claude Code: a review bot gave no steps for the Ootto MCP (Use with caution); it needs a paid Ootto plan and Meta OAuth access to your Instagram.
+Not code-reviewed yet: ask a review bot or Claude to review it before installing.
+Contain it: business account only; publishing and DMs off; email Ootto for deletion when done.

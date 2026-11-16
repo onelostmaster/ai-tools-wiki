@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-10
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @02d1912, 2026-11-10, no-intake review): Safe. A markdow
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows Claude Code: `git clone https://github.com/win4r/video-director`, then `git checkout 02d1912` (the reviewed commit, still HEAD on 2026-11-15), and copy only the inner video-director folder into %USERPROFILE%\.claude\\skills\\ (or a project's .claude\\skills). For the QA scripts: `winget install Gyan.FFmpeg` and, in a venv, `pip install numpy Pillow`. The scripts make no network calls and write only into the --out folder (scripts/qa_video.py:552,582,691,698). Skip evals/*/place-files.sh. Not a claude.ai, Hermes or Android tool.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin and the venv.
+git clone https://github.com/win4r/video-director && pip install numpy Pillow
 
 ## Install notes
 

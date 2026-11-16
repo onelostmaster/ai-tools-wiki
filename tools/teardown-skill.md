@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read, a91262a, a project a review, 2026-10-31): Looks safe. N
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): `git clone https://github.com/elvarofficial/teardown %USERPROFILE%\.claude\skills\teardown`, then `git checkout a91262a` (the reviewed commit, still HEAD on 2026-11-14), then in that folder `npm ci` (uses package-lock.json, all five dependencies pinned exactly in package.json, Playwright 1.58.2) and `npx playwright install chromium`. This replaces the unpinned `npx skills add ... -g` installer, which installs globally for every project. Install scripts that run during npm ci: esbuild and fsevents (package-lock.json:457,498; fsevents only on macOS). Needs Node 20+, ffmpeg and Python 3. Hermes (unconfirmed route): copy the whole folder to ~/.hermes/skills/creative/teardown/, run the same two commands, start a new session. claude.ai and Android: no install route.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin and the lockfile install, and installs globally.
+npx skills add elvarofficial/teardown -g -a claude-code, then npm install && npx playwright install chromium in the folder (package.json setup script).
 
 ## Install notes
 

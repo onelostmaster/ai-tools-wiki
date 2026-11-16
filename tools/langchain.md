@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @2775506, a review, 2026-11-02): safe. LangSmith t
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows (Python 3.10+, libs/langchain_v1/pyproject.toml:25): in a venv `pip install langchain==1.4.8` (the version at the reviewed 2775506, libs/langchain_v1/pyproject.toml:24; on PyPI since 2026-11-02). It sends nothing on its own; LangSmith tracing starts only when you set the LangSmith environment variables, so leave them unset unless you want traces uploaded. Put model API keys in environment variables or an untracked .env, never in committed code. claude.ai, Claude Code, Hermes, Android: no direct install (it is a library).
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the version pin (gets 1.5.0 from 2026-11-11, unreviewed) and the venv.
+uv add langchain
 
 ## Install notes
 

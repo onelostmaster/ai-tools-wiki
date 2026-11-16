@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-04
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @b782da4, a review, 2026-11-02): safe. No telemetr
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: download BepInEx_win_x64_5.4.23.6.zip (or win_x86 for 32-bit games) from the official GitHub release v5.4.23.6 (2026-10-23), make a backup copy of the game folder, then unzip into the game folder next to the game .exe and start the game once to create the config. Unverified: the 5.x release binaries (the reviewed b782da4 is the 6.x master branch) -> contain: backup copy of the game folder, single-player or offline games only (online anti-cheat bans modded clients), and add only plugin DLLs you trust or wrote yourself, since every plugin runs with full rights. For IL2CPP games (6.x only) it downloads Unity base libraries from the official BepInEx host (Runtimes/Unity/BepInEx.Unity.IL2CPP/Il2CppInteropManager.cs:57-64). Claude Code can write the C# plugins. Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the game-folder backup and uses the 6.x bleeding-edge build (6.0.0-pre.2 or nightly), unreviewed.
+Unzip the 6.x build for your game type into the game folder.
 
 ## Install notes
 

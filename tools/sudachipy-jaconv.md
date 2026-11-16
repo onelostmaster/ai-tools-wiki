@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,7 +16,7 @@ Not code-reviewed. Open-source Japanese libraries on PyPI: SudachiPy (Works Appl
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Unreviewed: contain it: inside a project container or a Python venv only, `pip install sudachipy==0.7.0 sudachidict_core==20261015 jaconv==0.5.0` (latest on PyPI 2026-11-14; SudachiPy needs Python >= 3.10; the core dictionary package is about 77 MB), pinned in requirements.txt, no API keys in that environment, network only while installing. unverified: whether either library makes network calls at runtime. Get a review before real use.
 
 ## YOLO install
 

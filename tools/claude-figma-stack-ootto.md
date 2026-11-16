@@ -6,23 +6,24 @@
 - **GitHub repo:** https://github.com/Ootto-AI/claude-figma-stack @ 8813d75 (MIT; read by a review bot and Claude, a review)
 - **Price:** Free (MIT, github.com, checked 2026-10-31); needs a Composio account and key.
 - **Decision:** Skip
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
-a review bot (code read, 8813d75, a review, 2026-10-31): Use with caution; Claude (read 8813d75) confirmed. Runs unattended every 20 min and posts public replies and DMs by keyword, auto-DMs a default reply to every new DM, and the Action commits handled commenter IDs back to your repo (public if your fork is). Composio holds your Instagram token. Deps pinned, no telemetry.
+Claude code read @55b8a6b (2026-11-15): safe with fixes, Skip. It replies and DMs through Composio (official Instagram API). The Action runs every 20 min (lead-monitor.yml:9) and pushes handled-comment IDs to your repo (lines 61-66). A non-empty dm_default DMs every new DM (comment_monitor.py:237-246); comments with no rule are deferred (line 106). Fix: private repo, seed first, dm_default empty, rules only for keywords you chose.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Private fork at 55b8a6b; run comment_monitor.py seed once; in auto_responses.json set dm_default to "" and keep only your own keyword rules; Composio key and IG IDs as GitHub secrets. Or delete the cron line and run scan / send by hand.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the private repo, seed and empty default, so it auto-DMs everyone and publishes commenter IDs.
+Fork publicly and enable the Action as the README says.
 
 ## Install notes
 
-Caution: read the Safety reason and ask the user before installing.
-Claude Code: no steps given (a review bot withholds steps for caution items).
+Ask the user before installing. Private fork at 55b8a6b; run comment_monitor.py seed once; in auto_responses.json set dm_default to "" and keep only your own keyword rules; Composio key and IG IDs as GitHub secrets. Or delete the cron line and run scan / send by hand.

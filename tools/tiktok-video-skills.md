@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-11
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,11 +16,14 @@ a review bot (code read @2a77533, 2026-11-11, no-intake review): Safe. Four mark
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): download the repo at the reviewed commit 2a77533 (git clone https://github.com/iart-ai/tiktok-video-skills, then git checkout 2a77533) and copy the four folders under skills\\ (short-form-video, caption-animation, countdown-video, lower-thirds) into %USERPROFILE%\.claude\\skills\. Do not use scripts/seek-shot.sh as shipped: it runs `npx -y playwright screenshot` (line 17 at 2a77533, line 18 at HEAD), which fetches the latest Playwright and Chromium unpinned; install a pinned Playwright in the Remotion project instead (`npm install -D playwright@1.58.2`, then `npx playwright install chromium`). contact-sheet.sh and probe-mp4.sh only call ffmpeg/ffprobe and are fine (Git Bash or WSL). HEAD moved to 88e7152 (2026-11-11 12:12 ET, README-only change per its commit message) and is not reviewed, so stay on 2a77533. claude.ai, Hermes and Android: no install route recorded.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin and the pinned Playwright.
+/plugin marketplace add iart-ai/tiktok-video-skills
+/plugin install tiktok-video-skills (README), and use scripts/seek-shot.sh as shipped.
 
 ## Install notes
 

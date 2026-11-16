@@ -6,22 +6,24 @@
 - **GitHub repo:** [https://github.com/Ootto-AI/claude-content-skills](https://github.com/Ootto-AI/claude-content-skills)
 - **Price:** Free (MIT)
 - **Decision:** Try
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
-a review bot (code read, c79c330, a review): Use with caution. Bundles vendored Agent-Reach with a "MUST USE" rule on any URL or search that tells the agent to follow a live remote `install.md`, plus cookies and update checks; content-factory and comment-responder set up 24/7 automatic public replies and DMs through Composio; `install.sh` and `mine_hooks.py` are benign.
+Claude code read @691875a (2026-11-15): safe with fixes. Most of the 58 skills are plain writing guides. Three need leaving out: agent-reach (MUST USE on any URL and tells the agent to follow a live remote install.md, skills/agent-reach/SKILL.md:4-11, 59), content-factory and comment-responder (24/7 unattended public replies and DMs through Composio, content-factory/SKILL.md:42, comment-responder/SKILL.md:48). install.sh only copies files.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Clone at 691875a and copy only the skill folders you want into ~/.claude/skills; leave out agent-reach, content-factory and comment-responder. For web research use the Agent Reach row's Safe install.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the skill filter, so the agent follows a live remote installer and wires 24/7 auto-replies.
+bash install.sh from the repo.
 
 ## Install notes
 
-No install steps: the source withholds them until the tool is rated safe. Read the Safety reason and ask the user first.
+Ask the user before installing. Clone at 691875a and copy only the skill folders you want into ~/.claude/skills; leave out agent-reach, content-factory and comment-responder. For web research use the Agent Reach row's Safe install.

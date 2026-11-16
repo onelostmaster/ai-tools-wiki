@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @8b62eb5, a review, 2026-11-02): safe. Loopback only wit
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows Claude Code: install Go 1.22 or later (SKILL.md:17), git clone https://github.com/statico/claudeweaver and git checkout 8b62eb5 (reviewed; still HEAD on 2026-11-15), and copy skills/claudeweaver to %USERPROFILE%\.claude\\skills\\claudeweaver. Skip the Tailscale phone overlay and the iOS Shortcut. Not a claude.ai, Hermes or Android tool.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin.
+npx skills add statico/claudeweaver (README.md:20)
 
 ## Install notes
 

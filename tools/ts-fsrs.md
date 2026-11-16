@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-14
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read of packages/fsrs and packages/srs-kit @f582c1d, ts-fsrs 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows) or a project container: `npm install ts-fsrs@6.0.0 --save-exact` (the reviewed version, still the npm latest on 2026-11-14; its one dependency @open-spaced-repetition/srs-kit is pinned at 1.0.0 by ts-fsrs itself, npm view). Do not add the optional native optimizer @open-spaced-repetition/binding: it is a separate package nobody has reviewed. No keys or network needed at runtime (no fetch or telemetry in src/, per the code read). claude.ai, Hermes and Android: it is a code library, use it inside a project, no install route.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the exact pin and allows the unreviewed native optimizer.
+npm install ts-fsrs @open-spaced-repetition/binding
 
 ## Install notes
 

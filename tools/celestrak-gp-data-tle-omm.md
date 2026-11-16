@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-12
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Read-only public data from the CelesTrak non-profit, no account or key. Strict r
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Nothing to install: plain HTTPS GET to https://celestrak.org/NORAD/elements/gp.php with GROUP, CATNR or NAME and FORMAT=JSON or CSV (answered 200 on 2026-11-15), no key or account, from any platform (claude.ai, Claude Code, Hermes, Android, Windows). Fixes for the official rate rules (GP docs page): cache each query and re-download only when the cached file is over 2 hours old; stop on the first 301/403/404 and tell the user, because more than 50 such errors in 2 hours puts the IP behind CelesTrak's firewall; use the .org domain only.
 
 ## YOLO install
 

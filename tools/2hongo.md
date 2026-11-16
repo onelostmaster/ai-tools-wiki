@@ -5,22 +5,23 @@
 - **GitHub repo:** unknown
 - **Price:** unknown
 - **Decision:** Skip
-- **Safety verdict:** caution
+- **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-15
 
 ## Safety reason
 
-Not code-reviewed. Claude (a project tool scout, 2026-10-31) rejected it because it stores the study record on a third-party server and has no public docs. No URL, maker or type is recorded.
+Claude fix-mode re-review (2026-11-15): unreviewed. No URL, maker or docs were ever recorded, so there is nothing to read; the old caution came from a scout note that it keeps the study record on a third-party server. Unverified: who runs it and what it stores -> Contain: install nothing until someone records its official URL, then review it.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Unreviewed: contain it: do not install until its official URL is recorded and reviewed. Get a review before real use.
 
 ## YOLO install
 
-Not written yet.
+Not offered.
 
 ## Install notes
 
-No install steps: the source withholds them until the tool is rated safe. Read the Safety reason and ask the user first.
+Not code-reviewed yet: ask a review bot or Claude to review it before installing.
+Contain it: do not install until its official URL is recorded and reviewed.
