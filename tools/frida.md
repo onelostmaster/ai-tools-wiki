@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @29016db, a review, 2026-11-02): safe (meta repo o
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows (Python 3.7+, PyPI): in a venv `pip install frida-tools==14.13.1` (PyPI, pulls frida 17.26.3 from the official 17.26.3 release, 2026-11-13). It injects code into the processes you point it at by design. Fix: attach only to your own apps and single-player games (online games' anti-cheat bans injectors). Unverified: the engine (frida-gum, frida-core submodules, not read; review read the meta repo at 29016db) -> contain: venv only, no admin shell, test machine or VM for unknown targets. Android: frida-server needs root; run it only on a rooted test device you can wipe, never your main phone. Claude Code: can write Frida scripts. claude.ai, Hermes: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the version pin, the venv and the test-device limit.
+pip install frida-tools
 
 ## Install notes
 

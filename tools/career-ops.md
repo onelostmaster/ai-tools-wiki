@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Not code-reviewed; the post only names it. README: says no telemetry, never subm
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Unreviewed: contain it: run it in a devcontainer or WSL2 folder with a copy of your CV only (no other personal files), git clone at the row's commit 6210e44 instead of npx @santifer/career-ops init (if you use npx, pin it: 1.40.0 is the latest on npm 2026-11-16), install Chromium only for that folder, skip the Gmail, Notion and Apify add-ons, give it no keys beyond the one AI provider you pick, and treat every draft as a draft: you send applications yourself. Get a review before real use.
 
 ## YOLO install
 

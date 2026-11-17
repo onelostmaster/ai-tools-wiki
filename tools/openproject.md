@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (vendor site and README, 2026-10-31): safe. Official product of Ope
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows (Docker Desktop, local only): docker run -d -p 127.0.0.1:8080:80 --name openproject -e OPENPROJECT_HOST__NAME=localhost:8080 -e OPENPROJECT_HTTPS=false -e SECRET_KEY_BASE=<random, e.g. openssl rand -hex 64> -v C:\\openproject\\pgdata:/var/openproject/pgdata -v C:\\openproject\\assets:/var/openproject/assets openproject/openproject:17 (openproject.org Docker guide, with the port bound to 127.0.0.1 and Windows folders for the data). The guide says this one-container setup turns HTTPS off and is not for production, so keep it on localhost; for access from other devices put it behind a TLS reverse proxy and set OPENPROJECT_HOST__NAME to the real public name (the guide warns about HOST header injection otherwise). Keep SECRET_KEY_BASE out of chats and shared pages.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the localhost-only port and the data folders.
+docker run -it -p 8080:80 -e SECRET_KEY_BASE=<secret> -e OPENPROJECT_HOST__NAME=localhost:8080 -e OPENPROJECT_HTTPS=false openproject/openproject:17 (quick start in the guide; reachable from your network, data lost when the container is removed).
 
 ## Install notes
 

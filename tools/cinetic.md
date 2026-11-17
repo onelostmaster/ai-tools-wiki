@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-11
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @f4bbfc8, 2026-11-11, no-intake review): Safe. One skill
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): git clone https://github.com/Leonxlnx/cinetic.git, git checkout f4bbfc8 (reviewed), copy skills\\cinetic into %USERPROFILE%\.claude\\skills\\ (docs/setup.md manual route) and start a new session. Needs Node, ffmpeg/ffprobe 6+ on PATH (winget install Gyan.FFmpeg), Python 3.11+ in a venv with pip install -r scripts\\requirements.txt, a headless Chromium, and Git Bash for the bash scripts (README). Do not run hyperframes init: it installs its vendor's skills into ~/.claude/skills (docs/setup.md); use new-film.sh --engine hyperframes. Stock keys (PEXELS_API_KEY, UNSPLASH_ACCESS_KEY, PIXABAY_API_KEY) are optional and go in environment variables only; they are sent only to those official APIs (scripts/assets.mjs lines 772-804). It writes history under ~/.cinetic. Sound effects need earshot (separate repo, unreviewed: contain it: install only after its own review).
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin and the manual copy.
+/plugin marketplace add Leonxlnx/cinetic then /plugin install cinetic@cinetic, or npx skills add Leonxlnx/cinetic#v1.5.1 (docs/setup.md; HEAD or the tag, not the reviewed commit).
 
 ## Install notes
 

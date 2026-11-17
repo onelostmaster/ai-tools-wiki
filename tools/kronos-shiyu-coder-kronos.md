@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @67b630e, a review, 2026-11-02): safe. Downloads w
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows (Python 3.10+, README.md:89): download the repo at commit 67b630e, make a venv and `pip install -r requirements.txt` (einops 0.8.1, huggingface_hub 0.33.1, safetensors 0.6.2 pinned; numpy, pandas, torch>=2.0.0 not pinned). Weights load from the official NeoQuasar Hugging Face repos (README.md: NeoQuasar/Kronos-small, Kronos-Tokenizer-base). Verified: finetune/dataset.py:42 uses pickle.load on the data file you give it. Fix: load only pickle files you made yourself, never ones from others. Set HF_HUB_DISABLE_TELEMETRY=1 (huggingface_hub env-var docs). Forecasts are research output, not trading advice. Claude Code: can run it. claude.ai, Hermes, Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin, the venv and the pickle rule.
+git clone the repo and pip install -r requirements.txt
 
 ## Install notes
 

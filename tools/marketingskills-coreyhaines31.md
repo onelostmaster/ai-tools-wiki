@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,14 @@ a review bot (code read @88c79f6, a review, 2026-11-02): safe. The five named sk
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): copy only the skill folders you want (e.g. skills/copywriting, skills/cro) from reviewed commit 88c79f6 into ~/.claude/skills. Markdown and evals JSON only, no hooks or scripts. ai-seo names paid sponsor tools Omnia and Ploy (skills/ai-seo/SKILL.md:411,425; README.md:17): treat those picks as ads.
+Hermes: copy the same folders into ~/.hermes/skills/<category>/.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips picking folders at the reviewed commit.
+/plugin marketplace add coreyhaines31/marketingskills, then install marketing-skills (all 53 skills, README.md:158-166), or npx skills add coreyhaines31/marketingskills -a claude-code (README.md:155).
 
 ## Install notes
 

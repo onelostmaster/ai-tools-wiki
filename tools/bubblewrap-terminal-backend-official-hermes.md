@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @a50b0fe, Hermes a review, 2026-11-02): safe. Hide
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Hermes (Linux, Hermes 0.22.6+; on Windows only inside WSL, untested): `sudo apt install bubblewrap` (0.9.0+), then `hermes plugins install bubblewrap` (catalog install at the reviewed pin) and `hermes config set terminal.backend bubblewrap` (bubblewrap/README.md:17-25). Do not use `hermes plugins install NousResearch/hermes-official-plugins#bubblewrap`: that installs straight from main, not a reviewed pin (bubblewrap/README.md:28-29). Verified: the default profile is "network", which shares the host network with no egress filter (README.md:214, 243-249). Fix: `hermes config set plugins.entries.bubblewrap.settings.profile workspace` (or restricted for read-only work) and switch to network only for jobs that need it. Check with `hermes doctor` that the sandbox probe passes. claude.ai, Claude Code, Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the reviewed-pin install and the no-network profile (keeps host network on).
+hermes plugins install NousResearch/hermes-official-plugins#bubblewrap; hermes config set terminal.backend bubblewrap
 
 ## Install notes
 

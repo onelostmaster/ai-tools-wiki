@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @1e98025, sweep 2026-11-02): safe. Backend listens
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): install Ghidra 12.1.4+ and the GhidraMCP extension, then claude mcp add ghidra -- uvx --from git+https://github.com/LaurieWired/GhidraMCP@1e980252087b2479a21b9ca6d82d5829538651a7 ghidra-mcp --ghidra-server http://127.0.0.1:8080/ (pinned to the reviewed commit; README.md:104 uses unpinned main). Backend is loopback only (BackendHttpServer.java:61). The binary's code goes to the LLM you use: only open software you own or are allowed to reverse-engineer. Hermes: same uvx command. claude.ai, Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin.
+claude mcp add ghidra -- uvx --from git+https://github.com/LaurieWired/GhidraMCP ghidra-mcp --ghidra-server http://127.0.0.1:8080/ (README.md:104)
 
 ## Install notes
 

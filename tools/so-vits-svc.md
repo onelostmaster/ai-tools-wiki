@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,7 +16,7 @@ a review bot (light read of README @730930d, a review, 2026-11-02): not code-rev
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Unreviewed: contain it: archived since 2023 (no fixes will come), so only inside a throwaway VM or WSL2 distro with no API keys or tokens and no personal files, cloned at the pinned commit 730930d, network off after the model download. Voice cloning needs the voice owner's consent. Better: use RVC WebUI or Chatterbox instead. Get a review before real use. claude.ai, Android: no.
 
 ## YOLO install
 

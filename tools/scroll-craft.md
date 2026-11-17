@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-12
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @75d81f7, 2026-11-12, no-intake review): Safe. The plugi
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): git clone https://github.com/nateherkai/scroll-craft.git, git checkout 75d81f7 (reviewed, plugin 0.3.1), then /plugin marketplace add <path to that folder> and /plugin install nateherk-design, with auto-update off. Needs Node, playwright-core in the build folder, Chrome and a full ffmpeg (winget install Gyan.FFmpeg); run scripts/doctor.mjs first. No key needed for builds from your own photos and footage; set KIE_AI_API_KEY (in a .env, never committed) only if you want paid kie.ai generation (kie.mjs lines 47-58 send it only to api.kie.ai and kieai.redpandaai.co). Run serve.mjs without --lan so it stays on 127.0.0.1 (serve.mjs lines 27-29).
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin and the localhost-only preview.
+/plugin marketplace add nateherkai/scroll-craft then /plugin install nateherk-design (README lines 125-129) at HEAD, and serve.mjs --lan.
 
 ## Install notes
 

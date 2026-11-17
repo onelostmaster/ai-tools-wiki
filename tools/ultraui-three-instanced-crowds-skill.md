@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-13
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,14 @@ a review bot (code read @592ae7f, 2026-11-13, no-intake review): Safe. Markdown 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): copy the folder skills/three/three-instanced-crowds from reviewed commit 592ae7f of github.com/AvnehSBhatia/UltraUI into %USERPROFILE%\.claude\\skills\\three-instanced-crowds (one level deep) and start a new session. Markdown only; nothing runs. Copy just this one skill, not all 147 (the README says each adds to every prompt).
+claude.ai: zip that folder (SKILL.md, reference.md, EVAL.md) and upload it under Settings, Capabilities, Skills.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin and the single-folder copy.
+The README route npx skills add (CLAUDE.md line 15; third-party installer, not reviewed), at HEAD.
 
 ## Install notes
 

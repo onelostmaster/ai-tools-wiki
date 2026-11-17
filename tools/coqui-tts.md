@@ -7,20 +7,22 @@
 - **Price:** Free, MPL-2.0 (github.com, checked 2026-11-02)
 - **Decision:** Skip
 - **Safety verdict:** caution
-- **Safety basis:** Official vendor
-- **Last checked:** 2026-11-02
+- **Safety basis:** Code read
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
-a review bot (light read of README @dbf1a08, a review, 2026-11-02): caution. Official Coqui repo but unmaintained (last push 2024-08-16). Downloads models on first use. Code not reviewed.
+Claude code read @dbf1a08 (2026-11-16): caution. Model downloads go through the coqui.gateway.scarf.sh tracking gateway (TTS/.models.json:8); XTTS needs a CPML non-commercial acceptance (TTS/utils/manage.py:312-315); checkpoints load with torch.load and no weights_only (TTS/utils/io.py:51). No fix: unmaintained since 2024-02, so nobody patches it. Use the Chatterbox or Kokoro rows.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Use the Chatterbox or Kokoro rows instead. If you must: own venv, pip install TTS==0.22.0, torch 2.6+ so torch.load defaults to weights_only; non-commercial use only for XTTS.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the venv and pin.
+pip install TTS.
 
 ## Install notes
 

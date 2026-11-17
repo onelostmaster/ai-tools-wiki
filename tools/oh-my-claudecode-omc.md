@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Not code-reviewed; the post only names it. README: large plugin plus an npm CLI 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Unreviewed: contain it: use it only in a throwaway test project inside a devcontainer or WSL2 folder, not your real repos; git clone the repo at the row's commit 98e2c16 and add that folder with /plugin marketplace add <path> instead of the HEAD marketplace; do not install the npm CLI oh-my-claude-sisyphus@latest (if needed, pin it: 5.8.4 is the latest on npm 2026-11-16); give it no Gemini, Codex or Jev keys and keep Claude Code asking before each command (no autopilot loops). Get a review before real use.
 
 ## YOLO install
 

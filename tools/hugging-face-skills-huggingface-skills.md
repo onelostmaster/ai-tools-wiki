@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @25910b3, a review, 2026-11-02): safe, official ve
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): `/plugin marketplace add huggingface/skills` then `/plugin install hf-cli@huggingface/skills` (README.md:30,36). Verified: the hf-cli skill installs the CLI with curl | bash (skills/hf-cli/SKILL.md:6). Fix: install it instead in a venv with `pip install huggingface_hub==2.4.0` (PyPI, 2026-10-29; the version the skill was generated with) and set HF_HUB_DISABLE_TELEMETRY=1 and HF_HUB_DISABLE_UPDATE_CHECK=1 (huggingface_hub env-var docs). Add other skills one by one with `hf skills add <name>`. Trainer and job skills need an HF_TOKEN and run paid HF Jobs: use a read-only token unless you mean to upload or pay. claude.ai, Hermes, Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the pinned pip install, telemetry and update-check opt-outs and the read-only token.
+/plugin marketplace add huggingface/skills; /plugin install hf-cli@huggingface/skills; let it run the curl | bash installer.
 
 ## Install notes
 

@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light read of README/LICENSE @33108c7, a review, 2026-11-02): safe
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: no Windows pip wheel exists (PyPI 2.1b6.dev1438 has Linux x86_64 and macOS wheels only; README.md:23), so use the official Docker image mtgupf/essentia (README.md:25) or WSL2 Ubuntu with pip install essentia==2.1b6.dev1438 in a venv (version pinned, PyPI latest on 2026-11-16). Hermes (Linux): same pinned pip command. AGPL-3.0: sharing a modified app means sharing its source. Android: library build only (README.md:17), no app. claude.ai: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the venv and the version pin.
+pip install essentia (Linux/WSL2, README.md:23)
 
 ## Install notes
 

@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-12
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,14 @@ a review bot (code read @bc99455, 2026-11-12, no-intake review): Safe. The plugi
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): copy skills/file-search from reviewed commit bc99455 of github.com/netresearch/file-search-skill into ~/.claude/skills. This skips the separate netresearch/claude-code-marketplace repo, which was not reviewed, and leaves out the warn-only Bash hook (it only prints search tips; hooks/hooks.json lines 4-15). Install the search tools you want (ripgrep, fd, ast-grep and so on) yourself; none are bundled.
+Hermes: copy the same folder into ~/.hermes/skills/<category>/file-search/.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin and avoiding the unreviewed marketplace repo.
+/plugin marketplace add netresearch/claude-code-marketplace, then /plugin install file-search@netresearch-claude-code-marketplace (README lines 47-48), which also adds the hook (runs through uv).
 
 ## Install notes
 

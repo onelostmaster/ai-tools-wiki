@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Not code-reviewed; the post only names it. README: built to bypass anti-bot chec
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Unreviewed: contain it: install it in a venv inside a devcontainer or WSL2 folder pinned to scrapling==0.5.1 (latest on PyPI 2026-11-16) or the row's commit 26dc85a, use the plain HTTP fetcher first, run scrapling install (browser downloads) only inside that container, give it no saved logins, proxies or CAPTCHA-solver keys, and scrape only sites whose terms allow it. Get a review before real use.
 
 ## YOLO install
 

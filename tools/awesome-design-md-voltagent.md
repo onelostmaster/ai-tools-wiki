@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-13
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @fcc7028, 2026-11-13, no-intake review): Safe. Repo is 1
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Nothing to install and nothing runs. Claude Code (Windows): download one file, github.com/VoltAgent/awesome-design-md/blob/fcc7028/design-md/<brand>/DESIGN.md (reviewed commit; Raw, save) into your project root and ask Claude to follow it (README lines 23, 33). claude.ai and Android (claude.ai app): attach that DESIGN.md to a project or chat. Use it as a style guide only; do not copy the brand's logo or name into your own product.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin.
+Download the DESIGN.md from the main branch (newer files are not reviewed).
 
 ## Install notes
 

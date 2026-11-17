@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot : website safe to browse, no code reviewed. Its MCP server (Pro/Tea
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Nothing to install: open https://mobbin.com in a browser (Windows or Android); the free tier works without paying. Claude Code (Pro/Team only): the Mobbin MCP is hosted and closed source. Unverified: what the server does with your requests -> contain: add it only for design sessions, sign in with your Mobbin account only (no other keys), never paste its key on shared pages, and remove it with `claude mcp remove` when done. claude.ai, Hermes: same MCP limits. Android: website only.
 
 ## YOLO install
 

@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,14 @@ a review bot (file read @d4bb6d2, 2e25bfa, df72375, a review / Hermes #102, 2026
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows (Hermes): download LiquidAI/LFM2.5-24B-A2B-GGUF (Q4_K_M) and the adapter GGUF from harness-hub/LFM2.5-24B-A2B-hermes-GGUF pinned to the reviewed revision 2e25bfa (hf download <repo> --revision <full commit id from the repo History page>); start llama.cpp's official release llama-server.exe -m <base>.gguf --lora <adapter>.gguf -c 65536 --host 127.0.0.1 --port 8080 so it listens only on your PC; in Hermes choose Custom endpoint http://localhost:8080/v1 and keep approvals on. Fix: skip the card's curl|bash Hermes installer (README.md:86); install Hermes by its own official route.
+Claude Code (Windows, local only): serve the claude-code adapter (revision df72375) the same way and set ANTHROPIC_BASE_URL to the local endpoint for that session only. Weights only (safetensors/GGUF, no remote code), so nothing else to fix.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the revision pins, the localhost-only bind and avoiding the card's curl|bash Hermes step.
+Follow the model card as written (README.md:86 curl|bash, then llama serve with the latest adapter files).
 
 ## Install notes
 

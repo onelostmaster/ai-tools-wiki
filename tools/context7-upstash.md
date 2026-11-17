@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light read @ceaf5f9, a review, 2026-11-02): safe. Sends library na
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): claude mcp add context7 -e OTEL_SDK_DISABLED=true -- npx -y @upstash/context7-mcp@4.7.0 (version pinned, npm latest on 2026-11-16; OTEL_SDK_DISABLED=true turns its metrics server off, packages/mcp/src/lib/telemetry-config.ts:1-3). Your library names and questions go to context7.com (README.md:59): never put keys or private code in a question. Hermes: same npx command as a plain MCP server with the same env var. claude.ai: no install (use the hosted connector only if you accept the same data rule). Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the version pin and the telemetry switch.
+claude mcp add context7 -- npx -y @upstash/context7-mcp
 
 ## Install notes
 

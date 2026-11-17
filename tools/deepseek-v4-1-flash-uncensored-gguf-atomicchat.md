@@ -5,24 +5,24 @@
 - **Official URL:** https://huggingface.co/AtomicChat/DeepSeek-V4.1-Flash-1017-Uncensored-GSQ-RCO-GGUF
 - **GitHub repo:** unknown (Hugging Face model AtomicChat/DeepSeek-V4.1-Flash-1017-Uncensored-GSQ-RCO-GGUF @ 4f1d2f7, MIT, updated 2026-10-31)
 - **Price:** Free download, MIT (huggingface.co, checked 2026-11-02); DeepSeek API version $0.30/$1.20 per 1M tokens at peak (api-docs.deepseek.com, checked 2026-11-02)
-- **Decision:** Try
-- **Safety verdict:** caution
+- **Decision:** Skip
+- **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
-a review bot (model card read @4f1d2f7, Hermes a review, 2026-11-02): caution. Refusals removed on purpose (`README.md:94`), so it also follows injected instructions more readily: a bad fit for an agent that reads the web. Needs 64 GB RAM plus a separate 110 GB Engram file (`README.md:48-49,84`). Strata-only runtime, not reviewed.
+a review bot model card read @4f1d2f7, re-checked by Claude (2026-11-16): unreviewed. Refusals were removed on purpose, so it follows injected instructions more readily: no tools or web input. It runs only on the Strata runtime, which nobody has reviewed. Unverified: Strata -> Contain: chat only in the spare account, no tools, files or web. Needs 64 GB RAM plus a 110 GB file.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Unreviewed: contain it: only after Strata gets its own review; then chat-only in the spare account, no tools, files or web. Get a review before real use.
 
 ## YOLO install
 
-Not written yet.
+Not offered.
 
 ## Install notes
 
-Caution: read the Safety reason and ask the user before installing.
-Windows: only via the Strata runtime (not reviewed); 12 GB GPU, 64 GB RAM and a fast SSD per the model card.
+Not code-reviewed yet: ask a review bot or Claude to review it before installing.
+Contain it: only after Strata gets its own review; then chat-only in the spare account, no tools, files or web.

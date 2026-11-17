@@ -6,23 +6,25 @@
 - **GitHub repo:** https://github.com/AgriciDaniel/claude-seo @ 6be93f4 (MIT; not a fork)
 - **Price:** Free, MIT (github.com, checked 2026-11-02); optional extensions use paid APIs (DataForSEO, Firecrawl, Ahrefs, SE Ranking, Moz and others, per `PRIVACY.md`).
 - **Decision:** Try
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
-a review bot (code read @6be93f4, a review, 2026-11-02): caution. A PostToolUse hook runs a local Python schema check after every Edit/Write (`hooks/hooks.json:3-5`; `validate-schema.py` only reads the file). Google sign-in asks for full Search Console (webmasters), Indexing and Analytics read scopes (`scripts/google_auth.py:51-55`). Uninstall tip is curl|bash (`install.sh:211`). PRIVACY.md says no telemetry; none found.
+Claude code read @468ed5b (2026-11-16): safe with fixes. The PostToolUse hook only runs a local schema check after Edit/Write (hooks/hooks.json). Google sign-in now asks for read-only Search Console and Analytics (scripts/google_auth.py:60) and adds Indexing only when you ask (line 552). The README's one-liner is curl into a file then run (README.md:225-231): use the plugin route. Fits the website project.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+/plugin marketplace add AgriciDaniel/claude-seo#468ed5b, /plugin install claude-seo@agricidaniel-claude-seo; grant only the read-only Google scopes; paid SEO API keys in env.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the pin and scope limit.
+Run the curl install script and grant Indexing.
 
 ## Install notes
 
-Caution: read the Safety reason and ask the user before installing.
+Ask the user before installing.
 Claude Code: per its README; avoid the curl|bash install/uninstall; grant Google scopes only if needed.

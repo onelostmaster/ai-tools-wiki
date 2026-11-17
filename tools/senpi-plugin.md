@@ -5,22 +5,23 @@
 - **GitHub repo:** unknown
 - **Price:** unknown
 - **Decision:** Skip
-- **Safety verdict:** caution
+- **Safety verdict:** unreviewed
 - **Safety basis:** No source
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
-Not code-reviewed. No Notion source names it. A third-party listing found by web search (2026-10-31) describes a Senpi plugin that links Hermes to a hosted Hyperliquid trading agent over OAuth, so it could touch real funds. Caution is a review bot's own call.
+Claude fix-mode re-review (2026-11-16): unreviewed. No URL recorded; a third-party listing describes a Hermes plugin that links to a hosted Hyperliquid trading agent over OAuth, which moves real funds. Unverified: its code and the agent's limits -> Contain: never connect a funded wallet or exchange account; review its repo first.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Unreviewed: contain it: do not connect any wallet or exchange account; review its repo first. Get a review before real use.
 
 ## YOLO install
 
-Not written yet.
+Not offered.
 
 ## Install notes
 
-No install steps: the source withholds them until the tool is rated safe. Read the Safety reason and ask the user first.
+Not code-reviewed yet: ask a review bot or Claude to review it before installing.
+Contain it: do not connect any wallet or exchange account; review its repo first.

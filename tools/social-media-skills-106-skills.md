@@ -5,23 +5,23 @@
 - **GitHub repo:** unknown
 - **Price:** unknown
 - **Decision:** Try
-- **Safety verdict:** caution
+- **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
-Not code-reviewed. Claude's a project tool scout (2026-10-31) rated it Add now from its Claude plugin directory listing: community-made, not by Anthropic, price unknown. No safety review is recorded; caution is a review bot's own call.
+Claude fix-mode re-review (2026-11-16): unreviewed. Community plugin seen only in the claude.ai plugin directory; no repo or maker was recorded, so no skill file was read. Unverified: hooks or scripts in the bundle -> Contain: before enabling, open its source from the directory listing and record the repo here for a review.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Unreviewed: contain it: record its repo URL from the claude.ai plugin directory first; enable only after a review. Get a review before real use.
 
 ## YOLO install
 
-Not written yet.
+Not offered.
 
 ## Install notes
 
-Caution: read the Safety reason and ask the user before installing.
-[claude.ai](http://claude.ai): Customize > Plugins (the source's route)
+Not code-reviewed yet: ask a review bot or Claude to review it before installing.
+Contain it: record its repo URL from the claude.ai plugin directory first; enable only after a review.

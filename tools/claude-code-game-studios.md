@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-14
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read of .claude/settings.json, hooks and scripts @05ad7c8, 20
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows, local only; needs Git for Windows for Bash and Python 3, README): git clone https://github.com/Donchitos/Claude-Code-Game-Studios.git my-game, cd my-game, git checkout 05ad7c8 (reviewed commit, framework 1.2.0), set updates.check: false in project.yaml so the session-start hook stops asking the GitHub releases API daily (.claude/hooks/update-check.sh lines 132-139), then open Claude Code in that folder and run /start. Keep .claude/settings.json as shipped: it auto-allows only dir and pytest and denies rm -rf, force push, sudo and .env reads. The notify hook shows Windows balloon tips through powershell.exe; that is all it does.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin and the update-check opt-out.
+git clone https://github.com/Donchitos/Claude-Code-Game-Studios.git my-game and run /start at HEAD (README), daily update check on.
 
 ## Install notes
 

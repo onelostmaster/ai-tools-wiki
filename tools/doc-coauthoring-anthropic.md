@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-14
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,15 @@ a review bot (vendor repo read @ca45fc4, a review, 2026-11-02): safe. Anthropic'
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+claude.ai: already built in on paid plans (anthropics/skills README.md:55), nothing to install.
+Claude Code (Windows): copy only skills/doc-coauthoring from reviewed commit ca45fc4 into ~/.claude/skills (HEAD is e4bb5d9 on 2026-11-16, not reviewed). One SKILL.md, no scripts.
+Hermes: copy the same folder into ~/.hermes/skills/<category>/doc-coauthoring/ (<category> = any folder name you choose).
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips copying only the one folder at the reviewed commit.
+/plugin marketplace add anthropics/skills, then /plugin install example-skills@anthropic-agent-skills (installs all 12 example skills at HEAD, .claude-plugin/marketplace.json).
 
 ## Install notes
 

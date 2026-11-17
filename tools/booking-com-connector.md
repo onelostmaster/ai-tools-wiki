@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,7 +16,9 @@ Booking.com (official vendor connector, made by Booking BV; not code-reviewed; d
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+claude.ai and Android: already connected on the Claude account; elsewhere add Booking.com from claude.com/connectors. One search-only tool (accommodations_search), no account access or bookings inside Claude (developers.booking.com), so nothing to fix. To remove it, disconnect it in Settings > Connectors.
+Claude Code: not supported (Booking.com docs).
 
 ## YOLO install
 

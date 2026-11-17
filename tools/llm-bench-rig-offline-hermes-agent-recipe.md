@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @7c302ca, Hermes a review, 2026-11-01): Looks safe as a 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Nothing to install; it is a write-up to read (reports/offline-hermes.md). To reproduce on Windows, use Docker Desktop with WSL2 and keep the repo's container settings as written. Fix: run the agentic parts only inside those containers, because they execute model-written code by design (lib/agentic/sandbox.py:24, tools_repo.py:131-135). Do not run pheromone/05-pheromone-pf.sh: it sources the author's private night-lib.sh (:25) and kills and restarts local servers (:98-111). Pin the reviewed commit 7c302ca (git checkout 7c302ca).
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the container-only rule, the commit pin and the pheromone/05 ban.
+Run the repo scripts on your machine as the reports describe.
 
 ## Install notes
 

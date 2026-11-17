@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light read @a7ba5b9, a review, 2026-11-02): safe. Allowed tools ar
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): /plugin install code-review@claude-plugins-official (Anthropic official directory); needs the GitHub CLI signed in (gh auth login). Run /code-review without --comment: it then posts nothing to the PR (commands/code-review.md:66) and only shows results in your terminal. Launches Opus and Sonnet subagents (code-review.md:56), so it spends your plan or API tokens. claude.ai, Hermes, Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips leaving --comment off.
+/code-review --comment (posts its review on the PR).
 
 ## Install notes
 

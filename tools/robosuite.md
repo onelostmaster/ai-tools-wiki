@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,7 +16,7 @@ a review bot (light read of README/LICENSE @5ce6643, a review, 2026-11-02): not 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Unreviewed: contain it: in a fresh conda env (conda create -n robosuite python=3.10, per robosuite.ai installation docs), pip install robosuite==1.5.2 (version pinned, PyPI latest on 2026-11-16; reviewed repo commit 5ce6643 is still HEAD), no API keys in that environment. It pulls pynput (keyboard/mouse listener, used for teleoperation, per PyPI requires_dist), so run it only in that env. Windows: officially macOS and Linux; the docs' Windows steps say to copy mujoco.dll from site-packages\\mujoco into site-packages\\robosuite\\utils if you get "mujoco.dll not found". Get a review before real use. claude.ai, Hermes, Android: no.
 
 ## YOLO install
 

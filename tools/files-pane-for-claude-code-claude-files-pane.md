@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read of hooks/ @3794eea, a review, 2026-11-02; Claude spot-ch
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): claude plugin marketplace add Marius-Adam/claude-files-pane#3794eea (reviewed commit; HEAD is c6ccff9 on 2026-11-11, not reviewed), then claude plugin install files-pane@marius-adam; restart and run /files. The plugin source is "./" (.claude-plugin/marketplace.json), so the pin fixes the reviewed code. Runs only read-only git and your chosen editor (hooks/disk.ts:28-76, hooks/editors.ts:35-149). Uninstall: claude plugin uninstall files-pane.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin.
+claude plugin marketplace add Marius-Adam/claude-files-pane, then claude plugin install files-pane@marius-adam (README Installation; takes HEAD).
 
 ## Install notes
 

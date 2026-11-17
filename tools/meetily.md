@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (pattern scan plus targeted reads @a2cb62e, a review), 2026-11-01; 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: download meetily_0.4.1_x64-setup.exe from github.com/Zackriya-Solutions/meetily/releases/tag/v0.4.1 (released 2026-09-12, two days after the reviewed commit a2cb62e; v0.5.0 from 2026-11-14 is not reviewed) and run it; needs an AVX2 CPU (README). Leave analytics off: PostHog is opt-in and off by default (AnalyticsProvider.tsx:34-53). Turn off auto-update in its settings if you want to stay on the reviewed version (unverified: whether the app has that setting; if not, it will offer v0.5.0). Get consent from everyone before recording a call.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the v0.4.1 pin.
+Install meetily_0.5.0_x64-setup.exe from the latest release.
 
 ## Install notes
 

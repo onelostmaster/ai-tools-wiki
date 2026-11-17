@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-14
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,12 +16,14 @@ a review bot (code read @5cc4aad, 2026-11-14, no-intake review): Safe, with cave
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): git clone https://github.com/Egonex-AI/Understand-Anything.git, git checkout 5cc4aad (reviewed), then in Claude Code /plugin marketplace add <path to that folder> and /plugin install understand-anything, with plugin auto-update off. Needs Node.js; the first /understand run runs pnpm install (lockfile pinned) and builds the core package inside the plugin folder. Leave autoUpdate off in .understand-anything/config.json: when on, its hooks tell Claude to re-analyse after every commit without asking (post-tool-use-auto-update.mjs lines 17-24, 48-52). In /understand-dashboard say no to the npx --yes release tarball (SKILL.md lines 110-116, not reviewed) and use the local build. Do not use the install.sh / install.ps1 one-liners (they pull unpinned main). It reads your whole repo, so scope it to a subfolder on big projects, and keep .understand-anything out of shared commits.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin, the tarball refusal and auto-update off.
+/plugin marketplace add Egonex-AI/Understand-Anything, /plugin install understand-anything (README) at HEAD, accept the npx dashboard tarball and turn on --auto-update.
 
 ## Install notes
 
-Code-reviewed by a review bot @5cc4aad (safe, with the caveats in Safety reason). Claude Code on Windows: in Claude Code type /plugin marketplace add Egonex-AI/Understand-Anything, then /plugin install understand-anything (README). Keep plugin auto-update off so a later version is not pulled in without a new review. Needs Node.js; the first /understand run may run pnpm install and build the core package inside the plugin folder. Do not use the curl ... install.sh | bash or install.ps1 one-liners; they are for other agents and fetch the latest main. Leave --auto-update off unless you want it: when on, its hooks tell Claude to re-analyse the graph after every commit without asking, which spends tokens. /understand-dashboard first tries npx --yes on a prebuilt viewer tarball from the GitHub release; say no to that and let it use the local build if you want only reviewed code. It reads your whole repo (large token use; scope to a subfolder on big projects) and writes a .understand-anything folder; do not commit that folder in a private project if you share the repo. claude.ai and Android: not a fit (needs a local computer).
+Code-reviewed by a review bot @5cc4aad (safe, with the caveats in Safety reason). Claude Code on Windows: in Claude Code type /plugin marketplace add Egonex-AI/Understand-Anything, then /plugin install understand-anything (README). Keep plugin auto-update off so a later version is not pulled in without a new review. Needs Node.js; the first /understand run runs pnpm install and build the core package inside the plugin folder. Do not use the curl ... install.sh | bash or install.ps1 one-liners; they are for other agents and fetch the latest main. Leave --auto-update off unless you want it: when on, its hooks tell Claude to re-analyse the graph after every commit without asking, which spends tokens. /understand-dashboard first tries npx --yes on a prebuilt viewer tarball from the GitHub release; say no to that and let it use the local build if you want only reviewed code. It reads your whole repo (large token use; scope to a subfolder on big projects) and writes a .understand-anything folder; do not commit that folder in a private project if you share the repo. claude.ai and Android: not a fit (needs a local computer).

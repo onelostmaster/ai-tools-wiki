@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot (code read of launch scripts @251f360, a review, 2026-11-02): safe.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: install a 64-bit JDK 25, download ghidra_12.2_PUBLIC_20261016.zip (release Ghidra_12.2_build, reviewed commit 251f360) from github.com/NationalSecurityAgency/ghidra/releases, check its SHA-256 against the one on the release page, unzip to a user folder and run ghidraRun.bat. Fix: use 12.2, not an old version (README.md:23-26 warns old versions have known vulnerabilities). Open untrusted binaries only in a VM. Only analyse software you own or may analyse.
 
 ## YOLO install
 

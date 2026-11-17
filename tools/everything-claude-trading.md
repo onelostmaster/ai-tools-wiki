@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,14 @@ a review bot (code read @9a8fcfc) and Claude (@9a8fcfc), 2026-11-01: Looks safe.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): copy only the skill folders you want (skills/<category>/<skill>, each with a SKILL.md) from reviewed commit 9a8fcfc into %USERPROFILE%\.claude\\skills\\ and start a new session. Copying skills only also leaves out the 4 warn-only Node hooks (they read stdin and print warnings, hooks/hooks.json). Knowledge only: it places no trades.
+Hermes: copy the same folders into ~/.hermes/skills/<category>/.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin and the skills-only copy.
+Install the whole repo at HEAD with the README's claude install-skill or plugin route (not confirmed to work), hooks included. Even here, do not add mcp-configs/mcp-servers.json: the two unregistered npm names are a takeover risk, not a setting.
 
 ## Install notes
 

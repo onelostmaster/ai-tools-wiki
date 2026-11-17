@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot : looks safe to browse: a website, nothing to install, no code revi
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Nothing to install: open https://brandguidelines.net in a browser (Windows or Android). Browse without an account; nothing to fix. Templates are paid downloads; open them in your own design app. claude.ai, Claude Code, Hermes: no install (use it as a reference you look at).
 
 ## YOLO install
 

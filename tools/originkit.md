@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot : looks safe to browse; the components are code you copy into your 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Nothing to install: open https://originkit.dev in a browser (Windows or Android). Unverified: the component code you copy into your site (not reviewed, no official repo) -> contain: read each component before pasting it, paste it into a branch or test project first, and never put keys in it. Claude Code: paste a component and ask Claude to review it before you keep it. claude.ai, Hermes: no install.
 
 ## YOLO install
 

@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @d3b0d5b, a review, 2026-11-02): safe. Only talks 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows (Rust + Ollama): download the repo at commit d3b0d5b, `cargo build`, then `set OLLAMA_HOST=http://localhost:11434` and `cargo run -p schedule-experiment` (README.md:25-41), with Ollama serving qwen2.5:0.5b, 1.5b and 3b (README.md:72). The crates use edition 2024, so you need Rust 1.85 or newer (README.md:71 says 1.75+). Unverified: crate dependency versions, because no Cargo.lock is committed (repo root, GitHub contents API) -> contain: build it in WSL or a devcontainer with no keys, run `cargo generate-lockfile` once and keep that lock file for later builds. Keep OLLAMA_HOST on localhost (crates/schedule-experiment/src/main.rs:26). Claude Code: can build and run it for you. claude.ai, Hermes, Android: no (Hermes: idea source only).
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin, the container and the kept lock file.
+git clone https://github.com/Govcraft/pressure-field-experiment; cargo build; cargo run -p schedule-experiment
 
 ## Install notes
 

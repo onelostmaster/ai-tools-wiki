@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-12
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,14 @@ a review bot (code read @10ca79c, 2026-11-12, no-intake review): Safe. The plugi
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): copy only the skills/ folders you want from reviewed commit 10ca79c of github.com/charlie947/social-media-skills into %USERPROFILE%\.claude\\skills\\<name> and start a new session (this leaves out the author's tests/test-codex-portability.py and validate-skills.sh, which the marketplace route copies). Nothing runs at install. reels-scripting needs Node plus your own APIFY_API_TOKEN and GOOGLE_AI_API_KEY (paid) in environment variables, never in chat; it asks before costs (SKILL.md lines 22-60). Drafts never publish (post-writer SKILL.md line 15): you post yourself.
+claude.ai: zip one skill folder and upload it in Customize > Skills.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin and the folder copy.
+/plugin marketplace add charlie947/social-media-skills then /plugin install social-media-skills (README lines 113-122) at HEAD.
 
 ## Install notes
 

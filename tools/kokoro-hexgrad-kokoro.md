@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,14 @@ a review bot (code read @dfb907a, a review, 2026-11-01): Looks safe. Plain infer
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: in a fresh virtual environment (python -m venv kokoro-env, then activate it) run pip install kokoro==0.9.4 soundfile (0.9.4 is the newest on PyPI on 2026-11-16; repo HEAD is the reviewed commit dfb907a), then install espeak-ng from the .msi on github.com/espeak-ng/espeak-ng/releases (README.md:89-96). On first use it downloads the model and voices from Hugging Face (kokoro/model.py:46,67; pipeline.py:152) and loads them with torch.load weights_only=True (model.py:68, pipeline.py:157), so nothing else to fix.
+Claude Code (Windows): same venv install, called from a local script.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the virtual environment and the version pin.
+pip install kokoro soundfile into your main Python, as the README shows.
 
 ## Install notes
 

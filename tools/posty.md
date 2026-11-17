@@ -4,22 +4,23 @@
 - **GitHub repo:** unknown
 - **Price:** unknown
 - **Decision:** Skip
-- **Safety verdict:** caution
+- **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
-Not code-reviewed. Claude's a project tool scout (2026-10-31) only names it in its skip list of posting and scheduling tools; no URL, maker or type is recorded. The caution rating is a review bot's own and stays until someone reviews it.
+Claude fix-mode re-review (2026-11-16): unreviewed. Named only in a skip list of posting tools; no URL, maker or type was recorded, so nothing can be read. Unverified: what it is -> Contain: install nothing until its official URL is recorded and reviewed.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Unreviewed: contain it: do not install until its official URL is recorded and reviewed. Get a review before real use.
 
 ## YOLO install
 
-Not written yet.
+Not offered.
 
 ## Install notes
 
-No install steps: the source withholds them until the tool is rated safe. Read the Safety reason and ask the user first.
+Not code-reviewed yet: ask a review bot or Claude to review it before installing.
+Contain it: do not install until its official URL is recorded and reviewed.

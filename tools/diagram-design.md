@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-12
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,14 @@ a review bot (code read @f2496ac, 2026-11-12, no-intake review): Safe. The plugi
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): copy only skills/diagram-design from reviewed commit f2496ac of github.com/cathrynlavery/diagram-design into %USERPROFILE%\.claude\\skills\\diagram-design and start a new session (the /plugin route installs HEAD, not the reviewed commit). Do not run the repo-root scripts/ folder (maintainer tests and builds). PNG export is optional: pip install playwright and playwright install chromium (README line 517). Generated diagrams request fonts from Google Fonts when opened; nothing else leaves your PC.
+claude.ai: zip that folder and upload it under Settings, Capabilities, Skills.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin.
+/plugin marketplace add cathrynlavery/diagram-design, then /plugin install diagram-design@diagram-design (README lines 60-61), with marketplace auto-update on as the README suggests (lines 66-71): new versions install without a review.
 
 ## Install notes
 

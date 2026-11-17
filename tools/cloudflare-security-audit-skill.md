@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-14
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @c1c8a8c, a review, 2026-11-02): safe, official ve
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): download the repo at commit c1c8a8c and copy the folder skills/security-audit into %USERPROFILE%\.claude\\skills\\ (or the project's .claude\\skills). This skips the third-party Skills CLI (README.md:51-56 uses npx skills add). Needs Node.js for its validators, which only read files (validate-findings.cjs:11-13). Verified: it runs the target's builds and tests only inside an OS sandbox with networking off; without one it leaves findings as needs_validation (README.md:86-90, SKILL.md:31-35). Fix: audit only code you own, and give it a sandbox (devcontainer or VM, no network, no keys) if you want findings confirmed. Reports go to ~/security-audit-skill/<repo>/run-N by default (README.md). claude.ai, Hermes, Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin and the sandbox.
+npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit --global
 
 ## Install notes
 

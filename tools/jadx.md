@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @c5a451e, a review, 2026-11-02): safe. The GUI che
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: download jadx-gui-1.5.6-with-jre-win.zip (bundles Java) or jadx-1.5.6.zip from the official GitHub release v1.5.6 (2026-07-10) and unzip to its own folder. Verified: the GUI checks for updates on start, on by default (JadxSettingsData.java:53, JadxUpdate.kt:39). Fix: untick the check-for-updates option in Preferences on first start. Unverified: the 1.5.6 binaries (review read source at c5a451e) -> contain: open only APKs you are allowed to decompile. Android: no (it runs on the PC on APK files). Claude Code: can run the jadx CLI. claude.ai, Hermes: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips turning off the update check (the GUI keeps contacting GitHub).
+Unzip the latest jadx-gui release and run it.
 
 ## Install notes
 

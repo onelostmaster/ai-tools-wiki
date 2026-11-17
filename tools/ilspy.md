@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @baeadcd, a review, 2026-11-02): safe. Weekly upda
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: download ILSpy_windows_selfcontained_11.2.0.10050-x64.zip (or the x64 .msi) from the official GitHub release v11.2 (2026-10-27) and unzip to its own folder. Verified: it checks icsharpcode.github.io/ILSpy/updates.xml automatically, on by default (UpdateSettings.cs:38,45; UpdateService.cs:59). Fix: turn off the automatic update check in its settings on first start; for ilspycmd add --disable-updatecheck (IlspyCmdProgram.cs:235). Unverified: the v11.2 binaries (review read source at baeadcd) -> contain: open only assemblies you are allowed to decompile. claude.ai, Claude Code, Hermes, Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips turning off the update check (it keeps contacting icsharpcode.github.io).
+Install the latest ILSpy .msi from the release page and run it.
 
 ## Install notes
 

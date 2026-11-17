@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (vendor README and pricing page, 2026-11-01): safe. Official produc
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows (Docker Desktop, local only): install Docker Desktop yourself first (winget install Docker.DockerDesktop). Do not pipe install.ps1 into iex: when Docker is missing it relaunches itself as Administrator and installs Docker Desktop and WSL with winget (deployment/docker_compose/install.ps1 lines 626-632, main on 2026-11-16), and the Linux/macOS install_onyx.sh fetches the newest onyx-cli and adds ~/.local/bin to your shell profile (lines 12-19). Instead download docker-compose.yml and env.template from github.com/onyx-dot-app/onyx/tree/main/deployment/docker_compose, copy env.template to .env, set IMAGE_TAG=v5.1.3 (latest release, 2026-11-16 ET) instead of latest (docker-compose.yml line 48), and change the nginx ports (lines 510-511) to "127.0.0.1:80:80" and "127.0.0.1:3000:80" so only your PC can reach it. Then docker compose up -d and open http://localhost:3000. Connect only the document sources you want indexed; queries go to the LLM provider you configure. Claude Code: add your Onyx server's MCP endpoint (Onyx docs).
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the version pin, the localhost-only ports and installing Docker yourself.
+Windows: irm https://raw.githubusercontent.com/onyx-dot-app/onyx/main/deployment/docker_compose/install.ps1 | iex (install.sh line 137). Linux/macOS: curl -fsSL https://onyx.app/install_onyx.sh | bash (README), image tag latest, ports open on all interfaces.
 
 ## Install notes
 

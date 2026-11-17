@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @f74c1d7, a review, 2026-11-02): safe. No phone-ho
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: download rizin-windows-static-v0.9.1.zip from the official GitHub release v0.9.1 (2026-06-29), unzip to its own folder and add its bin folder to PATH for your user only. No phone-home found in the reviewed f74c1d7. Unverified: the release binaries -> contain: open only files you are allowed to analyse, and analyse unknown malware samples only inside a VM. Claude Code: can drive the rizin CLI once it is on PATH. Android: official android-aarch64 tarball exists, but use it only under Termux on a test device. claude.ai, Hermes: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the per-user PATH and the VM for unknown samples.
+Unzip the latest Windows release and run rizin.exe.
 
 ## Install notes
 

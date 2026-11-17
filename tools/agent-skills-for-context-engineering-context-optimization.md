@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-12
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,14 @@ a review bot (code read @9ff0c99, 2026-11-12, no-intake review): Safe. The plugi
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): /plugin marketplace add muratcankoylan/Agent-Skills-for-Context-Engineering#9ff0c99 (reviewed commit), then /plugin install context-engineering@context-engineering-marketplace (README lines 103-117). 18 text skills, no hooks, MCP server or commands (.plugin/plugin.json line 8). The researcher/ folder is copied too because the marketplace source is the repo root: never run its install.sh or research loop (a macOS launchd scheduler for the author's own system).
+Hermes: copy the skill folders you want from 9ff0c99 into ~/.hermes/skills/<category>/.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin.
+/plugin marketplace add muratcankoylan/Agent-Skills-for-Context-Engineering, then /plugin install context-engineering@context-engineering-marketplace.
 
 ## Install notes
 

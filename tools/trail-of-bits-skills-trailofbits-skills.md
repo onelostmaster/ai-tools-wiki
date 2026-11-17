@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @711af09, a review, 2026-11-02): safe. Some plugin
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): `/plugin marketplace add trailofbits/skills` (README.md:12), then install only the plugins you need from /plugin menu. Verified: modern-python adds PATH shims (setup-shims.sh:24) and gh-cli adds hooks that intercept GitHub fetches and delete the clones afterwards (cleanup-clones.sh:17-21). Fix: leave modern-python and gh-cli out unless you want those changes. Semgrep runs with --metrics=off, nothing to switch off. Unverified: the shims and hooks on Windows (they are bash scripts) -> contain: use them only in WSL or Git Bash. claude.ai, Hermes, Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips choosing plugins (installs modern-python shims and gh-cli hooks too).
+/plugin marketplace add trailofbits/skills, then install every plugin.
 
 ## Install notes
 

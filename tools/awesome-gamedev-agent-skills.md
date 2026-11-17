@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-13
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,14 @@ a review bot (code read @c6ca6c4, 2026-11-13, no-intake review): Safe. 80 SKILL.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): from reviewed commit c6ca6c4 of github.com/gamedev-skills/awesome-gamedev-agent-skills copy only the skill folders you need (for example skills/router and skills/web-engines/threejs-scene-setup) into %USERPROFILE%\.claude\\skills\\<name> and start a new session; the marketplace route installs HEAD. Helper scripts need Python 3 (create-game-assets also needs Pillow); skip package_macos_app.py (Mac-only). Say no when a skill asks to run npx @gltf-transform/cli or playwright (threejs-gltf-loading lines 29, 123; pixijs-rendering line 134; not reviewed). Skip the npx skills add installer. No keys; type store logins for steam-publish or itch-publish yourself.
+claude.ai: zip one skill folder and upload it under Settings, Capabilities, Skills.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin and saying no to the npx tools.
+claude plugin marketplace add gamedev-skills/awesome-gamedev-agent-skills then claude plugin install gamedev@awesome-gamedev-agent-skills (all 80 skills, HEAD; README lines 96-108).
 
 ## Install notes
 

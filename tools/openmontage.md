@@ -6,22 +6,24 @@
 - **GitHub repo:** [https://github.com/calesthio/OpenMontage](https://github.com/calesthio/OpenMontage) (not in any Notion source; a web search names it the original repo, checked 2026-10-31)
 - **Price:** Free (open source); license unconfirmed (not in any Notion source)
 - **Decision:** Skip
-- **Safety verdict:** caution
-- **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-10-31
+- **Safety verdict:** safe
+- **Safety basis:** Code read
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
-Not code-reviewed. No source reviewed its code or gave a safety verdict; a project rejected it for fit only (a full replacement pipeline). Caution is a review bot's own call.
+Claude targeted read @2e003e6 (2026-11-16; large repo): safe with fixes, Skip (a project has its own pipeline). AGPL-3.0 (LICENSE). No telemetry, curl|bash or shell=True found in the code. Paid model tools take a --max-credits cap and config.yaml has a budget block (line 9). Fix: set the budget before the first run and keep keys in .env.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Clone at 2e003e6; set the budget in config.yaml before the first run; API keys in .env, never in chat; npm install (not -g) inside remotion-composer.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the budget, so paid tools run uncapped.
+Clone and run as the README says.
 
 ## Install notes
 
-No install steps: the source withholds them until the tool is rated safe. Read the Safety reason and ask the user first.
+Ask the user before installing. Clone at 2e003e6; set the budget in config.yaml before the first run; API keys in .env, never in chat; npm install (not -g) inside remotion-composer.

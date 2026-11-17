@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,7 +16,7 @@ a review bot (light read of README/LICENSE @62ff3a5, a review, 2026-11-02): not 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Unreviewed: contain it: in a fresh venv (Python 3.9+), pip install mani_skill==3.0.1 torch (version pinned, PyPI latest on 2026-11-16; README.md:34-36 at 62ff3a5, still HEAD), no API keys or tokens in that environment, and set up Vulkan per the official installation docs (README.md:39). Windows: CPU sim and rendering only, no GPU sim (README "System Support" table; SAPIEN 3.0.3 has win_amd64 wheels); WSL2 has no rendering. Get a review before real use. claude.ai, Hermes, Android: no (Hermes Linux works with an NVIDIA GPU after a review).
 
 ## YOLO install
 

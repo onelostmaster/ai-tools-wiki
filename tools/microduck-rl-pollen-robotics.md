@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,7 +16,7 @@ a review bot (repo metadata via GitHub API, a review, 2026-11-02): not code-revi
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Unreviewed: contain it: clone at the checked commit (git clone https://github.com/pollen-robotics/microduck_rl, then git checkout 0daab16, develop HEAD on 2026-11-16) inside a WSL2 or Docker container with an NVIDIA GPU, no API keys or tokens in that environment, and turn off any experiment logging that sends runs online. Get a review before real use. claude.ai, Hermes, Android: no.
 
 ## YOLO install
 

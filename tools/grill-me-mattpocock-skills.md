@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,14 @@ a review bot (code read @4ae2317, a review, 2026-11-02): safe. Markdown only; di
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): copy skills/productivity/grill-me and skills/productivity/grilling from reviewed commit 4ae2317 into ~/.claude/skills (grill-me alone is only a stub, skills/productivity/grill-me/SKILL.md:7). Runs only when you type /grill-me (disable-model-invocation).
+Hermes: copy the same two folders into ~/.hermes/skills/<category>/.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips copying only the two folders at the reviewed commit; the plugin updates itself from main (README.md:27).
+claude plugin install mattpocock-skills@claude-plugins-official (README.md:35).
 
 ## Install notes
 

@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-09
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @b860c79, 2026-11-09, no-intake review): Safe. Four mark
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): skip the curl | bash one-liner (install.sh runs unpinned npx create-video@latest and npx -y skills add, lines 41-48). Make a Remotion project yourself (npx create-video@latest, Node needed), download the repo at reviewed commit b860c79 (github.com/Liamrjohnston/remotion-motion-graphics-skill/archive/b860c79.zip) and copy the four folders under skills/ into that project's .claude\\skills folder; add the official Remotion skill from remotion-dev/skills the same way (not reviewed). Stage 5 needs ffmpeg/ffprobe on PATH (winget install Gyan.FFmpeg). The skills make the agent read 1 to 3 official web pages for logos and screenshots and cache them under .promptible in the project. Remotion licensing applies (see the Remotion row).
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin and the manual copy.
+Run the README one-liner curl ... install.sh | bash in Git Bash or WSL (bash script), which installs both skill sets at HEAD with npx -y.
 
 ## Install notes
 

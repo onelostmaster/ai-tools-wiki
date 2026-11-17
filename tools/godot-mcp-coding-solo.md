@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @1209744, sweep 2026-11-02): safe. Calls Godot wit
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): claude mcp add godot -e GODOT_PATH="C:\\Path\\To\\Godot.exe" -- npx -y @coding-solo/godot-mcp@0.1.1 (version pinned, npm latest on 2026-11-16; GODOT_PATH per README.md:100). No network calls found and no shell (src/index.ts:509-528). run_project runs your own game code (nothing to fix; it is your code). Needs Node.js and Godot. Hermes: same npx command as a plain MCP server. claude.ai, Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the version pin.
+claude mcp add godot -- npx @coding-solo/godot-mcp (README.md:92)
 
 ## Install notes
 

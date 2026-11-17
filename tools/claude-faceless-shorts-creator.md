@@ -5,23 +5,23 @@
 - **GitHub repo:** unknown
 - **Price:** unknown
 - **Decision:** Skip
-- **Safety verdict:** caution
+- **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
-Not code-reviewed. Claude's a project tool scout (2026-10-30) rejected it as inspiration only (same stack as a project); no repo, URL or safety finding is recorded. The caution rating is a review bot's own and stays until someone reviews it.
+Claude fix-mode re-review (2026-11-16): unreviewed. Rejected by a scout as inspiration only; no repo, URL or finding was recorded, so nothing can be read. Unverified: what it installs -> Contain: install nothing until its repo is recorded and reviewed.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Unreviewed: contain it: do not install until its repo is recorded and reviewed. Get a review before real use.
 
 ## YOLO install
 
-Not written yet.
+Not offered.
 
 ## Install notes
 
-No install steps: the source withholds them until the tool is rated safe. Read the Safety reason and ask the user first.
-Not code-reviewed yet: ask a review bot or Claude to review it before installing (no repo is recorded).
+Not code-reviewed yet: ask a review bot or Claude to review it before installing.
+Contain it: do not install until its repo is recorded and reviewed.
