@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read, a project a review, 2026-10-29): Looks safe. About 800 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): git clone https://github.com/Yusuke710/manim-skill, then git checkout the commit you reviewed so later pushes do not arrive unreviewed; install the README's Python packages inside a venv (README:15-22). The viewer binds 127.0.0.1 only and the Kokoro voice model downloads once from Hugging Face on first use ; no keys needed.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin and venv.
+git clone https://github.com/Yusuke710/manim-skill and install the README packages globally (README:15-22).
 
 ## Install notes
 

@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @0f287ed, game-sfx 0.1.0, 2026-11-02, no-intake review):
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): git clone https://github.com/GhazaGG/Game-Sound-Effect-for-Claude.git, git checkout 0f287ed (reviewed, game-sfx 0.1.0), then /plugin marketplace add <path to that folder> and /plugin install game-sfx@game-sfx with auto-update off. Needs Python 3.8+; the synth is standard-library only and works offline. Only for the sample pipeline: install ffmpeg and set FREESOUND_API_KEY yourself as a user environment variable (freesound.py line 26 also reads it from the Windows user registry), never in chat.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin.
+/plugin marketplace add GhazaGG/Game-Sound-Effect-for-Claude then /plugin install game-sfx@game-sfx (README) at HEAD.
 
 ## Install notes
 

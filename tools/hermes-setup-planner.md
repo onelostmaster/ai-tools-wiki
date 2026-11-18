@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Not code-reviewed. A free third-party web page (no sign-up) that asks five quest
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Unreviewed: contain it: it is a web page only (https://hermeswatcher.com/planner); nothing installs. Type no keys, passwords or personal details into it; unverified: the site's claim that answers stay in the page URL . Get a review before real use.
 
 ## YOLO install
 

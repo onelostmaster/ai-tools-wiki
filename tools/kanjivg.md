@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Not code-reviewed. Kanji stroke-order dataset (SVG files, CC BY-SA 3.0) listed u
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Unreviewed: contain it: download the SVG data only from the official releases on https://github.com/KanjiVG/kanjivg and use the files as data (no scripts to run). It needs no keys and no network after download. Get a review before real use.
 
 ## YOLO install
 

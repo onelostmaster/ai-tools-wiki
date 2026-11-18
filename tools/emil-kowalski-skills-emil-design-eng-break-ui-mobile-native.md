@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read, a81dbca, a project a review): Looks safe. Text-only ski
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): git clone https://github.com/emilkowalski/skills, git checkout a81dbca (the reviewed commit), then copy the skill folders you want from skills\\ into %USERPROFILE%\.claude\\skills\\ and start a new session. This skips the skills CLI and its install telemetry to skills.sh. remove-animations deletes animation code by design, so run it on committed work.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin and folder copy.
+npx skills@latest add emilkowalski/skills (README route; sends install telemetry to skills.sh unless DISABLE_TELEMETRY=1 is set).
 
 ## Install notes
 

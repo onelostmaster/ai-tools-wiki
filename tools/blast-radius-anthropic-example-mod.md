@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read, a review, 569c528, 2026-10-31) and Claude (re-read, a p
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (local only), Windows: git clone https://github.com/anthropics/claude-code-playground.git, git checkout 569c528 (reviewed), cd claude-code-playground\\claude-code\\mods, claude plugin marketplace add ./, then claude plugin install blast-radius@claude-code-playground-mods --scope user (mods/README.md). Unverified: whether it works on Windows; it shells to bash and sleep, so have Git Bash on PATH and test it on a throwaway project first. Keep it out of unattended runs: with nobody at the keyboard it refuses a held command after 10 minutes.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin and the throwaway-project test.
+Install from the repo HEAD as in mods/README.md.
 
 ## Install notes
 

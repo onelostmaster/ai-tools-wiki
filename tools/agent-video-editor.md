@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot (code read @8e32c0a, plugin 2.0.0, 2026-11-03, no-intake review): L
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): /plugin marketplace add kmilo93sd/agent-video-editor, then /plugin install agent-video-editor@agent-video-editor (README; reviewed @8e32c0a, plugin 2.0.0). No hooks, MCP or install scripts. Tutorial templates need Node 20+, ffmpeg and Playwright; ElevenLabs and Gemini keys go only in the project .env (gen-voice.mjs:31-33), never in chat. Check each asset's line in library/LICENSES.md before reuse.
 
 ## YOLO install
 

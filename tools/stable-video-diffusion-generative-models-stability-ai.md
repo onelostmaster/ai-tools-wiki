@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @e8cd657, a review, 2026-11-02): caution. Runs eval() on
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows (no official Windows steps; Python + NVIDIA GPU per its README): git clone https://github.com/Stability-AI/generative-models, git checkout e8cd657, install in a venv. Load only the official Stability AI checkpoints and the repo's own config files: it runs eval() on config strings (sgm/util.py:25) and loads checkpoints with torch.load (sgm/util.py:205), so a third-party config or checkpoint runs code on your PC. Check the Stability community licence before any commercial use of output. Research repo, no commit since 2025-12. Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the official-weights-and-configs-only rule.
+Windows: clone, install and load any checkpoint or config you find; a malicious one runs code on your PC.
 
 ## Install notes
 

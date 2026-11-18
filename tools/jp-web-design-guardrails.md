@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-13
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @1ac0c1a, 2026-11-13, no-intake review): Safe. Markdown 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): copy skills/jp-design from https://github.com/mrslbt/jp-web-design-guardrails at reviewed commit 1ac0c1a into %USERPROFILE%\.claude\\skills\\jp-design, then start a new session (/jp-design). claude.ai: zip that jp-design folder (SKILL.md plus references/) and upload it under Settings, Capabilities, Skills. Markdown only; no keys, nothing runs.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin.
+The README one-line plugin command (latest commit, and the repo has no marketplace file).
 
 ## Install notes
 

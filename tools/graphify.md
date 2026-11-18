@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-14
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot (code read, a0946f9): Looks safe. Local code knowledge graph; no te
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): uv tool install graphifyy (two y's), then graphify install. That step adds PreToolUse search/read hooks to .claude/settings.json every time (that is how it works); open the file afterwards and check only graphify's hook lines were added. LLM extraction runs only with your own key, kept in an env var. Hermes: uv tool install graphifyy, then graphify install --platform hermes (README:241). No telemetry; query log off by default.
 
 ## YOLO install
 

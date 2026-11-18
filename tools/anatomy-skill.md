@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read, a review, 2026-10-28): Looks safe. Node built-ins only;
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): git clone https://github.com/wheresryan22/anatomy.git %USERPROFILE%\.claude\\skills\\anatomy, then start a new session. This skips the skills CLI and its install telemetry to skills.sh. Never run scripts/publish.mjs with --submit unless you want it pushed to the gallery via gh . Hermes: clone into ~/.hermes/skills/creative/anatomy/.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the plain clone.
+npx skills add wheresryan22/anatomy -g -a claude-code (sends install telemetry to skills.sh unless DISABLE_TELEMETRY=1 is set).
 
 ## Install notes
 

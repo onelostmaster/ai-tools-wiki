@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot (code read, a project a review, #3, #16): Looks safe. Nous-maintain
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Hermes: hermes plugins install <name> from the official catalog (README:47; the catalog is SHA-pinned). Vendor keys go in Hermes secrets, never in chat. Only xchat, camofox, meshy, elevenlabs and advanced-delegation were spot-checked ; unverified: the other 13, so install those only after their own review. Keep meshy's MCP pin at @meshy-ai/meshy-mcp-server@0.6.5.
 
 ## YOLO install
 

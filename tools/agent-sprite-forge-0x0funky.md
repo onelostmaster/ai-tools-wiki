@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @5324342, 2026-11-03): caution for money, not malw
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code on Windows: copy the skills folder from https://github.com/0x0funky/agent-sprite-forge at commit 5324342 into %USERPROFILE%\.claude\\skills. Configure only the one provider key you want charged, in an env var or %APPDATA%\\agent-sprite-forge\\config.json (SKILL.md:47), never in chat, and always pass --budget-usd (SKILL.md:51); without it the skill spends on any configured key with no per-call question (skills/generate2dmedia/SKILL.md:23). Needs Python (numpy, Pillow, scipy) and ffmpeg for video. Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the single key and the budget cap.
+Claude Code on Windows: add the skills folder with all your provider keys set; it spends on any of them with no cap and no question.
 
 ## Install notes
 

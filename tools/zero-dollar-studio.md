@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @d265696, 2026-11-03, no-intake review): Looks safe. Plu
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: no working install as shipped: make-video SKILL.md line 16 requires macOS on Apple Silicon and tools/setup.sh lines 2-15 use Homebrew and the Apple GPU, so it needs porting (for example under WSL2) first. If you port it: git clone https://github.com/TheNoumanDev/zero-dollar-studio.git, git checkout d265696 (reviewed), /plugin marketplace add <path to that folder>, /plugin install make-video@zero-dollar-studio with auto-update off; setup downloads about 6 GB of pinned models from Hugging Face. snipshorts sends prompts to your logged-in claude CLI and uses your plan (podcast/llm.py lines 33-37). Nothing is posted or uploaded.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin.
+/plugin marketplace add TheNoumanDev/zero-dollar-studio then /plugin install make-video@zero-dollar-studio (README) at HEAD; still Mac-only.
 
 ## Install notes
 

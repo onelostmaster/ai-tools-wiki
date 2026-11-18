@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ JLPT official site (sample questions; data, not code; not reviewed): safe. No se
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code: nothing to install. Download the N4 sample-questions ZIP (PPT and MP3, about 1.1 MB) yourself from https://www.jlpt.jp/e/samples/forteachers.html and upload it to the project (jlpt.jp is blocked from Claude's machine). Use it only to mirror item types in our own drills; do not republish the files (jlpt.jp copyright policy).
 
 ## YOLO install
 

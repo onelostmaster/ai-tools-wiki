@@ -7,7 +7,7 @@
 - **Decision:** Skip
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -15,7 +15,8 @@ Not code-reviewed. A project tool scout (2026-10-31) gave it only a fit rating (
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Unreviewed: contain it: no install route yet: the official repo is not identified (several GitHub repos share this name), so install nothing until the owner is confirmed; then clone it at a fixed commit into a devcontainer or WSL2 test folder, copy only the skill folder, give it no keys, and keep Claude Code asking before each command. Get a review before real use.
 
 ## YOLO install
 

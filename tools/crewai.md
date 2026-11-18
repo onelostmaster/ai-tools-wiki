@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @86dca29, a review, 2026-11-02): caution. Anonymou
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: in a venv, pip install crewai==<release matching 86dca29> (README); do not use the uv curl | sh installer from the README. Set the user env var CREWAI_DISABLE_TELEMETRY=true (or OTEL_SDK_DISABLED=true) before first use; otherwise it sends anonymous telemetry to telemetry.crewai.com:4319 (lib/crewai/src/crewai/telemetry/constants.py:9; lib/crewai-core/src/crewai_core/telemetry.py:354-359). Keep share_crew=False (the default) so task content is never sent (telemetry/telemetry.py:307). Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the version pin and the telemetry switch.
+Windows: uv curl | sh installer then uv tool install crewai (README); anonymous telemetry stays on.
 
 ## Install notes
 

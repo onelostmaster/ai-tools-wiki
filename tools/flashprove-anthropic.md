@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot (light code read @9e2bdd8f, 2026-11-03): safe. No telemetry found; 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Not needed for you now. If ever used: Linux or WSL on Windows (g++13), clone https://github.com/anthropics/FlashProve at 9e2bdd8f and follow README.md; proving needs one NVIDIA H100 (README.md:18-21), verifying runs on CPU. Point --server only at a server you trust (integrations/ask_and_check.py:203-218). The only curl|sh is Lean's official elan installer (lean/CHECKING.md:183); nothing to fix. Repo is unmaintained (README.md:3). Android: no.
 
 ## YOLO install
 

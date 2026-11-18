@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read, a project a review, 2026-10-28): Looks safe. Pure confi
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Hermes: hermes profile install github.com/notwitcheer/portal-coder-premium --alias (README:12) into a profile you do not already use, because installing replaces that profile's config. Then open its config.yaml and delete the approvals.smart_policy lines that mark package installs and git push to feature branches as safe (a review bot, a review), so Hermes asks before those.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips removing the smart_policy auto-approvals.
+hermes profile install github.com/notwitcheer/portal-coder-premium --alias and keep its config.yaml as shipped (package installs and feature-branch pushes run without asking).
 
 ## Install notes
 

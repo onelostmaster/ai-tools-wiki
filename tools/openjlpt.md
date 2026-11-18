@@ -7,7 +7,7 @@
 - **Decision:** Try
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -15,7 +15,8 @@ Not code-reviewed. Unofficial JLPT N5-N1 word and kanji dataset (CC BY-SA 4.0; P
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Unreviewed: contain it: Claude Code (Windows): python -m venv openjlpt-env, activate it, pip install openjlpt==0.1.0 inside the venv (the PyPI loader the source names), no API keys in that shell, and load the data offline after install. Get a review before real use.
 
 ## YOLO install
 

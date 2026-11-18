@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,9 @@ a review bot (code read, v5.3.3 on main, pushed 2026-10-29): safe. Hooks on Sess
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code: /plugin marketplace add DietrichGebert/ponytail, then /plugin install ponytail@ponytail (official README; only from DietrichGebert/ponytail, copycats exist). Leave the optional webhook URL empty so it makes no network calls (a review bot code read).
+Hermes: hermes plugins install DietrichGebert/ponytail --enable (official INSTALL.md).
 
 ## YOLO install
 

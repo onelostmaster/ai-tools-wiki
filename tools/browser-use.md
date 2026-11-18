@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @b49a68e, a review / Hermes a review, 2026-11-02):
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: in a project venv, uv add browser-use==<release matching b49a68e>. Set ANONYMIZED_TELEMETRY=false before first run; otherwise PostHog telemetry is on and cloud sync follows it (browser_use/config.py:58-63; telemetry/service.py:21). Point it only at a separate browser profile with no logins, because the agent can act on any site that profile is signed in to; keep LLM keys in env vars. Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the version pin, the telemetry switch and the separate profile.
+Windows: uv add browser-use with defaults in your normal browser; telemetry stays on and the agent can act on every site you are signed in to.
 
 ## Install notes
 

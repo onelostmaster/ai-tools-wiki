@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot (scanned for telemetry, installers, updaters and keys, not fully re
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: use the hosted editor at opencut.app in your browser (a review bot, a review: the main repo is mid-rewrite per its README, so do not build it from source yet). Nothing installs on your computer.
 
 ## YOLO install
 

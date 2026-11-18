@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,14 @@ Granola (official vendor connector; not code-reviewed: a review bot listed it un
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+claude.ai: already connected on the Claude account; nothing to install. In Granola Settings, opt out of training on your data (Granola trains on anonymized user data unless you opt out, Granola docs).
+Claude Code (Windows): claude mcp add granola --transport http https://mcp.granola.ai/mcp, then /mcp > Authenticate. It reads your notes and transcripts as you and can add or remove notes from folders.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the training opt-out.
+Connect as in the Granola docs and leave Settings at the default.
 
 ## Install notes
 

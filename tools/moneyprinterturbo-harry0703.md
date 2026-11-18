@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @ab6004e, 2026-11-03): caution. The API listens on
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: git clone https://github.com/harry0703/MoneyPrinterTurbo and git checkout v1.3.9 (ab6004e). Copy config.example.toml to config.toml and before first start set listen_host = "127.0.0.1" (default 0.0.0.0, config.example.toml:11) and set app.api_key to a long random value (auth is off until set, config.example.toml:52, app/asgi.py:28-32). If you use Docker, change the WebUI port mapping in docker-compose.yml:12 to start with 127.0.0.1: so it is not open to your network. Keep your LLM/TTS/Pexels/Pixabay keys only in that local config.toml. Never paste the README's "send this prompt to your AI agent" block into any agent (README-en.md:174,289). Then run webui.bat (Python 3.11+, ffmpeg). Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the 127.0.0.1 bind and the API key.
+Windows: one-click package or webui.bat with default config; the API listens on 0.0.0.0:8080 with no auth, so anyone on your network can use it and spend your API credits.
 
 ## Install notes
 

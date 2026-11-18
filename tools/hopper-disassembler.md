@@ -7,7 +7,7 @@
 - **Price:** Paid proprietary license; exact current official price not verified. https://www.hopperapp.com/faq.html confirms license/update policy and no Windows version; do not use third-party prices as confirmed.
 - **Safety verdict:** unreviewed
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-07
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -15,7 +15,8 @@ Proprietary disassembler. Official FAQ says no Windows version, so not a recomme
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Unreviewed: contain it: not for this setup: Hopper has no Windows version (official FAQ https://www.hopperapp.com/faq.html), so there is nothing to install on Windows or Android. Closed source; if ever used elsewhere, install only from hopperapp.com and open only samples you are allowed to analyse. Get a review before real use.
 
 ## YOLO install
 

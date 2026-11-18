@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @0ca8994, a review, 2026-11-02): caution. Self-hos
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: self-host with Docker Desktop using the repo's docker-compose.yml at commit 0ca8994 with image tags pinned to that release; set TELEMETRY_ENABLED=false in the compose env (web/src/env.mjs:140), otherwise self-host telemetry is on. Bind the web port to localhost. Do not run npm install in the repo itself (the postinstall at package.json:20 is a dev helper you do not need). Or use the hosted Langfuse cloud instead. Android: open the dashboard in a phone browser once hosted.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the version pin, the telemetry switch and localhost binding.
+Windows: docker compose up with the repo defaults; self-host telemetry stays on.
 
 ## Install notes
 

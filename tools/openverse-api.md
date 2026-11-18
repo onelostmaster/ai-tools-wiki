@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ Openverse (official public API of the WordPress Openverse project; a review bot,
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code and Hermes: nothing to install, no key. Tell the agent to call https://api.openverse.org/v1/audio/?q=<search>&license=cc0 so only CC0 clips come back (licences vary per clip, a review), and to keep each clip's source URL. api.openverse.org is blocked in a project cloud sandbox, so run it locally.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the CC0-only filter.
+Call https://api.openverse.org/v1/audio/?q=<search> and credit or drop each clip by its own licence (CC-BY needs credit; NC clips cannot go in monetized videos).
 
 ## Install notes
 

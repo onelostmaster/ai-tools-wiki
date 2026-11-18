@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Not code-reviewed. genanki is an open-source Python library for generating Anki 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Unreviewed: contain it: Claude Code (Windows): pip install genanki inside a venv (python -m venv anki-env), no keys, no network after install. Do not install any Anki MCP server: none is named or reviewed. Get a review before real use.
 
 ## YOLO install
 

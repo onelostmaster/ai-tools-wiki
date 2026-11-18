@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Claude (a project tool scout, 2026-10-31): Canva's own connector in Claude's con
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+claude.ai: add it at claude.ai/customize/connectors (or the Connect card Claude posts) and sign in to Canva there. It makes and edits designs in your own Canva account (that is how it works). Android: nothing to install; tweak designs in the Canva app. Official vendor connector; nothing to fix.
 
 ## YOLO install
 

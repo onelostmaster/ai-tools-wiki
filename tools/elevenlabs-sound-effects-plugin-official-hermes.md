@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot (code spot-check, a review, 2026-10-28): Looks safe. Official Nous 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Hermes: hermes plugins install elevenlabs-sound-effects. Keep the ElevenLabs key in Hermes secrets, never in chat. Each generation spends ElevenLabs credits. It calls only api.elevenlabs.io and converts locally with ffmpeg ; nothing to fix.
 
 ## YOLO install
 

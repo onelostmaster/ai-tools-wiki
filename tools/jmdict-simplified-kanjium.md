@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Not code-reviewed. Japanese dictionary data (offline glosses from jmdict-simplif
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Unreviewed: contain it: download the JSON files only from the GitHub releases of https://github.com/scriptin/jmdict-simplified and the data files from https://github.com/mifunetoshiro/kanjium, and use them as data (no scripts to run, no keys, no network after download). Get a review before real use.
 
 ## YOLO install
 

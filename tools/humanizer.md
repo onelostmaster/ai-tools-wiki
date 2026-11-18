@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-09
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot (code read, 0ef9fe5, a review): Looks safe. One text-only `SKILL.md
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code: /plugin marketplace add blader/humanizer, then /plugin install humanizer@humanizer . claude.ai: Code > Download ZIP on GitHub and upload it under Customize > Skills. One text-only SKILL.md (reviewed @0ef9fe5); nothing to fix.
 
 ## YOLO install
 

@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ ElevenLabs (official SDK; PyPI package `elevenlabs` lists the elevenlabs/elevenl
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): pip install elevenlabs inside a project venv, with ELEVENLABS_API_KEY in an env var, never in chat. Official vendor SDK; nothing to fix.
 
 ## YOLO install
 

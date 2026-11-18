@@ -7,7 +7,7 @@
 - **Decision:** Try
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -15,7 +15,8 @@ Not code-reviewed. Japanese verb and adjective conjugation library (Unlicense, o
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Unreviewed: contain it: Claude Code (Windows): npm install kamiya-codec@<exact version npm shows today> --ignore-scripts inside a scratch project folder (not global), no API keys in that shell; it needs no network after install. Get a review before real use.
 
 ## YOLO install
 

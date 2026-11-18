@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,14 @@ Ollama (official vendor; not code-reviewed: a review bot listed it under 'not au
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: run OllamaSetup.exe from https://ollama.com/download (official docs; installs in your user account, no admin rights). Use local models only; cloud models are a separate paid service, so do not sign in to an Ollama account unless you want them.
+Linux: download https://ollama.com/install.sh, read it, then run it (do not pipe curl straight into sh).
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips reading the Linux script first.
+Linux: curl -fsSL https://ollama.com/install.sh | sh (official docs). Windows is the same as Safe install.
 
 ## Install notes
 

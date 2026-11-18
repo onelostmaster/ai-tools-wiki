@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,14 @@ GitHub (official vendor; not code-reviewed: a review bot listed GitHub CLI under
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: winget install --id GitHub.cli (cli.github.com). Sign in with gh auth login in the browser flow; do not paste tokens into chat (a GITHUB_TOKEN env var works too). Install no gh extensions you have not read: extensions are not certified by GitHub (gh manual).
+Claude Code: same; ask Claude to use read-only gh commands unless you want it to push or open PRs.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the extension and read-only limits.
+winget install --id GitHub.cli, gh auth login, and install extensions as you like.
 
 ## Install notes
 

@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Slack (official vendor MCP server; not code-reviewed: a review bot listed it und
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Not needed: no project uses Slack. If you connect it: claude.ai Customize > Connectors > + > Slack, or in Claude Code claude plugin install slack, then sign in through OAuth (Slack docs).; that access cannot be narrowed, so only connect a workspace where that is fine, and a workspace admin must approve it.
 
 ## YOLO install
 

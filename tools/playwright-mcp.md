@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ Microsoft (official npm package `@playwright/mcp`, published by Microsoft's main
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code: claude mcp add playwright -- npx @playwright/mcp@<exact version npm shows today> (pinned instead of @latest; official package @playwright/mcp by Microsoft). It drives a real browser, so do not sign it in to accounts you do not want the agent to use.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the version pin.
+claude mcp add playwright npx @playwright/mcp@latest (package README on npm).
 
 ## Install notes
 

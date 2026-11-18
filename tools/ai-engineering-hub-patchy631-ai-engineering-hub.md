@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot : not reviewed: a large tutorial collection; each folder has its ow
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Unreviewed: contain it: read the tutorials in a browser. To run one folder, download only that folder at commit 042aeb5 into a devcontainer or WSL sandbox with its own venv, use a throwaway API key with a spend limit (never your main key), and read its requirements and code first. Android: read only. Get a review before real use.
 
 ## YOLO install
 

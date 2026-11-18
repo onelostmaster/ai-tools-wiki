@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-09
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Not code-reviewed for safety. A project Tool Scout (Claude, 2026-11-09) rated it
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Unreviewed: contain it: read it on GitHub first (https://github.com/alireza12t/foldline @ 4ee6ada); if you try it, install it at that exact commit only in a throwaway Claude Code project in a devcontainer or WSL sandbox (not your main Claude Code config on Windows), no API keys in its env (its repo describes Mac rendering, so on Windows expect it not to render), no network unless a step needs it, and do not run its install scripts. Get a review before real use. Android: no.
 
 ## YOLO install
 

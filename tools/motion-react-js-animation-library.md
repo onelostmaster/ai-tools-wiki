@@ -7,7 +7,7 @@
 - **Price:** Free MIT library verified online 2026-11-08 at https://motion.dev/docs/react and official GitHub README/license. Motion+ paid extras are separate and not required; no Motion+ price claimed.
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -15,11 +15,13 @@ Targeted runtime read @78f3ff5 (Motion package 14.10.1), not a complete dependen
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows (web project): npm install --save-exact motion@14.10.1 (the reviewed package version, @78f3ff5), then import from motion/react. Use the npm package, not the repo's maintainer scripts (root package.json:22-28). Agent AI Kit/MCP from the docs is a separate product, not reviewed: do not install it from this row. Respect reduced motion (use-reduced-motion.ts:37).
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the exact version pin.
+npm install motion (README.md:16; latest version).
 
 ## Install notes
 

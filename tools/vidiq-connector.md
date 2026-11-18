@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ vidIQ (official vendor connector in Claude's connector directory, hosted; not co
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+claude.ai: add vidIQ only from Claude's own connector directory (claude.ai/customize/connectors) or the Connect card Claude posts, and sign in through vidIQ's page; never paste a vidIQ password or key into chat. Hosted by vidIQ; nothing runs on your computer.
 
 ## YOLO install
 

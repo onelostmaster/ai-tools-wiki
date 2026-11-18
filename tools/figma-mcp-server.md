@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Figma (official vendor MCP server; not code-reviewed: a review bot listed it und
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): claude plugin install figma@claude-plugins-official, restart Claude Code and sign in from /plugin (or claude mcp add --transport http figma https://mcp.figma.com/mcp, then /mcp > Authenticate) (Figma docs). It reaches only files you can access; some tools write to your files and image and Make tools spend Figma AI credits, so ask Claude to use read-only tools unless you want edits. It does not connect in Claude Code cloud sessions.
 
 ## YOLO install
 

@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-09
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Descript (official connector in Claude's directory, hosted; not code-reviewed): 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+claude.ai: add it at claude.ai/customize/connectors (or the Connect card Claude posts) and sign in to Descript there. Imported narration and clips are stored in your Descript account (that is how it works). Official hosted connector; nothing to fix.
 
 ## YOLO install
 

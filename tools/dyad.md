@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot (code scan, 0ec8cc2, a review): Looks safe. Local AI app builder wi
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: install the desktop app from the official site dyad.sh. Leave the telemetry banner declined (telemetry is opt-in). Enter your model keys only in Dyad's settings, never in chat. It auto-updates (main.ts:22, a review); unverified: whether a setting turns that off. The macOS keychain reader does not apply on Windows.
 
 ## YOLO install
 

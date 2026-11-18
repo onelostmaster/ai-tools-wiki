@@ -6,25 +6,23 @@
 - **GitHub repo:** https://github.com/reason-machines/reason-network @ bcf045c (2026-10-30, MIT/Apache-2.0) · https://github.com/reason-machines/reason-plugins @ a6c511e (2026-10-16, MIT); the cloud agent is closed source
 - **Price:** Network and plugin free; cloud sessions use Reason plan credits, no plan prices published (`reasonmachines.com`, checked 2026-11-01); your own Claude/ChatGPT plan pays for turns run on it
 - **Decision:** Skip
-- **Safety verdict:** caution
+- **Safety verdict:** unreviewed
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
-a review bot (code read network @bcf045c, plugins @a6c511e, a review, 2026-11-01): Use with caution. Unpinned curl|bash / irm|iex installers; daemon self-updates every 6 h by default; setup adds MCP plus an always-allow rule and hooks that inject other agents' messages (prompt-injection path); account-linked usage upload (DO_NOT_TRACK=1); skill pushes work to its paid cloud. Cloud agent closed source.
+Claude code read network @5442c8b v0.12.17, plugins @b9417b9 (2026-11-17): the daemon self-updates every 6 h, off with auto_update = false (src/daemon/update.rs:1-10, config.rs:83). Setup auto-allows only ask_user (src/setup.rs:374-387). Other agents' messages reach the model via check_inbox. Unverified: the cloud agent behind mcp.reasonmachines.com is closed -> Contain: no private repos.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Unreviewed: contain it: build the network daemon from source at v0.12.17, set auto_update = false; plugin only on test repos, no secrets; skip curl|bash and irm|iex. Get a review before real use.
 
 ## YOLO install
 
-Not written yet.
+Not offered.
 
 ## Install notes
 
-Caution: read the Safety reason and ask the user before installing.
-Claude Code: plugin is a remote MCP server (`mcp.reasonmachines.com/mcp`); if tried, set DO_NOT_TRACK=1 and auto_update = false and don't let it auto-allow tools.
-Hermes: Network plugin needs unreleased Hermes plugin APIs (`integrations/hermes/README.md`).
-Windows: Network engine has a PowerShell installer (`README.md:44`); the desktop app is macOS only.
+Not code-reviewed yet: ask a review bot or Claude to review it before installing.
+Contain it: build the network daemon from source at v0.12.17, set auto_update = false; plugin only on test repos, no secrets; skip curl|bash and irm|iex.

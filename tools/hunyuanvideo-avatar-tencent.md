@@ -6,24 +6,26 @@
 - **GitHub repo:** https://github.com/Tencent-Hunyuan/HunyuanVideo-Avatar @ 8c31d0d (2025-12-16, Tencent Hunyuan Community License)
 - **Price:** Free model under the Tencent Hunyuan Community License (not open source; not valid in the EU, UK or South Korea); needs a 24 GB+ NVIDIA GPU or paid rented GPU time (github.com, checked 2026-11-01)
 - **Decision:** Try
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
-a review bot (code read @8c31d0d, a review, 2026-11-01): Use with caution. os.system ffmpeg commands from file paths (`hymm_sp/sample_gpu_poor.py:99`); Gradio demo opens a public share link on 0.0.0.0, API server on 0.0.0.0:80 with no auth (`hymm_gradio/flask_audio.py:33`); torch.load without weights_only; committed .pyc files; Docker runs --privileged. Licence: not valid in EU/UK/South Korea; output must be labelled AI-generated.
+Claude code read @8c31d0d (2026-11-17): safe with fixes. Gradio demo opens a public share link (hymm_gradio/gradio_audio.py:90); the API server takes 0.0.0.0:80 with no auth (flask_audio.py:265). torch.load without weights_only (hymm_sp/inference.py:144). ffmpeg runs via os.system on your file paths (sample_gpu_poor.py:99). Fix: CLI scripts only, torch 2.6+. Licence excludes EU, UK, South Korea (LICENSE:3).
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Linux, NVIDIA 24 GB+; clone at 8c31d0d, own venv with torch 2.6+; delete hymm_sp/**/__pycache__; run scripts/run_single_poor.sh only (never run_gradio.sh or flask_audio.py); plain file names; Docker without --privileged or --net=host; label output AI-generated.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips CLI-only, torch 2.6 and the Docker trims.
+Run the Gradio demo with its public link and the README's --privileged container.
 
 ## Install notes
 
-Caution: read the Safety reason and ask the user before installing.
+Ask the user before installing.
 Windows: no official Windows setup; the README guide is Linux only (`README.md:103`) and needs an NVIDIA GPU with at least 24 GB VRAM (`README.md:89`).
 Claude Code (local only): Linux GPU machine only, per the README.

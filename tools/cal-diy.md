@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (scanned for telemetry, installers, updaters and keys, not fully re
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Self-hosted server (Docker): follow the repo docs at https://github.com/calcom/cal.diy (no confirmed command yet) and set CALCOM_TELEMETRY_DISABLED=1 in .env before first start; telemetry is on otherwise (.env.example:64; a review, a5ee96f).
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the telemetry switch.
+The repo's Docker setup with the default .env (telemetry on).
 
 ## Install notes
 

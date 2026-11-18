@@ -5,22 +5,24 @@
 - **Official URL:** https://github.com/pinokiocomputer/pinokio
 - **GitHub repo:** https://github.com/pinokiocomputer/pinokio @ 102e5ea (2026-11-01, MIT) · engine https://github.com/pinokiocomputer/pinokiod @ add4a67
 - **Price:** Free (MIT, github.com, checked 2026-11-01)
-- **Decision:** Try
+- **Decision:** Skip
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
-a review bot (code read pinokio @102e5ea, pinokiod @add4a67, a review, 2026-11-01): Use with caution. Runs community install scripts in a real shell with your user rights (`kernel/shell.js:12,862`); main window disables webSecurity and context isolation and gives subframes Node (`full.js:3504-3508`); update check on launch, download only after you agree. Launch telemetry is a local record only; peer networking off by default.
+Claude code read pinokio @ae5f9f3, pinokiod @fc258db (2026-11-17): caution. The main window turns off webSecurity and contextIsolation and gives subframes the preload (full.js:3504-3508), whose electronAPI sends any IPC message (preload.js:99-103). Community scripts run in your shell with your rights (kernel/shell.js). No fix: those settings are hard-coded; only a separate VM contains them.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Only in a VM or spare PC with no personal files; desktop app from the official GitHub releases; verified scripts only; accept updates manually.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the VM.
+Install on your main PC and run any community script.
 
 ## Install notes
 

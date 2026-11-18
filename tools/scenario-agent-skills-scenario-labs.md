@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @7f4b801, 2026-11-03): caution for spend and local
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code on Windows: do not use the unpinned npx skills add installer; instead copy the skill folders you want from https://github.com/scenario-labs/skills at commit 7f4b801 into %USERPROFILE%\.claude\\skills. Do not open the cloned repo itself as a Claude Code project (its .claude/settings.json SessionStart hook runs pnpm install, .claude/hooks/ensure-husky.sh:14). Every generation spends Scenario credits: ask for the dry_run price first each time (skills/scenario/SKILL.md:96-97) and never run it unattended, because unattended runs take the top-ranked model and proceed (SKILL.md:236). Only use the Unreal/editor expert skills when you want it to run Python inside your open editor (ue_remote.py:330-336). Text overlay fetches Google Fonts (pillow_render.py:32). Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin, the per-run price check and the no-unattended rule.
+Claude Code on Windows: npx skills add scenario-labs/skills (README.md:50-75) plus the hosted Scenario MCP; unattended runs spend credits on the top-ranked model without asking.
 
 ## Install notes
 

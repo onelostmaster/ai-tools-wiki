@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,9 @@ Google (official YouTube API; not code-reviewed): safe. No security findings are
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): in your own Google Cloud project, create the OAuth client and sign in once with only the read-only scopes yt-analytics.readonly and youtube.readonly (reports.query needs both, Google API reference). Keep the client secret and token files outside any repo folder and give them to tools as environment variables or file paths, never in chat. Do not grant write scopes such as youtube or youtube.upload; this use only reads reports.
+Android: not needed (use the YouTube Studio app).
 
 ## YOLO install
 

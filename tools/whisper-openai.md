@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ Whisper (official vendor, OpenAI; not code-reviewed: a review bot listed it unde
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): python -m venv whisper-env, activate it, then pip install openai-whisper==<the version PyPI shows today> (pinned, inside the venv) and winget install Gyan.FFmpeg for the ffmpeg command-line tool it needs. Runs locally; no key.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the venv and the version pin.
+pip install -U openai-whisper (PyPI) into your main Python, plus ffmpeg.
 
 ## Install notes
 

@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @3933bb9, a review, 2026-11-02): repo code is clean, cau
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: RDR2 on PC, Story mode only (never Red Dead Online). Install ScriptHookRDR2 only from its official site (closed-source DLL loader, not reviewed: unverified: what the loader does; contain it by using a game install with no other mods and no saved logins on that Windows account). Then ScriptHookRDR2DotNet V2, git clone https://github.com/Bagomojo/rdr2-companion, git checkout 3933bb9, run setup.cmd (hash-pinned packages, setup.cmd:7) and start-bridge.cmd. Put the Anthropic and ElevenLabs keys in bridge/.env (allowlisted, bridge/keys.py:21-41); skip the optional vault script, which runs PowerShell -ExecutionPolicy Bypass (bridge/keys.py:56-60). Needs an Anthropic API key with credit (Claude Pro/Max does not work). Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin and the no-vault-script rule.
+Windows: latest clone, setup.cmd, and the optional vault script (runs PowerShell with -ExecutionPolicy Bypass).
 
 ## Install notes
 

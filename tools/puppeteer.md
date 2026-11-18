@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ Puppeteer (official npm package; not code-reviewed: a review bot listed it under
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code: npm i puppeteer@<exact version from npm> --save-exact and commit package-lock.json (fixes the unpinned ^25/no-lockfile problem a review bot flagged in #68). The install downloads Chrome for Testing into ~/.cache/puppeteer (pptr.dev); to control that, use npm i puppeteer-core@<version> --save-exact and run npx puppeteer browsers install chrome yourself.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the exact pin and lockfile.
+npm i puppeteer (pptr.dev).
 
 ## Install notes
 

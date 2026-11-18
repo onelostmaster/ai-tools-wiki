@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot (scanned for telemetry, installers, updaters and keys, not fully re
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: install from the official packages page https://docs.appflowy.io/docs/appflowy/install-appflowy/installation-methods/mac-windows-linux-packages. Android: from https://appflowy.com. The official builds send crash reports to Sentry (DSN set at build, frontend/appflowy_flutter/lib/env/env.dart:43; a review, 8fcee27); unverified: whether a setting turns that off, so keep no keys or passwords in AppFlowy pages. Self-host: official guide https://docs.appflowy.io/docs/guides/appflowy/self-hosting-appflowy.
 
 ## YOLO install
 

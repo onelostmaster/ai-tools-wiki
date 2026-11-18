@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot (code read, a review, 2026-10-28): Looks safe. Official Nous plugin
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Hermes: hermes plugins install advanced-delegation (SHA-pinned official catalog, a review). No network, tools or hooks of its own; nothing to fix.
 
 ## YOLO install
 

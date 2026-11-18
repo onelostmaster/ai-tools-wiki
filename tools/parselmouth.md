@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Not code-reviewed. Mainstream open-source Python library that runs Praat for pit
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Unreviewed: contain it: Claude Code (Windows): python -m venv parselmouth-env, activate it, pip install praat-parselmouth==<the version PyPI shows today> inside the venv (official PyPI package by Yannick Jadoul), no API keys in that shell; it needs no network after install. Get a review before real use.
 
 ## YOLO install
 

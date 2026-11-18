@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Cloudflare docs (official vendor plugin, checked 2026-10-31; not code-reviewed):
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code: /plugin marketplace add cloudflare/skills, then /plugin install cloudflare@cloudflare (Cloudflare docs). On the first Cloudflare tool call, approve only the OAuth scopes the task needs (the API server reaches DNS, WAF, R2 and Zero Trust); never paste API tokens into chat. Official vendor plugin.
 
 ## YOLO install
 

@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @acd084ab, a review, 2026-11-02): caution. Officia
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: in a venv, pip install "litellm>=1.83.0" pinned to one exact version 1.83.0 or newer; never 1.82.7 or 1.82.8, which carried credential-stealing malware (GHSA-5mg7-485q-xm76; docs.litellm.ai/blog/security-update-march-2026). Or Docker with a pinned 1.83.0+ image tag. Put provider keys in an env file read only by the proxy, and bind the proxy to localhost. Claude Code: point it at the local proxy to route to other models. Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the exact version pin and localhost binding.
+Windows: pip install litellm (latest); still never 1.82.7/1.82.8.
 
 ## Install notes
 

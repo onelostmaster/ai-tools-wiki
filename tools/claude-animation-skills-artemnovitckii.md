@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @5dbea55, 2026-11-03; Claude re-checked SKILL.md and ren
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows (inside WSL2; the README supports macOS/Linux only): git clone the repo, git checkout 5dbea55. Before any render, change the file server in render.mjs (lines 12-15) to listen on 127.0.0.1; otherwise it listens on all interfaces with no ../ path check. Run ./install.sh (lines 8-16 only symlink the skills into ~/.claude/skills inside WSL2), then ./setup.sh without --voice (setup.sh lines 16-44 download via npm/npx/curl; --voice adds about 1 GB). Claude Code: use it from the WSL2 copy of Claude Code. If you add the paid ElevenLabs voice, put the key in an env var, never in chat. Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin and the 127.0.0.1 change.
+Windows (WSL2): ./install.sh && ./setup.sh --voice; the render server listens on all interfaces with no ../ check.
 
 ## Install notes
 

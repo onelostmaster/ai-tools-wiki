@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot (scanned for telemetry, installers, updaters and keys, not fully re
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: download the installer only from the official releases page https://github.com/OpenWhispr/openwhispr/releases (a review bot, a review, b9e9ebe). It needs microphone and accessibility permissions; leave telemetry at its default (off). It auto-updates itself ; unverified: whether auto-update can be switched off, so keep it to the official build only. Prefer local models if you do not want audio sent to a cloud service.
 
 ## YOLO install
 

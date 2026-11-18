@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read, a review, 2026-10-29): Looks safe. No telemetry, exfilt
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code: git clone https://github.com/lemomo-ai/lemo-opuscar.git, cd lemo-opuscar, git checkout the commit you reviewed, then open it with claude (README:78-80). Do not run setup.sh as shipped: it pulls updates from unpinned main on each run ; install its playwright-core, three and Python audio packages yourself at fixed versions instead.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin and skipping setup.sh.
+git clone https://github.com/lemomo-ai/lemo-opuscar.git && cd lemo-opuscar && claude, and run setup.sh as shipped (auto-updates from main).
 
 ## Install notes
 

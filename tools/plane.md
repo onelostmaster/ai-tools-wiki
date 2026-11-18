@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code scan, b98e1de, a project a review, 2026-10-31): Looks safe. M
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows (Docker Desktop): follow the official Docker Compose guide at https://developers.plane.so/self-hosting/methods/docker-compose, keep the web port bound to 127.0.0.1 unless others need it, and switch off instance telemetry in the instance admin settings after setup (it is on by default: apps/api/plane/license/api/views/admin.py:131, a review bot a review). unverified: the exact name of that admin setting.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the localhost binding and telemetry switch-off.
+Follow the official Docker Compose guide as written (telemetry stays on).
 
 ## Install notes
 

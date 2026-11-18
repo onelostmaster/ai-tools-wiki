@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read of packages/core/src and packages/mcp/src @a80f176, v2.1
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): MCP config \{ "mcpServers": \{ "make-sfx": \{ "command": "npx", "args": ["-y", "make-sfx-mcp@2.0.0"] \} \} \} so npx stops fetching the newest version on every start. Unverified: npm 2.0.0 was not diffed against the reviewed repo code (2.1.0 @a80f176); to run exactly the reviewed code, git clone https://github.com/Tuntii/make-sfx.git, git checkout a80f176, build packages/mcp and point the config at that local build. Give the agent a dedicated outputDir (MCP tools write WAV/JSON there, mcp/src/utils.ts lines 66-71). Skip the Unity, Unreal and Roblox integrations (not reviewed).
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the version pin and the dedicated output folder.
+npx -y make-sfx-mcp (README), newest npm version on every start.
 
 ## Install notes
 

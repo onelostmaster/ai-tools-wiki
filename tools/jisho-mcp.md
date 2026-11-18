@@ -7,7 +7,7 @@
 - **Decision:** Skip
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -15,7 +15,8 @@ Claude (a project tool scout, code read, 2026-10-31): "clean code", but the repo
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Unreviewed: contain it: no repo is recorded, so there is no specific package to contain. If you pick one, run it in a devcontainer or sandbox with network limited to jisho.org, no keys, at a pinned version or commit. Get a review before real use.
 
 ## YOLO install
 

@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,15 @@ a review bot (scanned for telemetry, installers, updaters and keys, not fully re
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code: /plugin marketplace add every-app/open-seo then /plugin install openseo@openseo (official repo every-app/open-seo); the hosted MCP signs in with OAuth in the browser.
+Self-hosting: set OPENSEO_TELEMETRY_DISABLED=1 to stop the anonymized heartbeat and put your DataForSEO key in an env var, never in chat.
+Hermes: unconfirmed: add an http MCP server for https://app.openseo.so/mcp.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips turning off the self-host telemetry heartbeat.
+Same plugin install; self-host without OPENSEO_TELEMETRY_DISABLED.
 
 ## Install notes
 

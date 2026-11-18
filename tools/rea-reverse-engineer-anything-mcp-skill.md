@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (targeted code read @9bea563, a review, 2026-11-02; not a full audi
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows (Claude Code): from a folder outside any project, run npx rea-agents@6.8.0 setup (pins the reviewed 9bea563 release; the Claude plugin launcher pins an exact version too, scripts/plugin-mcp-launcher.mjs lines 8-25). Choose only Claude Code (or Hermes) and read each proposed MCP config change before saying yes. Do not use the curl | bash install.sh. Update only with rea update when you choose (src/application/Update.ts lines 125, 136). Decline the Hopper download (src/application/HopperReleaseFeed.ts lines 19-23). Use only on apps you own or whose licence allows it; DISCLAIMER.md bans DRM/anti-cheat bypass and cheats. unverified: the full ~7,000-file tree (targeted read only); contain it by running decompilation on copies of target files and keeping other API keys out of its MCP config. Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the version pin and the per-change config review.
+Claude Code: npx rea-agents setup with the defaults.
 
 ## Install notes
 

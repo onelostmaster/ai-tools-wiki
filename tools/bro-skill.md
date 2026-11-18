@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read, a review, 2026-10-29): Looks safe. `SKILL.md` is a pure
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): git clone https://github.com/luchasarie/bro-skill.git, then copy SKILL.md to %USERPROFILE%\.claude\\skills\\bro\\SKILL.md and restart the session (install.sh only does this copy; a review). This skips the curl one-liner. Pure prompt, no code. Hermes: copy SKILL.md to ~/.hermes/skills/<category>/bro/.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the manual copy.
+The README curl one-liner or ./install.sh.
 
 ## Install notes
 

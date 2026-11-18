@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read, a review, 48cc040): Looks safe. Skills and Markdown onl
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): claude plugin marketplace add ayrshare/ayrshare-social-media-api-claude-plugin, then claude plugin install ayrshare@ayrshare. Do not run /ayrshare\:setup\: it writes the API key in plaintext to ~/.claude/settings.json . Set the key as a Windows user env var instead (unverified: the exact variable name; read it from the plugin's MCP config first). Keep its PreToolUse hook on: it asks before every publish, comment, DM or ad action. Never paste the key into chat.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the env-var key.
+Run /ayrshare:setup (key stored in plaintext in settings.json).
 
 ## Install notes
 

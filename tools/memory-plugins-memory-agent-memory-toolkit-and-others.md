@@ -7,7 +7,7 @@
 - **Decision:** Skip
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -15,7 +15,8 @@ Not code-reviewed. Claude (a project tool scout, 2026-10-31) rejected these `cla
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Unreviewed: contain it: no maker, repo or URL is recorded, so there is nothing to install safely yet. If you want one, give a review bot its official repo first; until reviewed, only try it in a throwaway Claude Code project or devcontainer with no API keys or private repos, pinned to one commit, and turn off any per-session hooks it adds. Get a review before real use.
 
 ## YOLO install
 

@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot (code read, a review, 0968699): Looks safe. No network code, teleme
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): copy the repo folder to %USERPROFILE%\.claude\\skills\\ascii-art\\ (README has no command). Install its Python deps in a venv: python -m venv ascii-env, then pip install numpy scipy pillow scikit-image playwright and python -m playwright install chromium; ffmpeg on the PATH. No network code . SKILL.md has the agent save the MP4 to Downloads and open it (that is how it works). Hermes: same folder under ~/.hermes/skills/creative/ascii-art/.
 
 ## YOLO install
 

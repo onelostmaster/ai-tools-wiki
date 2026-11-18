@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @6c16b23, a review / Hermes a review, 2026-11-02): safe.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): download agent_skills/<skill> from https://github.com/Shubhamsaboo/awesome-llm-apps at reviewed commit 6c16b23 and copy only the skill folders you want into %USERPROFILE%\.claude\\skills\\ (pinned so later commits do not arrive unreviewed). Hermes: same folders into ~/.hermes/skills/ (agent_skills/README.md:52). Leave dependency-doctor's PyPI lookup off unless you want it to go online (dep_doctor.py:389-392). first-reader talks only to 127.0.0.1 (feed.py:303). Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin.
+The registry's npx skills add install (latest commit).
 
 ## Install notes
 

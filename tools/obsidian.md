@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (official vendor pages, 2026-10-31): safe. Closed-source desktop an
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: installer only from https://obsidian.md/download. Android: Obsidian from Google Play (md.obsidian). Keep Restricted mode on (Settings > Community plugins; it is on by default and blocks all community plugins): community plugins are third-party code with their own review. Sync and Publish are optional paid add-ons; nothing needs an account.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips Restricted mode.
+Turn Restricted mode off and install community plugins without a review.
 
 ## Install notes
 

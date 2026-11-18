@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot : not reviewed: a link list; the linked tools are not vetted. The a
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Unreviewed: contain it: nothing to install: it is a link list (license NOASSERTION). Read it in a browser on Windows or Android; do not download or run any linked tool until that tool has its own wiki row and review. Get a review before real use.
 
 ## YOLO install
 

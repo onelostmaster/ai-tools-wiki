@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-14
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @8163adf, 2026-11-14, no-intake review): Caution. About 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows (Claude Code): install Node 20.9+, Rust (winget install Rustlang.Rustup), the Visual Studio C++ Build Tools and WebView2 yourself first, then pnpm install -g pake-cli@3.18.0 (pins the reviewed 8163adf release). Always pass --icon with your own icon file; otherwise the site's domain goes to logo.dev, Brandfetch, Clearbit, Google favicons and favicon.is (bin/options/icon.ts lines 85-88, 518-538). If you add the plugin (/plugin marketplace add tw93/Pake, /plugin install pake@pake), tell Claude to ask you before installing anything, because its SKILL.md tells it to npm install -g pake-cli unpinned (line 17) and to 'install and rerun' on ENV_MISSING (line 41). Wrap only sites you trust: the wrapped origin gets downloads, notifications and open-link commands (src-tauri/src/app/config.rs lines 150-192). Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the version pin, the own-icon flag and the ask-first rule.
+Windows: npm install -g pake-cli; answer yes to 'Rust not detected. Install now?' (winget install Rustlang.Rustup).
 
 ## Install notes
 

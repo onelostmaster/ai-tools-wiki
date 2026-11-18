@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-14
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read, a review / Hermes a review, 70aa400, 2026-10-31): Use w
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows (Claude Code; checked @4412033, v15.21.0): install Bun (winget install Oven-sh.Bun) and uv (winget install astral-sh.uv) yourself first; otherwise setup pipes bun.sh and astral.sh install scripts into PowerShell (src/npx-cli/install/setup-runtime.ts lines 150-153, 187-192, 297-302, 351-353). Then run npx claude-mem@15.21.0 install --ide claude-code and turn usage analytics off with npx claude-mem telemetry disable (README.md line 149: on by default). It will add its bin folder to your Windows user PATH through a hidden PowerShell -ExecutionPolicy Bypass call (src/launcher/install-launcher.ts lines 386-390, 896-899); this cannot be skipped. Leave cloud sync off (empty token by default, src/shared/SettingsDefaultsManager.ts line 735). The worker stays on 127.0.0.1 (src/npx-cli/commands/install.ts line 1195). No fix: hooks send every tool result to the memory model (plugin/hooks/hooks.json lines 80-86, matcher *) and stored memories are re-injected at SessionStart (line 20), so poisoned tool output persists; review or clear ~/.claude-mem after sessions on untrusted repos or web pages. Hermes: npx claude-mem@15.21.0 install --ide hermes replaces your active Hermes memory provider. Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the Bun/uv pre-install, the version pin and the telemetry opt-out.
+Claude Code: /plugin marketplace add thedotmack/claude-mem, then /plugin install claude-mem; setup pipes the Bun and uv installers into PowerShell and analytics stay on.
 
 ## Install notes
 

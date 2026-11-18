@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,14 @@ a review bot (code read @4e1b437, 2026-11-03, no-intake review): Looks safe. The
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): git clone https://github.com/krisyangdev/motionboard.git, git checkout 4e1b437 (reviewed, plugin 1.0.0), then /plugin marketplace add <path to that folder> and /plugin install motionboard@motionboard with auto-update off. Install Node 22+ and ffmpeg yourself. Shots fetch HyperFrames with npx --yes hyperframes@0.8.209 (pinned in each shot package.json; HeyGen's CLI, unverified: its own code was not read), so run renders in a project folder with no keys in its environment. Never run the shot folders' publish script (npx hyperframes publish uploads the shot); the skill does not call it.
+claude.ai: not available.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin and the no-keys render folder.
+/plugin marketplace add krisyangdev/motionboard then /plugin install motionboard@motionboard, or npx skills add krisyangdev/motionboard (README), at HEAD.
 
 ## Install notes
 

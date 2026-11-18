@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-08
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @34483cb, a review, 2026-11-02): caution. If you a
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: official installer from imhex.werwolv.net or the GitHub release matching 34483cb. Set the user env var DO_NOT_TRACK=1 before first start, which turns off stats and crash upload (imhex_api.cpp:1136-1146); also answer No to server contact at first start (settings_entries.cpp:46-48) and confirm crash-log upload is off in Settings (on by default, settings_entries.cpp:755). Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the DO_NOT_TRACK switch and the crash-upload check.
+Windows: latest installer with defaults; crash-log upload stays on (settings_entries.cpp:755).
 
 ## Install notes
 

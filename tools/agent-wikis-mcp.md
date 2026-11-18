@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read, a review, 8d9397a / npm 0.2.3): Looks safe. One depende
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): claude mcp add agentwikis -- npx -y agentwikis-mcp@0.2.3 (pinned to the reviewed npm version, a review). The optional Pro key goes in the AGENTWIKIS_API_KEY env var, never in chat. Search queries go to agentwikis.com (that is how it works). Do not install the Pro Hermes skills bundle: unreviewed. Or no install: point the agent at https://agentwikis.com/llms.txt.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the version pin.
+claude mcp add agentwikis -- npx -y agentwikis-mcp (pulls latest).
 
 ## Install notes
 

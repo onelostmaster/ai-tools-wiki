@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @8b584f2, a review, 2026-11-02): caution. Sends us
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: in a venv, pip install deepeval==<release matching 8b584f2>. Set the user env var DEEPEVAL_TELEMETRY_OPT_OUT=1 before first use; otherwise it sends usage events to PostHog (deepeval/telemetry/client.py:55-56, api.py:64). Claude Code: use it to test prompts and agents you build. Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the version pin and the telemetry opt-out.
+Windows: pip install deepeval; PostHog usage events stay on.
 
 ## Install notes
 

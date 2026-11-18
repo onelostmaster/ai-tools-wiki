@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read, a review, c1aa65e): Looks safe. Instructions plus HTML 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): /plugin marketplace add bangtutorial/bang-motion, then /plugin install bang-motion@bang-motion (README); one copy only. Optional MP4 export: npm install --save-exact puppeteer@<one 25.x version> plus ffmpeg, because scripts/ae/bridge lists puppeteer ^25 with no lockfile. Starters load pinned GSAP/Three.js/Google Fonts from CDNs (that is how it works). Skip the After Effects route unless you accept that renders go through Higgsfield's MCP and CloudFront .
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the exact puppeteer pin.
+npm i puppeteer (floats within ^25).
 
 ## Install notes
 

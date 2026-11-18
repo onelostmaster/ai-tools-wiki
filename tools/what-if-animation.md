@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a project Claude (code read, 8092fb5, 2026-10-31): no safety problems reported; 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): git clone https://github.com/kelano86/what-if-animation ~/.claude/skills/what-if-animation, then git -C ~/.claude/skills/what-if-animation checkout 8092fb5 (the reviewed commit). Copy studio to ./what-if-studio and run npm install there (README; expected). Set ELEVENLABS_API_KEY in your environment or a .env in that folder yourself, never in chat; each episode spends your ElevenLabs credits.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin.
+Clone at HEAD as in the README.
 
 ## Install notes
 

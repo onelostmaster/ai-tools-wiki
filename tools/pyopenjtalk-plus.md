@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Not code-reviewed. Open-source Japanese text-to-speech, reading and accent libra
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Unreviewed: contain it: pip install pyopenjtalk-plus==<pinned version> only inside a throwaway virtual environment or devcontainer with no API keys in its environment; do not install the tsqyomi extra (it downloads ONNX models from Hugging Face at first use, PyPI); the base wheel ships its own dictionary so it needs no network after install. Get a review before real use.
 
 ## YOLO install
 

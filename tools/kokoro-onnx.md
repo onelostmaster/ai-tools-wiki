@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-10
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @3596b26, 2026-11-10, no-intake review): Safe for local 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows (Python 3.10 to 3.13): in a venv, pip install kokoro-onnx==0.6.1 soundfile (0.6.1 is the latest on PyPI 2026-11-16; kokoro-onnx[gpu]==0.6.1 for an NVIDIA card). Download kokoro-v1.0.onnx (or the int8 file) and voices-v1.0.bin by hand only from https://github.com/thewh1teagle/kokoro-onnx/releases: the library does not check those files (config.py lines 32-37 only print the download place). Leave PHONEMIZER_ESPEAK_LIBRARY unset so it uses the bundled espeakng-loader (tokenizer.py lines 31-55). Runs offline after that.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the version pin, the venv and the release-page-only model rule.
+pip install kokoro-onnx soundfile, models from any mirror.
 
 ## Install notes
 

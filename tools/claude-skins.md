@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,14 @@ a review bot (code read, a review, 985ad63, 2026-10-31): Looks safe. MIT. Like a
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (local only), Windows: git clone https://github.com/hellosverre/claude-skins.git, git checkout 985ad63 (reviewed), /plugin marketplace add <path to that folder>, then /plugin install skins@hellosverre-mods with auto-update off. Once a day it fetches plugin.json from GitHub main and only shows an update toast; ignore the toast and stay on the pinned commit. Do not use the README's mod-store (about 2,700 unvetted mods).
+claude.ai: not available.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin and following the update toast.
+/plugin marketplace add hellosverre/claude-skins then /plugin install skins@hellosverre-mods (README) at HEAD. Still skip the mod-store.
 
 ## Install notes
 

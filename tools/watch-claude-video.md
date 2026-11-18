@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-16
 
 ## Safety reason
 
@@ -16,11 +16,14 @@ a review bot (code read @03ceb42, plugin 0.3.2, 2026-11-03, no-intake review): L
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): git clone https://github.com/bradautomates/claude-video.git, git checkout 03ceb42 (reviewed, plugin watch 0.3.2), then /plugin marketplace add <path to that folder> and /plugin install watch@claude-video, with auto-update off. Install Python 3.10+, then winget install --id Gyan.FFmpeg --exact, winget install --id yt-dlp.yt-dlp --exact and winget install --id DenoLand.Deno --exact yourself (setup.py prints these, never runs them). Use the local engine (no key, nothing leaves your PC); for the gemini engine put the key in ~/.config/watch/.env with Notepad, never in chat (SKILL.md line 51 offers chat; say no). Do not pass browser cookies to yt-dlp (download.py lines 30-35 do it only when you ask). Skip setup.py --install-whisperx unless you need it (it runs Astral's irm | iex uv installer and downloads about 1.5 GB; Windows untested).
+claude.ai: not available (Claude Code plugin only).
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin, the local-only engine and the no-cookies rule.
+/plugin marketplace add bradautomates/claude-video then /plugin install watch@claude-video (README) at HEAD, gemini engine, cookies and WhisperX as you like.
 
 ## Install notes
 

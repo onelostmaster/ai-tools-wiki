@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-14
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @3af4967, 2026-11-14, no-intake review): Caution. About 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows (Claude Code): pipx install mcptoon==0.8.40 (pins the reviewed 3af4967 release; not into system Python). Run mcptoon commands yourself; do not run quickstart or sync --takeover, which rewrite every detected agent's MCP config and write into ~/.claude/CLAUDE.md (sync.py lines 207-213). Do not let an agent run mcptoon exec on untrusted code: it is 'not a security sandbox' (exec_sandbox.py line 31). Vet each registry server before installing it. Do not pass --install-autostart (serve.py lines 1720-1745 add a Windows logon task); serve stays on 127.0.0.1 (lines 1986-1991). Tell Claude to ask you before installing anything: the bundled SKILL.md tells it to pip install mcptoon itself (lines 18-31). Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the version pin and the no-takeover rule.
+Windows: pip install mcptoon && mcptoon quickstart (rewrites all detected agents' MCP configs; mcptoon restore puts them back).
 
 ## Install notes
 

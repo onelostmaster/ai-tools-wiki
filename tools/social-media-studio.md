@@ -7,7 +7,7 @@
 - **Decision:** Skip
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -15,7 +15,8 @@ Not code-reviewed. Claude's a project tool scout (2026-10-31) only names it in i
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Unreviewed: contain it: in claude.ai, only connect it to a So-me Studio workspace with no real social accounts attached, so its publish and schedule tools cannot post anything; unverified: what the remote MCP server stores and sends (its code is not public and the vendor site could not be reached). Never connect your channel accounts. Get a review before real use.
 
 ## YOLO install
 

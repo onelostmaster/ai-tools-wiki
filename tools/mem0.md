@@ -6,24 +6,24 @@
 - **GitHub repo:** [https://github.com/mem0ai/mem0](https://github.com/mem0ai/mem0)
 - **Price:** SDK free (Apache-2.0). The Claude Code plugin needs a Mem0 Platform key. Free plan: 10,000 adds and 1,000 retrievals a month for the first 30 days (model calls on Mem0), or 50,000 adds and 10,000 retrievals a month with your own LLM key; usage-based billing past those limits, with a monthly cap you set. Custom plans by contract (`mem0.ai`, checked 2026-10-31). Hermes OSS mode is free with your own LLM and vector store.
 - **Decision:** Try
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
-a review bot (code read, a review / Hermes a review, 753496c, 2026-10-31): Use with caution. The Claude Code plugin uploads your session memories to Mem0 Cloud (`api.mem0.ai`) and needs a Mem0 Platform API key; hooks on SessionStart, every prompt and every tool call; PostHog telemetry on by default in the plugin and the SDK (opt out `MEM0_TELEMETRY=false`). Recalled memories are injected as context (poisoning risk).
+Claude code read @f1791da v2.2.1 (2026-11-17): safe with fixes. The Claude Code plugin needs a Mem0 Platform key and stores memories on api.mem0.ai (integrations/claude-code-plugin/.claude-plugin/plugin.json). PostHog telemetry is on in the library (mem0/memory/telemetry.py:14-16), the server and the plugin (core/telemetry.py:117); MEM0_TELEMETRY=false stops all three. Fix: OSS library with a local store, telemetry off.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Own venv; pip install mem0ai==2.2.1; env MEM0_TELEMETRY=false; local vector store and your own model key in env; Hermes: hermes plugins install mem0 in OSS mode with MEM0_TELEMETRY=false in ~/.hermes/.env; skip the cloud plugin.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips OSS mode and telemetry off.
+Install the cloud plugin with a Platform key and leave telemetry on.
 
 ## Install notes
 
-Caution: read the Safety reason and ask the user before installing.
-Claude Code: a review bot gave no steps (not Looks safe). The plugin needs a Mem0 Platform API key: add it as a secret/env var, never paste it into chat.
-Hermes: if you try it, OSS/self-hosted mode keeps data local: `hermes plugins install mem0`, then `hermes memory setup`, and set `MEM0_TELEMETRY=false` in `~/.hermes/.env`.
+Ask the user before installing. Own venv; pip install mem0ai==2.2.1; env MEM0_TELEMETRY=false; local vector store and your own model key in env; Hermes: hermes plugins install mem0 in OSS mode with MEM0_TELEMETRY=false in ~/.hermes/.env; skip the cloud plugin.

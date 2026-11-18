@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @338b9a7, a review / Hermes a review, 2026-11-02):
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: in a venv, pip install mcp-use==<release matching 338b9a7>. Set the user env var MCP_USE_ANONYMIZED_TELEMETRY=false before first use; otherwise PostHog + Scarf telemetry is on (libraries/python/mcp_use/telemetry/telemetry.py:12-13,139; pyproject.toml:30-31). For a starter app use npx create-mcp-use-app@<pinned version>, not @latest. Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the version pins and the telemetry switch.
+Windows: pip install mcp-use and npx create-mcp-use-app@latest; telemetry stays on.
 
 ## Install notes
 

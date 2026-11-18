@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,14 @@ a review bot (code read, a review, 569c528, 2026-10-31) and Claude (re-read, a p
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (local only), Windows: git clone https://github.com/anthropics/claude-code-playground.git, git checkout 569c528 (reviewed), cd claude-code-playground\\claude-code\\mods, claude plugin marketplace add ./, then claude plugin install replay-theater@claude-code-playground-mods --scope user (mods/README.md). It only records Edit/Write calls in memory and never blocks edits.
+claude.ai: not available.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin.
+Install from the repo HEAD as in mods/README.md.
 
 ## Install notes
 

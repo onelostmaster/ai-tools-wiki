@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read, a review, c871c15, 2026-10-31): Looks safe. MIT. Like a
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (local only, 2.1.287 or later): git clone https://github.com/JohnnyVizz/claude-kit.git, git checkout c871c15 (reviewed), /plugin marketplace add <path to that folder>, then /plugin install savvy-progress@claude-kit only. Do not install the sibling session-band mod (macOS-only Swift notifier that runs processes).
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin.
+/plugin marketplace add johnnyvizz/claude-kit then /plugin install savvy-progress@claude-kit (README) at HEAD.
 
 ## Install notes
 

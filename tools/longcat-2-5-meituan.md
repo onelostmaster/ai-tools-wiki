@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** unreviewed
 - **Safety basis:** No source
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot : not reviewed: hosted model with no weights, repo or license publi
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Unreviewed: contain it: nothing to install: hosted model only, no weights, repo or license published (as of 2026-11-02). If you try it, use the official site from https://longcat.ai with no personal data, keys or private code in prompts. Windows: API only. Android: no. Get a review before real use.
 
 ## YOLO install
 

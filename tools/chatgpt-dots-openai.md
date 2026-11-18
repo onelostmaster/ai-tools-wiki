@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** unreviewed
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-04
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Closed source, no code to read (a review bot, 2026-11-03). Per OpenAI (openai.co
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Unreviewed: contain it: closed source, so nothing to read or pin. If you try it, use only OpenAI's own Dots app, connect no apps at first and add only ones you pick (OpenAI says you choose connected apps), set its approval rules to ask before every action, and keep texting off unless you accept messages going through Linq, a third-party provider (per OpenAI's release notes). Get a review before real use.
 
 ## YOLO install
 

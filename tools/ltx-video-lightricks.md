@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @50f0aef, a review, 2026-11-02): caution. The optional p
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: git clone https://github.com/Lightricks/LTX-Video, git checkout 50f0aef, then python -m pip install -e .[inference] in a venv (NVIDIA GPU). Always run with enhance_prompt off (the default); turning it on loads a third-party Hugging Face model with trust_remote_code=True, which runs that model's own Python code (ltx_video/inference.py:253-256; configs/ltxv-2b-0.9.8-distilled-fp8.yaml:12). Download only the official Lightricks weights. Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin and the enhance_prompt-off rule.
+Windows: pip install -e .[inference] from the latest clone and use enhance_prompt; the prompt-enhancer model's remote code runs on your PC.
 
 ## Install notes
 

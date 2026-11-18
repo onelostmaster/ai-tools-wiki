@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot (code read, a review, 2026-10-28): Looks safe. Official Nous plugin
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Hermes: hermes plugins install camofox. Point CAMOFOX_URL only at your own Camofox server, started locked down: CAMOFOX_BIND_HOST=127.0.0.1, CAMOFOX_ACCESS_KEY set, CAMOFOX_CRASH_REPORT_ENABLED=false (see the camofox-browser row). The plugin blocks URLs that carry secrets (camofox/camofox_policy.py:91-110). Stealth browsing and cookie import are its purpose; follow each site's terms.
 
 ## YOLO install
 

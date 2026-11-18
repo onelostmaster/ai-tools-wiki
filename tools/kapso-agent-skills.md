@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read, 415c1b4, a review): Looks safe. Skill code only calls `
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code: git clone https://github.com/gokapso/agent-skills, git checkout 415c1b4 (the reviewed commit, a review) and copy the skill folders into %USERPROFILE%\.claude\\skills instead of the unpinned npx installer. Put KAPSO_API_KEY in an env var, never in chat. It sends real WhatsApp messages and makes paid calls , so keep Claude's permission prompt on for its send commands. The repo has no license .
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin and folder copy.
+npx skills add gokapso/agent-skills (unpinned installer, follows main).
 
 ## Install notes
 

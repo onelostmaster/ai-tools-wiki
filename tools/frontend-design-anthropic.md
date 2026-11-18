@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-14
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Claude (a project scout, read before install, 2026-10-31): Safe. One text-only s
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code: claude plugin install frontend-design@claude-plugins-official (claude.com/plugins/frontend-design). claude.ai: add it under Customize > Plugins. One text-only Anthropic skill, no hooks; nothing to fix.
 
 ## YOLO install
 

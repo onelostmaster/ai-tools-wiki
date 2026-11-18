@@ -6,25 +6,27 @@
 - **GitHub repo:** https://github.com/affaan-m/ECC @ b38be6a (MIT; v2.2.3)
 - **Price:** Free, MIT (github.com, checked 2026-11-02); ECC Tools app for private repos from $19 per seat a month per README.md:85 (unconfirmed on its site)
 - **Decision:** Try
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
-a review bot (light code read @b38be6a, a review, 2026-11-02): caution. 27 hook entries on 8 events (`hooks/hooks.json`) plus memory persistence run on every session; review and trim them first. The paid ECC Tools app for private repos is mentioned in `README.md:85`.
+Claude code read @3f14a10 v2.2.3 (2026-11-17): safe with fixes. 28 hooks on 8 events (hooks/hooks.json); the hook scripts make no network calls (scripts/hooks/). Hook profile defaults to standard (scripts/lib/hook-flags.js:7); minimal trims them and ECC_DISABLED_HOOKS turns single hooks off. scripts/auto-update.js pulls new code only when you run it. Fix: pin the commit, ECC_HOOK_PROFILE=minimal.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+/plugin marketplace add affaan-m/ECC#3f14a10, /plugin install ecc@ecc; env ECC_HOOK_PROFILE=minimal; never run scripts/auto-update.js; read hooks/hooks.json before the first session.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the pin and the minimal profile.
+Install from main with all 28 hooks on the standard profile.
 
 ## Install notes
 
-Caution: read the Safety reason and ask the user before installing.
+Ask the user before installing.
 Claude Code: install only the parts you need per its README, after reading the hooks.
 Hermes: has a Hermes hooks folder (not tested).
 Windows: works in Claude Code on Windows (not tested). Android: no.

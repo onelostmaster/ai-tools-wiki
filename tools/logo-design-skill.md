@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read, a project a review, 7340903): Looks safe. No network ca
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code: git clone https://github.com/kaankiziltug/logo-design-skill.git, git checkout 7340903 (the reviewed commit, a review), then copy skills/logo-design to %USERPROFILE%\.claude\\skills\\logo-design (README:49-57). Needs Python 3 and one SVG renderer (cairosvg is enough); no keys, no network.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin.
+/plugin marketplace add kaankiziltug/logo-design-skill then /plugin install logo-design@logo-design-skill (README:49-57; follows main).
 
 ## Install notes
 

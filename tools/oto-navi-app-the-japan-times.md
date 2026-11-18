@@ -7,7 +7,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -15,7 +15,8 @@ The Japan Times (official publisher app; not code-reviewed): safe. a project (to
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Android: install OTO Navi from Google Play, checking the publisher is The Japan Times, then add GENKI I inside the app. Keep the Genki audio private (do not upload it to videos or shared drives).
 
 ## YOLO install
 

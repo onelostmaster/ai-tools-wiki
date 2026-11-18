@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (light code read @35a9dd9, a review, 2026-11-02): caution. Sends te
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: npm install @copilotkit/react-core@<release matching 35a9dd9> @copilotkit/runtime@<same release> (README). Set COPILOTKIT_TELEMETRY_DISABLED=1 (or DO_NOT_TRACK=1) before first run; otherwise it sends telemetry to telemetry.copilotkit.ai (packages/web-inspector/src/lib/telemetry.ts:92; packages/shared/src/telemetry/telemetry-disabled.ts:14-20). Use a pinned npx copilotkit@<version>, not @latest, for onboarding. Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the version pins and the telemetry switch.
+Windows: npx copilotkit@latest and default npm install; telemetry to telemetry.copilotkit.ai stays on.
 
 ## Install notes
 

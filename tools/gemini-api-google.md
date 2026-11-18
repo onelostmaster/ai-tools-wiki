@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-13
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,14 @@ Gemini (official vendor, Google; not code-reviewed: a review bot listed it under
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): pip install google-genai (PyPI). Use a paid-tier key for anything private: free-tier content is used to improve Google's products and paid-tier content is not (Google pricing page). Keep GEMINI_API_KEY as an environment variable or secret, never in chat or in a repo, and set a spend cap on the project.
+Hermes: only through the plugins that need it (see their rows), with your own key stored as a secret.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the paid-tier key and spend cap.
+Use a free-tier key from Google AI Studio; your prompts and uploads will then be used to improve Google's products.
 
 ## Install notes
 

@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Whop / Content Rewards (official hosted platform; not code-reviewed): safe. No s
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Web (Windows or Android browser): nothing to install; sign in only at https://contentrewards.com. Payouts go to a platform balance and are withdrawn through Whop (vendor terms).
 
 ## YOLO install
 

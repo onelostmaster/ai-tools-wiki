@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-12
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,13 @@ a review bot (code read @b16a0ef, 2026-11-11, no-intake review): Caution. The co
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows (local only): install Node.js and pnpm, git clone the repo, git checkout b16a0ef, pnpm install --frozen-lockfile, then pnpm dev -- -H 127.0.0.1 so the unauthenticated /api/blob upload route (src/app/api/blob/route.ts line 12) is reachable only from your PC. Do not paste your platform key into the hosted openhiggsfield.ai (third-party server; the key goes to it, src/generation/platform.ts lines 49-66). Use a Vercel Blob store made only for this and treat every upload as a public URL. Do not share the terminal output: it logs every prompt and media URL (platform.ts lines 55 and 66). unverified: npm dependencies (pnpm-lock.yaml not read); contain it by running it with no other API keys in .env.local. No fix: there is no LICENSE file, so reuse rights stay unclear. Android: no.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin, the localhost binding and the separate Blob store.
+Windows: pnpm install && pnpm dev, or the hosted openhiggsfield.ai with your key.
 
 ## Install notes
 

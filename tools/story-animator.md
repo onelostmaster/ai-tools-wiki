@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,14 @@ a review bot (code read @6bff528, plugin 1.0.0, 2026-11-03, no-intake review): L
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): git clone https://github.com/deenukhan/story-animator.git, git checkout 6bff528 (reviewed, plugin 1.0.0), then /plugin marketplace add <path to that folder> and /plugin install story-animator@story-animator with auto-update off. Install Node.js, Python 3 and ffmpeg (winget install ffmpeg) yourself; put faster-whisper in a venv. Voice: use the ElevenLabs connector or set ELEVENLABS_API_KEY in your own environment, never in chat; every narration spends your ElevenLabs credits (references/voice-and-sound.md lines 26-36). The skill runs npm install on a pinned Remotion 4.0.534 template (SKILL.md line 72); that is expected.
+claude.ai: not available (Claude Code plugin).
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the commit pin.
+/plugin marketplace add deenukhan/story-animator then /plugin install story-animator@story-animator (README) at HEAD.
 
 ## Install notes
 

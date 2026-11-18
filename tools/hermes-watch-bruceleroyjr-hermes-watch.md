@@ -7,7 +7,7 @@
 - **Decision:** Skip
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -15,7 +15,8 @@ Not code-reviewed. a review bot only named it while vetting the Hermes Wear OS a
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Unreviewed: contain it: do not install it on your own phone or watch; unverified: which watch platform it targets, what permissions it asks for and what it connects to (nothing is recorded beyond the repo name). If you want to look, read the repo on GitHub only. Get a review before real use.
 
 ## YOLO install
 

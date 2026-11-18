@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,11 +16,14 @@ a review bot (light code read @a0c51b0, a review / Hermes a review, 2026-11-02):
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: pip install composio==<release matching a0c51b0> or npm install @composio/core@<same release> (README); never the curl | sh CLI installer (README.md:105). Set the user env var TELEMETRY_DISABLED=true before first use; otherwise the SDK sends telemetry (ts/packages/core/src/telemetry/Telemetry.ts:179). Connect only the apps you need with the narrowest scopes it offers: your app OAuth tokens are held in Composio's cloud (closed), which no setting avoids. Claude Code / Hermes: its MCP with the same narrow app list. Android: no.
+No fix: OAuth tokens stored in Composio's cloud.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the version pin, the telemetry switch and the narrow-scopes rule.
+Windows: curl | sh CLI install from the README, connect apps with default scopes; telemetry stays on.
 
 ## Install notes
 

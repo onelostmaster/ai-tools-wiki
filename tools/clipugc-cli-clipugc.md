@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-12
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Not code-reviewed for safety. Uses the ClipUGC cloud service (account and API ke
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Unreviewed: contain it: read it on GitHub first (https://github.com/clipugc/ClipUGC-CLI @ 5aef139); if you try it, install it at that exact commit only in a throwaway Claude Code project in a devcontainer or WSL sandbox (not your main Claude Code config on Windows), no API keys in its env except a separate ClipUGC key you can revoke, no network unless a step needs it, and do not run its install scripts. Get a review before real use. Android: no.
 
 ## YOLO install
 

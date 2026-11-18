@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,9 @@ Perplexity (official vendor MCP server; not code-reviewed: a review bot listed i
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Claude Code (Windows): claude mcp add --transport http perplexity https://api.perplexity.ai/mcp, then /mcp and sign in with Perplexity (OAuth), so no API key sits in a config file. Every tool call is billed to the account or API organization you pick at sign-in (Perplexity docs); that cost will happen on each search.
+claude.ai: add https://api.perplexity.ai/mcp as a custom connector and sign in with Perplexity.
 
 ## YOLO install
 

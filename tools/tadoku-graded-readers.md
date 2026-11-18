@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-01
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Not code-reviewed. Free Japanese graded readers (PDF, some with MP3 audio) from 
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Unreviewed: contain it: download the PDFs and MP3s only from https://tadoku.org (official site), open them in your normal PDF viewer or browser on Windows or Android, and upload them to a Claude project if you want Claude to use them; there is no code to install. Keep them for personal study: the book pages state CC BY-NC-ND 4.0 (no edits, non-commercial), so do not reuse them in channel videos. Get a review before real use.
 
 ## YOLO install
 

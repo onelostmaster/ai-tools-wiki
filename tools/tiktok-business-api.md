@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ TikTok (official API for Business; not code-reviewed): safe. No security finding
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+TikTok does not onboard personal accounts or individual developers yet, so this will not work with a personal setup). If registered, authorize only the Accounts API insights scopes for your own account, keep the access token in an environment variable outside any repo, never in chat.
 
 ## YOLO install
 

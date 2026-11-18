@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-02
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ Google (official vendor; not code-reviewed: a review bot listed it under 'not au
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Android: install Google Gemini from Google Play, checking the publisher is Google LLC, and use Nano Banana inside it per https://support.google.com/gemini/answer/14286560. Official vendor app; nothing to fix.
 
 ## YOLO install
 

@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-10-31
+- **Last checked:** 2026-11-17
 
 ## Safety reason
 
@@ -16,7 +16,8 @@ a review bot (code read, pin 62dbc16, a project a review): Looks safe. About 620
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Hermes: hermes plugins install inbox (README:35). Read-only local plugin (SQLite opened read-only, no network, pin 62dbc16, a review); nothing to fix.
 
 ## YOLO install
 
