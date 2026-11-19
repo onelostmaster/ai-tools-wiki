@@ -8,11 +8,11 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-17
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 
-a review bot (light code read @a0c51b0, a review / Hermes a review, 2026-11-02): caution. Holds your app OAuth tokens in its cloud (third-party storage, broad scopes); SDK telemetry unless TELEMETRY_DISABLED=true (`ts/packages/core/src/telemetry/Telemetry.ts:179`); CLI install is curl | sh (`README.md:105`).
+a review bot (light code read @a0c51b0, a review / Hermes a review, 2026-11-02): caution. Holds your app OAuth tokens in its cloud (third-party storage, broad scopes); SDK telemetry unless TELEMETRY_DISABLED=true (ts/packages/core/src/telemetry/Telemetry.ts:179); CLI install is curl | sh (README.md:105). No fix: your app OAuth tokens are held in Composio's closed cloud and no setting keeps them local; telemetry and the curl | sh installer are fixed in Safe install, and narrow app scopes limit the exposure. Caution stands for the token storage only.
 
 ## Safe install
 

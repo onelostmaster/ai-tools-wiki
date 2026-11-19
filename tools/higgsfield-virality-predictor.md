@@ -4,11 +4,11 @@
 - **Category:** research, social posting
 - **Official URL:** https://higgsfield.ai
 - **GitHub repo:** unknown
-- **Price:** Paid hosted service: a review bot noted $19+/mo . Higgsfield's own pages disagree on the Starter price ($19/mo or $15/mo, possibly annual billing), so unconfirmed (`higgsfield.ai`, checked 2026-10-31)
+- **Price:** Paid hosted service: a review bot noted $19+/mo . Higgsfield's own pages disagree on the Starter price ($19/mo or $15/mo, unverified: whether that is the annual-billing price), so unconfirmed (higgsfield.ai, checked 2026-10-31)
 - **Decision:** Skip
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-14
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 

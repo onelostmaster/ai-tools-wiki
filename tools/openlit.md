@@ -6,13 +6,13 @@
 - **GitHub repo:** https://github.com/openlit/openlit @ 4f095b5 (Apache-2.0)
 - **Price:** Free to self-host; hosted plans (prices not checked today, 2026-11-02)
 - **Decision:** Try
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-17
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 
-a review bot (light code read @4f095b5, a review, 2026-11-02): caution. Server posts events to us.i.posthog.com unless TELEMETRY_ENABLED=false (`src/client/src/lib/posthog.ts:22-27`, `constants/posthog.ts:3`). README offers a curl | sh installer (`README.md:150`): use Docker or pip instead.
+a review bot (light code read @4f095b5, a review, 2026-11-02): caution. Server posts events to us.i.posthog.com unless TELEMETRY_ENABLED=false (src/client/src/lib/posthog.ts:22-27, constants/posthog.ts:3). README offers a curl | sh installer (README.md:150): use Docker or pip instead. Fix-rule re-rate 2026-11-18: every verified risk has an exact fix in Safe install (the telemetry fix (TELEMETRY_ENABLED=false) and no curl | sh installer (Docker or pip, pinned)); with those fixes applied: safe.
 
 ## Safe install
 
@@ -26,5 +26,5 @@ Windows: curl | sh installer from README.md:150; PostHog telemetry stays on.
 
 ## Install notes
 
-Caution: read the Safety reason and ask the user before installing.
+Ask the user before installing. Safe only with the fixes in Safe install applied.
 Windows: Docker or pip (not tested), never the curl | sh installer; set TELEMETRY_ENABLED=false.

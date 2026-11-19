@@ -6,23 +6,23 @@
 - **GitHub repo:** https://github.com/mksglu/context-mode
 - **Price:** Local Engine free, no account, source-available Elastic License 2.0 (not MIT/OSI open source; LICENSE limits offering it as a substantial hosted/managed service). Verified online 2026-11-07 at contextmode.ai/docs/engine/gateway and /pricing. Optional separate Gateway: 1,000 requests/month free; Pro starts $20/month for 10,000 requests; model usage additional. Gateway forwards conversations to its server and stores searchable session data (README.md:660); not part of this local-code review and not recommended for a first trial.
 - **Decision:** Try
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-15
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 
-Targeted source read @2000abb (v2.1.6), not a full dependency audit. CAUTION: its "sandbox" is output isolation, not a security sandbox. ctx_execute runs model-written code with your user filesystem, network and most environment variables; src/core/tools/execute.ts:188-214, src/core/sandbox/spawn.ts:43-45, env.ts:24-32 (strips preload vars, not general API secrets), README.md:581. Keep agent approvals on and never blanket-allow ctx_execute/ctx_batch. Raw outputs/session data persist locally; avoid indexing secrets, protect ~/.context-mode and backups. Retrieved content can still contain prompt injection: output filtering is not a trust boundary. Hooks: plugins/claude-code/hooks/claude-code.json:3-48 runs Node on PostToolUse, PreToolUse, SessionStart, UserPromptSubmit; adapters/claude-code.ts:208 can deny oversized calls and redirect, rather than grant permissions. MCP is local stdio (plugins/claude-code/.claude-plugin/plugin.json:7-15). No telemetry SDK found in targeted src scan; local usage stats. Network: explicit URL indexing via core/sandbox/fetch.ts:144-149 rejects private resolved addresses and checks redirect hops; doctor/upgrade contact GitHub/npm (core/contracts/constants.ts:486,547; core/ops/doctor-env.ts:92). ctx_upgrade can invoke host updates/regenerate config (core/tools/upgrade.ts:67-107): explicit tool, not evidence of silent auto-updating. No npm postinstall/preinstall, no curl|bash installer or direct eval found in targeted source scan; shell/code execution itself is an advertised feature. Storage: core/store/db.ts:123 creates project storage; constants.ts:131,168 gives context.db and ~/.context-mode. No database encryption layer seen; this is not a secret vault. Dependency and bundled-binary audit not performed. No fix: ctx_execute is an output-isolation tool, not a security sandbox, and code it runs has your full user rights; contained by approving every call and a clean environment with no keys.
+Claude code read @9a1282f v2.2.1 (2026-11-18): safe with fixes. ctx_execute runs model-written code as you, with your files, network and env minus preload vars (README.md:600; src/core/sandbox/env.ts:24-32). Its hook denies Read and points the agent to ctx_execute; it grants nothing (plugins/claude-code/pi/index.js:12582). No telemetry (README.md:588). Fix: never allow-list ctx_execute or ctx_batch_execute, pin.
 
 ## Safe install
 
 Safe install (fixes applied):
-Windows Claude Code with Node >=24.15.0 and Git for Windows (README.md:56): `claude plugin marketplace add mksglu/context-mode` then `claude plugin install context-mode@context-mode` (README.md:63-64; bundled 2.1.6, reviewed @2000abb). Use it in a disposable test repo first. Keep Claude Code's normal permission prompts on (never --dangerously-skip-permissions). Never add ctx_execute or ctx_batch to the allow list: they run model-written code with your user rights, network and most env vars (execute.ts:188-214, env.ts:24-32), so approve each call. Start Claude Code from a shell without production keys in the environment. Don't index secrets; raw outputs stay in context.db and ~/.context-mode unencrypted (db.ts:123, constants.ts:131,168), so delete that folder when done. Don't configure the Gateway (it forwards conversations to its server, README.md:660). Run ctx_upgrade only by hand. claude.ai, Android, Hermes: no supported route.
+claude plugin marketplace add mksglu/context-mode#9a1282f, claude plugin install context-mode@context-mode; Node 24.15+ and Git Bash on Windows; keep approval prompts for ctx_execute and ctx_batch_execute; don't index secrets; ctx_purge when done.
 
 ## YOLO install
 
-YOLO (your own risk): skips the test repo, the per-call approval on ctx_execute/ctx_batch and the clean environment.
-claude plugin marketplace add mksglu/context-mode && claude plugin install context-mode@context-mode
+YOLO (your own risk): skips the pin and the approval rule.
+Install from main and allow ctx_execute always.
 
 ## Install notes
 

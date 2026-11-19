@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-17
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 

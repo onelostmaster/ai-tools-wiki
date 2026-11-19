@@ -5,24 +5,23 @@
 - **GitHub repo:** unknown
 - **Price:** unknown
 - **Decision:** Try
-- **Safety verdict:** caution
+- **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-14
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 
-Not code-reviewed. Claude's a project tool scout (2026-10-31) lists it as a plugin under Later or maybe (★★★☆☆): transcripts of other lore videos, competitor and keyword ideas; price unknown. No safety review is recorded; caution is a review bot's own call. No fix: not reviewed and the publisher is not recorded, so there is no code to check.
+No code: publisher and source not recorded (a project scout 2026-10-31). Unverified: who publishes it and what it sends -> Contain: install only after the publisher and source are named and reviewed; no Google account connection beyond read-only.
 
 ## Safe install
 
-Safe install (fixes applied):
-claude.ai: install it only from the in-app plugin directory (Customize > Plugins, the route a project scout gives), never a copy found by search. unverified: its publisher, price and what it sends; contain it by turning it on only in chats where you need transcripts or keyword ideas and leaving it off otherwise. Windows and Android: use it through claude.ai. Claude Code and Hermes: no install path recorded.
+Unreviewed: contain it: do not install until the claude.ai Customize > Plugins listing names its publisher and source; then a code or docs review; read-only access only. Get a review before real use.
 
 ## YOLO install
 
-Not written yet.
+Not offered.
 
 ## Install notes
 
-Caution: read the Safety reason and ask the user before installing.
-[claude.ai](http://claude.ai): Customize > Plugins (the route a project scout gives)
+Not code-reviewed yet: ask a review bot or Claude to review it before installing.
+Contain it: do not install until the claude.ai Customize > Plugins listing names its publisher and source; then a code or docs review; read-only access only.

@@ -6,24 +6,24 @@
 - **GitHub repo:** [https://github.com/debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio)
 - **Price:** Free (AGPL)
 - **Decision:** Try
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-14
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 
-a review bot (code scan, da74a6f, a project a review, 2026-10-31): Use with caution. `curl|sh` installer; some engines load Hugging Face models with `trust_remote_code=True`, which runs model-repo code; PostHog analytics are opt-in; the server binds `127.0.0.1`; it ships a Claude skill plus an MCP at `localhost:3900/mcp`. About 6 months old, single developer. No fix: the release installers are prebuilt binaries nobody has reviewed (only the source was read), from a single developer.
+Claude code read @8f6c113 v0.5.9-beta.6 (2026-11-18): safe with fixes. API binds 127.0.0.1 (backend/main.py:2483,2515). MOSS-TTS v1.5 loads remote code at pinned revisions (backend/engines/moss_tts_v15/main.py:57-59); MOSS-TTS-Nano loads it from main unpinned (backend/services/tts_backend.py:2521-2523). Analytics are opt-in. Fix: run from source, skip curl|sh and the Nano engine.
 
 ## Safe install
 
 Safe install (fixes applied):
-Windows: download the Windows installer from the official GitHub releases page (github.com/debpalash/VoiceStudio/releases/latest, README.md:221) instead of the `irm https://voicestudio.sh/install.ps1 | iex` one-liner (README.md:218). Android: the APK from the same releases page (README.md:393). Do not turn on the MOSS-TTS engines: they load Hugging Face model code with trust_remote_code=True (backend/services/tts_backend.py:2517, backend/engines/moss_tts_v15/main.py:308,318; checked at HEAD 0d71fe7 on 2026-11-14). Run the desktop app, not the Docker image: the Docker entrypoint listens on 0.0.0.0 (backend/docker_entrypoint.py:14), the app and MCP shim default to 127.0.0.1 (backend/mcp_shim/__main__.py:61). Leave PostHog analytics off (opt-in). Claude Code: add its MCP only as http://127.0.0.1:3900/mcp when the app is running.
+Clone at 8f6c113 and run from source per README.md:334 (or build the repo's Docker image yourself); never curl … | sh; don't install moss_tts_nano; leave analytics off.
 
 ## YOLO install
 
-YOLO (your own risk): skips the release download (pipes the official script into PowerShell) and allows the MOSS-TTS engines.
-irm https://voicestudio.sh/install.ps1 | iex
+YOLO (your own risk): skips source builds and the Nano rule.
+curl -fsSL https://voicestudio.sh/install | sh with every engine.
 
 ## Install notes
 
-No install steps: the source withholds them until the tool is rated safe. Read the Safety reason and ask the user first.
+Ask the user before installing. Clone at 8f6c113 and run from source per README.md:334 (or build the repo's Docker image yourself); never curl … | sh; don't install moss_tts_nano; leave analytics off.

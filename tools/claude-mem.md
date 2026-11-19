@@ -8,11 +8,11 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-17
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 
-a review bot (code read, a review / Hermes a review, 70aa400, 2026-10-31): Use with caution. Hooks on every prompt and tool call feed all tool output to an observer LLM, which stores it; stored observations are re-injected at SessionStart, so poisoned tool output can persist. Setup runs `bun install`; a self-heal step edits your shell rc or Windows PATH (PowerShell `-ExecutionPolicy Bypass`). Worker binds 127.0.0.1; cloud sync to `cmem.ai` off by default.
+a review bot (code read, a review / Hermes a review, 70aa400, 2026-10-31): Use with caution. Hooks on every prompt and tool call feed all tool output to an observer LLM, which stores it; stored observations are re-injected at SessionStart, so poisoned tool output can persist. Setup runs bun install; a self-heal step edits your shell rc or Windows PATH (PowerShell -ExecutionPolicy Bypass). Worker binds 127.0.0.1; cloud sync to cmem.ai off by default. No fix: hooks send every tool result to the memory model (plugin/hooks/hooks.json lines 80-86, matcher *) and stored memories are re-injected at SessionStart (line 20), so poisoned tool output persists; this is the tool's core design and cannot be turned off; the install-script and telemetry risks are fixed in Safe install.
 
 ## Safe install
 

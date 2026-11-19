@@ -6,13 +6,13 @@
 - **GitHub repo:** https://github.com/Stability-AI/generative-models @ e8cd657 (MIT code; weights under the Stability community licence; last commit 2025-12-16)
 - **Price:** Free code (MIT); weights under the Stability AI community licence (github.com, checked 2026-11-02)
 - **Decision:** Try
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-17
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 
-a review bot (code read @e8cd657, a review, 2026-11-02): caution. Runs eval() on config strings (`sgm/util.py:25`) and loads checkpoints with torch.load (`sgm/util.py:205`): use only official weights. Research repo, no commit since 2025-12. Weights carry Stability's community licence (check before commercial use).
+a review bot (code read @e8cd657, a review, 2026-11-02): caution. Runs eval() on config strings (sgm/util.py:25) and loads checkpoints with torch.load (sgm/util.py:205): use only official weights. Research repo, no commit since 2025-12. Weights carry Stability's community licence (check before commercial use). Fix-rule re-rate 2026-11-18: every verified risk has its exact fix in Safe install (only official Stability AI checkpoints and the repo's own configs loaded, so eval() and torch.load see no third-party input, pinned e8cd657); with those fixes applied: safe.
 
 ## Safe install
 
@@ -26,5 +26,5 @@ Windows: clone, install and load any checkpoint or config you find; a malicious 
 
 ## Install notes
 
-Caution: read the Safety reason and ask the user before installing.
+Ask the user before installing. Safe only with the fixes in Safe install applied.
 Windows: no official Windows steps; Python + NVIDIA GPU per its README (not tested). Android: no.

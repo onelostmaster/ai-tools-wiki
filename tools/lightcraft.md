@@ -5,21 +5,23 @@
 - **Official URL:** https://github.com/storytold/lightcraft
 - **GitHub repo:** https://github.com/storytold/lightcraft
 - **Price:** Standalone app free, verified online 2026-11-07 at https://getartcraft.com/apps and individual app pages. Optional separate ArtCraft cloud-generation subscriptions not required for local editing. License MIT OR Apache-2.0 (Cargo.toml; GitHub detects Apache-2.0).
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-07
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 
-Targeted source read only, not a full security/dependency/binary audit. Early/active-development editor with file-editing automation and updater code; use disposable copies and backups. No tracking SDK found in targeted runtime scan; this does NOT establish zero telemetry. Update machinery uses pinned external craft-libs dependency (Cargo.toml); consent/defaults and dependency internals not fully reviewed. Do not label updates silent or claim isolation. Agent file access is not a security sandbox. No blanket execution/permission grants; untrusted documents and tool output can carry prompt injection. Update source: crates/ui-egui/src/dialogs/updates_ui.rs:10:use craft_update:\:updater\::\{Action, Status, Updater\}; Additional evidence: crates/fetch/src/lib.rs:82-89,277-280 optional model-download bearer token constrained to original HTTPS host; crates/geocode/src/lib.rs:21 GeoNames download base; README.md:507 local Windows logs.
+Claude code read @d5382f2 (2026-11-18): safe with fixes, same pattern as the other Craft apps. Updates go through craft_update (crates/ui-egui/src/dialogs/updates_ui.rs:10); the desktop app checks for one at startup. A download token goes only to the mirror's host, and only if set (crates/fetch/src/lib.rs:82-89). Its MCP edits files directly. Fix: portable build, copies of your files, updates by hand.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: portable build only from https://getartcraft.com/apps/lightcraft; work on copies with backups; decline in-app updates and download new builds by hand; set no download token; AI provider features off, no API keys in it; add its local stdio MCP in Claude Code with tool approvals on.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips copies, backups and manual updates.
+Install from getartcraft.com, open your real files and accept in-app updates.
 
 ## Install notes
 

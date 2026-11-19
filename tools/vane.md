@@ -4,11 +4,11 @@
 - **Category:** research
 - **Official URL:** https://github.com/ItzCrazyKns/Vane
 - **GitHub repo:** https://github.com/ItzCrazyKns/Vane @ 348feca (MIT)
-- **Price:** Free, open source (MIT) (github.com, checked 2026-11-01); model APIs you connect may cost extra
+- **Price:** Free, open source (MIT) (github.com, checked 2026-11-01); model APIs you connect bill you separately at their own rates
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-16
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 

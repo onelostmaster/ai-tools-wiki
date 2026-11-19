@@ -8,11 +8,11 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-17
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 
-a review bot (code read @c133c38, a review, 2026-11-02): caution. Localhost only by default (`src/ida_pro_mcp/server.py:57`). Headless server hides unsafe tools (py_eval, debugger) unless --unsafe (`idalib_server.py:289-291`), but the IDA GUI plugin turns every tool on by default, unsafe ones included (`ida_mcp/http.py:51-72`); untick unsafe. Installer writes MCP config into `~/.claude.json` and other clients (`installer_data.py:115`). Sample binaries can carry prompt injection.
+a review bot (code read @c133c38, a review, 2026-11-02): caution. Localhost only by default (src/ida_pro_mcp/server.py:57). Headless server hides unsafe tools (py_eval, debugger) unless --unsafe (idalib_server.py:289-291), but the IDA GUI plugin turns every tool on by default, unsafe ones included (ida_mcp/http.py:51-72); untick unsafe. Installer writes MCP config into ~/.claude.json and other clients (installer_data.py:115). Sample binaries can carry prompt injection. No fix: the MCP server hands strings and code from the analysed binary straight to the agent, so prompt-injection text inside a sample cannot be filtered out; unsafe tools, localhost and client configs are fixed in Safe install, so caution stands for untrusted samples only.
 
 ## Safe install
 

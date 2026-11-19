@@ -6,6 +6,8 @@ The tool's own defaults: no fixes, no sandbox, at your own risk. Never offered f
 The README curl one-liner or ./install.sh.
 - [Ace Data Cloud plugin](tools/ace-data-cloud-plugin.md): YOLO (your own risk): skips the key limits and toolset choice, so the model spends credits freely.
 Install from the catalog with your general key and all 17 toolsets.
+- [advisor-orchestrator-worker skill (awesome-llm-apps)](tools/advisor-orchestrator-worker-skill-awesome-llm-apps.md): YOLO (your own risk): skips the VM.
+Copy the skill into your main Claude Code and let workers run with skip-permissions.
 - [AG-UI protocol](tools/ag-ui-protocol.md): YOLO (your own risk): skips the version pins and runs the unpinned CopilotKit CLI.
 npx create-ag-ui-app my-agent-app
 - [AG2](tools/ag2.md): YOLO (your own risk): skips the version pin (gets 1.3.2 from 2026-11-15, unreviewed) and the venv.
@@ -36,6 +38,8 @@ npx skills add wheresryan22/anatomy -g -a claude-code (sends install telemetry t
 pip install angr
 - [Anime.js](tools/anime-js.md): YOLO (your own risk): skips the version pin.
 npm install animejs
+- [Anthropic TypeScript SDK](tools/anthropic-typescript-sdk.md): YOLO (your own risk): skips the version pin, telemetry off, debug-log and secret-scrubbing steps and the spend limit.
+Windows: npm install @anthropic-ai/sdk in your project and call the API with your key and default settings.
 - [Apify (API + MCP)](tools/apify-api-mcp.md): YOLO (your own risk): skips telemetry off, the tool allowlist and price checks.
 npx @apify/actors-mcp-server with defaults.
 - [Apktool](tools/apktool.md): YOLO (your own risk): skips the pinned version.
@@ -44,14 +48,14 @@ Download the newest apktool jar and run java -jar apktool.jar.
 pip install -U arize-phoenix with the pixel on.
 - [Astryx](tools/astryx.md): YOLO (your own risk): skips the pinned version, --ignore-scripts, NO_UPDATE_NOTIFIER=1, the deny rule against global npm, and staying off the hosted MCP and `astryx init --user`.
 `npm i -g @astryxdesign/cli` (README), or install the Astryx skill, which tells an agent to run that command when `astryx` is not found (SKILL.md:19).
-- [Atheros AI Builder](tools/atheros-ai-builder.md): YOLO (your own risk): skips the project-key-only, Pass-only and read-tool allowlist rules.
-claude mcp add atheros --transport http https://mcp.atheros.ai/v1 --header "Authorization: Bearer YOUR_API_KEY"
 - [AudioCraft / MusicGen (Meta)](tools/audiocraft-musicgen-meta.md): YOLO (your own risk): skips the venv and the version pin.
 python -m pip install -U audiocraft (README.md:20)
 - [Aura Autopilot](tools/aura-autopilot.md): YOLO (your own risk): skips sharing off and the sandbox, so harness code runs as you and runs upload.
 Install on Windows with defaults.
 - [Auto-Editor](tools/auto-editor.md): YOLO (your own risk): skips the firewall block and the review gap; gets the newest release and its skills.
 Latest auto-editor-windows-x86_64.exe from the releases page, then npx skills add WyattBlue/auto-editor
+- [AutoGen (Microsoft)](tools/autogen-microsoft.md): YOLO (your own risk): skips moving to a maintained fork.
+pip install autogen-agentchat and build on it.
 - [Awesome DESIGN.md (VoltAgent)](tools/awesome-design-md-voltagent.md): YOLO (your own risk): skips the commit pin.
 Download the DESIGN.md from the main branch (newer files are not reviewed).
 - [awesome-gamedev-agent-skills](tools/awesome-gamedev-agent-skills.md): YOLO (your own risk): skips the commit pin and saying no to the npx tools.
@@ -78,10 +82,13 @@ Installer from blockbench.net, any plugins.
 /plugin marketplace add anthropics/skills, then /plugin install example-skills@anthropic-agent-skills (installs all 12 example skills at HEAD, .claude-plugin/marketplace.json).
 - [Browser Use](tools/browser-use.md): YOLO (your own risk): skips the version pin, the telemetry switch and the separate profile.
 Windows: uv add browser-use with defaults in your normal browser; telemetry stays on and the agent can act on every site you are signed in to.
+- [Bubblewrap](tools/bubblewrap.md): YOLO (your own risk): skips the exact pin, the lockfile install, the checked JDK/SDK downloads (you get the unchecked 32-bit JDK on Windows) and the Gradle checksum. npm i -g @bubblewrap/cli, then bubblewrap init --manifest https://<your-site>/manifest.json and accept the downloads, then bubblewrap build (README).
 - [Bubblewrap terminal backend (official Hermes)](tools/bubblewrap-terminal-backend-official-hermes.md): YOLO (your own risk): skips the reviewed-pin install and the no-network profile (keeps host network on).
 hermes plugins install NousResearch/hermes-official-plugins#bubblewrap; hermes config set terminal.backend bubblewrap
 - [Cache Tax](tools/cache-tax.md): YOLO (your own risk): skips the pin and Auto keepwarm off, so pings spend usage after every cold write.
 Install from the marketplace with defaults.
+- [CADCraft](tools/cadcraft.md): YOLO (your own risk): skips working on copies and backups and the update containment.
+Windows: download from https://getartcraft.com/apps/cadcraft, open your real files, connect its MCP in Claude Code and accept in-app updates.
 - [Cal.diy](tools/cal-diy.md): YOLO (your own risk): skips the telemetry switch.
 The repo's Docker setup with the default .env (telemetry on).
 - [Camera Controls (three.js)](tools/camera-controls-three-js.md): YOLO (your own risk): skips the version pin.
@@ -110,6 +117,8 @@ npm run dev
 Copy the folder as is.
 - [Claude Code Game Studios](tools/claude-code-game-studios.md): YOLO (your own risk): skips the commit pin and the update-check opt-out.
 git clone https://github.com/Donchitos/Claude-Code-Game-Studios.git my-game and run /start at HEAD (README), daily update check on.
+- [Claude Code Mods (official feature)](tools/claude-code-mods-official-feature.md): YOLO (your own risk): skips validate and the pin.
+Install any mod Claude writes or a marketplace offers.
 - [Claude in Chrome](tools/claude-in-chrome.md): YOLO (your own risk): skips per-action approval.
 'Automatically approve' mode in your main Chrome profile.
 - [Claude Quickstarts](tools/claude-quickstarts.md): YOLO (your own risk): skips the commit pin, Docker isolation, the no-extra-mounts rule, and skipping Managed Agents and macOS-native samples.
@@ -160,29 +169,37 @@ pip install cognee with defaults.
 Comfy Desktop from https://www.comfy.org/download (README; the Desktop app itself was not reviewed) with any custom nodes you like.
 - [Composio](tools/composio.md): YOLO (your own risk): skips the version pin, the telemetry switch and the narrow-scopes rule.
 Windows: curl | sh CLI install from the README, connect apps with default scopes; telemetry stays on.
-- [Context Mode (local Engine plugin)](tools/context-mode-local-engine-plugin.md): YOLO (your own risk): skips the test repo, the per-call approval on ctx_execute/ctx_batch and the clean environment.
-claude plugin marketplace add mksglu/context-mode && claude plugin install context-mode@context-mode
+- [Context Mode (local Engine plugin)](tools/context-mode-local-engine-plugin.md): YOLO (your own risk): skips the pin and the approval rule.
+Install from main and allow ctx_execute always.
 - [Context7 (Upstash)](tools/context7-upstash.md): YOLO (your own risk): skips the version pin and the telemetry switch.
 claude mcp add context7 -- npx -y @upstash/context7-mcp
 - [CopilotKit](tools/copilotkit.md): YOLO (your own risk): skips the version pins and the telemetry switch.
 Windows: npx copilotkit@latest and default npm install; telemetry to telemetry.copilotkit.ai stays on.
 - [Coqui TTS](tools/coqui-tts.md): YOLO (your own risk): skips the venv and pin.
 pip install TTS.
-- [Craft Anything (ArtCraft workbench)](tools/craft-anything-artcraft-workbench.md): YOLO (your own risk): skips Auto mode off, the approval changes and the signature check; uses the default build and setup.
-craft-anything-cli setup
+- [Craft Anything (ArtCraft workbench)](tools/craft-anything-artcraft-workbench.md): YOLO (your own risk): skips Auto mode off.
+Let builds run in Auto mode with default approvals.
 - [creator-generalist (codepawl)](tools/creator-generalist-codepawl.md): YOLO (your own risk): skips the commit pin, the local marketplace and the per-tool no answers.
 /plugin marketplace add codepawl/creator-generalist
 /plugin install <name>@creator-generalist (each of the five plugins)
 - [CrewAI](tools/crewai.md): YOLO (your own risk): skips the version pin and the telemetry switch.
 Windows: uv curl | sh installer then uv tool install crewai (README); anonymous telemetry stays on.
+- [css.gg (current restricted license)](tools/css-gg-current-restricted-license.md): YOLO (your own risk): skips the 2.1.1 pin.
+Install latest and use it commercially against its licence.
+- [Cua Spaces plugin](tools/cua-spaces-plugin.md): YOLO (your own risk): skips reading the installer and the telemetry opt-out.
+Hermes: curl -fsSL https://cua.ai/install.sh | sh, cua auth login, then hermes plugins install https://github.com/trycua/hermes-cua-spaces.
+- [DeckCraft](tools/deckcraft.md): YOLO (your own risk): skips working on copies and backups and the update containment.
+Windows: download from https://getartcraft.com/apps/deckcraft, open your real files, connect its MCP in Claude Code and accept in-app updates.
 - [DeepEval (Confident AI)](tools/deepeval-confident-ai.md): YOLO (your own risk): skips the version pin and the telemetry opt-out.
 Windows: pip install deepeval; PostHog usage events stay on.
-- [DeepFilterNet](tools/deepfilternet.md): YOLO (your own risk): skips the venv and version pin.
-pip install torch torchaudio deepfilternet
+- [DeepFilterNet](tools/deepfilternet.md): YOLO (your own risk): skips the venv, torch 2.6 and the pin.
+pip install deepfilternet and run the demo installer.
 - [DeepSeek Harness (dsh)](tools/deepseek-harness-dsh.md): YOLO (your own risk): skips the VM and approvals.
 npx @deepseek-ai/dsh web on your main account with Creator Mode on.
 - [Demucs (htdemucs)](tools/demucs-htdemucs.md): YOLO (your own risk): skips the virtual environment and the exact pin (the built-in-models-only rule still applies).
 `pip install demucs`
+- [DesignCraft](tools/designcraft.md): YOLO (your own risk): skips working on copies and backups and the update containment.
+Windows: download from https://getartcraft.com/apps/designcraft, open your real files, connect its MCP in Claude Code and accept in-app updates.
 - [Diagram Design](tools/diagram-design.md): YOLO (your own risk): skips the commit pin.
 /plugin marketplace add cathrynlavery/diagram-design, then /plugin install diagram-design@diagram-design (README lines 60-61), with marketplace auto-update on as the README suggests (lines 66-71): new versions install without a review.
 - [Diffusion Policy](tools/diffusion-policy.md): YOLO (your own risk): skips offline logging and the own-checkpoints rule.
@@ -199,6 +216,8 @@ pip install e2b
 `git clone https://github.com/Leonxlnx/earshot` then `pip install -e ".[mcp]"` and `claude mcp add earshot -- python -m earshot mcp` (still never set GEMINI_API_KEY).
 - [ECC (affaan-m/ECC, formerly everything-claude-code)](tools/ecc-affaan-m-ecc-formerly-everything-claude-code.md): YOLO (your own risk): skips the pin and the minimal profile.
 Install from main with all 28 hooks on the standard profile.
+- [EffectCraft](tools/effectcraft.md): YOLO (your own risk): skips copies, backups and manual updates.
+Install from getartcraft.com, open your real files and accept in-app updates.
 - [Element 84 Earth Search (STAC API)](tools/element-84-earth-search-stac-api.md): YOLO (your own risk): skips the venv and the version pin.
 pip install pystac-client
 - [ElevenLabs agent skills](tools/elevenlabs-agent-skills.md): YOLO (your own risk): skips the key and pin, so the skill runs the latest CLI sign-in.
@@ -232,6 +251,8 @@ claude plugin install figma@claude-plugins-official
 claude plugin marketplace add Marius-Adam/claude-files-pane, then claude plugin install files-pane@marius-adam (README Installation; takes HEAD).
 - [Filetree (claude-code-filetree)](tools/filetree-claude-code-filetree.md): YOLO (your own risk): skips the pin, so updates arrive unread.
 Install from the marketplace as the README says.
+- [FilmCraft](tools/filmcraft.md): YOLO (your own risk): skips copies, backups and manual updates.
+Install from getartcraft.com, open your real files and accept in-app updates.
 - [find-skills (vercel-labs/skills)](tools/find-skills-vercel-labs-skills.md): YOLO (your own risk): skips the deny and telemetry off.
 npx skills add vercel-labs/skills@find-skills -g -y.
 - [FreeLLMAPI (tashfeenahmed/freellmapi)](tools/freellmapi-tashfeenahmed-freellmapi.md): YOLO (your own risk): skips the pin and the one-account rule.
@@ -274,10 +295,14 @@ Connect as in the Granola docs and leave Settings at the default.
 docker compose up with the defaults.
 - [Gravity UI Icons](tools/gravity-ui-icons.md): YOLO (your own risk): skips the version pin and --ignore-scripts.
 npm install --save-dev @gravity-ui/icons
+- [GridCraft](tools/gridcraft.md): YOLO (your own risk): skips working on copies and backups and the update containment.
+Windows: download from https://getartcraft.com/apps/gridcraft, open your real files, connect its MCP in Claude Code and accept in-app updates.
 - [grill-me (mattpocock/skills)](tools/grill-me-mattpocock-skills.md): YOLO (your own risk): skips copying only the two folders at the reviewed commit; the plugin updates itself from main (README.md:27).
 claude plugin install mattpocock-skills@claude-plugins-official (README.md:35).
 - [GSAP](tools/gsap.md): YOLO (your own risk): skips the version pin and self-hosting.
 npm install gsap
+- [gstack](tools/gstack.md): YOLO (your own risk): skips both switches and the CLAUDE.md rule.
+Run the README one-liner as written.
 - [Habitat Lab (Meta)](tools/habitat-lab-meta.md): YOLO (your own risk): skips the fresh env and the version pin.
 conda install habitat-sim withbullet -c conda-forge -c aihabitat && pip install habitat-lab
 - [Hallmark](tools/hallmark.md): YOLO (your own risk): skips the commit pin, the hook opt-out and per-command approval.
@@ -304,6 +329,10 @@ Accept the setup defaults.
 /plugin marketplace add huggingface/skills; /plugin install hf-cli@huggingface/skills; let it run the curl | bash installer.
 - [HunyuanVideo-Avatar (Tencent)](tools/hunyuanvideo-avatar-tencent.md): YOLO (your own risk): skips CLI-only, torch 2.6 and the Docker trims.
 Run the Gradio demo with its public link and the README's --privileged container.
+- [HyperFrames](tools/hyperframes.md): YOLO (your own risk): skips the env vars and pin.
+Install latest and let the skill post feedback after every render.
+- [IconPark (ByteDance; archived)](tools/iconpark-bytedance-archived.md): YOLO (your own risk): skips the pin.
+Clone the repo and run its build.
 - [ida-pro-mcp](tools/ida-pro-mcp.md): YOLO (your own risk): skips unticking the unsafe tools and the config review.
 Claude Code: README install with defaults; py_eval and debugger stay on in the GUI plugin.
 - [ILSpy](tools/ilspy.md): YOLO (your own risk): skips turning off the update check (it keeps contacting icsharpcode.github.io).
@@ -323,6 +352,7 @@ Unzip the latest jadx-gui release and run it.
 Install from the marketplace and send anything.
 - [jp-web-design-guardrails](tools/jp-web-design-guardrails.md): YOLO (your own risk): skips the commit pin.
 The README one-line plugin command (latest commit, and the repo has no marketplace file).
+- [KanjiVG](tools/kanjivg.md): YOLO (your own risk): skips the SHA-256 check and the parser setting. git clone https://github.com/KanjiVG/kanjivg and point the app at the kanji/ folder (README).
 - [Kapso agent skills](tools/kapso-agent-skills.md): YOLO (your own risk): skips the commit pin and folder copy.
 npx skills add gokapso/agent-skills (unpinned installer, follows main).
 - [karpathy-guidelines (andrej-karpathy-skills)](tools/karpathy-guidelines-andrej-karpathy-skills.md): YOLO (your own risk): skips the commit pin.
@@ -345,10 +375,14 @@ Install the latest skill as its README says and run setup with --allow-browser-c
 git clone https://github.com/lemomo-ai/lemo-opuscar.git && cd lemo-opuscar && claude, and run setup.sh as shipped (auto-updates from main).
 - [LeRobot (Hugging Face)](tools/lerobot-hugging-face.md): YOLO (your own risk): skips the venv, the version pin and the extras limit.
 pip install lerobot (README.md:33)
+- [Letta Code (letta-ai)](tools/letta-code-letta-ai.md): YOLO (your own risk): skips telemetry off, update off and local backend.
+npm install -g @letta-ai/letta-code on Letta Cloud.
 - [LFM2.5-24B-A2B harness adapters (harness-hub LoRAs: hermes, claude-code)](tools/lfm2-5-24b-a2b-harness-adapters-harness-hub-loras-hermes-cla.md): YOLO (your own risk): skips the revision pins, the localhost-only bind and avoiding the card's curl|bash Hermes step.
 Follow the model card as written (README.md:86 curl|bash, then llama serve with the latest adapter files).
 - [librosa](tools/librosa.md): YOLO (your own risk): skips the virtual environment and the exact pin.
 `pip install librosa`
+- [LightCraft](tools/lightcraft.md): YOLO (your own risk): skips copies, backups and manual updates.
+Install from getartcraft.com, open your real files and accept in-app updates.
 - [LiteLLM](tools/litellm.md): YOLO (your own risk): skips the exact version pin and localhost binding.
 Windows: pip install litellm (latest); still never 1.82.7/1.82.8.
 - [llm-bench-rig (offline Hermes Agent recipe)](tools/llm-bench-rig-offline-hermes-agent-recipe.md): YOLO (your own risk): skips the container-only rule, the commit pin and the pheromone/05 ban.
@@ -429,6 +463,7 @@ curl -fsSL https://omher.app/install | sh with the auto update mode.
 Claude Code on Windows: add the skill; it checks ui.oiloil.org for updates each time it loads.
 - [Ollama](tools/ollama.md): YOLO (your own risk): skips reading the Linux script first.
 Linux: curl -fsSL https://ollama.com/install.sh | sh (official docs). Windows is the same as Safe install.
+- [one-minute-remotion (itwanger)](tools/one-minute-remotion-itwanger.md): YOLO (your own risk): skips the pinned commit, the lockfile install, the Chrome path and the firewall limit. npx skills add itwanger/one-minute-remotion -g -a claude-code -y (README:59), then npm install in each project; the first render downloads Chromium.
 - [Onyx](tools/onyx.md): YOLO (your own risk): skips the version pin, the localhost-only ports and installing Docker yourself.
 Windows: irm https://raw.githubusercontent.com/onyx-dot-app/onyx/main/deployment/docker_compose/install.ps1 | iex (install.sh line 137). Linux/macOS: curl -fsSL https://onyx.app/install_onyx.sh | bash (README), image tag latest, ports open on all interfaces.
 - [Open Higgsfield](tools/open-higgsfield.md): YOLO (your own risk): skips the commit pin, the localhost binding and the separate Blob store.
@@ -447,6 +482,8 @@ Follow the README on your main machine.
 OpenIDEA_0.1.45_x64-setup.exe from the GitHub release.
 - [OpenLIT](tools/openlit.md): YOLO (your own risk): skips the version pin, the telemetry switch and localhost binding.
 Windows: curl | sh installer from README.md:150; PostHog telemetry stays on.
+- [OpenMausBot](tools/openmausbot.md): YOLO (your own risk): skips analytics off and the Full-access ban.
+Run it hosted with Full access on.
 - [OpenMontage](tools/openmontage.md): YOLO (your own risk): skips the budget, so paid tools run uncapped.
 Clone and run as the README says.
 - [OpenProject](tools/openproject.md): YOLO (your own risk): skips the localhost-only port and the data folders.
@@ -467,10 +504,15 @@ https://github.com/stablyai/orca/releases/latest/download/orca-windows-setup.exe
 claude mcp add --transport http --scope user oxylabs-web-api https://mcp.oxylabs.io/web-api-mcp --header "Authorization: Bearer $\{OXYLABS_WEB_API_KEY\}"
 - [Pake](tools/pake.md): YOLO (your own risk): skips the version pin, the own-icon flag and the ask-first rule.
 Windows: npm install -g pake-cli; answer yes to 'Rust not detected. Install now?' (winget install Rustlang.Rustup).
+- [Parselmouth](tools/parselmouth.md): YOLO (your own risk): skips the hash pin and the script rule. pip install praat-parselmouth (README).
+- [PdfCraft](tools/pdfcraft.md): YOLO (your own risk): skips working on copies and backups and the update containment.
+Windows: download from https://getartcraft.com/apps/pdfcraft, open your real files, connect its MCP in Claude Code and accept in-app updates.
 - [PeakCut](tools/peakcut.md): YOLO (your own risk): skips the commit pin, the update-check switch and the localhost-only rule.
 git clone https://github.com/haziqahmedqasmi/PeakCut, pip install -r requirements.txt, python -m studio.server (follows main, update banner on).
 - [Phone Harness](tools/phone-harness.md): YOLO (your own risk): skips the spare phone and both switches.
 Install with --upgrade on your main phone as install.md says.
+- [PhotoCraft](tools/photocraft.md): YOLO (your own risk): skips copies, backups and manual updates.
+Install from getartcraft.com, open your real files and accept in-app updates.
 - [Pinokio](tools/pinokio.md): YOLO (your own risk): skips the VM.
 Install on your main PC and run any community script.
 - [Piper (OHF-Voice)](tools/piper-ohf-voice.md): YOLO (your own risk): skips the venv, version pin and 127.0.0.1 binding.
@@ -569,16 +611,22 @@ pip install sgp4
 npx shadcn@latest init, and npx shadcn@latest mcp for Claude Code
 - [shazamio](tools/shazamio.md): YOLO (your own risk): skips the virtual environment and the exact pin.
 `pip install shazamio`
+- [Sherlock (username OSINT CLI)](tools/sherlock-username-osint-cli.md): YOLO (your own risk): skips the proxy, manifest and consent rules.
+pipx install sherlock-project and look anyone up from your IP.
 - [SkillEvaluator (NVIDIA)](tools/skillevaluator-nvidia.md): YOLO (your own risk): skips the version pin, --no-llm and the key unsetting.
 `uv tool install skillevaluator` then `skillevaluator tier1 ./skill` (sends skill text to whichever model key is set).
 - [Social Media Skills (charlie947)](tools/social-media-skills-charlie947.md): YOLO (your own risk): skips the commit pin and the folder copy.
 /plugin marketplace add charlie947/social-media-skills then /plugin install social-media-skills (README lines 113-122) at HEAD.
+- [SoundCraft](tools/soundcraft.md): YOLO (your own risk): skips working on copies and backups and the update containment.
+Windows: download from https://getartcraft.com/apps/soundcraft, open your real files, connect its MCP in Claude Code and accept in-app updates.
 - [Stable Audio Tools (Stability AI)](tools/stable-audio-tools-stability-ai.md): YOLO (your own risk): skips the commit pin, the Python 3.10 venv and the inference-only extras.
 pip install "stable-audio-tools[train]" (README.md:37)
 - [Stable Video Diffusion / generative-models (Stability AI)](tools/stable-video-diffusion-generative-models-stability-ai.md): YOLO (your own risk): skips the official-weights-and-configs-only rule.
 Windows: clone, install and load any checkpoint or config you find; a malicious one runs code on your PC.
 - [Stageshow skill (benjitaylor/skills)](tools/stageshow-skill-benjitaylor-skills.md): YOLO (your own risk): skips the commit pin and the per-command approval.
 npx skills add benjitaylor/skills --skill stageshow (README; unpinned third-party installer), at HEAD, with commands auto-approved.
+- [Stitch skills](tools/stitch-skills.md): YOLO (your own risk): skips copying single folders, the SKILL.md key edit and the own-site rule.
+Claude Code (Windows): run the README's npx plugins add command and let upload-to-stitch pull the key from ~/.claude.json.
 - [story-animator](tools/story-animator.md): YOLO (your own risk): skips the commit pin.
 /plugin marketplace add deenukhan/story-animator then /plugin install story-animator@story-animator (README) at HEAD.
 - [Strata runtime (Niko1221/Strata)](tools/strata-runtime-niko1221-strata.md): YOLO (your own risk): skips the read-before-run, the Python pre-install and the agent ask-first step.
@@ -645,6 +693,8 @@ Install the official Upload-Post plugin from the Claude directory (README.md:23)
 /plugin marketplace add plugin87/ux-ui-agent-skills then /plugin install ux-ui-agent-skills@ux-ui-agent-skills
 - [Vane](tools/vane.md): YOLO (your own risk): skips the localhost bind.
 docker run -d -p 3000:3000 -v vane-data:/home/vane/data --name vane itzcrazykns1337/vane:latest (README); anyone on your network can use it.
+- [VectorCraft](tools/vectorcraft.md): YOLO (your own risk): skips copies, backups and manual updates.
+Install from getartcraft.com, open your real files and accept in-app updates.
 - [Vercel](tools/vercel.md): YOLO (your own risk): skips the pinned project-local CLI and telemetry off.
 `npm i -g vercel` (Vercel CLI docs).
 - [Vercel agent-skills (vercel-labs/agent-skills)](tools/vercel-agent-skills-vercel-labs-agent-skills.md): YOLO (your own risk): skips the commit pin and the guidelines pin (rules follow main).
@@ -659,8 +709,9 @@ git clone https://github.com/win4r/video-director && pip install numpy Pillow
 video2x-qt6-windows-amd64-installer.exe from the 6.4.0 release (README.md:56).
 - [Vite](tools/vite.md): YOLO (your own risk): skips the exact reviewed pin.
 `npm create vite@latest` (vite.dev Getting Started).
-- [VoiceStudio](tools/voicestudio.md): YOLO (your own risk): skips the release download (pipes the official script into PowerShell) and allows the MOSS-TTS engines.
-irm https://voicestudio.sh/install.ps1 | iex
+- [vite-plugin-pwa](tools/vite-plugin-pwa.md): YOLO (your own risk): skips the exact version pin, the lockfile install and the update prompt. npm i vite-plugin-pwa -D (README), then VitePWA(\{ registerType: 'autoUpdate' \}).
+- [VoiceStudio](tools/voicestudio.md): YOLO (your own risk): skips source builds and the Nano rule.
+curl -fsSL https://voicestudio.sh/install | sh with every engine.
 - [Wan2.1 (Wan-Video)](tools/wan2-1-wan-video.md): YOLO (your own risk): skips the commit pin, the venv and the local-only prompt rule.
 git clone, pip install -r requirements.txt, --use_prompt_extend with dashscope and your DASH_API_KEY.
 - [Watch (claude-video)](tools/watch-claude-video.md): YOLO (your own risk): skips the commit pin, the local-only engine and the no-cookies rule.
@@ -681,6 +732,8 @@ pip install -U openai-whisper (PyPI) into your main Python, plus ffmpeg.
 Windows: pip install whisperx; diarization runs send usage events to otel.pyannote.ai.
 - [wllama](tools/wllama.md): YOLO (your own risk): skips the source build at the reviewed commit c10c211.
 `npm install @wllama/wllama` (official npm package, latest 3.13.0 on 2026-11-14).
+- [WordCraft](tools/wordcraft.md): YOLO (your own risk): skips working on copies and backups and the update containment.
+Windows: download from https://getartcraft.com/apps/wordcraft, open your real files, connect its MCP in Claude Code and accept in-app updates.
 - [x64dbg](tools/x64dbg.md): YOLO (your own risk): skips the plugin and VM limits.
 Unzip the latest snapshot and run x96dbg.exe.
 - [yt-dlp](tools/yt-dlp.md): YOLO (your own risk): skips the pin, config and plugin blocks and the no-cookies rule.

@@ -8,11 +8,11 @@
 - **Decision:** Skip
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-16
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 
-Booking.com (official vendor connector, made by Booking BV; not code-reviewed; docs checked 2026-11-02): safe. Search only (one tool, accommodations_search); no Booking.com account access, no bookings, payments or reservation changes inside Claude; Booking.com says it does not receive your Claude chat history. Bookings finish on `booking.com`, where you may sign in.
+Booking.com (official vendor connector, made by Booking BV; not code-reviewed; docs checked 2026-11-02): safe. Search only (one tool, accommodations_search); no Booking.com account access, no bookings, payments or reservation changes inside Claude; Booking.com says it does not receive your Claude chat history. Bookings finish on booking.com, where signing in is your choice.
 
 ## Safe install
 

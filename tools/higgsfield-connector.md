@@ -4,11 +4,11 @@
 - **Category:** generating videos, design
 - **Official URL:** https://higgsfield.ai
 - **GitHub repo:** unknown
-- **Price:** Unconfirmed: Higgsfield's own pages disagree. Its pricing guide lists Starter $19/mo, Plus $59/mo, Ultra $129/mo; its blog lists Starter $15, Plus $49, Ultra $129 (possibly annual billing). The pricing page could not be loaded (`higgsfield.ai`, checked 2026-10-31)
+- **Price:** Unconfirmed: Higgsfield's own pages disagree. Its pricing guide lists Starter $19/mo, Plus $59/mo, Ultra $129/mo; its blog lists Starter $15, Plus $49, Ultra $129 (unverified: whether these are annual-billing prices). The pricing page could not be loaded (higgsfield.ai, checked 2026-10-31)
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-14
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 

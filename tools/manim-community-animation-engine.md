@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-15
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 
@@ -26,4 +26,4 @@ pip install manim
 
 ## Install notes
 
-CAUTION: review Safety reason and obtain specific installation approval first. Windows official docs: use an existing approved Python environment and python -m pip install manim, or with already-approved uv: uv init manimations ; cd manimations ; uv add manim. Documented only, NOT RUN. Native compiler/LaTeX prerequisites depend on chosen features; TeX optional for formulas. Use an isolated venv and disposable project, no secrets. Claude Code/Hermes could write and invoke scenes only after approval; no official MCP verified. claude.ai can draft Python but no local renderer access assumed. Android plays outputs, not a supported native rendering host.
+CAUTION: review Safety reason and obtain specific installation approval first. Windows official docs: use an existing approved Python environment and python -m pip install manim, or with already-approved uv: uv init manimations ; cd manimations ; uv add manim. Documented only, NOT RUN. Native compiler/LaTeX prerequisites depend on chosen features; TeX optional for formulas. Use an isolated venv and disposable project, no secrets. Claude Code/Hermes write scene files and run manim only through their command tool, and only after your approval; no official MCP verified. claude.ai can draft Python but no local renderer access assumed. Android plays outputs, not a supported native rendering host.

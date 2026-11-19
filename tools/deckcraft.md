@@ -5,21 +5,23 @@
 - **Official URL:** https://github.com/storytold/deckcraft
 - **GitHub repo:** https://github.com/storytold/deckcraft
 - **Price:** Standalone app free, verified online 2026-11-07 at https://getartcraft.com/apps and individual app pages. Optional separate ArtCraft cloud-generation subscriptions not required for local editing. License MIT OR Apache-2.0 (Cargo.toml; GitHub detects Apache-2.0).
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-07
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 
-Targeted source read only, not a full security/dependency/binary audit. Early/active-development editor with file-editing automation and updater code; use disposable copies and backups. No tracking SDK found in targeted runtime scan; this does NOT establish zero telemetry. Update machinery uses pinned external craft-libs dependency (Cargo.toml); consent/defaults and dependency internals not fully reviewed. Do not label updates silent or claim isolation. Agent file access is not a security sandbox. No blanket execution/permission grants; untrusted documents and tool output can carry prompt injection. Update source: crates/ui-egui/src/dialogs/updates_ui.rs:2://! prompt that offers to update and restart. The flow itself is `craft_update:\:updater\::Updater`. Additional evidence: crates/mcp/src/lib.rs:3 stdio; crates/engine/src/file_access.rs:279-295 negative path-access tests are present (not executed).
+Targeted source read only, not a full security/dependency/binary audit. Early/active-development editor with file-editing automation and updater code; use disposable copies and backups. No tracking SDK found in targeted runtime scan; this does NOT establish zero telemetry. Update machinery uses pinned external craft-libs dependency (Cargo.toml); consent/defaults and dependency internals not fully reviewed. Do not label updates silent or claim isolation. Agent file access is not a security sandbox. No blanket execution/permission grants; untrusted documents and tool output can carry prompt injection. Update source: crates/ui-egui/src/dialogs/updates_ui.rs:2://! prompt that offers to update and restart. The flow itself is `craft_update::updater::Updater`. Additional evidence: crates/mcp/src/lib.rs:3 stdio; crates/engine/src/file_access.rs:279-295 negative path-access tests are present (not executed). Fix-rule re-rate 2026-11-18: no verified risk lacks a fix; the unverified items (update-check payload, updater dependency internals, telemetry) each have a containment step in Safe install (portable build from the official getartcraft.com page only, work on copies with backups, in-app updates declined and new builds downloaded by hand (contains the unverified update-check payload and the unreviewed craft-libs updater), MCP tool approvals kept per call with no blanket grants, and the per-app items listed in Safe install); with those fixes applied: safe.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows: download the standalone portable build only from https://getartcraft.com/apps/deckcraft (official page for github.com/storytold/deckcraft); nothing else gets installed. Open only copies of your files and keep backups, because an agent connected over MCP edits files directly. Updates run through craft_update::updater (crates/ui-egui/src/dialogs/updates_ui.rs:2, a prompt that offers to update and restart, so nothing updates without your yes); unverified: what the update check sends, so contain it: decline in-app updates and update by downloading a new build from the official page. MCP runs over stdio (crates/mcp/src/lib.rs:3). Claude Code (Windows): add the local stdio MCP command from the repo README as an MCP server; keep tool approvals on and never start it with --dangerously-skip-permissions. Hermes: untested, generic MCP only; keep approvals on. claude.ai, Android: no (local Windows program).
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips working on copies and backups and the update containment.
+Windows: download from https://getartcraft.com/apps/deckcraft, open your real files, connect its MCP in Claude Code and accept in-app updates.
 
 ## Install notes
 

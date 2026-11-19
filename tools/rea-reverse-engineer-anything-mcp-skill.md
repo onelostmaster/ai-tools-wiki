@@ -8,11 +8,11 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-17
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 
-a review bot (targeted code read @9bea563, a review, 2026-11-02; not a full audit of ~7,000 files): no telemetry (`src/hopper/HopperDiagnostics.ts:8` is local diagnostics); Claude plugin pins an exact version (`scripts/plugin-mcp-launcher.mjs:8-25`); no npm postinstall (`scripts/prepare.mjs:26-38`); updates only on `rea update` (`src/application/Update.ts:125,136`); JADX jar sha256-pinned. Caution: setup rewrites agents' MCP config and adds workflow instructions (backups, asks first); optional curl|bash `install.sh` (use npm); can download Hopper (`src/application/HopperReleaseFeed.ts:19-23`) and runs decompilers on any target; legal limits (DISCLAIMER.md bans DRM/anti-cheat bypass and cheats).
+a review bot (targeted code read @9bea563, a review, 2026-11-02; not a full audit of ~7,000 files): no telemetry (src/hopper/HopperDiagnostics.ts:8 is local diagnostics); Claude plugin pins an exact version (scripts/plugin-mcp-launcher.mjs:8-25); no npm postinstall (scripts/prepare.mjs:26-38); updates only on rea update (src/application/Update.ts:125,136); JADX jar sha256-pinned. Caution: setup rewrites agents' MCP config and adds workflow instructions (backups, asks first); optional curl|bash install.sh (use npm); can download Hopper (src/application/HopperReleaseFeed.ts:19-23) and runs decompilers on any target; legal limits (DISCLAIMER.md bans DRM/anti-cheat bypass and cheats). No fix: decompiled output from the target goes straight to the agent, so prompt-injection text inside a target cannot be filtered out, and only a targeted read of the ~7,000-file tree was done (contained in Safe install); caution stands for those two points only.
 
 ## Safe install
 

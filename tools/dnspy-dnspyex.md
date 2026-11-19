@@ -8,11 +8,11 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-17
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 
-a review bot (light code read @6e8a26a, a review, 2026-11-02): caution. The original dnSpy (Official URL) was archived on 2020-12-20; dnSpyEx is an unofficial GitHub fork. Startup update check on by default (`UpdateService.cs:93,146`).
+a review bot (light code read @6e8a26a, a review, 2026-11-02): caution. The original dnSpy (Official URL) was archived on 2020-12-20; dnSpyEx is an unofficial GitHub fork. Startup update check on by default (UpdateService.cs:93,146). No fix: the original dnSpy is archived (2020-12-20) and the only maintained build, dnSpyEx, is an unofficial fork with no vendor security contact; the startup update check is fixed in Safe install, so caution stands for the fork's provenance only.
 
 ## Safe install
 

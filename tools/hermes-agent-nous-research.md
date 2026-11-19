@@ -4,11 +4,11 @@
 - **Category:** automation, Hermes add-ons
 - **Official URL:** https://hermes-agent.nousresearch.com
 - **GitHub repo:** https://github.com/NousResearch/hermes-agent (MIT; latest release v0.22.6 on 2026-11-02 per Hermes a review; the wiki review @9a56be3; a review bot targeted reads of /learn, write approval and /personality @8468f3c)
-- **Price:** Free software (MIT, github.com, checked 2026-10-31). Optional Nous Portal plans: Free $0, Plus $20/month ($22 credits), Super $100, Ultra $200 (portal.nousresearch.com figures as quoted by gethermesagentai.com and jaymountconsulting.com; vendor page not readable without a browser, checked 2026-10-31). Update 2026-11-02 : Nous says every plan now includes one Cloud agent and more usage; the Portal page showed no plan prices today (portal.nousresearch.com, checked 2026-11-02), so the figures above may be out of date. Check the Portal before paying.
+- **Price:** Free software (MIT, github.com, checked 2026-10-31). Optional Nous Portal plans: Free $0, Plus $20/month ($22 credits), Super $100, Ultra $200 (portal.nousresearch.com figures as quoted by gethermesagentai.com and jaymountconsulting.com; vendor page not readable without a browser, checked 2026-10-31). Update 2026-11-02 : Nous says every plan now includes one Cloud agent and more usage; the Portal page showed no plan prices today (portal.nousresearch.com, checked 2026-11-02), so the figures above are unconfirmed since 2026-11-02. Check the Portal before paying.
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-14
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 

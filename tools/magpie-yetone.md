@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-11
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 
@@ -16,7 +16,7 @@ Not code-reviewed by a review bot. A project Tool Scout (Claude, 2026-11-11, REA
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Unreviewed: contain it: run it only in a throwaway VM, Windows Sandbox or Docker container with no real agent configs, keys or plan sign-ins in it, pin the reviewed commit 4ae833f (official repo github.com/yetone/magpie), and give it network only to the model endpoints you test. It edits the coding agents' own config files and handles their keys and sign-ins (README), so never point it at your real Claude Code config. Get a review before real use.
 
 ## YOLO install
 

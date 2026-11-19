@@ -8,7 +8,7 @@
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-14
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 
@@ -26,5 +26,5 @@ npx skills add elvarofficial/teardown -g -a claude-code, then npm install && npx
 
 ## Install notes
 
-Claude Code: `npx skills add elvarofficial/teardown -g -a claude-code` (unpinned installer), or clone into `~/.claude/skills/teardown` (unconfirmed); then `npm install && npx playwright install chromium` in the folder. Needs Node 20+, ffmpeg and Python 3.
-Hermes: unconfirmed: copy the whole repo to `~/.hermes/skills/creative/teardown/`, run the same npm command, then start a new session (copy rather than `hermes skills install`, which may skip `sims/` and `sfx/`).
+Claude Code: npx skills add elvarofficial/teardown -g -a claude-code (unpinned installer), or clone into ~/.claude/skills/teardown (unconfirmed); then npm install && npx playwright install chromium in the folder. Needs Node 20+, ffmpeg and Python 3.
+Hermes: unconfirmed: copy the whole repo to ~/.hermes/skills/creative/teardown/, run the same npm command, then start a new session (copy rather than hermes skills install, unverified: whether it copies sims/ and sfx/; copying the whole folder avoids the question).

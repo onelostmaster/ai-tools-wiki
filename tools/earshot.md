@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-14
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 

@@ -4,26 +4,27 @@
 - **Category:** automation, developer tools
 - **Official URL:** https://www.openmausbot.com/
 - **GitHub repo:** https://github.com/milind-soni/OpenMausBot @ 6ae15f25 (v0.1.157, Apache-2.0)
-- **Price:** Free, open source (Apache-2.0); uses your existing agent subscriptions; boat.dev cloud computers and Composio connections may cost extra (unknown) (github.com, checked 2026-11-01)
+- **Price:** Free, open source (Apache-2.0); uses your existing agent subscriptions; unverified: whether boat.dev cloud computers and Composio connections charge, and how much (unknown); containment: stay on local runs and your existing subscriptions (github.com, checked 2026-11-01)
 - **Decision:** Skip
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-14
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 
-a review bot (spot-check @6e32504, ~6,400 files) and Claude (@6e32504), 2026-11-01: caution. Approval mode full runs Claude Code with bypassPermissions (default acceptEdits, `server/drivers/claude.ts:654, 1027`); computer control via bundled cua-driver; PostHog analytics on unless opted out; updates install on quit; apps via Composio, cloud computers via boat.dev; prepare sets git hooksPath. No malware signs.
-Claude re-review @6ae15f25 (v0.1.157), 2026-11-14: still caution. PostHog analytics on unless switched off (src/lib/analytics.ts:21-30); hourly announcements feed from the repo's main branch; Windows installer unsigned; some keys stored plaintext (SECURITY.md); Full access = bypassPermissions (server/drivers/claude.ts:1003); about 1M lines of TypeScript, several releases a day, 1,056 open issues, so reviews go stale fast.
+Claude code read @35d0442 v0.1.169 (2026-11-18): safe with fixes. Full access maps to bypassPermissions; default acceptEdits (server/drivers/claude.ts:630,989). PostHog is on until you opt out (src/lib/analytics.ts:21-30); updates download only on request (electron/updater.mjs:206). On a hosted or shared workspace a bot shell reaches Full-access threads (SECURITY.md:20-27). MCP env values stay plaintext (:31). Fix: local desktop, no Full access.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Windows desktop from the official GitHub releases; Settings → analytics off; never Full access or shared Full access; no hosted or shared workspace; no secrets in MCP env or headers; download updates by choice.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips analytics off and the Full-access ban.
+Run it hosted with Full access on.
 
 ## Install notes
 
-Caution: read the Safety reason and ask the user before installing.
+Ask the user before installing.
 Windows: no install steps given (the source withholds them until the tool is rated safe); see the official repo https://github.com/milind-soni/OpenMausBot.

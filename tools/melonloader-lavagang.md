@@ -8,11 +8,11 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-17
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 
-a review bot (light code read @5aff4d9, 2026-11-03): caution. On first run for Il2Cpp games it sends the game name to api.melonloader.com for Unity version info (`Dependencies/Il2CppAssemblyGenerator/RemoteAPI.cs:72-76,139-141`), downloads Cpp2IL and Unity dependencies from GitHub releases (`Packages/Cpp2IL.cs:47`, `Packages/UnityDependencies.cs:11`) and runs them as child processes (`Packages/Models/ExecutablePackage.cs:54-60`). On Windows it can download and silently run the .NET 6 runtime installer from aka.ms (`MelonLoader.Bootstrap/RuntimeHandlers/Dotnet/DotnetInstaller.cs:10,60`). Every mod runs with full user permissions. No other telemetry found.
+a review bot (light code read @5aff4d9, 2026-11-03): caution. On first run for Il2Cpp games it sends the game name to api.melonloader.com for Unity version info (Dependencies/Il2CppAssemblyGenerator/RemoteAPI.cs:72-76,139-141), downloads Cpp2IL and Unity dependencies from GitHub releases (Packages/Cpp2IL.cs:47, Packages/UnityDependencies.cs:11) and runs them as child processes (Packages/Models/ExecutablePackage.cs:54-60). On Windows it can download and silently run the .NET 6 runtime installer from aka.ms (MelonLoader.Bootstrap/RuntimeHandlers/Dotnet/DotnetInstaller.cs:10,60). Every mod runs with full user permissions. No other telemetry found. No fix: every mod runs with your full Windows user rights and MelonLoader has no sandbox for mods; the first-launch call to api.melonloader.com and the Cpp2IL download-and-run step on Il2Cpp games cannot be turned off (RemoteAPI.cs:72-76,139-141; Packages/Cpp2IL.cs:47). Online games with anti-cheat ban modded clients. These remain after the fixes in Safe install, so caution stands.
 
 ## Safe install
 
@@ -27,4 +27,4 @@ Windows: latest MelonLoader.Installer .exe, pick the game folder, add any mods; 
 ## Install notes
 
 Caution: read the Safety reason and ask the user before installing.
-Windows: MelonLoader.Installer .exe, pick the game folder. Only use mods from known sources, and only on single-player or offline games (anti-cheat may ban modded clients). Android: WIP upstream (`README.md:43-44`), not usable yet.
+Windows: MelonLoader.Installer .exe, pick the game folder. Only use mods from known sources, and only on single-player or offline games (unverified: whether a given online game's anti-cheat bans modded clients; containment: never use it on online or multiplayer games). Android: WIP upstream (README.md:43-44), not usable yet.

@@ -8,11 +8,11 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-17
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 
-a review bot (code read @5dbea55, 2026-11-03; Claude re-checked SKILL.md and render.mjs 2026-11-03 20:12): caution. Code clean: no telemetry, hooks, eval or prompt-injection text found; `install.sh:8-16` only symlinks the skills into ~/.claude/skills. But `setup.sh:16-44` downloads via npm/npx/curl (about 1 GB with --voice; GSAP with no hash check; hyperframes@0.8.34 pinned, `anim.py:19`), and while rendering `render.mjs:12-15` runs a file server that listens on all interfaces with no ../ path check, so render only on a trusted home network or bind it to 127.0.0.1.
+a review bot (code read @5dbea55, 2026-11-03; Claude re-checked SKILL.md and render.mjs 2026-11-03 20:12): caution. Code clean: no telemetry, hooks, eval or prompt-injection text found; install.sh:8-16 only symlinks the skills into ~/.claude/skills. But setup.sh:16-44 downloads via npm/npx/curl (about 1 GB with --voice; GSAP with no hash check; hyperframes@0.8.34 pinned, anim.py:19), and while rendering render.mjs:12-15 runs a file server that listens on all interfaces with no ../ path check, so render only on a trusted home network or bind it to 127.0.0.1. No fix: setup.sh (lines 16-44) downloads GSAP with no hash check and there is no setup option to pin or verify it; the all-interfaces file server and the 1 GB voice download are fixed in Safe install, so caution stands for the unverified GSAP download only.
 
 ## Safe install
 

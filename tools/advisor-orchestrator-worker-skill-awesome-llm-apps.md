@@ -8,19 +8,21 @@
 - **Decision:** Skip
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-03
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 
-a review bot (code read @6c16b23, a review / Hermes a review, 2026-11-02): caution. Workers run the Antigravity CLI with --dangerously-skip-permissions in a temp folder (`agent_skills/advisor-orchestrator-worker/SKILL.md:44-53`); the skill itself says that folder "is not a sandbox". Workers can touch anything your user can.
+Claude code read @14c5f8f (2026-11-18): caution. Every worker runs agy --dangerously-skip-permissions (agent_skills/advisor-orchestrator-worker/SKILL.md:47-50); the skill says the flag is required headless and the temp dir "is not a sandbox" (:54-56). No fix: the skill cannot run with approvals on; only a disposable VM contains it.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Safe install (fixes applied):
+Only in a disposable VM with no personal files or keys beyond a capped Antigravity login; copy the folder from commit 14c5f8f.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the VM.
+Copy the skill into your main Claude Code and let workers run with skip-permissions.
 
 ## Install notes
 

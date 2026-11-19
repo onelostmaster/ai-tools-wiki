@@ -6,23 +6,23 @@
 - **GitHub repo:** unknown
 - **Price:** Free beta per a review bot ; the official page shows no price (hermes-agent.nousresearch.com, checked 2026-10-31)
 - **Decision:** Try
-- **Safety verdict:** caution
+- **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-04
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 
-a review bot : Use with caution; not code-reviewed. The official Nous page (Hermes Mobile Beta), but the beta app is closed source, so there is no code to audit; the open-source mobile shell is still an unmerged pull request (NousResearch/hermes-agent#52673). It connects to your Hermes, so treat it as an unaudited beta app. Earlier: a review, #54, #55, #60, #61, #63.
+Claude docs read (2026-11-18): the official page is a waitlist only (hermes-agent.nousresearch.com/mobile); no build is public and the open-source mobile shell is an unmerged PR. Unverified: the beta app is closed -> Contain: join the waitlist only; when a build ships, connect it to a Hermes profile without your main keys.
 
 ## Safe install
 
-Not written yet: use Install notes and the fixes in the Safety reason.
+Unreviewed: contain it: waitlist only from the official page; when it ships, pair it with a separate Hermes profile holding capped keys, and get a review first. Get a review before real use.
 
 ## YOLO install
 
-Not written yet.
+Not offered.
 
 ## Install notes
 
-Caution: read the Safety reason and ask the user before installing.
-Hermes: nothing to install yet; iOS is a TestFlight beta and Android is signup only, from the official page https://hermes-agent.nousresearch.com/mobile .
+Not code-reviewed yet: ask a review bot or Claude to review it before installing.
+Contain it: waitlist only from the official page; when it ships, pair it with a separate Hermes profile holding capped keys, and get a review first.

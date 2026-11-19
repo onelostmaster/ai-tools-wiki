@@ -4,11 +4,11 @@
 - **Category:** Hermes add-ons
 - **Official URL:** https://github.com/NousResearch/hermes-official-plugins
 - **GitHub repo:** https://github.com/NousResearch/hermes-official-plugins (seen @ a50b0fe on 2026-11-02 with accent-picker and bubblewrap folders; see their own rows)
-- **Price:** Free plugin code; vendor API usage may cost (not verified)
+- **Price:** Free plugin code; unverified: which plugins call paid vendor APIs; containment: read each plugin's README before enabling it, and set a spend limit on any API key you give it
 - **Decision:** Try
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-17
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 

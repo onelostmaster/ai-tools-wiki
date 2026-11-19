@@ -6,13 +6,13 @@
 - **GitHub repo:** https://github.com/unslothai/unsloth @ 1c23549 (Apache-2.0)
 - **Price:** Free, Apache-2.0 (github.com, checked 2026-11-02)
 - **Decision:** Try
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-17
+- **Last checked:** 2026-11-18
 
 ## Safety reason
 
-a review bot (light code read @1c23549, a review, 2026-11-02): caution. README installs with curl | sh or irm | iex (`README.md:64,69`). On load it downloads a small file from Hugging Face to count your environment; off with UNSLOTH_DISABLE_STATISTICS (`unsloth/models/_utils.py:5183,5233-5237`).
+a review bot (light code read @1c23549, a review, 2026-11-02): caution. README installs with curl | sh or irm | iex (README.md:64,69). On load it downloads a small file from Hugging Face to count your environment; off with UNSLOTH_DISABLE_STATISTICS (unsloth/models/_utils.py:5183,5233-5237). Fix-rule re-rate 2026-11-18: every verified risk has its exact fix in Safe install (pip/uv release install instead of curl | sh or irm | iex, UNSLOTH_DISABLE_STATISTICS=1 set before first use); with those fixes applied: safe.
 
 ## Safe install
 
@@ -26,5 +26,5 @@ Windows: irm | iex installer from the README; the load-time stats download stays
 
 ## Install notes
 
-Caution: read the Safety reason and ask the user before installing.
-Windows: `uv pip install unsloth --torch-backend=auto` (README), not the script installer; NVIDIA GPU; set UNSLOTH_DISABLE_STATISTICS=1. Android: no.
+Ask the user before installing. Safe only with the fixes in Safe install applied.
+Windows: uv pip install unsloth --torch-backend=auto (README), not the script installer; NVIDIA GPU; set UNSLOTH_DISABLE_STATISTICS=1. Android: no.
