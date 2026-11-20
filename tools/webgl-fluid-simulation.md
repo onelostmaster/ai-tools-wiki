@@ -6,22 +6,23 @@
 - **GitHub repo:** https://github.com/PavelDoGreat/WebGL-Fluid-Simulation
 - **Price:** Source license checked in the official repository; no hosted-service price claimed. Third-party models, assets and plugins are billed by their own providers if you use them. Price search performed 2026-11-07.
 - **Decision:** Try
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-15
+- **Last checked:** 2026-11-19
 
 ## Safety reason
 
-Targeted source read, not a full dependency/binary audit; PavelDoGreat/WebGL-Fluid-Simulation @a2d2929. Interactive fluid effect demo, not an export pipeline. No telemetry/install hooks found; script.js:45-51 links separate mobile apps, not required for browser demo. Latest commit November 2024: stale. Mobile app is a separate product, not vetted. No fix: unmaintained since November 2024; contained by running it only in the browser sandbox.
+Claude code read @a2d2929 (2026-11-19): safe with fixes. A WebGL demo with no install. The official page loads Google Analytics (index.html:195) and script.js sends ga() events (lines 44,50,156,241-270). In a self-hosted copy, deleting the analytics.js tag at index.html:195 leaves the ga() stub (:190-194) queuing locally, so nothing leaves the page. Fix: tracker blocker on the demo; self-host the pinned copy without line 195.
 
 ## Safe install
 
 Safe install (fixes applied):
-Any browser (Windows or Android Chrome): open the official demo https://paveldogreat.github.io/WebGL-Fluid-Simulation/ (README.md:3); nothing to install. To use it in your own page, copy index.html/script.js from the official repo pinned at a2d2929. Ignore the app-store links in the demo (script.js:45-51): those apps are a separate, unvetted product. unverified: how smoothly it runs on your phone; open the demo page on the phone to check.
+Any browser (Windows or Android Chrome): open the official demo https://paveldogreat.github.io/WebGL-Fluid-Simulation/ (README.md:3) with a tracker blocker on (it loads Google Analytics, index.html:195); nothing to install. To use it in your own page, copy index.html, script.js and dat.gui.min.js from the official repo pinned at a2d2929, delete only the analytics.js script tag (index.html:195); the local ga() stub at :190-194 then keeps script.js's ga() calls harmless. The app-store apps are a separate, unvetted product. Check smoothness on your phone before relying on it.
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the tracker blocker and the analytics removal.
+Open the official demo or copy the repo files as they are.
 
 ## Install notes
 

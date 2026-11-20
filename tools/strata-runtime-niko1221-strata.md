@@ -6,13 +6,13 @@
 - **GitHub repo:** https://github.com/Niko1221/Strata @ 13eedf5 (MIT; HEAD on 2026-11-14, latest commit 2026-11-12 01:18 ET; docs say version 0.2.13)
 - **Price:** Free, MIT (github.com, checked 2026-11-02)
 - **Decision:** Try
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-18
+- **Last checked:** 2026-11-19
 
 ## Safety reason
 
-a review bot (partial code read @13eedf5, 2026-11-14, no-intake review): Caution. Very large repo (about 350,000 lines: Python setup/server plus a C++/CUDA/SYCL engine and binary data); I read the launchers, the download and checksum paths in setup.py, the server's listen and auth code and the agent docs, not the engine. No telemetry or analytics code found. Good: the server listens on 127.0.0.1 unless you change it (serve/server.py line 10212), API keys are compared in constant time (lines 9333-9335), and model downloads are checked against pinned SHA-256s (setup.py verify_sha256, line 3712). SECURITY.md describes a signed (Ed25519) update feed for the Terminal and app (lines 66-71; not verified here) and says there has been no outside audit (line 95). Why caution: (1) the engine download fails open: if GitHub's published SHA-256 can't be fetched, setup warns and installs the engine unverified (setup.py lines 5807-5811); (2) START-HERE.bat silently installs Python via winget or runs the python.org installer with no checksum (lines 18-26); (3) the documented install is irm | iex from the latest release, which SECURITY.md itself says trusts only HTTPS and the release (lines 87-90); (4) AGENTS.md tells agents to set up and serve 'without questions' with --yes, downloading tens of GB (lines 51-55). Third-party, single-maintainer project. Replaces the earlier not-reviewed status. No fix: the C++/CUDA/SYCL engine was not code-read and the project says it has had no outside audit (SECURITY.md line 95); the fail-open engine download, silent Python install and irm | iex are fixed in Safe install, so caution stands for the unreviewed engine only.
+Claude code read @13eedf5 (2026-11-19): safe with fixes. Server binds 127.0.0.1 (serve/server.py:10212); model downloads are SHA-256 checked (setup.py:3712). Each found risk has a step: own Python first (START-HERE.bat:18-26), no irm|iex (SECURITY.md:87-90), stop on an unverified-engine warning (setup.py:5807-5811). The C++/CUDA engine wasn't read and has no outside audit (SECURITY.md:95); it stays on localhost.
 
 ## Safe install
 

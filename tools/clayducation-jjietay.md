@@ -8,11 +8,11 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-15
+- **Last checked:** 2026-11-19
 
 ## Safety reason
 
-a review bot (code read @af8dcf0, 2026-11-11, no-intake review): Caution. The repo's own code is local and clean: no keys or paid APIs, the voice check re-listens with a local Whisper (engine/voicecheck.mjs, engine/tts/hear.py), rendering runs headless Chrome against a 127.0.0.1-only server (engine/make.mjs lines 838, 885). Why caution: the setup (bin/clayducation.mjs) shows its plan and asks before acting, but pipes curl https://astral.sh/uv/install.sh into sh when uv is missing (line 148), clones and npm-installs explainroo from another author unpinned (lines 143-144), and creates symlinks in ~/.claude/skills and ~/.claude/agents (lines 230-252); headless Chrome runs with --no-sandbox (make.mjs 865, 885). bin/update.mjs --apply moves to the newest tag and reruns the setup with --yes, but SKILL.md lines 19-30 tell Claude to ask the user first. agents/clay-kit.md line 64 assumes a separate heat-guard skill that is not in the repo. Correction to the scout note: the voice check uses local Whisper, not ElevenLabs Scribe. Not reviewed: explainroo, the pip and npm dependencies, engine/vendor/three.module.min.js, binary fonts, models and media, tests. No fix: no native Windows route (Linux/macOS only, INSTALL.md) and headless Chrome always runs with --no-sandbox (engine/make.mjs 865, 885) with no setting to change it; both are contained by running it only in a devcontainer or WSL (see Safe install).
+Claude code read @af8dcf0 (2026-11-19): caution. Headless Chrome is hard-coded with --no-sandbox (engine/make.mjs:865,885; still at :872,892 in 02466c9), and there is no native Windows route (INSTALL.md lists Linux and macOS only). The setup's curl|sh uv install and unpinned explainroo are fixed in Safe install. No fix: the --no-sandbox flag has no setting; only a devcontainer or WSL contains it.
 
 ## Safe install
 
@@ -21,7 +21,8 @@ Windows: no native install (setup and engine call which, apt/brew and venv/bin p
 
 ## YOLO install
 
-Not written yet.
+YOLO (your own risk): skips the container, the commit pin and the uv pre-install.
+In WSL or Linux run npx clayducation (README.md:80) and accept its setup.
 
 ## Install notes
 

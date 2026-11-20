@@ -8,11 +8,11 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-18
+- **Last checked:** 2026-11-19
 
 ## Safety reason
 
-a review bot (code read @b16a0ef, 2026-11-11, no-intake review): Caution. The code itself is small and clean: a Next.js app whose server actions alone call the generation API (POST /\{model\}, GET /requests/\{id\}/status) with an 'Authorization: Key id:secret' header (src/generation/platform.ts lines 49-66), the key is kept in an httpOnly cookie for 30 days (src/generation/credentials.ts lines 1-9, actions.ts lines 19-23), and there is no telemetry, eval or extra network call. Reasons for caution: (1) the hosted openhiggsfield.ai is a third-party site that receives your platform key on its server; (2) the /api/blob route hands out Vercel Blob upload tokens to anyone who can reach it, as its own comment says (src/app/api/blob/route.ts line 12), and uploaded files become public URLs; (3) the server logs every request body, including prompts and media URLs (platform.ts lines 55 and 66); (4) no LICENSE file; (5) HF_API_BASE_URL is left unnamed in the README, though model paths such as higgsfield-ai/soul (src/generation/to-platform.ts lines 8-9) point at Higgsfield's own API. Not reviewed: npm dependencies (pnpm-lock.yaml present) and the brand-asset script that drives a local Chromium (not part of normal use). No fix: the repo has no LICENSE file, so reuse rights stay unclear; the key, upload-route and logging risks are fixed in Safe install, so caution stands for the missing licence only.
+Claude code read @b16a0ef (2026-11-19, still HEAD): caution. The tree has no LICENSE file (only README, src, scripts, configs). The hosted-key, open /api/blob route (src/app/api/blob/route.ts:12) and prompt logging (src/generation/platform.ts:55,66) are fixed in Safe install. No fix: with no licence the code is all rights reserved, so you have no granted right to run or change it.
 
 ## Safe install
 

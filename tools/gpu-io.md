@@ -6,18 +6,18 @@
 - **GitHub repo:** https://github.com/amandaghassaei/gpu-io
 - **Price:** Source license checked in the official repository; no hosted-service price claimed. Third-party models, assets and plugins are billed by their own providers if you use them. Price search performed 2026-11-07.
 - **Decision:** Try
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-15
+- **Last checked:** 2026-11-19
 
 ## Safety reason
 
-Targeted source read, not a full dependency/binary audit; amandaghassaei/gpu-io @14a6081. GPU particle/physics building blocks, not a ready-made physics studio. No telemetry/install hooks found; src/index.ts:64-87 exports GPU utilities. Latest commit January 2024: stale and GPU/browser compatibility needs testing. No fix: unmaintained since January 2024; contained by pinning 0.2.7 and running only in the browser.
+Claude code read @14a6081 + npm gpu-io 0.2.7 (2026-11-19): safe with fixes. GPU utility exports only (src/index.ts:64-87); no network, eval or install scripts; npm 0.2.7 pulls four small dependencies (changedpi, file-saver, float16, type-checks). An old commit date is not a risk for browser-sandboxed GPU code. Fix: pin 0.2.7 with a lockfile and test on your target phone.
 
 ## Safe install
 
 Safe install (fixes applied):
-Windows Claude Code or any web project: `npm install gpu-io@0.2.7` (README.md:37) inside the project, then build your page as usual; it runs in the browser sandbox. It has no install scripts or telemetry in the reviewed source (src/index.ts:64-87 exports only GPU utilities). unverified: WebGL2/GPU support on your target phone; test the page on the phone before relying on it. claude.ai artifacts: import it only if the artifact allows npm packages. Not a Hermes tool.
+Windows Claude Code or any web project: npm install --save-exact --ignore-scripts gpu-io@0.2.7 (README.md:37) inside the project, then build your page as usual; it runs in the browser sandbox. It has no install scripts or telemetry in the reviewed source (src/index.ts:64-87 exports only GPU utilities). Test the page on your target phone (WebGL2) before relying on it. claude.ai artifacts: import it only if the artifact allows npm packages. Not a Hermes tool.
 
 ## YOLO install
 

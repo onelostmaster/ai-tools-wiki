@@ -86,7 +86,7 @@
 | [awesome-gamedev-agent-skills](tools/awesome-gamedev-agent-skills.md) | Try | safe |
 | [awesome-llm-apps (Shubhamsaboo)](tools/awesome-llm-apps-shubhamsaboo.md) | Try | safe |
 | [awesome-llm-apps agent skills (7 of 8: commit-archaeologist, scope-creep-detector, project-graveyard, dependency-doctor, first-reader, thinking-out-loud, self-improving-agent-skills)](tools/awesome-llm-apps-agent-skills-7-of-8-commit-archaeologist-sc.md) | Try | safe |
-| [awesome-reverse-engineering (morluto)](tools/awesome-reverse-engineering-morluto.md) | Try | unreviewed |
+| [awesome-reverse-engineering (morluto)](tools/awesome-reverse-engineering-morluto.md) | Try | safe |
 | [Backgrounds Supply](tools/backgrounds-supply.md) | Try | safe |
 | [Bang Motion](tools/bang-motion.md) | Try | safe |
 | [Basic Memory](tools/basic-memory.md) | Try | safe |
@@ -147,7 +147,7 @@
 | [DeepFilterNet](tools/deepfilternet.md) | Try | safe |
 | [DeepSeek Harness (dsh)](tools/deepseek-harness-dsh.md) | Try | safe |
 | [Demucs (htdemucs)](tools/demucs-htdemucs.md) | Try | safe |
-| [DesignBookmark (design-resource directory)](tools/designbookmark-design-resource-directory.md) | Try | caution |
+| [DesignBookmark (design-resource directory)](tools/designbookmark-design-resource-directory.md) | Try | unreviewed |
 | [Diagram Design](tools/diagram-design.md) | Try | safe |
 | [Diffusion Policy](tools/diffusion-policy.md) | Try | safe |
 | [dnSpy / dnSpyEx](tools/dnspy-dnspyex.md) | Try | caution |
@@ -162,14 +162,14 @@
 | [ElevenLabs connector (Claude directory)](tools/elevenlabs-connector-claude-directory.md) | Try | safe |
 | [ElevenLabs sound-effects plugin (official Hermes)](tools/elevenlabs-sound-effects-plugin-official-hermes.md) | Try | safe |
 | [Emil Kowalski skills (emil-design-eng, break-ui, mobile-native)](tools/emil-kowalski-skills-emil-design-eng-break-ui-mobile-native.md) | Try | safe |
-| [Energy Icons (SVG library and MCP)](tools/energy-icons-svg-library-and-mcp.md) | Try | caution |
+| [Energy Icons (SVG library and MCP)](tools/energy-icons-svg-library-and-mcp.md) | Try | safe |
 | [Essentia (MTG)](tools/essentia-mtg.md) | Try | safe |
-| [Eva Icons (Akveo)](tools/eva-icons-akveo.md) | Try | caution |
+| [Eva Icons (Akveo)](tools/eva-icons-akveo.md) | Try | safe |
 | [everything-claude-trading](tools/everything-claude-trading.md) | Try | safe |
 | [F5-TTS (SWivid)](tools/f5-tts-swivid.md) | Try | safe |
 | [faster-whisper](tools/faster-whisper.md) | Try | safe |
 | [feathericon (not Feather Icons)](tools/feathericon-not-feather-icons.md) | Try | safe |
-| [figma-shaders (official Figma skill)](tools/figma-shaders-official-figma-skill.md) | Try | caution |
+| [figma-shaders (official Figma skill)](tools/figma-shaders-official-figma-skill.md) | Try | safe |
 | [file-search skill (Netresearch)](tools/file-search-skill-netresearch.md) | Try | safe |
 | [Files pane for Claude Code (claude-files-pane)](tools/files-pane-for-claude-code-claude-files-pane.md) | Try | safe |
 | [Footer Design (footer.design)](tools/footer-design-footer-design.md) | Try | safe |
@@ -185,7 +185,7 @@
 | [GitHub Pages](tools/github-pages.md) | Try | safe |
 | [godot-mcp (Coding-Solo)](tools/godot-mcp-coding-solo.md) | Try | safe |
 | [Google ADK (adk-python)](tools/google-adk-adk-python.md) | Try | safe |
-| [gpu-io](tools/gpu-io.md) | Try | caution |
+| [gpu-io](tools/gpu-io.md) | Try | safe |
 | [graphify](tools/graphify.md) | Try | safe |
 | [Graphiti MCP (Zep)](tools/graphiti-mcp-zep.md) | Try | safe |
 | [Gravity UI Icons](tools/gravity-ui-icons.md) | Try | safe |
@@ -217,9 +217,9 @@
 | [Isaac Lab (NVIDIA)](tools/isaac-lab-nvidia.md) | Try | unreviewed |
 | [jadx](tools/jadx.md) | Try | safe |
 | [Jev (TypeSafe)](tools/jev-typesafe.md) | Try | safe |
-| [jmdict-simplified + kanjium](tools/jmdict-simplified-kanjium.md) | Try | unreviewed |
+| [jmdict-simplified + kanjium](tools/jmdict-simplified-kanjium.md) | Try | safe |
 | [jp-web-design-guardrails](tools/jp-web-design-guardrails.md) | Try | safe |
-| [kamiya-codec](tools/kamiya-codec.md) | Try | unreviewed |
+| [kamiya-codec](tools/kamiya-codec.md) | Try | safe |
 | [KanjiVG](tools/kanjivg.md) | Try | safe |
 | [Kapso agent skills](tools/kapso-agent-skills.md) | Try | safe |
 | [karpathy-guidelines (andrej-karpathy-skills)](tools/karpathy-guidelines-andrej-karpathy-skills.md) | Try | safe |
@@ -241,7 +241,7 @@
 | [LongCat-2.5 (Meituan)](tools/longcat-2-5-meituan.md) | Try | unreviewed |
 | [LTX-Video (Lightricks)](tools/ltx-video-lightricks.md) | Try | safe |
 | [make-sfx](tools/make-sfx.md) | Try | safe |
-| [Manim Community (animation engine)](tools/manim-community-animation-engine.md) | Try | caution |
+| [Manim Community (animation engine)](tools/manim-community-animation-engine.md) | Try | safe |
 | [manim-skill](tools/manim-skill.md) | Try | safe |
 | [ManiSkill](tools/maniskill.md) | Try | unreviewed |
 | [marketingskills (coreyhaines31)](tools/marketingskills-coreyhaines31.md) | Try | safe |
@@ -256,7 +256,7 @@
 | [MelonLoader (LavaGang)](tools/melonloader-lavagang.md) | Try | caution |
 | [Mem0](tools/mem0.md) | Try | safe |
 | [Memelord hosted MCP](tools/memelord-hosted-mcp.md) | Try | unreviewed |
-| [MeshLine (pmndrs)](tools/meshline-pmndrs.md) | Try | caution |
+| [MeshLine (pmndrs)](tools/meshline-pmndrs.md) | Try | safe |
 | [Meshy 3D plugin (official Hermes)](tools/meshy-3d-plugin-official-hermes.md) | Try | safe |
 | [MicroDuck skill-tree dataset](tools/microduck-skill-tree-dataset.md) | Try | safe |
 | [microduck_rl (Pollen Robotics)](tools/microduck-rl-pollen-robotics.md) | Try | unreviewed |
@@ -272,7 +272,7 @@
 | [MuJoCo (Google DeepMind)](tools/mujoco-google-deepmind.md) | Try | safe |
 | [n8n-skills (czlonkowski/n8n-skills)](tools/n8n-skills-czlonkowski-n8n-skills.md) | Try | safe |
 | [Nano Banana (Google image editor)](tools/nano-banana-google-image-editor.md) | Try | safe |
-| [Neat Icons (SVG library and paid MCP)](tools/neat-icons-svg-library-and-paid-mcp.md) | Try | caution |
+| [Neat Icons (SVG library and paid MCP)](tools/neat-icons-svg-library-and-paid-mcp.md) | Try | safe |
 | [notebooklm-py (teng-lin)](tools/notebooklm-py-teng-lin.md) | Try | safe |
 | [Nous Portal hosted connectors](tools/nous-portal-hosted-connectors.md) | Try | unreviewed |
 | [NumPy](tools/numpy.md) | Try | safe |
@@ -294,18 +294,18 @@
 | [OpenJLPT](tools/openjlpt.md) | Try | unreviewed |
 | [OpenLIT](tools/openlit.md) | Try | safe |
 | [OpenProject](tools/openproject.md) | Try | safe |
-| [OpenSandbox](tools/opensandbox.md) | Try | caution |
+| [OpenSandbox](tools/opensandbox.md) | Try | safe |
 | [OpenSEO](tools/openseo.md) | Try | safe |
 | [Openverse API](tools/openverse-api.md) | Try | safe |
 | [OpenVLA](tools/openvla.md) | Try | safe |
 | [OpenWhispr](tools/openwhispr.md) | Try | safe |
-| [Orca (Stably AI)](tools/orca-stably-ai.md) | Try | caution |
+| [Orca (Stably AI)](tools/orca-stably-ai.md) | Try | safe |
 | [Originkit](tools/originkit.md) | Try | safe |
 | [Oxylabs Web API MCP](tools/oxylabs-web-api-mcp.md) | Try | safe |
 | [Pake](tools/pake.md) | Try | safe |
 | [Parselmouth](tools/parselmouth.md) | Try | safe |
 | [Phone Harness](tools/phone-harness.md) | Try | safe |
-| [Piper (OHF-Voice)](tools/piper-ohf-voice.md) | Try | caution |
+| [Piper (OHF-Voice)](tools/piper-ohf-voice.md) | Try | safe |
 | [pixelfx](tools/pixelfx.md) | Try | safe |
 | [Pixelorama (Orama-Interactive)](tools/pixelorama-orama-interactive.md) | Try | safe |
 | [Plane](tools/plane.md) | Try | safe |
@@ -326,29 +326,29 @@
 | [radare2](tools/radare2.md) | Try | safe |
 | [RapidOCR](tools/rapidocr.md) | Try | safe |
 | [rdr2-companion (Bagomojo)](tools/rdr2-companion-bagomojo.md) | Try | caution |
-| [REA (Reverse Engineer Anything) MCP + skill](tools/rea-reverse-engineer-anything-mcp-skill.md) | Try | caution |
+| [REA (Reverse Engineer Anything) MCP + skill](tools/rea-reverse-engineer-anything-mcp-skill.md) | Try | safe |
 | [React Three Fiber (R3F)](tools/react-three-fiber-r3f.md) | Try | safe |
 | [Recent (recent.design)](tools/recent-recent-design.md) | Try | safe |
 | [Refero](tools/refero.md) | Try | safe |
 | [rembg](tools/rembg.md) | Try | safe |
 | [Remotion Motion Graphics Skills](tools/remotion-motion-graphics-skills.md) | Try | safe |
 | [ReVa (reverse-engineering-assistant)](tools/reva-reverse-engineering-assistant.md) | Try | safe |
-| [Rhubarb Lip Sync](tools/rhubarb-lip-sync.md) | Try | caution |
+| [Rhubarb Lip Sync](tools/rhubarb-lip-sync.md) | Try | safe |
 | [rizin](tools/rizin.md) | Try | safe |
 | [roadmap-skill (shiquda)](tools/roadmap-skill-shiquda.md) | Try | safe |
 | [robosuite](tools/robosuite.md) | Try | unreviewed |
 | [ROS 2](tools/ros-2.md) | Try | safe |
-| [Rune Icons (SVG library and local MCP)](tools/rune-icons-svg-library-and-local-mcp.md) | Try | caution |
+| [Rune Icons (SVG library and local MCP)](tools/rune-icons-svg-library-and-local-mcp.md) | Try | safe |
 | [RustDesk](tools/rustdesk.md) | Try | safe |
 | [RVC WebUI (Retrieval-based Voice Conversion)](tools/rvc-webui-retrieval-based-voice-conversion.md) | Try | safe |
 | [satellite.js](tools/satellite-js.md) | Try | safe |
 | [Savvy Progress](tools/savvy-progress.md) | Try | safe |
 | [Scenario Agent Skills (scenario-labs)](tools/scenario-agent-skills-scenario-labs.md) | Try | safe |
-| [SceneAI (UI prompt and asset library)](tools/sceneai-ui-prompt-and-asset-library.md) | Try | caution |
+| [SceneAI (UI prompt and asset library)](tools/sceneai-ui-prompt-and-asset-library.md) | Try | unreviewed |
 | [Scrapling](tools/scrapling.md) | Try | unreviewed |
-| [Scroll Shaders](tools/scroll-shaders.md) | Try | caution |
+| [Scroll Shaders](tools/scroll-shaders.md) | Try | unreviewed |
 | [scroll-craft](tools/scroll-craft.md) | Try | safe |
-| [Scrolltide (templates, prompts + MCP)](tools/scrolltide-templates-prompts-mcp.md) | Try | caution |
+| [Scrolltide (templates, prompts + MCP)](tools/scrolltide-templates-prompts-mcp.md) | Try | unreviewed |
 | [sgp4 (python-sgp4)](tools/sgp4-python-sgp4.md) | Try | safe |
 | [shadcn/ui (+ shadcn MCP server)](tools/shadcn-ui-shadcn-mcp-server.md) | Try | safe |
 | [shazamio](tools/shazamio.md) | Try | safe |
@@ -359,8 +359,8 @@
 | [Stable Video Diffusion / generative-models (Stability AI)](tools/stable-video-diffusion-generative-models-stability-ai.md) | Try | safe |
 | [Stageshow skill (benjitaylor/skills)](tools/stageshow-skill-benjitaylor-skills.md) | Try | safe |
 | [story-animator](tools/story-animator.md) | Try | safe |
-| [Strata runtime (Niko1221/Strata)](tools/strata-runtime-niko1221-strata.md) | Try | caution |
-| [SudachiPy + jaconv](tools/sudachipy-jaconv.md) | Try | unreviewed |
+| [Strata runtime (Niko1221/Strata)](tools/strata-runtime-niko1221-strata.md) | Try | safe |
+| [SudachiPy + jaconv](tools/sudachipy-jaconv.md) | Try | safe |
 | [Superpowers](tools/superpowers.md) | Try | safe |
 | [SVG.js](tools/svg-js.md) | Try | safe |
 | [Synfig Studio](tools/synfig-studio.md) | Try | safe |
@@ -376,15 +376,15 @@
 | [TinyFish (MCP + Claude Code plugin + connector)](tools/tinyfish-mcp-claude-code-plugin-connector.md) | Try | safe |
 | [TradingAgents (TauricResearch/TradingAgents)](tools/tradingagents-tauricresearch-tradingagents.md) | Try | safe |
 | [Trail of Bits skills (trailofbits/skills)](tools/trail-of-bits-skills-trailofbits-skills.md) | Try | safe |
-| [Troika (three-text)](tools/troika-three-text.md) | Try | caution |
+| [Troika (three-text)](tools/troika-three-text.md) | Try | safe |
 | [TruLens](tools/trulens.md) | Try | safe |
 | [ts-fsrs](tools/ts-fsrs.md) | Try | safe |
 | [TubeAlfred YouTube plugin](tools/tubealfred-youtube-plugin.md) | Try | unreviewed |
 | [ui-ux-pro-max skill](tools/ui-ux-pro-max-skill.md) | Try | safe |
 | [UltraUI three-instanced-crowds skill](tools/ultraui-three-instanced-crowds-skill.md) | Try | safe |
 | [Understand Anything](tools/understand-anything.md) | Try | safe |
-| [underthesea](tools/underthesea.md) | Try | unreviewed |
-| [Unslop (UI design skill)](tools/unslop-ui-design-skill.md) | Try | caution |
+| [underthesea](tools/underthesea.md) | Try | safe |
+| [Unslop (UI design skill)](tools/unslop-ui-design-skill.md) | Try | safe |
 | [Unsloth](tools/unsloth.md) | Try | safe |
 | [Upload-Post MCP](tools/upload-post-mcp.md) | Try | safe |
 | [UX/UI Agent Skills (XIAS, plugin87)](tools/ux-ui-agent-skills-xias-plugin87.md) | Try | safe |
@@ -401,7 +401,7 @@
 | [watched.earth (Watched)](tools/watched-earth-watched.md) | Try | safe |
 | [web-quality-skills](tools/web-quality-skills.md) | Try | safe |
 | [webapp-testing (Anthropic)](tools/webapp-testing-anthropic.md) | Try | safe |
-| [WebGL Fluid Simulation](tools/webgl-fluid-simulation.md) | Try | caution |
+| [WebGL Fluid Simulation](tools/webgl-fluid-simulation.md) | Try | safe |
 | [what-if-animation](tools/what-if-animation.md) | Try | safe |
 | [WhisperX](tools/whisperx.md) | Try | safe |
 | [Whop Content Rewards](tools/whop-content-rewards.md) | Try | safe |
@@ -453,6 +453,7 @@
 | [claude-instagram-autopilot (Ootto)](tools/claude-instagram-autopilot-ootto.md) | Skip | safe |
 | [claude-reflect](tools/claude-reflect.md) | Skip | safe |
 | [claude-stickman-shorts (SyedBahjat)](tools/claude-stickman-shorts-syedbahjat.md) | Skip | unreviewed |
+| [claude-video-editing-skills (Viprasol-Tech)](tools/claude-video-editing-skills-viprasol-tech.md) | Skip | unreviewed |
 | [claude-video-effects (Vibha-Ramprakash)](tools/claude-video-effects-vibha-ramprakash.md) | Skip | unreviewed |
 | [claude-virality-skill (Ootto)](tools/claude-virality-skill-ootto.md) | Skip | safe |
 | [ClipIt (shasshhaank)](tools/clipit-shasshhaank.md) | Skip | unreviewed |
@@ -502,6 +503,7 @@
 | [keeran.ai skills (kjagsadvisors)](tools/keeran-ai-skills-kjagsadvisors.md) | Skip | unreviewed |
 | [lanshu-animated-architecture-diagram (cclank)](tools/lanshu-animated-architecture-diagram-cclank.md) | Skip | unreviewed |
 | [last30days skill](tools/last30days-skill.md) | Skip | safe |
+| [lemo-animi (lemomo-ai)](tools/lemo-animi-lemomo-ai.md) | Skip | unreviewed |
 | [lemo-opuscar](tools/lemo-opuscar.md) | Skip | safe |
 | [Letta Code (letta-ai)](tools/letta-code-letta-ai.md) | Skip | safe |
 | [line-art-animation (JDhruv14)](tools/line-art-animation-jdhruv14.md) | Skip | unreviewed |
@@ -579,6 +581,7 @@
 | [video-as-code (zenitlab)](tools/video-as-code-zenitlab.md) | Skip | unreviewed |
 | [video-edit-skill (tenfoldmarc)](tools/video-edit-skill-tenfoldmarc.md) | Skip | unreviewed |
 | [video-effects-pack (neurolena1)](tools/video-effects-pack-neurolena1.md) | Skip | unreviewed |
+| [video-shotcraft (Vincentwei1021)](tools/video-shotcraft-vincentwei1021.md) | Skip | unreviewed |
 | [VideoZero skills (Motion Canvas)](tools/videozero-skills-motion-canvas.md) | Skip | unreviewed |
 | [viral-hook-reels-skill (dovudhusan)](tools/viral-hook-reels-skill-dovudhusan.md) | Skip | unreviewed |
 | [viral-video-edit-skills (BusyBee3333)](tools/viral-video-edit-skills-busybee3333.md) | Skip | unreviewed |

@@ -8,17 +8,16 @@
 - **Decision:** Try
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-18
+- **Last checked:** 2026-11-19
 
 ## Safety reason
 
-a review bot (light code read @a0c51b0, a review / Hermes a review, 2026-11-02): caution. Holds your app OAuth tokens in its cloud (third-party storage, broad scopes); SDK telemetry unless TELEMETRY_DISABLED=true (ts/packages/core/src/telemetry/Telemetry.ts:179); CLI install is curl | sh (README.md:105). No fix: your app OAuth tokens are held in Composio's closed cloud and no setting keeps them local; telemetry and the curl | sh installer are fixed in Safe install, and narrow app scopes limit the exposure. Caution stands for the token storage only.
+Claude code read @a0c51b0 (2026-11-19): caution. Telemetry stops with TELEMETRY_DISABLED=true (ts/packages/core/src/telemetry/Telemetry.ts:179) and the curl|sh CLI (README.md:105) is replaced by pinned pip/npm; both fixed in Safe install. No fix: Composio's closed cloud holds your connected apps' OAuth tokens, and no setting keeps them local; narrow scopes limit what a leak exposes.
 
 ## Safe install
 
 Safe install (fixes applied):
-Windows: pip install composio==<release matching a0c51b0> or npm install @composio/core@<same release> (README); never the curl | sh CLI installer (README.md:105). Set the user env var TELEMETRY_DISABLED=true before first use; otherwise the SDK sends telemetry (ts/packages/core/src/telemetry/Telemetry.ts:179). Connect only the apps you need with the narrowest scopes it offers: your app OAuth tokens are held in Composio's cloud (closed), which no setting avoids. Claude Code / Hermes: its MCP with the same narrow app list. Android: no.
-No fix: OAuth tokens stored in Composio's cloud.
+Windows: pip install composio==0.30.0 or npm install --save-exact @composio/core@0.27.0 (the versions in the reviewed a0c51b0: python/pyproject.toml:3, ts/packages/core/package.json); never the curl | sh CLI installer (README.md:105). Set the user env var TELEMETRY_DISABLED=true before first use; otherwise the SDK sends telemetry (ts/packages/core/src/telemetry/Telemetry.ts:179). Connect only the apps you need with the narrowest scopes it offers: your app OAuth tokens are held in Composio's cloud (closed), which no setting avoids. Claude Code / Hermes: its MCP with the same narrow app list. Android: no.
 
 ## YOLO install
 

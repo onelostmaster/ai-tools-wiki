@@ -64,6 +64,7 @@ claude plugin marketplace add gamedev-skills/awesome-gamedev-agent-skills then c
 git clone https://github.com/Shubhamsaboo/awesome-llm-apps
 - [awesome-llm-apps agent skills (7 of 8: commit-archaeologist, scope-creep-detector, project-graveyard, dependency-doctor, first-reader, thinking-out-loud, self-improving-agent-skills)](tools/awesome-llm-apps-agent-skills-7-of-8-commit-archaeologist-sc.md): YOLO (your own risk): skips the commit pin.
 The registry's npx skills add install (latest commit).
+- [awesome-reverse-engineering (morluto)](tools/awesome-reverse-engineering-morluto.md): YOLO (your own risk): skips the no-run rule: in a throwaway venv, python -m pip install -r examples/resource-intake/requirements.txt then python examples/resource-intake/verify.py (needs Node and JDK 17; downloads hash-checked jars and hermes compilers).
 - [Ayrshare Claude plugin + MCP](tools/ayrshare-claude-plugin-mcp.md): YOLO (your own risk): skips the env-var key.
 Run /ayrshare:setup (key stored in plaintext in settings.json).
 - [Bang Motion](tools/bang-motion.md): YOLO (your own risk): skips the exact puppeteer pin.
@@ -151,6 +152,8 @@ Run the curl install script and grant Indexing.
 git clone https://github.com/Ootto-AI/claude-virality-skill && copy claude-virality-skill\\virality to %USERPROFILE%\.claude\\skills\\ (follows main).
 - [claudeweaver (statico)](tools/claudeweaver-statico.md): YOLO (your own risk): skips the commit pin.
 npx skills add statico/claudeweaver (README.md:20)
+- [clayducation (jjietay)](tools/clayducation-jjietay.md): YOLO (your own risk): skips the container, the commit pin and the uv pre-install.
+In WSL or Linux run npx clayducation (README.md:80) and accept its setup.
 - [Cloudflare Pages](tools/cloudflare-pages.md): YOLO (your own risk): skips single-repo GitHub access, the pinned project-local Wrangler, telemetry off and the No to the skills prompt.
 Connect GitHub with "All repositories"; `npm i -g wrangler` and accept its prompts.
 - [Cloudflare security-audit-skill](tools/cloudflare-security-audit-skill.md): YOLO (your own risk): skips the commit pin and the sandbox.
@@ -229,8 +232,7 @@ npx skills@latest add emilkowalski/skills (README route; sends install telemetry
 - [Emscripten (emsdk)](tools/emscripten-emsdk.md): YOLO (your own risk): skips the digest-pinned container.
 Local `./emsdk install latest` then `./emsdk activate latest` (emscripten.org).
 - [Energy Icons (SVG library and MCP)](tools/energy-icons-svg-library-and-mcp.md): YOLO (your own risk): skips the version pin and uses the hosted MCP.
-npm install energy-icons
-claude mcp add --transport http energy-icons https://energyicons.com/mcp
+npm install energy-icons claude mcp add --transport http energy-icons https://energyicons.com/mcp
 - [Essentia (MTG)](tools/essentia-mtg.md): YOLO (your own risk): skips the venv and the version pin.
 pip install essentia (Linux/WSL2, README.md:23)
 - [Eva Icons (Akveo)](tools/eva-icons-akveo.md): YOLO (your own risk): skips the version pin and the static-files-only rule.
@@ -350,8 +352,10 @@ npx impeccable install with defaults.
 Unzip the latest jadx-gui release and run it.
 - [Jev (TypeSafe)](tools/jev-typesafe.md): YOLO (your own risk): skips the pin and the data rule.
 Install from the marketplace and send anything.
+- [jmdict-simplified + kanjium](tools/jmdict-simplified-kanjium.md): YOLO (your own risk): skips the hash check and commit pin: download the latest jmdict-eng release zip and git clone https://github.com/mifunetoshiro/kanjium (latest), npm install @scriptin/jmdict-simplified-loader.
 - [jp-web-design-guardrails](tools/jp-web-design-guardrails.md): YOLO (your own risk): skips the commit pin.
 The README one-line plugin command (latest commit, and the repo has no marketplace file).
+- [kamiya-codec](tools/kamiya-codec.md): YOLO (your own risk): skips the version pin and integrity check: npm install kamiya-codec (latest).
 - [KanjiVG](tools/kanjivg.md): YOLO (your own risk): skips the SHA-256 check and the parser setting. git clone https://github.com/KanjiVG/kanjivg and point the app at the kanji/ folder (README).
 - [Kapso agent skills](tools/kapso-agent-skills.md): YOLO (your own risk): skips the commit pin and folder copy.
 npx skills add gokapso/agent-skills (unpinned installer, follows main).
@@ -489,9 +493,7 @@ Clone and run as the README says.
 - [OpenProject](tools/openproject.md): YOLO (your own risk): skips the localhost-only port and the data folders.
 docker run -it -p 8080:80 -e SECRET_KEY_BASE=<secret> -e OPENPROJECT_HOST__NAME=localhost:8080 -e OPENPROJECT_HTTPS=false openproject/openproject:17 (quick start in the guide; reachable from your network, data lost when the container is removed).
 - [OpenSandbox](tools/opensandbox.md): YOLO (your own risk): skips the version pins, the 127.0.0.1 binding, the deny network policy and the metrics opt-out.
-uvx opensandbox-server init-config ~/.sandbox.toml --example docker
-uvx opensandbox-server
-uv pip install opensandbox
+uvx opensandbox-server init-config ~/.sandbox.toml --example docker uvx opensandbox-server uv pip install opensandbox
 - [OpenSEO](tools/openseo.md): YOLO (your own risk): skips turning off the self-host telemetry heartbeat.
 Same plugin install; self-host without OPENSEO_TELEMETRY_DISABLED.
 - [Openverse API](tools/openverse-api.md): YOLO (your own risk): skips the CC0-only filter.
@@ -583,6 +585,8 @@ Run the README one-liner curl ... install.sh | bash in Git Bash or WSL (bash scr
 Install from the repo HEAD as in mods/README.md.
 - [ReVa (reverse-engineering-assistant)](tools/reva-reverse-engineering-assistant.md): YOLO (your own risk): skips Scripting off and the VM.
 Install with every tool group on and open samples on your PC.
+- [Rhubarb Lip Sync](tools/rhubarb-lip-sync.md): YOLO (your own risk): skips the version pin and the own-audio rule.
+Download the latest release zip and run it on any audio.
 - [rizin](tools/rizin.md): YOLO (your own risk): skips the per-user PATH and the VM for unknown samples.
 Unzip the latest Windows release and run rizin.exe.
 - [roadmap-skill (shiquda)](tools/roadmap-skill-shiquda.md): YOLO (your own risk): skips the version pin.
@@ -603,8 +607,6 @@ npm install satellite.js
 Claude Code on Windows: npx skills add scenario-labs/skills (README.md:50-75) plus the hosted Scenario MCP; unattended runs spend credits on the top-ranked model without asking.
 - [scroll-craft](tools/scroll-craft.md): YOLO (your own risk): skips the commit pin and the localhost-only preview.
 /plugin marketplace add nateherkai/scroll-craft then /plugin install nateherk-design (README lines 125-129) at HEAD, and serve.mjs --lan.
-- [Scrolltide (templates, prompts + MCP)](tools/scrolltide-templates-prompts-mcp.md): YOLO (your own risk): skips reading prompts first and connects the MCP on day one.
-claude mcp add --transport http scrolltide https://www.scrolltide.co/api/mcp
 - [sgp4 (python-sgp4)](tools/sgp4-python-sgp4.md): YOLO (your own risk): skips the venv and the version pin.
 pip install sgp4
 - [shadcn/ui (+ shadcn MCP server)](tools/shadcn-ui-shadcn-mcp-server.md): YOLO (your own risk): skips the version pin.
@@ -631,6 +633,7 @@ Claude Code (Windows): run the README's npx plugins add command and let upload-t
 /plugin marketplace add deenukhan/story-animator then /plugin install story-animator@story-animator (README) at HEAD.
 - [Strata runtime (Niko1221/Strata)](tools/strata-runtime-niko1221-strata.md): YOLO (your own risk): skips the read-before-run, the Python pre-install and the agent ask-first step.
 Windows (PowerShell): the README's irm | iex install from the latest release; START-HERE.bat installs Python silently if missing. Still never set STRATA_SKIP_SHA256=1.
+- [SudachiPy + jaconv](tools/sudachipy-jaconv.md): YOLO (your own risk): skips the wheel-only hash pin. pip install sudachipy sudachidict_core jaconv (PyPI; the dictionary package is about 77 MB).
 - [Superpowers](tools/superpowers.md): YOLO (your own risk): skips the telemetry opt-out (the brainstorm page fetches its logo from primeradiant.com).
 /plugin install superpowers@claude-plugins-official
 - [SVG.js](tools/svg-js.md): YOLO (your own risk): skips the version pin and local bundling.
@@ -683,6 +686,7 @@ Copy the skills as the README says, without those deny rules.
 The README route npx skills add (CLAUDE.md line 15; third-party installer, not reviewed), at HEAD.
 - [Understand Anything](tools/understand-anything.md): YOLO (your own risk): skips the commit pin, the tarball refusal and auto-update off.
 /plugin marketplace add Egonex-AI/Understand-Anything, /plugin install understand-anything (README) at HEAD, accept the npx dashboard tarball and turn on --auto-update.
+- [underthesea](tools/underthesea.md): YOLO (your own risk): skips the hash check, version pins and function limits: pip install underthesea (latest, any extras), and use download-model, deep models and the agent as documented.
 - [Unslop (UI design skill)](tools/unslop-ui-design-skill.md): YOLO (your own risk): skips the commit pin, project-only scope and audit-first step.
 git clone https://github.com/heydamir/unslop && mkdir -p ~/.claude/skills && cp -r unslop/skills/unslop ~/.claude/skills/
 - [Unsloth](tools/unsloth.md): YOLO (your own risk): skips the version pin, the script-installer ban and UNSLOTH_DISABLE_STATISTICS.
@@ -724,6 +728,8 @@ git clone, pip install -r requirements.txt, --use_prompt_extend with dashscope a
 npm install -g @axe-core/cli
 - [webapp-testing (Anthropic)](tools/webapp-testing-anthropic.md): YOLO (your own risk): skips copying only the one folder.
 Install the whole example-skills plugin.
+- [WebGL Fluid Simulation](tools/webgl-fluid-simulation.md): YOLO (your own risk): skips the tracker blocker and the analytics removal.
+Open the official demo or copy the repo files as they are.
 - [what-if-animation](tools/what-if-animation.md): YOLO (your own risk): skips the commit pin.
 Clone at HEAD as in the README.
 - [Whisper (OpenAI)](tools/whisper-openai.md): YOLO (your own risk): skips the venv and the version pin.

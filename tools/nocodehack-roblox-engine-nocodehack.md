@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-14
+- **Last checked:** 2026-11-19
 
 ## Safety reason
 
@@ -25,4 +25,5 @@ Not offered.
 ## Install notes
 
 Not code-reviewed yet: ask a review bot or Claude to review it before installing.
+Repo gone: github.com/nocodehack/nocodehack-roblox-engine returns 404 (checked 2026-11-19 ET); nothing to install.
 Claude Code (Windows): `/plugin install nocodehack@nocodehack-roblox-engine` or copy skills/roblox-engine into C:\\Users\\<you>\.claude\\skills\\ (README:84-89). Needs Blender 5.2, ffmpeg+ffprobe and Python (README:133-134). First use copies the engine into ./nocodehack-engine/ (README:100). Optional ElevenLabs voice key and Blotato posting key go in ./nocodehack-engine/.env (SKILL.md:37,44); SKILL.md:44 carries a Blotato referral sign-up link.
