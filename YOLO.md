@@ -4,6 +4,7 @@ The tool's own defaults: no fixes, no sandbox, at your own risk. Never offered f
 
 - [/bro skill](tools/bro-skill.md): YOLO (your own risk): skips the manual copy.
 The README curl one-liner or ./install.sh.
+- [2d-character-sketch (yenceesanjeev)](tools/2d-character-sketch-yenceesanjeev.md): YOLO (your own risk): skips the commit pin, the manual Rhubarb checksum and the WSL-only openvoice rule. Copy the skill folder into %USERPROFILE%\.claude\\skills\\ (or ~/.claude/skills), then let Claude run bash scripts/install-rhubarb.sh and bash scripts/install-openvoice.sh when it asks (SKILL.md:35,149).
 - [Ace Data Cloud plugin](tools/ace-data-cloud-plugin.md): YOLO (your own risk): skips the key limits and toolset choice, so the model spends credits freely.
 Install from the catalog with your general key and all 17 toolsets.
 - [advisor-orchestrator-worker skill (awesome-llm-apps)](tools/advisor-orchestrator-worker-skill-awesome-llm-apps.md): YOLO (your own risk): skips the VM.
@@ -176,6 +177,7 @@ Windows: curl | sh CLI install from the README, connect apps with default scopes
 Install from main and allow ctx_execute always.
 - [Context7 (Upstash)](tools/context7-upstash.md): YOLO (your own risk): skips the version pin and the telemetry switch.
 claude mcp add context7 -- npx -y @upstash/context7-mcp
+- [coolray-video-qc (ShakeJ)](tools/coolray-video-qc-shakej.md): YOLO (your own risk): skips the pinned release, the test folder and the Windows python3/py fix. git clone https://github.com/ShakeJ/coolray-video-qc (moving main branch) and copy it to ~/.claude/skills/coolray-video-qc with the README one-liner (README.md:79).
 - [CopilotKit](tools/copilotkit.md): YOLO (your own risk): skips the version pins and the telemetry switch.
 Windows: npx copilotkit@latest and default npm install; telemetry to telemetry.copilotkit.ai stays on.
 - [Coqui TTS](tools/coqui-tts.md): YOLO (your own risk): skips the venv and pin.
@@ -441,10 +443,12 @@ Windows: pip install mlflow; usage telemetry stays on.
 Windows: one-click package or webui.bat with default config; the API listens on 0.0.0.0:8080 with no auth, so anyone on your network can use it and spend your API credits.
 - [Motion (React/JS animation library)](tools/motion-react-js-animation-library.md): YOLO (your own risk): skips the exact version pin.
 npm install motion (README.md:16; latest version).
+- [motion-director (sharbelxyz)](tools/motion-director-sharbelxyz.md): YOLO (your own risk): skips the pinned commit, the one-agent copy and the WSL fix. Inside WSL or Linux: curl -fsSL https://raw.githubusercontent.com/sharbelxyz/motion-director/main/install.sh | bash (README.md:26; installs the moving main branch into every agent folder it finds), then say "set up motion director" to your agent.
 - [motionboard](tools/motionboard.md): YOLO (your own risk): skips the commit pin and the no-keys render folder.
 /plugin marketplace add krisyangdev/motionboard then /plugin install motionboard@motionboard, or npx skills add krisyangdev/motionboard (README), at HEAD.
 - [motionbrief (YahyaLendani/motionbrief-claude-skills)](tools/motionbrief-yahyalendani-motionbrief-claude-skills.md): YOLO (your own risk): skips the commit pin.
 npx skills add YahyaLendani/motionbrief-claude-skills (README Quick start; third-party installer, not reviewed), at HEAD.
+- [motlab (staryone)](tools/motlab-staryone.md): YOLO (your own risk): skips the commit pin, the dry run and the no-update rule. npm install -g @motlab/cli then npx @motlab/cli setup (README); this always installs globally and copies the skills to %USERPROFILE%\.claude\\skills; update with npm install -g @motlab/cli@latest and motlab setup --update.
 - [MoviePy](tools/moviepy.md): YOLO (your own risk): skips the commit pin (gets PyPI 2.2.1, older than the review) and the venv.
 pip install moviepy
 - [MuJoCo (Google DeepMind)](tools/mujoco-google-deepmind.md): YOLO (your own risk): skips the venv and the version pin.
@@ -581,6 +585,7 @@ rembg s
 npx skills add remotion-dev/skills
 - [Remotion Motion Graphics Skills](tools/remotion-motion-graphics-skills.md): YOLO (your own risk): skips the commit pin and the manual copy.
 Run the README one-liner curl ... install.sh | bash in Git Bash or WSL (bash script), which installs both skill sets at HEAD with npx -y.
+- [remotion-qa (GroMarketing)](tools/remotion-qa-gromarketing.md): YOLO (your own risk): skips the commit pin, --ignore-scripts and your own ffmpeg. npm install --save-dev remotion-qa (README.md:52; ffmpeg-static downloads its ffmpeg binary) or plain npx remotion-qa (latest from npm each time); Claude Code plugin: /plugin install remotion-qa@remotion-qa (README.md:198).
 - [Replay Theater (Anthropic example mod)](tools/replay-theater-anthropic-example-mod.md): YOLO (your own risk): skips the commit pin.
 Install from the repo HEAD as in mods/README.md.
 - [ReVa (reverse-engineering-assistant)](tools/reva-reverse-engineering-assistant.md): YOLO (your own risk): skips Scripting off and the VM.
@@ -705,8 +710,8 @@ Install from getartcraft.com, open your real files and accept in-app updates.
 npx skills add vercel-labs/agent-skills
 - [Vercel AI SDK](tools/vercel-ai-sdk.md): YOLO (your own risk): skips the version pin (gets 7.0.173 from 2026-11-13, unreviewed).
 npm install ai
-- [Vibe Kanban (BloopAI)](tools/vibe-kanban-bloopai.md): YOLO (your own risk): skips the version pin, the analytics switch and the Sentry block.
-Windows: npx vibe-kanban with default settings; analytics and Sentry crash reports stay on.
+- [Vibe Kanban (BloopAI)](tools/vibe-kanban-bloopai.md): YOLO (your own risk): skips the permission-profile change; agents run with --dangerously-skip-permissions or their yolo modes.
+npx vibe-kanban with defaults.
 - [video-director (win4r)](tools/video-director-win4r.md): YOLO (your own risk): skips the commit pin and the venv.
 git clone https://github.com/win4r/video-director && pip install numpy Pillow
 - [Video2X](tools/video2x.md): YOLO (your own risk): skips the CLI-only route; the Qt6 GUI's source is not in the reviewed repo (no GUI folder or submodule at 7db9c18), so the GUI is unreviewed.

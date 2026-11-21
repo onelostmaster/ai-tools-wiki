@@ -1,5 +1,5 @@
 {
- "count": 621,
+ "count": 630,
  "tools": [
   {
    "Name": "/bro skill",
@@ -25,13 +25,13 @@
    "GitHub repo": "https://github.com/yenceesanjeev/2d-character-sketch @ 46ef64e (MIT)",
    "Price": "Free on GitHub, MIT (github.com, checked 2026-11-13)",
    "Decision": "Skip",
-   "Safety verdict": "unreviewed",
-   "Safety basis": "Inferred (unreviewed)",
-   "Safety reason": "Not code-reviewed for safety. Repo, license and latest commit confirmed from github.com metadata, 2026-11-13.",
-   "Safe install": "Safe install (fixes applied):\nUnreviewed: contain it: read it on GitHub first (https://github.com/yenceesanjeev/2d-character-sketch @ 46ef64e); if you try it, copy the skill folder at that exact commit into a throwaway Claude Code project or devcontainer (on Windows, not your main %USERPROFILE%\\.claude\\\\skills), no API keys in its env, no network for its scripts unless a step needs it, and do not run its install scripts. Get a review before real use.",
-   "YOLO install": "Not offered.",
-   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nClaude Code: follow the repo README; on Windows skills go under %USERPROFILE%\\.claude\\\\skills\\.",
-   "Last checked": "2026-11-17"
+   "Safety verdict": "safe",
+   "Safety basis": "Code read",
+   "Safety reason": "a review bot code read @46ef64e: safe with the fixes in Safe install. No package.json, so no npm packages and no install hooks; the renderer draws SVG in code and runs only rsvg-convert, ffmpeg, ffprobe, git, rhubarb, macOS say and the openvoice Python, each through spawn with an argument list and no shell (scripts/sketch.mjs:55-71). Network: only the paid voices: api.elevenlabs.io (sketch.mjs:444,549,1367) and api.sarvam.ai (sketch.mjs:558); a paid send stops unless --max-chars covers it (sketch.mjs:516) and sounds/music unless --max-credits covers it (sketch.mjs:1358-1365). No telemetry. Verified behaviour and fixes: (1) API keys are read from the environment, then .env.local, .env in the working folder, then ~/.2d-character-sketch/keys.env (sketch.mjs:396-412); a key file inside a git repo that git does not ignore is refused (sketch.mjs:405-407); fix: use the free voices, or put a low-limit ElevenLabs/Sarvam key only in a gitignored .env.local. (2) install-rhubarb.sh downloads Rhubarb 1.14.0 from the official GitHub release and checks size, but the Linux build has no SHA-256 recorded (scripts/install-rhubarb.sh:17,34) and the script exits on Windows (line 18); fix: download the release zip yourself and compare its SHA-256 with the digest on the GitHub release page before unzipping. (3) install-openvoice.sh (optional, about 2 GB) pins MeloTTS to commit 2091453 and torch 2.8.0 (lines 13,23,27) but upgrades boto3/botocore unpinned (line 29), resolves MeloTTS's own requirements at install time (line 28) and downloads NLTK data and the voice model (lines 37,40); the tool calls the venv's venv/bin/python (sketch.mjs:525), a Linux/macOS path, so on Windows openvoice works only inside WSL; fix: skip openvoice, or install it only in WSL. (4) It writes into the working folder and ~/.2d-character-sketch only, and deletes only its own temp/scratch files (sketch.mjs:526,567,571,1203-1220). No fix needed beyond these.",
+   "Safe install": "Safe install (fixes applied): Claude Code on Windows: run it inside WSL Ubuntu (its tool paths and install scripts are Linux/macOS only). In WSL: sudo apt install librsvg2-bin ffmpeg (the commands the tool itself prints, sketch.mjs:48-51) plus Node 20 or newer; git clone https://github.com/yenceesanjeev/2d-character-sketch ~/.claude/skills/2d-character-sketch && git -C ~/.claude/skills/2d-character-sketch checkout 46ef64e. Use the free voices (no keys). Lip sync: download Rhubarb-Lip-Sync-1.14.0-Linux.zip from https://github.com/DanielSWolf/rhubarb-lip-sync/releases, check its SHA-256 against the release page, unzip it into ~/.2d-character-sketch/rhubarb and set RHUBARB to the rhubarb file inside, instead of running install-rhubarb.sh. Skip install-openvoice.sh unless you want the 2 GB local voice. Paid voices only with a low-limit key in a gitignored .env.local, and only with --max-chars / --max-credits after reading the printed estimate. claude.ai: no (needs local Node, FFmpeg and rsvg-convert). Hermes: no. Android: no.",
+   "YOLO install": "YOLO (your own risk): skips the commit pin, the manual Rhubarb checksum and the WSL-only openvoice rule. Copy the skill folder into %USERPROFILE%\\.claude\\\\skills\\\\ (or ~/.claude/skills), then let Claude run bash scripts/install-rhubarb.sh and bash scripts/install-openvoice.sh when it asks (SKILL.md:35,149).",
+   "Install notes": "Ask the user before installing. Safe with the fixes in Safe install applied. Local Claude Code skill: draws simple 2D cartoon characters in SVG and renders short talking sketch videos with FFmpeg; free voices need no key, paid ElevenLabs/Sarvam voices are capped by --max-chars/--max-credits.",
+   "Last checked": "2026-11-20"
   },
   {
    "Name": "2hongo",
@@ -784,6 +784,22 @@
    "YOLO install": "YOLO (your own risk): skips moving to a maintained fork.\npip install autogen-agentchat and build on it.",
    "Install notes": "Caution: read the Safety reason and ask the user before installing.\nWindows: do not start new work on it; use AG2 instead. Android: no.",
    "Last checked": "2026-11-18"
+  },
+  {
+   "Name": "autoRecording (OrrrGE)",
+   "Type": "skill",
+   "Category": "generating videos, editing",
+   "Official URL": "https://github.com/OrrrGE/autoRecording",
+   "GitHub repo": "https://github.com/OrrrGE/autoRecording @ 5e8ba4b (MIT)",
+   "Price": "Free on GitHub, MIT (LICENSE file, checked 2026-11-20)",
+   "Decision": "Skip",
+   "Safety verdict": "unreviewed",
+   "Safety basis": "Inferred (unreviewed)",
+   "Safety reason": "Not code-reviewed for safety. Unverified: Python scripts, the Playwright browser download and the TTS provider it calls -> Contain: venv, pinned commit, record only your own local app, no keys. Commit and LICENSE confirmed on github.com, 2026-11-20.",
+   "Safe install": "Unreviewed: contain it: clone into a separate project folder on Windows, git checkout 5e8ba4b, install Python packages in a venv at fixed versions, point it only at your own local app, add no API keys, keep Claude Code's normal permission prompts on (never --dangerously-skip-permissions). Get a review before real use.",
+   "YOLO install": "Not offered.",
+   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nContain it: clone into a separate project folder on Windows, git checkout 5e8ba4b, install Python packages in a venv at fixed versions, point it only at your own local app, add no API keys, keep Claude Code's normal permission prompts on (never --dangerously-skip-permissions).",
+   "Last checked": "2026-11-20"
   },
   {
    "Name": "Awesome DESIGN.md (VoltAgent)",
@@ -1705,13 +1721,13 @@
    "GitHub repo": "https://github.com/artemnovitckii/claude-animation-skills @ 5dbea55 (MIT, LICENSE)",
    "Price": "Free, MIT (LICENSE in repo, checked 2026-11-03); optional ElevenLabs voice is paid per use",
    "Decision": "Try",
-   "Safety verdict": "caution",
+   "Safety verdict": "safe",
    "Safety basis": "Code read",
-   "Safety reason": "a review bot (code read @5dbea55, 2026-11-03; Claude re-checked SKILL.md and render.mjs 2026-11-03 20:12): caution. Code clean: no telemetry, hooks, eval or prompt-injection text found; install.sh:8-16 only symlinks the skills into ~/.claude/skills. But setup.sh:16-44 downloads via npm/npx/curl (about 1 GB with --voice; GSAP with no hash check; hyperframes@0.8.34 pinned, anim.py:19), and while rendering render.mjs:12-15 runs a file server that listens on all interfaces with no ../ path check, so render only on a trusted home network or bind it to 127.0.0.1. No fix: setup.sh (lines 16-44) downloads GSAP with no hash check and there is no setup option to pin or verify it; the all-interfaces file server and the 1 GB voice download are fixed in Safe install, so caution stands for the unverified GSAP download only.",
-   "Safe install": "Safe install (fixes applied):\nWindows (inside WSL2; the README supports macOS/Linux only): git clone the repo, git checkout 5dbea55. Before any render, change the file server in render.mjs (lines 12-15) to listen on 127.0.0.1; otherwise it listens on all interfaces with no ../ path check. Run ./install.sh (lines 8-16 only symlink the skills into ~/.claude/skills inside WSL2), then ./setup.sh without --voice (setup.sh lines 16-44 download via npm/npx/curl; --voice adds about 1 GB). Claude Code: use it from the WSL2 copy of Claude Code. If you add the paid ElevenLabs voice, put the key in an env var, never in chat. Android: no.",
+   "Safety reason": "Claude code read @5dbea55 (2026-11-20): safe with fixes. GSAP is fetched from cdnjs without a hash only if kit/vendor/gsap.min.js is missing (kit/setup.sh:21-24), so placing a copy from npm gsap@3.12.5 (sha512-checked) first skips it. The render file server listens on all interfaces (skills/zach-d-films/engine/render.mjs:15); .listen(0, '127.0.0.1') keeps it local. npm deps are lockfile-pinned (kit/package-lock.json).",
+   "Safe install": "Safe install (fixes applied):\nWindows (inside WSL2; README covers macOS/Linux): git clone the repo, git checkout 5dbea55. Edit skills/zach-d-films/engine/render.mjs line 15 from .listen(0) to .listen(0, '127.0.0.1') (it serves files with no ../ check). Get GSAP with its npm integrity check before setup: npm pack gsap@3.12.5, unpack, copy package/dist/gsap.min.js to kit/vendor/gsap.min.js; setup.sh then skips the unhashed cdnjs download (kit/setup.sh:21-24). Run ./install.sh (only symlinks the skills into ~/.claude/skills inside WSL2), then bash kit/setup.sh without --voice (--voice adds about 1 GB of models from GitHub releases, setup.sh:29-44). Use it from the WSL2 copy of Claude Code. A paid ElevenLabs key goes in an env var, never in chat. Android: no.",
    "YOLO install": "YOLO (your own risk): skips the commit pin and the 127.0.0.1 change.\nWindows (WSL2): ./install.sh && ./setup.sh --voice; the render server listens on all interfaces with no ../ check.",
-   "Install notes": "Caution: read the Safety reason and ask the user before installing.\nmacOS/Linux only per README; on Windows use WSL2 (untested). Claude Code: run install.sh inside WSL2 (it links the skills into ~/.claude/skills). Before rendering, change the server in render.mjs to listen on 127.0.0.1. Optional ElevenLabs voice is paid; keep its key in env, never in chat. Android: no.",
-   "Last checked": "2026-11-18"
+   "Install notes": "Ask the user before installing.\nmacOS/Linux only per README; on Windows use WSL2 (untested). Claude Code: run install.sh inside WSL2 (it links the skills into ~/.claude/skills). Before rendering, change the server in render.mjs to listen on 127.0.0.1. Optional ElevenLabs voice is paid; keep its key in env, never in chat. Android: no.",
+   "Last checked": "2026-11-20"
   },
   {
    "Name": "claude-code-mods (hamzafer)",
@@ -1849,13 +1865,13 @@
    "GitHub repo": "[https://github.com/thedotmack/claude-mem](https://github.com/thedotmack/claude-mem)",
    "Price": "Free, open-source engine (Apache-2.0, per a review bot's code read); it uses your own LLM, by default your Claude subscription. Optional CMEM Pro (hosted observation, cloud sync, private MCP recall): 30-day free trial, then $30/month; TeamBrain team pricing not announced (`cmem.ai`, checked 2026-10-31).",
    "Decision": "Try",
-   "Safety verdict": "caution",
+   "Safety verdict": "safe",
    "Safety basis": "Code read",
-   "Safety reason": "a review bot (code read, a review / Hermes a review, 70aa400, 2026-10-31): Use with caution. Hooks on every prompt and tool call feed all tool output to an observer LLM, which stores it; stored observations are re-injected at SessionStart, so poisoned tool output can persist. Setup runs bun install; a self-heal step edits your shell rc or Windows PATH (PowerShell -ExecutionPolicy Bypass). Worker binds 127.0.0.1; cloud sync to cmem.ai off by default. No fix: hooks send every tool result to the memory model (plugin/hooks/hooks.json lines 80-86, matcher *) and stored memories are re-injected at SessionStart (line 20), so poisoned tool output persists; this is the tool's core design and cannot be turned off; the install-script and telemetry risks are fixed in Safe install.",
-   "Safe install": "Safe install (fixes applied):\nWindows (Claude Code; checked @4412033, v15.21.0): install Bun (winget install Oven-sh.Bun) and uv (winget install astral-sh.uv) yourself first; otherwise setup pipes bun.sh and astral.sh install scripts into PowerShell (src/npx-cli/install/setup-runtime.ts lines 150-153, 187-192, 297-302, 351-353). Then run npx claude-mem@15.21.0 install --ide claude-code and turn usage analytics off with npx claude-mem telemetry disable (README.md line 149: on by default). It will add its bin folder to your Windows user PATH through a hidden PowerShell -ExecutionPolicy Bypass call (src/launcher/install-launcher.ts lines 386-390, 896-899); this cannot be skipped. Leave cloud sync off (empty token by default, src/shared/SettingsDefaultsManager.ts line 735). The worker stays on 127.0.0.1 (src/npx-cli/commands/install.ts line 1195). No fix: hooks send every tool result to the memory model (plugin/hooks/hooks.json lines 80-86, matcher *) and stored memories are re-injected at SessionStart (line 20), so poisoned tool output persists; review or clear ~/.claude-mem after sessions on untrusted repos or web pages. Hermes: npx claude-mem@15.21.0 install --ide hermes replaces your active Hermes memory provider. Android: no.",
+   "Safety reason": "Claude code read @4412033 v15.21.0 (2026-11-20): safe with fixes. Correction: capture has switches. CLAUDE_MEM_SKIP_TOOLS (src/shared/SettingsDefaultsManager.ts:567) keeps web and MCP tool output out of memory, CLAUDE_MEM_EXCLUDED_PROJECTS (:683) excludes untrusted repo paths, so untrusted text never reaches the store re-injected at SessionStart (plugin/hooks/hooks.json:20,80-86). Telemetry and installer fixes as before.",
+   "Safe install": "Safe install (fixes applied):\nWindows (Claude Code; checked @4412033, v15.21.0): install Bun (winget install Oven-sh.Bun) and uv (winget install astral-sh.uv) yourself first; otherwise setup pipes bun.sh and astral.sh install scripts into PowerShell (src/npx-cli/install/setup-runtime.ts lines 150-153, 187-192, 297-302, 351-353). Then run npx claude-mem@15.21.0 install --ide claude-code and turn usage analytics off with npx claude-mem telemetry disable (README.md line 149: on by default). It will add its bin folder to your Windows user PATH through a hidden PowerShell -ExecutionPolicy Bypass call (src/launcher/install-launcher.ts lines 386-390, 896-899); this cannot be skipped. Leave cloud sync off (empty token by default, src/shared/SettingsDefaultsManager.ts line 735). The worker stays on 127.0.0.1 (src/npx-cli/commands/install.ts line 1195). In ~/.claude-mem/settings.json add WebFetch,WebSearch and the MCP tools that read outside content to CLAUDE_MEM_SKIP_TOOLS (default list at SettingsDefaultsManager.ts:567) and put the folders where you open untrusted repos in CLAUDE_MEM_EXCLUDED_PROJECTS (comma-separated globs, :683), so their output is never stored and never re-injected at SessionStart (hooks.json lines 20, 80-86). Wrap anything private in <private> tags (README.md:229). Hermes: npx claude-mem@15.21.0 install --ide hermes replaces your active Hermes memory provider. Android: no.",
    "YOLO install": "YOLO (your own risk): skips the Bun/uv pre-install, the version pin and the telemetry opt-out.\nClaude Code: /plugin marketplace add thedotmack/claude-mem, then /plugin install claude-mem; setup pipes the Bun and uv installers into PowerShell and analytics stay on.",
-   "Install notes": "Caution: read the Safety reason and ask the user before installing.\nClaude Code: a review bot gave no formal steps (not Looks safe); if you try it: `/plugin marketplace add thedotmack/claude-mem`, then `/plugin install claude-mem`.\nHermes: if you try it: `npx claude-mem install --ide hermes` (replaces your active Hermes memory provider; uninstalling restores it).",
-   "Last checked": "2026-11-18"
+   "Install notes": "Ask the user before installing.\nClaude Code: a review bot gave no formal steps (not Looks safe); if you try it: `/plugin marketplace add thedotmack/claude-mem`, then `/plugin install claude-mem`.\nHermes: if you try it: `npx claude-mem install --ide hermes` (replaces your active Hermes memory provider; uninstalling restores it).",
+   "Last checked": "2026-11-20"
   },
   {
    "Name": "claude-reflect",
@@ -1872,6 +1888,22 @@
    "YOLO install": "YOLO (your own risk): skips the pin and the review, so every queued learning is applied.\nInstall from the marketplace and use Apply all.",
    "Install notes": "Ask the user before installing. claude plugin marketplace add bayramannakov/claude-reflect#v3.3.1, claude plugin install claude-reflect@claude-reflect-marketplace --scope local; run /reflect --dry-run, then pick learnings one by one, never Apply all; no --scan-history on sessions that read untrusted pages; skip reflect-mod.",
    "Last checked": "2026-11-15"
+  },
+  {
+   "Name": "claude-remotion-skill (cmak34)",
+   "Type": "skill",
+   "Category": "generating videos",
+   "Official URL": "https://github.com/cmak34/claude-remotion-skill",
+   "GitHub repo": "https://github.com/cmak34/claude-remotion-skill @ bfcbaee (MIT)",
+   "Price": "Free on GitHub, MIT (LICENSE file, checked 2026-11-20); Remotion has its own licence (free for individuals and small teams)",
+   "Decision": "Skip",
+   "Safety verdict": "unreviewed",
+   "Safety basis": "Inferred (unreviewed)",
+   "Safety reason": "Not code-reviewed for safety. Unverified: skill files and Remotion/npm dependencies -> Contain: separate project folder, pinned commit, no keys. Commit and LICENSE confirmed on github.com, 2026-11-20.",
+   "Safe install": "Unreviewed: contain it: clone into a separate project folder on Windows, git checkout bfcbaee, read SKILL.md and package.json first, npm install only from a lockfile with --ignore-scripts, add no API keys, keep Claude Code's normal permission prompts on (never --dangerously-skip-permissions). Get a review before real use.",
+   "YOLO install": "Not offered.",
+   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nContain it: clone into a separate project folder on Windows, git checkout bfcbaee, read SKILL.md and package.json first, npm install only from a lockfile with --ignore-scripts, add no API keys, keep Claude Code's normal permission prompts on (never --dangerously-skip-permissions).",
+   "Last checked": "2026-11-20"
   },
   {
    "Name": "claude-seo (AgriciDaniel)",
@@ -2265,13 +2297,13 @@
    "GitHub repo": "https://github.com/ShakeJ/coolray-video-qc @ 4ecab08 (MIT)",
    "Price": "Free on GitHub, MIT (github.com, checked 2026-11-15)",
    "Decision": "Later",
-   "Safety verdict": "unreviewed",
-   "Safety basis": "Inferred (unreviewed)",
-   "Safety reason": "Not code-reviewed for safety. A project Tool Scout (Claude, 2026-11-15) read it as read-only FFmpeg QC. README: no account, API key or upload, source files are not modified, scripts never install dependencies; Windows has not been validated by the author (macOS tested, Linux CI). Repo, license and latest commit confirmed from github.com metadata, 2026-11-15.",
-   "Safe install": "Unreviewed: contain it: download the v0.1.0 release ZIP (pinned version, not the moving main branch), run it first from a test folder on copies of your videos, no API keys needed and no network needed (it works on local files only), and keep the output folder separate from your source files. Get a review before real use.",
-   "YOLO install": "Not offered.",
-   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nClaude Code: copy the folder (SKILL.md at its root) to %USERPROFILE%\\.claude\\\\skills\\\\coolray-video-qc (README). Needs Python 3.10+ and ffmpeg/ffprobe on PATH. Windows is not validated by the author.",
-   "Last checked": "2026-11-15"
+   "Safety verdict": "safe",
+   "Safety basis": "Code read",
+   "Safety reason": "a review bot code read @4ecab08: safe with the fixes in Safe install. Python standard library only, no dependencies, no API keys, no telemetry and no network code (imports at scripts/media_audit.py:3-12 and scripts/captions.py:3-12). The only programs it starts are your own ffmpeg and ffprobe, without a shell and with input limited to local files (protocol_whitelist file,pipe, scripts/media_audit.py:39,154,211,278). It never edits or deletes your videos or captions: the video audit refuses an output folder that already exists (scripts/media_audit.py:276) and the caption report refuses to overwrite a file (scripts/captions.py:203). The skill is instructions only, no hooks (SKILL.md). Verified behaviour and fixes: (1) the commands are written as python3 (SKILL.md:17,30; README.md:73,79); on Windows python3 can open the Microsoft Store alias instead of your Python (Python docs, Using Python on Windows); fix: run the same commands with py. (2) The contact sheet uses FFmpeg glob input (scripts/media_audit.py:222), which needs an FFmpeg build with glob support (README.md:24); without it the run records only a contact_sheet_failed warning and the single frames are still written (scripts/media_audit.py:226); fix: open the frames folder instead, or run it in WSL. (3) Reports contain the full local paths of your files (SKILL.md:37); fix: don't share report.json publicly. Unverified: Windows behaviour beyond the two points above (the author tests macOS and Linux CI only, README.md:24); containment: first run on copies of a video in a test folder.",
+   "Safe install": "Safe install (fixes applied): Claude Code on Windows: winget install Python.Python.3.12 and winget install Gyan.FFmpeg (or any ffmpeg/ffprobe on PATH; the scripts never install anything). Download the v0.1.0 release ZIP from https://github.com/ShakeJ/coolray-video-qc/releases/tag/v0.1.0 (tag v0.1.0 = reviewed commit 4ecab08), extract it, keep the folder named coolray-video-qc and copy it to %USERPROFILE%\\.claude\\\\skills\\\\coolray-video-qc. Run it with py instead of python3, e.g. py scripts\\\\media_audit.py video.mp4 --out qa\\\\video-v1 (a new folder each run) and py scripts\\\\captions.py captions.srt --duration 60 --profile latin --out qa\\\\captions.json; first run on copies in a test folder; if the contact sheet fails, open qa\\\\video-v1\\\\frames instead. Don't share report.json (it holds your local paths). Hermes: same ZIP, copy the folder into your Hermes skills folder. claude.ai: no (needs local Python and ffmpeg). Android: no.",
+   "YOLO install": "YOLO (your own risk): skips the pinned release, the test folder and the Windows python3/py fix. git clone https://github.com/ShakeJ/coolray-video-qc (moving main branch) and copy it to ~/.claude/skills/coolray-video-qc with the README one-liner (README.md:79).",
+   "Install notes": "Ask the user before installing. Safe with the fixes in Safe install applied. Checks finished videos and subtitles for decode errors, black/frozen/silent parts, loudness, caption timing and reading speed before upload; local only, no keys, never edits your files. Fits the faceless video channel QC step.",
+   "Last checked": "2026-11-20"
   },
   {
    "Name": "CopilotKit",
@@ -2633,13 +2665,13 @@
    "GitHub repo": "https://github.com/dnSpyEx/dnSpy @ 6e8a26a (GPL-3.0)",
    "Price": "Free, GPL-3.0 (github.com, checked 2026-11-02)",
    "Decision": "Try",
-   "Safety verdict": "caution",
+   "Safety verdict": "safe",
    "Safety basis": "Code read",
-   "Safety reason": "a review bot (light code read @6e8a26a, a review, 2026-11-02): caution. The original dnSpy (Official URL) was archived on 2020-12-20; dnSpyEx is an unofficial GitHub fork. Startup update check on by default (UpdateService.cs:93,146). No fix: the original dnSpy is archived (2020-12-20) and the only maintained build, dnSpyEx, is an unofficial fork with no vendor security contact; the startup update check is fixed in Safe install, so caution stands for the fork's provenance only.",
-   "Safe install": "Safe install (fixes applied):\nWindows: download the dnSpyEx release zip for commit 6e8a26a's release from github.com/dnSpyEx/dnSpy/releases (unofficial fork; the original dnSpy was archived 2020-12-20), unzip to a user folder. On first start turn off the startup update check in Settings; otherwise it contacts GitHub at every start (UpdateService.cs:93,146). Open only files you trust in it. Android: no.",
+   "Safety reason": "Claude code read @6e8a26a (2026-11-20): safe with fixes. dnSpyEx is the active fork (last commit 2026-11-18); release zips are built by its own GitHub Actions workflow (.github/workflows/build.yml:9-11,57-61), so provenance is traceable. The startup GitHub update check defaults on (dnSpy/dnSpy/MainApp/UpdateService.cs:93,146) and has a setting. Debugging runs the target. Fix: v6.6.0 zip, update check off, decompile only for untrusted files.",
+   "Safe install": "Safe install (fixes applied):\nWindows: download the dnSpyEx v6.6.0 release zip (2026-06-20; the review read 6e8a26a, 15 commits later) from https://github.com/dnSpyEx/dnSpy/releases/tag/v6.6.0 and unzip it to a user folder. On first start untick Check for updates on startup in Settings (on by default, UpdateService.cs:93; it calls api.github.com, :146). Decompiling only reads a file; the debugger runs it, so debug untrusted assemblies only inside a VM. Android: no.",
    "YOLO install": "YOLO (your own risk): skips the pinned release and the update-check switch.\nWindows: latest dnSpyEx release zip; startup update check stays on.",
-   "Install notes": "Caution: read the Safety reason and ask the user before installing.\nWindows: dnSpyEx release from GitHub; turn off the update check. Android: no.",
-   "Last checked": "2026-11-18"
+   "Install notes": "Ask the user before installing.\nWindows: dnSpyEx release from GitHub; turn off the update check. Android: no.",
+   "Last checked": "2026-11-20"
   },
   {
    "Name": "doc-coauthoring (Anthropic)",
@@ -3554,6 +3586,22 @@
    "Last checked": "2026-11-15"
   },
   {
+   "Name": "gflow-cli (ffroliva)",
+   "Type": "MCP",
+   "Category": "generating videos",
+   "Official URL": "https://ffroliva.github.io/gflow-cli/",
+   "GitHub repo": "https://github.com/ffroliva/gflow-cli @ 8f8ac2c (MIT)",
+   "Price": "Free, MIT (LICENSE file, checked 2026-11-20); video spends your own Google Flow credits, images count against a daily quota (README)",
+   "Decision": "Skip",
+   "Safety verdict": "unreviewed",
+   "Safety basis": "Inferred (unreviewed)",
+   "Safety reason": "Not code-reviewed for safety. Unverified: the Python package and its Playwright browser automation. README (8f8ac2c) states it drives your own signed-in Google Flow session in a real Chrome window, bills your Flow credits, is not affiliated with Google, and that Google's terms apply to your account (see its DISCLAIMER and ACCOUNT_SAFETY docs) -> Contain: separate Chrome profile and a Google account you can afford to lose, pinned version. Commit and LICENSE confirmed on github.com, 2026-11-20.",
+   "Safe install": "Unreviewed: contain it: install a pinned version in its own venv (pip install gflow-cli==<reviewed version>), sign in with a separate Chrome profile on a Google account that holds nothing important, read docs/ACCOUNT_SAFETY.md first, do not use the marketplace plugin until reviewed, keep Claude Code's normal permission prompts on (never --dangerously-skip-permissions). Get a review before real use.",
+   "YOLO install": "Not offered.",
+   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nContain it: install a pinned version in its own venv (pip install gflow-cli==<reviewed version>), sign in with a separate Chrome profile on a Google account that holds nothing important, read docs/ACCOUNT_SAFETY.md first, do not use the marketplace plugin until reviewed, keep Claude Code's normal permission prompts on (never --dangerously-skip-permissions).",
+   "Last checked": "2026-11-20"
+  },
+  {
    "Name": "Ghidra",
    "Type": "app",
    "Category": "security, developer tools, 3D and games",
@@ -4425,13 +4473,13 @@
    "GitHub repo": "https://github.com/mrexodia/ida-pro-mcp @ c133c38 (2026-09-26; MIT)",
    "Price": "Free, MIT; needs IDA Pro: Essential from €1,099/year, Expert from €4,999/year, Ultimate €8,599/year, IDA Home $365/year non-commercial (hex-rays.com, checked 2026-11-02; Home support not stated).",
    "Decision": "Try",
-   "Safety verdict": "caution",
+   "Safety verdict": "safe",
    "Safety basis": "Code read",
-   "Safety reason": "a review bot (code read @c133c38, a review, 2026-11-02): caution. Localhost only by default (src/ida_pro_mcp/server.py:57). Headless server hides unsafe tools (py_eval, debugger) unless --unsafe (idalib_server.py:289-291), but the IDA GUI plugin turns every tool on by default, unsafe ones included (ida_mcp/http.py:51-72); untick unsafe. Installer writes MCP config into ~/.claude.json and other clients (installer_data.py:115). Sample binaries can carry prompt injection. No fix: the MCP server hands strings and code from the analysed binary straight to the agent, so prompt-injection text inside a sample cannot be filtered out; unsafe tools, localhost and client configs are fixed in Safe install, so caution stands for untrusted samples only.",
-   "Safe install": "Safe install (fixes applied):\nClaude Code / Hermes (Windows, needs paid IDA Pro 8.3+): install from the repo at commit c133c38 per its README. In the IDA plugin config page untick the unsafe tools (py_eval, debugger), which the GUI plugin turns on by default (ida_mcp/http.py:51-72); for the headless server never pass --unsafe (idalib_server.py:289-291). Keep it on localhost (server.py:57, the default). After install, open ~/.claude.json and the other client configs it writes (installer_data.py:115) and remove entries for clients you do not use. Treat text inside analysed binaries as untrusted (prompt injection). Only reverse-engineer software you own or are allowed to. Android: no.",
+   "Safety reason": "Claude code read @c133c38 (2026-11-20): safe with fixes. The GUI plugin enables every tool, py_eval and debugger included, unless unticked (src/ida_pro_mcp/ida_mcp/http.py:51-73); headless drops them without --unsafe (idalib_server.py:289-291); host 127.0.0.1 (server.py:57). Text from a sample reaches the agent as data, and Claude Code's permission prompts gate every action. Fix: untick unsafe tools, approvals on, prune client configs.",
+   "Safe install": "Safe install (fixes applied):\nClaude Code / Hermes (Windows, needs paid IDA Pro 8.3+): install from the repo at commit c133c38 per its README. In the IDA plugin config page untick the unsafe tools (py_eval, debugger), which the GUI plugin turns on by default (ida_mcp/http.py:51-73); for the headless server never pass --unsafe (idalib_server.py:289-291). Keep it on localhost (server.py:57, the default). After install, open ~/.claude.json and the other client configs it writes (installer_data.py:115) and remove entries for clients you do not use. Keep Claude Code's permission prompts on (never --dangerously-skip-permissions) so text inside an analysed binary can't trigger actions on its own; analyse copies of samples. Only reverse-engineer software you own or are allowed to. Android: no.",
    "YOLO install": "YOLO (your own risk): skips unticking the unsafe tools and the config review.\nClaude Code: README install with defaults; py_eval and debugger stay on in the GUI plugin.",
-   "Install notes": "Caution: read the Safety reason and ask the user before installing.\nClaude Code / Hermes: MCP server per its README; untick \"unsafe\" tools in the IDA plugin config page and review the MCP config it writes. Needs paid IDA Pro 8.3+. Only reverse-engineer software you own or are allowed to.",
-   "Last checked": "2026-11-18"
+   "Install notes": "Ask the user before installing.\nClaude Code / Hermes: MCP server per its README; untick \"unsafe\" tools in the IDA plugin config page and review the MCP config it writes. Needs paid IDA Pro 8.3+. Only reverse-engineer software you own or are allowed to.",
+   "Last checked": "2026-11-20"
   },
   {
    "Name": "ILSpy",
@@ -4736,6 +4784,22 @@
    "YOLO install": "YOLO (your own risk): skips the commit pin.\nThe README one-line plugin command (latest commit, and the repo has no marketplace file).",
    "Install notes": "Code-reviewed by a review bot @1ac0c1a (safe). Claude Code on Windows: copy the folder skills/jp-design from https://github.com/mrslbt/jp-web-design-guardrails into %USERPROFILE%\\.claude\\\\skills\\\\jp-design, then start a new session (it loads as /jp-design). The README's one-line plugin command (README Install) is the author's; the repo has a .claude-plugin/plugin.json but no marketplace file, so the folder copy is the dependable route. claude.ai: zip the jp-design folder (SKILL.md plus references/) and upload it under Settings, Capabilities, Skills. Nothing to run; no keys. Install is unpinned, so later commits arrive without a review.",
    "Last checked": "2026-11-17"
+  },
+  {
+   "Name": "juzu (syydaniel)",
+   "Type": "skill",
+   "Category": "generating videos, editing",
+   "Official URL": "https://github.com/syydaniel/juzu",
+   "GitHub repo": "https://github.com/syydaniel/juzu @ 2a57736 (MIT)",
+   "Price": "Free on GitHub, MIT (LICENSE file, checked 2026-11-20)",
+   "Decision": "Skip",
+   "Safety verdict": "unreviewed",
+   "Safety basis": "Inferred (unreviewed)",
+   "Safety reason": "Not code-reviewed for safety. Unverified: skill scripts and the voice/render tools it calls -> Contain: separate project folder, pinned commit, no keys. Commit and LICENSE confirmed on github.com, 2026-11-20.",
+   "Safe install": "Unreviewed: contain it: clone into a separate project folder on Windows, git checkout 2a57736, read SKILL.md and package.json first, npm install only inside that folder with --ignore-scripts, add no API keys, keep Claude Code's normal permission prompts on (never --dangerously-skip-permissions). Get a review before real use.",
+   "YOLO install": "Not offered.",
+   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nContain it: clone into a separate project folder on Windows, git checkout 2a57736, read SKILL.md and package.json first, npm install only inside that folder with --ignore-scripts, add no API keys, keep Claude Code's normal permission prompts on (never --dangerously-skip-permissions).",
+   "Last checked": "2026-11-20"
   },
   {
    "Name": "kamiya-codec",
@@ -5778,6 +5842,22 @@
    "Last checked": "2026-11-17"
   },
   {
+   "Name": "motion-3d-por-referencia (Felpborges)",
+   "Type": "skill",
+   "Category": "generating videos",
+   "Official URL": "https://github.com/Felpborges/motion-3d-por-referencia",
+   "GitHub repo": "https://github.com/Felpborges/motion-3d-por-referencia @ b1d7961 (no licence file)",
+   "Price": "Free to read on GitHub; no LICENSE file (checked 2026-11-20), so no rights to reuse it are granted",
+   "Decision": "Skip",
+   "Safety verdict": "unreviewed",
+   "Safety basis": "Inferred (unreviewed)",
+   "Safety reason": "Not code-reviewed for safety. Unverified: skill files and three.js/npm dependencies -> Contain: separate folder, pinned commit, no keys. Commit and LICENSE confirmed on github.com, 2026-11-20. No LICENSE file in the repo, so no reuse rights are granted.",
+   "Safe install": "Unreviewed: contain it: read only: no licence file, so take ideas, not code; if you test it, clone into a separate folder, git checkout b1d7961, npm install only inside it with --ignore-scripts, add no keys, keep Claude Code's normal permission prompts on (never --dangerously-skip-permissions). Get a review before real use.",
+   "YOLO install": "Not offered.",
+   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nContain it: read only: no licence file, so take ideas, not code; if you test it, clone into a separate folder, git checkout b1d7961, npm install only inside it with --ignore-scripts, add no keys, keep Claude Code's normal permission prompts on (never --dangerously-skip-permissions).",
+   "Last checked": "2026-11-20"
+  },
+  {
    "Name": "motion-code (mackswendhell)",
    "Type": "app",
    "Category": "generating videos, editing",
@@ -5801,13 +5881,13 @@
    "GitHub repo": "https://github.com/sharbelxyz/motion-director @ a21ffbf (MIT)",
    "Price": "Free on GitHub, MIT (github.com, checked 2026-11-16)",
    "Decision": "Later",
-   "Safety verdict": "unreviewed",
-   "Safety basis": "Inferred (unreviewed)",
-   "Safety reason": "Not code-reviewed for safety. README (commit a21ffbf): no accounts, no API keys, nothing uploaded; the one-line install is curl ... install.sh | bash and installs into every agent it finds; first run fetches Node 22+, FFmpeg and the HyperFrames renderer with headless Chrome, and a headless browser reads your website for brand assets, stored in ~/motion-director/brands. Repo, license and latest commit confirmed from github.com metadata, 2026-11-16.",
-   "Safe install": "Unreviewed: contain it: download the repo at the pinned commit a21ffbf (not the moving main branch), copy only skills/motion-director into one agent's skills folder by hand (never the curl | bash one-liner, which installs into every agent it finds), run it in a sandbox or devcontainer with no API keys, and let it reach the network only for the first-run setup downloads and your own site. Get a review before real use.",
-   "YOLO install": "Not offered.",
-   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nWindows (README): install Node.js 22+ and FFmpeg, then copy skills/motion-director into %USERPROFILE%\\.claude\\\\skills\\\\ for Claude Code. The curl|bash one-liner is macOS/Linux only and installs into every agent it detects; use the by-hand copy instead.",
-   "Last checked": "2026-11-16"
+   "Safety verdict": "safe",
+   "Safety basis": "Code read",
+   "Safety reason": "a review bot code read @a21ffbf: safe with the fixes in Safe install. Node standard library only, no npm dependencies of its own (scripts/lib.mjs:1); commands are started as argument lists, not shell strings (scripts/lib.mjs:50-61). The renderer is the third-party HyperFrames CLI, run through npx at the pinned version 0.8.188 (scripts/lib.mjs:12,81) with telemetry off, without installing its own agent skills, and with GEMINI/GOOGLE/HEYGEN keys removed from its environment unless you set MD_ALLOW_CLOUD=1 (scripts/lib.mjs:71-77; SKILL.md:297-301). Brand capture deletes the CLAUDE.md/AGENTS.md/.cursorrules files the capture writes, so captured sites don't feed instructions to your agent (scripts/brand-intake.mjs:134-135). No accounts, no posting, no uploads. Verified behaviour and fixes: (1) the curl | bash one-liner (README.md:26) clones the moving main branch (install.sh:32) and, with no flag, copies the skill into every agent folder it finds, Claude Code, Codex and Hermes (install.sh:49-52); fix: pinned clone at a21ffbf and copy only skills/motion-director by hand into one agent. (2) First run (SKILL.md:20-22,33) runs check-setup --fix, which downloads hyperframes@0.8.188 into the npx cache and HyperFrames' own headless Chrome (scripts/check-setup.mjs:34-45); nothing is installed globally (scripts/check-setup.mjs:6-7). Fix: let it, inside WSL. (3) On native Windows it fails: HyperFrames is started as spawnSync(\"npx\") without a shell (scripts/lib.mjs:81), and Node cannot start the npx.cmd file that way (Node.js docs, child_process: Spawning .bat and .cmd files on Windows); check-setup also calls df (scripts/check-setup.mjs:47) and find-assets calls unzip (scripts/find-assets.mjs:31). Fix: run Claude Code and the skill inside WSL2 Ubuntu. (4) It goes online when you ask for these steps: brand intake opens the site you give in headless Chrome and fetches its YouTube channel images and simple-icons logos from jsdelivr (scripts/brand-intake.mjs:131,188,218,307); find-assets downloads CC0 images from ambientCG, Poly Haven, Wikimedia Commons and Openverse (scripts/find-assets.mjs:26,44,71,82); 3D props load three.js 0.147.0 from jsdelivr (scripts/prop-render.mjs:37-39); a reference URL needs yt-dlp (scripts/ref-style.mjs:33). Fix: only give it your own site and links you choose. (5) cutout.mjs is macOS-only and stops elsewhere (scripts/cutout.mjs:17); fix: supply your own cut-out PNGs. Unverified: the HyperFrames 0.8.188 npm package and its Chrome download were not code-read; containment: WSL2 only, no API keys in that environment, never set MD_ALLOW_CLOUD=1.",
+   "Safe install": "Safe install (fixes applied): Claude Code on Windows: use it inside WSL2 Ubuntu (native Windows fails, see Safety reason). In WSL: sudo apt install -y ffmpeg git and Node.js 22 LTS (nodejs.org); install Claude Code in WSL; then git clone https://github.com/sharbelxyz/motion-director ~/src/motion-director && cd ~/src/motion-director && git checkout a21ffbf && mkdir -p ~/.claude/skills && cp -R skills/motion-director ~/.claude/skills/motion-director. Never run install.sh or the curl | bash line. First run: node ~/.claude/skills/motion-director/scripts/check-setup.mjs --fix (downloads pinned hyperframes@0.8.188 and its Chrome into caches only). Keep API keys out of that WSL environment, never set MD_ALLOW_CLOUD=1, and only give brand intake your own site. Hermes: same pinned clone, copy skills/motion-director to ~/.hermes/skills/creative/motion-director (in WSL). claude.ai: no (needs local Node, FFmpeg and Chrome). Android: no.",
+   "YOLO install": "YOLO (your own risk): skips the pinned commit, the one-agent copy and the WSL fix. Inside WSL or Linux: curl -fsSL https://raw.githubusercontent.com/sharbelxyz/motion-director/main/install.sh | bash (README.md:26; installs the moving main branch into every agent folder it finds), then say \"set up motion director\" to your agent.",
+   "Install notes": "Ask the user before installing. Safe with the fixes in Safe install applied (WSL2 on Windows, pinned commit a21ffbf, copy into one agent by hand, no API keys, no MD_ALLOW_CLOUD). Renders branded motion graphics, B-roll and transparent overlays locally with pinned HyperFrames; no accounts, nothing uploaded. Possible fit for the faceless video channel's B-roll and overlays.",
+   "Last checked": "2026-11-20"
   },
   {
    "Name": "motion-pack (ANVEAI)",
@@ -5890,6 +5970,22 @@
    "Last checked": "2026-11-17"
   },
   {
+   "Name": "motion-use (leeguooooo)",
+   "Type": "skill",
+   "Category": "generating videos",
+   "Official URL": "https://github.com/leeguooooo/motion-use",
+   "GitHub repo": "https://github.com/leeguooooo/motion-use @ b5578df (MIT)",
+   "Price": "Free on GitHub, MIT (LICENSE file, checked 2026-11-20)",
+   "Decision": "Skip",
+   "Safety verdict": "unreviewed",
+   "Safety basis": "Inferred (unreviewed)",
+   "Safety reason": "Not code-reviewed for safety. Unverified: the CLI and HyperFrames npm dependencies -> Contain: separate project folder, pinned commit, no global npm install, no keys. Commit and LICENSE confirmed on github.com, 2026-11-20.",
+   "Safe install": "Unreviewed: contain it: clone into a separate project folder on Windows, git checkout b5578df, npm install inside that folder only (no -g) from a lockfile with --ignore-scripts, add no API keys, keep Claude Code's normal permission prompts on (never --dangerously-skip-permissions). Get a review before real use.",
+   "YOLO install": "Not offered.",
+   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nContain it: clone into a separate project folder on Windows, git checkout b5578df, npm install inside that folder only (no -g) from a lockfile with --ignore-scripts, add no API keys, keep Claude Code's normal permission prompts on (never --dangerously-skip-permissions).",
+   "Last checked": "2026-11-20"
+  },
+  {
    "Name": "motionboard",
    "Type": "skill",
    "Category": "generating videos, design",
@@ -5945,13 +6041,13 @@
    "GitHub repo": "https://github.com/staryone/motlab @ 9a44f75 (MIT)",
    "Price": "Free on GitHub, MIT (github.com, checked 2026-11-18)",
    "Decision": "Later",
-   "Safety verdict": "unreviewed",
-   "Safety basis": "Inferred (unreviewed)",
-   "Safety reason": "Not code-reviewed for safety. README: needs Node 24+, Chrome or Chromium and ffmpeg/ffprobe on PATH; the npm route installs globally (npm install -g @motlab/cli) and setup copies the skills into the agent skill folder; the clone route (node install.js) runs npm ci and puts a motlab command in ~/.local/bin. Both routes add a motlab command to your user PATH; this always happens. Repo, license and latest commit confirmed from github.com metadata, 2026-11-18.",
-   "Safe install": "Unreviewed: contain it: clone at the pinned commit 9a44f75 inside a devcontainer or sandbox (not your main Windows profile), run node install.js --skill none there so nothing is copied into your real skills folder, no API keys (it needs none), and keep network on only for the npm ci step. Get a review before real use.",
-   "YOLO install": "Not offered.",
-   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nClaude Code on Windows: npm install -g @motlab/cli then npx @motlab/cli setup (README; installs globally and copies the skills to %USERPROFILE%\\.claude\\\\skills). Codex: npx @motlab/cli setup --skill agents. Needs Node 24+, Chrome and ffmpeg.",
-   "Last checked": "2026-11-18"
+   "Safety verdict": "safe",
+   "Safety basis": "Code read",
+   "Safety reason": "a review bot code read @9a44f75: safe with the fixes in Safe install. One npm dependency, mediabunny 1.65.2, pinned exactly with a lockfile and no install scripts (package.json, package-lock.json, .npmrc save-exact). No telemetry and no API keys. Local servers bind 127.0.0.1 only (src/editor.js:204,211; src/server.js:78); viewer writes are refused unless Host and Origin are local (editor.js:89-93) and it serves files only inside the project folder (editor.js:182). Verified behaviour and fixes: (1) the npm route always installs globally (npm install -g @motlab/cli, README); fix: use a clone at the pinned commit instead. (2) node install.js runs npm ci (install.js:70), always writes a motlab launcher to ~/.local/bin (motlab.cmd plus a sh launcher on Windows, install.js:84-92) and copies the motlab and motlab-assets skills into ~/.claude/skills by default, replacing existing folders of those names that hold a SKILL.md (install.js:100-115), and records this in ~/.motlab/install.json (install.js:118); it never edits PATH itself, it prints the line to add (install.js:94-96); fix: run it with --dry-run first, and pass --bin <folder> if you want the launcher elsewhere. (3) motlab update fetches origin, fast-forwards and reruns the installer (src/update.js:30-53), which moves you off the reviewed commit; on a detached pinned checkout it stops with 'not on a branch' (update.js:28); fix: don't run motlab update; check out a newer commit only after a new review. (4) Network: get_sfx.py downloads sounds from api.openverse.org (skills/motlab/scripts/get_sfx.py:18,50,71), get_font.py from fonts.google.com (get_font.py:32,58), and the three.js/p5 templates load pinned versions from cdn.jsdelivr.net in headless Chrome (templates/template-three.html:10-11, template-p5.html:9); no fix needed, skip those scripts and templates if you want it offline. (5) Chrome runs headless with a throwaway profile and --enable-unsafe-swiftshader, and adds --no-sandbox only when run as root (src/chrome.js:25,31,37-41); fix: never run it as root or in an elevated (Administrator) terminal. (6) The skill's Python helpers need numpy, scipy and pillow unpinned (skills/motlab/requirements.txt); fix: install them in a venv. The skills tell the agent to ask the user before installing (SKILL.md:30-38; docs/install-for-agents.md:3,50).",
+   "Safe install": "Safe install (fixes applied): Claude Code on Windows (needs Node 24+, Chrome and ffmpeg/ffprobe on PATH; normal, not Administrator, terminal): git clone https://github.com/staryone/motlab.git %USERPROFILE%\\\\motlab && cd %USERPROFILE%\\\\motlab && git checkout 9a44f75 && node install.js --skill claude --dry-run, read where files go, then node install.js --skill claude. It writes the launcher to %USERPROFILE%\\.local\\\\bin; add that to your user PATH yourself or call node %USERPROFILE%\\\\motlab\\\\bin\\\\motlab.js. Don't run motlab update (it leaves the reviewed commit). Optional Python helpers: python -m venv .venv && .venv\\\\Scripts\\\\pip install numpy scipy pillow. Hermes: same clone and pin, then node install.js --skill hermes --dry-run, then without --dry-run. claude.ai: no (needs local Node, Chrome and ffmpeg). Android: no.",
+   "YOLO install": "YOLO (your own risk): skips the commit pin, the dry run and the no-update rule. npm install -g @motlab/cli then npx @motlab/cli setup (README); this always installs globally and copies the skills to %USERPROFILE%\\.claude\\\\skills; update with npm install -g @motlab/cli@latest and motlab setup --update.",
+   "Install notes": "Ask the user before installing. Safe with the fixes in Safe install applied. Video-as-code engine for Claude Code, Codex and Hermes: canvas scene pages rendered with WebCodecs in headless Chrome, a local review viewer and two agent skills; no keys, no telemetry.",
+   "Last checked": "2026-11-20"
   },
   {
    "Name": "MoviePy",
@@ -7449,13 +7545,13 @@
    "GitHub repo": "https://github.com/Bagomojo/rdr2-companion @ 3933bb9 (MIT; committed 2026-10-31; C# ScriptHookRDR2DotNet V2 mod + local Python bridge)",
    "Price": "Mod free (MIT, github.com, checked 2026-11-02); Anthropic API pay-as-you-go, about 40-50 US cents per hour of play per the README; optional ElevenLabs paid plan for a cloned voice",
    "Decision": "Try",
-   "Safety verdict": "caution",
+   "Safety verdict": "safe",
    "Safety basis": "Code read",
-   "Safety reason": "a review bot (code read @3933bb9, a review, 2026-11-02): repo code is clean, caution for what it depends on. Bridge listens on 127.0.0.1:7777 only (bridge/server.py:58) and needs a per-start secret (mod/DaveCompanion.cs:944); network out only to Anthropic and ElevenLabs (bridge/voice.py:128-135); hash-pinned packages (setup.cmd:7); .env allowlist (bridge/keys.py:21-41). Needs ScriptHookRDR2, a closed-source DLL loader not reviewed; optional vault script runs PowerShell -ExecutionPolicy Bypass (keys.py:56-60). Story mode only, never Red Dead Online. No fix: it needs ScriptHookRDR2, a closed-source DLL loader that cannot be code-reviewed; Safe install contains it (game install with no other mods, no saved logins on that Windows account, Story mode only) but the loader still runs unreviewed code in the game process. The repo's own code is clean with the fixes in Safe install, so caution stands for the loader only.",
-   "Safe install": "Safe install (fixes applied):\nWindows: RDR2 on PC, Story mode only (never Red Dead Online). Install ScriptHookRDR2 only from its official site (closed-source DLL loader, not reviewed: unverified: what the loader does; contain it by using a game install with no other mods and no saved logins on that Windows account). Then ScriptHookRDR2DotNet V2, git clone https://github.com/Bagomojo/rdr2-companion, git checkout 3933bb9, run setup.cmd (hash-pinned packages, setup.cmd:7) and start-bridge.cmd. Put the Anthropic and ElevenLabs keys in bridge/.env (allowlisted, bridge/keys.py:21-41); skip the optional vault script, which runs PowerShell -ExecutionPolicy Bypass (bridge/keys.py:56-60). Needs an Anthropic API key with credit (Claude Pro/Max does not work). Android: no.",
+   "Safety reason": "Claude code read @3933bb9 (2026-11-20): safe with fixes. Bridge binds 127.0.0.1:7777 (bridge/server.py:58) with a per-start secret (mod/DaveCompanion.cs:945-946); packages hash-checked (bridge/setup.cmd:8); talks only to Anthropic and ElevenLabs (bridge/voice.py:129). The vault script runs PowerShell -ExecutionPolicy Bypass (bridge/keys.py:56-60) and is optional. Unverified: ScriptHookRDR2 (closed DLL) -> Contain: clean install, Story mode.",
+   "Safe install": "Safe install (fixes applied):\nWindows: RDR2 on PC, Story mode only (never Red Dead Online). Install ScriptHookRDR2 only from its official site (closed-source DLL loader, not reviewed: unverified: what the loader does; contain it by using a game install with no other mods and no saved logins on that Windows account). Then ScriptHookRDR2DotNet V2, git clone https://github.com/Bagomojo/rdr2-companion, git checkout 3933bb9, run bridge\\\\setup.cmd (pip --require-hashes, bridge/setup.cmd:8) and bridge\\\\start-bridge.cmd. Put the Anthropic and ElevenLabs keys in bridge/.env (allowlisted, bridge/keys.py:21-41); skip the optional vault script, which runs PowerShell -ExecutionPolicy Bypass (bridge/keys.py:56-60). Needs an Anthropic API key with credit (Claude Pro/Max does not work). Android: no.",
    "YOLO install": "YOLO (your own risk): skips the commit pin and the no-vault-script rule.\nWindows: latest clone, setup.cmd, and the optional vault script (runs PowerShell with -ExecutionPolicy Bypass).",
-   "Install notes": "Caution: read the Safety reason and ask the user before installing.\nWindows: RDR2 on PC + ScriptHookRDR2 + ScriptHookRDR2DotNet V2, then `setup.cmd` and `start-bridge.cmd` (README); needs an Anthropic API key with credit (Claude Pro/Max does not work). Never use in Red Dead Online. Android: no.",
-   "Last checked": "2026-11-18"
+   "Install notes": "Ask the user before installing.\nWindows: RDR2 on PC + ScriptHookRDR2 + ScriptHookRDR2DotNet V2, then `setup.cmd` and `start-bridge.cmd` (README); needs an Anthropic API key with credit (Claude Pro/Max does not work). Never use in Red Dead Online. Android: no.",
+   "Last checked": "2026-11-20"
   },
   {
    "Name": "REA (Reverse Engineer Anything) MCP + skill",
@@ -7689,13 +7785,29 @@
    "GitHub repo": "https://github.com/GroMarketing/remotion-qa @ dd246e9 (MIT)",
    "Price": "Free, MIT (github.com, checked 2026-11-17)",
    "Decision": "Later",
+   "Safety verdict": "safe",
+   "Safety basis": "Code read",
+   "Safety reason": "a review bot code read @dd246e9: safe with the fixes in Safe install. One dependency, ffmpeg-static (lockfile pins 5.3.0 with an integrity hash, package-lock.json:107-111). No telemetry, no API keys, and no network calls in its own code (no fetch or http in src/ or bin/). Video inputs are passed to ffmpeg as local files only with every other protocol refused (src/ffmpeg.mjs:14-18). The Claude Code plugin is the skill text only, no hooks or scripts (.claude-plugin/plugin.json, marketplace.json). Verified behaviour and fixes: (1) ffmpeg-static has an install script that downloads an ffmpeg binary (package-lock.json:111), and if that binary is missing and no ffmpeg is on PATH, remotion-qa runs that download itself on first use (src/ffmpeg.mjs:37-43); fix: install with --ignore-scripts and set REMOTION_QA_FFMPEG to your own ffmpeg, which it uses before anything else (src/ffmpeg.mjs:31). (2) The skill and README call npx remotion-qa (SKILL.md:16,44,59,73), which fetches the latest version from npm when it is not installed in the project; fix: install it in the project at the pinned commit so npx uses that copy. (3) The render command runs npx remotion render (bin/remotion-qa.mjs:100) and, when the pace check fails, deletes any existing <out>.failed-pace.mp4 and moves the new render there (bin/remotion-qa.mjs:104-106); on Windows Node will not start npx.cmd without a shell, so render fails there (Node child_process docs); fix: render with npx remotion render yourself, then run remotion-qa check. (4) --frames writes PNGs and overwrites files with the same name in that folder (src/safezone.mjs:106-108); fix: give it a new empty folder.",
+   "Safe install": "Safe install (fixes applied): Claude Code on Windows, inside one Remotion project (needs Node 18+): winget install Gyan.FFmpeg, then setx REMOTION_QA_FFMPEG \"<full path to ffmpeg.exe>\" and open a new terminal; in the project folder npm install --save-dev --ignore-scripts github:GroMarketing/remotion-qa#dd246e9 (never global; --ignore-scripts stops the ffmpeg download). Render with npx remotion render yourself, then npx remotion-qa check out\\\\video.mp4 --beats captions.srt --frames qa-frames-<new folder>; don't use remotion-qa render. Skill: copy node_modules\\\\remotion-qa\\\\skills\\\\remotion-qa to %USERPROFILE%\\.claude\\\\skills\\\\remotion-qa (text only). Hermes: same project install, copy the same skill folder into your Hermes skills folder. claude.ai: no (needs local Node and ffmpeg). Android: no.",
+   "YOLO install": "YOLO (your own risk): skips the commit pin, --ignore-scripts and your own ffmpeg. npm install --save-dev remotion-qa (README.md:52; ffmpeg-static downloads its ffmpeg binary) or plain npx remotion-qa (latest from npm each time); Claude Code plugin: /plugin install remotion-qa@remotion-qa (README.md:198).",
+   "Install notes": "Ask the user before installing. Safe with the fixes in Safe install applied. Checks rendered Reels/Shorts videos for dead air, captions too fast to read, text under the platform UI and mobile font floors; local only, no keys, no telemetry.",
+   "Last checked": "2026-11-20"
+  },
+  {
+   "Name": "remotion-shorts-skill (social-media-skills)",
+   "Type": "skill",
+   "Category": "generating videos",
+   "Official URL": "https://github.com/social-media-skills/remotion-shorts-skill",
+   "GitHub repo": "https://github.com/social-media-skills/remotion-shorts-skill @ 6a09634 (MIT)",
+   "Price": "Free on GitHub, MIT (LICENSE file, checked 2026-11-20); Remotion licence free for individuals and small teams",
+   "Decision": "Later",
    "Safety verdict": "unreviewed",
    "Safety basis": "Inferred (unreviewed)",
-   "Safety reason": "Not code-reviewed for safety. README at dd246e9: install is npm install --save-dev remotion-qa or npx (README.md:49-53); if no ffmpeg binary is found it downloads the bundled ffmpeg-static copy once on first run (README.md:55-58); the render command runs npx remotion render (README.md:169). A project Tool Scout (Claude, 2026-11-17) read it: 3/5, idea only (reading-time rule per caption: longest line / 15 cps + 0.4 s per extra line + 1 s). Repo, commit, license confirmed from github.com metadata, 2026-11-17; 0 stars, last push 2026-10-05.",
-   "Safe install": "Unreviewed: contain it: install it as a dev dependency inside one Remotion project only (npm install --save-dev remotion-qa@<version matching dd246e9>, never global), set REMOTION_QA_FFMPEG to your own ffmpeg (winget install Gyan.FFmpeg) so it downloads nothing on first run (README.md:55-58), no keys in that project, run it on copies of rendered videos. Get a review before real use.",
+   "Safety reason": "Not code-reviewed for safety. Unverified: skill files and Remotion/npm dependencies -> Contain: separate project folder, pinned commit, no keys. Commit and LICENSE confirmed on github.com, 2026-11-20.",
+   "Safe install": "Unreviewed: contain it: clone into a separate project folder on Windows, git checkout 6a09634, read SKILL.md and package.json first, npm install only inside that folder from a lockfile with --ignore-scripts, add no API keys, keep Claude Code's normal permission prompts on (never --dangerously-skip-permissions). Get a review before real use.",
    "YOLO install": "Not offered.",
-   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nREADME.md\\:49-53\\: npm install --save-dev remotion-qa (or npx remotion-qa). Set REMOTION_QA_FFMPEG to your own ffmpeg to skip the first-run download (README.md:58).",
-   "Last checked": "2026-11-17"
+   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nContain it: clone into a separate project folder on Windows, git checkout 6a09634, read SKILL.md and package.json first, npm install only inside that folder from a lockfile with --ignore-scripts, add no API keys, keep Claude Code's normal permission prompts on (never --dangerously-skip-permissions).",
+   "Last checked": "2026-11-20"
   },
   {
    "Name": "Renku Studio (GoRenku)",
@@ -8320,6 +8432,22 @@
    "YOLO install": "Not offered.",
    "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nOn first use scripts/doctor.py pip-installs numpy, scipy, pillow, playwright (and imageio-ffmpeg when ffmpeg is missing) into the current Python, retrying with --user and then --break-system-packages (doctor.py:6-21), and runs `playwright install chromium` when Chromium is missing (doctor.py:24-33).",
    "Last checked": "2026-11-14"
+  },
+  {
+   "Name": "stickman-video-director (kaomei)",
+   "Type": "skill",
+   "Category": "generating videos",
+   "Official URL": "https://github.com/kaomei/stickman-video-director",
+   "GitHub repo": "https://github.com/kaomei/stickman-video-director @ 7fa6a9a (MIT)",
+   "Price": "Free on GitHub, MIT (LICENSE file, checked 2026-11-20); image, voice and video services it connects bill separately (README FAQ)",
+   "Decision": "Later",
+   "Safety verdict": "unreviewed",
+   "Safety basis": "Inferred (unreviewed)",
+   "Safety reason": "Not code-reviewed for safety. Unverified: the skill scripts and the agent-led setup (README Step 1 has the agent install missing tools itself) -> Contain: pinned commit, manual install guide instead of agent self-install, no keys. README states image, voice and video engines (Gemini, ElevenLabs, Google Flow) bill your own accounts. Commit and LICENSE confirmed on github.com, 2026-11-20.",
+   "Safe install": "Unreviewed: contain it: clone into a separate project folder on Windows, git checkout 7fa6a9a, follow skills/directing-stickman-videos/references/installation-troubleshooting.md by hand instead of letting the agent self-install, add no API keys until reviewed, keep Claude Code's normal permission prompts on (never --dangerously-skip-permissions). Get a review before real use.",
+   "YOLO install": "Not offered.",
+   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nContain it: clone into a separate project folder on Windows, git checkout 7fa6a9a, follow skills/directing-stickman-videos/references/installation-troubleshooting.md by hand instead of letting the agent self-install, add no API keys until reviewed, keep Claude Code's normal permission prompts on (never --dangerously-skip-permissions).",
+   "Last checked": "2026-11-20"
   },
   {
    "Name": "Stitch skills",
@@ -9090,6 +9218,22 @@
    "Last checked": "2026-11-18"
   },
   {
+   "Name": "VBASE (ekanshvcpkg)",
+   "Type": "plugin",
+   "Category": "editing",
+   "Official URL": "https://github.com/ekanshvcpkg/VBASE",
+   "GitHub repo": "https://github.com/ekanshvcpkg/VBASE @ a7163f1 (MIT)",
+   "Price": "Free on GitHub, MIT (LICENSE file, checked 2026-11-20); ElevenLabs music and voice optional and off without a key (README); Remotion licence free for individuals and small teams",
+   "Decision": "Skip",
+   "Safety verdict": "unreviewed",
+   "Safety basis": "Inferred (unreviewed)",
+   "Safety reason": "Not code-reviewed for safety. Unverified: scripts/setup.sh, which README says installs ffmpeg, Node, uv, auto-editor, Python 3.11 tools and models (about 5 GB) -> Contain: WSL2 or devcontainer, pinned commit, read setup.sh before running, no ElevenLabs key. Commit and LICENSE confirmed on github.com, 2026-11-20.",
+   "Safe install": "Unreviewed: contain it: run it in WSL2 or a devcontainer, not on bare Windows; clone and git checkout a7163f1 instead of the marketplace install, read scripts/setup.sh before /vbase:setup (it installs about 5 GB of tools and models), add no ElevenLabs key, keep Claude Code's normal permission prompts on (never --dangerously-skip-permissions). Get a review before real use.",
+   "YOLO install": "Not offered.",
+   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nContain it: run it in WSL2 or a devcontainer, not on bare Windows; clone and git checkout a7163f1 instead of the marketplace install, read scripts/setup.sh before /vbase:setup (it installs about 5 GB of tools and models), add no ElevenLabs key, keep Claude Code's normal permission prompts on (never --dangerously-skip-permissions).",
+   "Last checked": "2026-11-20"
+  },
+  {
    "Name": "VectorCraft",
    "Type": "app",
    "Category": "creative tools, automation",
@@ -9161,13 +9305,13 @@
    "GitHub repo": "https://github.com/BloopAI/vibe-kanban @ 7c38070 (Apache-2.0; committed 2026-10-28; community-maintained since the company shut down)",
    "Price": "Free, Apache-2.0 (github.com, checked 2026-11-02); the paid cloud closed in May 2026",
    "Decision": "Try",
-   "Safety verdict": "caution",
+   "Safety verdict": "safe",
    "Safety basis": "Code read",
-   "Safety reason": "a review bot (code read @7c38070, a review, 2026-11-02): caution. The company shut down on 2026-04-10 and the repo is community-maintained (README.md:19-22); analytics on by default (crates/services/src/services/config/versions/v8.rs:76,144), turn off in settings; Sentry crash reports when a DSN is built in (crates/utils/src/sentry.rs:26). No fix: the company shut down on 2026-04-10 and the repo is community-maintained (README.md:19-22), so there is no vendor security response; pinning the reviewed 7c38070 limits but does not remove this. Analytics and Sentry are fixed in Safe install. Caution stands for maintenance only.",
-   "Safe install": "Safe install (fixes applied):\nWindows: npx vibe-kanban@<version built from the reviewed 7c38070> (Node needed) rather than the unpinned latest, since the repo is community-maintained after the company shut down (README.md:19-22). On first start open Settings and turn analytics off; it is on by default (crates/services/src/services/config/versions/v8.rs:76,144). Crash reports go to Sentry whenever the build has a DSN built in (crates/utils/src/sentry.rs:26); this cannot be switched off in settings, so if you want none, block sentry.io for it in your firewall. Android: no.",
-   "YOLO install": "YOLO (your own risk): skips the version pin, the analytics switch and the Sentry block.\nWindows: npx vibe-kanban with default settings; analytics and Sentry crash reports stay on.",
-   "Install notes": "Caution: read the Safety reason and ask the user before installing.\nWindows: `npx vibe-kanban` (README), needs Node; turn analytics off in settings. Android: no.",
-   "Last checked": "2026-11-18"
+   "Safety reason": "Claude code read @7c38070 + 0.1.46 diff (2026-11-20): safe with fixes. Found: the default Claude profile adds --dangerously-skip-permissions (crates/executors/default_profiles.json:3-9); a profiles.json override is merged (crates/executors/src/profile.rs:278-299) and approvals:true routes each tool call to you (claude.rs:166-172). 0.1.46 removes PostHog and Sentry (5f06193e); binaries are SHA-256 checked (npx-cli/src/download.ts:132).",
+   "Safe install": "Safe install (fixes applied):\nWindows (Node.js 18+): npx vibe-kanban@0.1.46 (npm latest; 0.1.45 was pulled from npm; 0.1.46 has PostHog analytics and Sentry crash reports removed, commit 5f06193e, and checks each downloaded binary's SHA-256 against GitHub releases, npx-cli/src/download.ts:16-17,132). Before the first task, open Settings > Agents and set the Claude Code DEFAULT profile to \"dangerously_skip_permissions\": false, \"approvals\": true (the shipped default skips permissions, crates/executors/default_profiles.json:3-9); do the same for any other agent you enable (Gemini/Qwen yolo, Codex danger-full-access, Amp allow-all in that file). Approve each tool call in its UI. Use one repo you can lose, no production keys. Android and claude.ai: no.",
+   "YOLO install": "YOLO (your own risk): skips the permission-profile change; agents run with --dangerously-skip-permissions or their yolo modes.\nnpx vibe-kanban with defaults.",
+   "Install notes": "Ask the user before installing.\nWindows: `npx vibe-kanban` (README), needs Node; turn analytics off in settings. Android: no.",
+   "Last checked": "2026-11-20"
   },
   {
    "Name": "vibe-knowledge-video",

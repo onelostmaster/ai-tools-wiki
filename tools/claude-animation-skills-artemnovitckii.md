@@ -6,18 +6,18 @@
 - **GitHub repo:** https://github.com/artemnovitckii/claude-animation-skills @ 5dbea55 (MIT, LICENSE)
 - **Price:** Free, MIT (LICENSE in repo, checked 2026-11-03); optional ElevenLabs voice is paid per use
 - **Decision:** Try
-- **Safety verdict:** caution
+- **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-18
+- **Last checked:** 2026-11-20
 
 ## Safety reason
 
-a review bot (code read @5dbea55, 2026-11-03; Claude re-checked SKILL.md and render.mjs 2026-11-03 20:12): caution. Code clean: no telemetry, hooks, eval or prompt-injection text found; install.sh:8-16 only symlinks the skills into ~/.claude/skills. But setup.sh:16-44 downloads via npm/npx/curl (about 1 GB with --voice; GSAP with no hash check; hyperframes@0.8.34 pinned, anim.py:19), and while rendering render.mjs:12-15 runs a file server that listens on all interfaces with no ../ path check, so render only on a trusted home network or bind it to 127.0.0.1. No fix: setup.sh (lines 16-44) downloads GSAP with no hash check and there is no setup option to pin or verify it; the all-interfaces file server and the 1 GB voice download are fixed in Safe install, so caution stands for the unverified GSAP download only.
+Claude code read @5dbea55 (2026-11-20): safe with fixes. GSAP is fetched from cdnjs without a hash only if kit/vendor/gsap.min.js is missing (kit/setup.sh:21-24), so placing a copy from npm gsap@3.12.5 (sha512-checked) first skips it. The render file server listens on all interfaces (skills/zach-d-films/engine/render.mjs:15); .listen(0, '127.0.0.1') keeps it local. npm deps are lockfile-pinned (kit/package-lock.json).
 
 ## Safe install
 
 Safe install (fixes applied):
-Windows (inside WSL2; the README supports macOS/Linux only): git clone the repo, git checkout 5dbea55. Before any render, change the file server in render.mjs (lines 12-15) to listen on 127.0.0.1; otherwise it listens on all interfaces with no ../ path check. Run ./install.sh (lines 8-16 only symlink the skills into ~/.claude/skills inside WSL2), then ./setup.sh without --voice (setup.sh lines 16-44 download via npm/npx/curl; --voice adds about 1 GB). Claude Code: use it from the WSL2 copy of Claude Code. If you add the paid ElevenLabs voice, put the key in an env var, never in chat. Android: no.
+Windows (inside WSL2; README covers macOS/Linux): git clone the repo, git checkout 5dbea55. Edit skills/zach-d-films/engine/render.mjs line 15 from .listen(0) to .listen(0, '127.0.0.1') (it serves files with no ../ check). Get GSAP with its npm integrity check before setup: npm pack gsap@3.12.5, unpack, copy package/dist/gsap.min.js to kit/vendor/gsap.min.js; setup.sh then skips the unhashed cdnjs download (kit/setup.sh:21-24). Run ./install.sh (only symlinks the skills into ~/.claude/skills inside WSL2), then bash kit/setup.sh without --voice (--voice adds about 1 GB of models from GitHub releases, setup.sh:29-44). Use it from the WSL2 copy of Claude Code. A paid ElevenLabs key goes in an env var, never in chat. Android: no.
 
 ## YOLO install
 
@@ -26,5 +26,5 @@ Windows (WSL2): ./install.sh && ./setup.sh --voice; the render server listens on
 
 ## Install notes
 
-Caution: read the Safety reason and ask the user before installing.
+Ask the user before installing.
 macOS/Linux only per README; on Windows use WSL2 (untested). Claude Code: run install.sh inside WSL2 (it links the skills into ~/.claude/skills). Before rendering, change the server in render.mjs to listen on 127.0.0.1. Optional ElevenLabs voice is paid; keep its key in env, never in chat. Android: no.
