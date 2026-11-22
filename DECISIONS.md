@@ -81,8 +81,8 @@
 | [Aura Autopilot](tools/aura-autopilot.md) | Try | safe |
 | [Auto-Editor](tools/auto-editor.md) | Try | safe |
 | [Awesome DESIGN.md (VoltAgent)](tools/awesome-design-md-voltagent.md) | Try | safe |
-| [awesome-ai-reverse-engineering (zhuyansen)](tools/awesome-ai-reverse-engineering-zhuyansen.md) | Try | unreviewed |
-| [awesome-claude-video-skills (curated list)](tools/awesome-claude-video-skills-curated-list.md) | Try | unreviewed |
+| [awesome-ai-reverse-engineering (zhuyansen)](tools/awesome-ai-reverse-engineering-zhuyansen.md) | Try | safe |
+| [awesome-claude-video-skills (curated list)](tools/awesome-claude-video-skills-curated-list.md) | Try | safe |
 | [awesome-gamedev-agent-skills](tools/awesome-gamedev-agent-skills.md) | Try | safe |
 | [awesome-llm-apps (Shubhamsaboo)](tools/awesome-llm-apps-shubhamsaboo.md) | Try | safe |
 | [awesome-llm-apps agent skills (7 of 8: commit-archaeologist, scope-creep-detector, project-graveyard, dependency-doctor, first-reader, thinking-out-loud, self-improving-agent-skills)](tools/awesome-llm-apps-agent-skills-7-of-8-commit-archaeologist-sc.md) | Try | safe |
@@ -259,7 +259,7 @@
 | [MeshLine (pmndrs)](tools/meshline-pmndrs.md) | Try | safe |
 | [Meshy 3D plugin (official Hermes)](tools/meshy-3d-plugin-official-hermes.md) | Try | safe |
 | [MicroDuck skill-tree dataset](tools/microduck-skill-tree-dataset.md) | Try | safe |
-| [microduck_rl (Pollen Robotics)](tools/microduck-rl-pollen-robotics.md) | Try | unreviewed |
+| [microduck_rl (Pollen Robotics)](tools/microduck-rl-pollen-robotics.md) | Try | safe |
 | [Microsoft Planetary Computer (STAC API + tiler)](tools/microsoft-planetary-computer-stac-api-tiler.md) | Try | safe |
 | [mitmproxy](tools/mitmproxy.md) | Try | safe |
 | [MLflow](tools/mlflow.md) | Try | safe |
@@ -439,6 +439,7 @@
 | [brief2mp4 (qualixar)](tools/brief2mp4-qualixar.md) | Skip | unreviewed |
 | [Cache Tax](tools/cache-tax.md) | Skip | safe |
 | [cartoon-shorts-skill (Matteoikarieth96)](tools/cartoon-shorts-skill-matteoikarieth96.md) | Skip | unreviewed |
+| [cartoon-skill (artemiimillier)](tools/cartoon-skill-artemiimillier.md) | Skip | unreviewed |
 | [caveman](tools/caveman.md) | Skip | safe |
 | [ChatGPT Dots (OpenAI)](tools/chatgpt-dots-openai.md) | Skip | unreviewed |
 | [chatgpt-gif-cinema (antropos17)](tools/chatgpt-gif-cinema-antropos17.md) | Skip | unreviewed |
@@ -512,6 +513,7 @@
 | [Letta Code (letta-ai)](tools/letta-code-letta-ai.md) | Skip | safe |
 | [line-art-animation (JDhruv14)](tools/line-art-animation-jdhruv14.md) | Skip | unreviewed |
 | [Lots of Sounds (lotsofsounds)](tools/lots-of-sounds-lotsofsounds.md) | Skip | safe |
+| [lyric-mv-kit (archerzjp-dev)](tools/lyric-mv-kit-archerzjp-dev.md) | Skip | unreviewed |
 | [magpie (yetone)](tools/magpie-yetone.md) | Skip | unreviewed |
 | [manimate (bassimeledath)](tools/manimate-bassimeledath.md) | Skip | unreviewed |
 | [maquina-cortes-gta (pedroxcardoso)](tools/maquina-cortes-gta-pedroxcardoso.md) | Skip | unreviewed |
@@ -557,6 +559,7 @@
 | [Reason (Reason Machines)](tools/reason-reason-machines.md) | Skip | unreviewed |
 | [ReelForge (dan2756)](tools/reelforge-dan2756.md) | Skip | unreviewed |
 | [reelforge (fahmid-juboraj)](tools/reelforge-fahmid-juboraj.md) | Skip | unreviewed |
+| [remotion-shorts-skill (social-media-skills)](tools/remotion-shorts-skill-social-media-skills.md) | Skip | safe |
 | [Renku Studio (GoRenku)](tools/renku-studio-gorenku.md) | Skip | unreviewed |
 | [Replay Theater (Anthropic example mod)](tools/replay-theater-anthropic-example-mod.md) | Skip | safe |
 | [revid-skills (Revid MCP plugin)](tools/revid-skills-revid-mcp-plugin.md) | Skip | unreviewed |
@@ -567,6 +570,7 @@
 | [Social media studio](tools/social-media-studio.md) | Skip | unreviewed |
 | [stickman-director (rocketmandrey)](tools/stickman-director-rocketmandrey.md) | Skip | unreviewed |
 | [stickman-skill (krishnagoswami52)](tools/stickman-skill-krishnagoswami52.md) | Skip | unreviewed |
+| [stickman-video-director (kaomei)](tools/stickman-video-director-kaomei.md) | Skip | safe |
 | [Stitch skills](tools/stitch-skills.md) | Skip | safe |
 | [story-video-skill (huynhcongdac)](tools/story-video-skill-huynhcongdac.md) | Skip | unreviewed |
 | [sui-motion-graphic-reel (suiyang-meta)](tools/sui-motion-graphic-reel-suiyang-meta.md) | Skip | unreviewed |
@@ -626,9 +630,7 @@
 | [PdfCraft](tools/pdfcraft.md) |  | safe |
 | [PhotoCraft](tools/photocraft.md) |  | safe |
 | [remotion-qa (GroMarketing)](tools/remotion-qa-gromarketing.md) | Later | safe |
-| [remotion-shorts-skill (social-media-skills)](tools/remotion-shorts-skill-social-media-skills.md) | Later | unreviewed |
 | [Sherlock (username OSINT CLI)](tools/sherlock-username-osint-cli.md) |  | safe |
 | [SoundCraft](tools/soundcraft.md) |  | safe |
-| [stickman-video-director (kaomei)](tools/stickman-video-director-kaomei.md) | Later | unreviewed |
 | [VectorCraft](tools/vectorcraft.md) |  | safe |
 | [WordCraft](tools/wordcraft.md) |  | safe |

@@ -59,6 +59,8 @@ Latest auto-editor-windows-x86_64.exe from the releases page, then npx skills ad
 pip install autogen-agentchat and build on it.
 - [Awesome DESIGN.md (VoltAgent)](tools/awesome-design-md-voltagent.md): YOLO (your own risk): skips the commit pin.
 Download the DESIGN.md from the main branch (newer files are not reviewed).
+- [awesome-ai-reverse-engineering (zhuyansen)](tools/awesome-ai-reverse-engineering-zhuyansen.md): YOLO (your own risk): skips ignoring the list's third-party grades. Trust an entry's SAFE badge (README.md:5, agentskillshub.top) and install the listed tool without a wiki review.
+- [awesome-claude-video-skills (curated list)](tools/awesome-claude-video-skills-curated-list.md): YOLO (your own risk): skips ignoring the list's third-party SAFE grades. Trust an entry's SAFE badge and run its quoted one-line installer straight from the README (e.g. README.md:334,383) without a wiki review.
 - [awesome-gamedev-agent-skills](tools/awesome-gamedev-agent-skills.md): YOLO (your own risk): skips the commit pin and saying no to the npx tools.
 claude plugin marketplace add gamedev-skills/awesome-gamedev-agent-skills then claude plugin install gamedev@awesome-gamedev-agent-skills (all 80 skills, HEAD; README lines 96-108).
 - [awesome-llm-apps (Shubhamsaboo)](tools/awesome-llm-apps-shubhamsaboo.md): YOLO (your own risk): skips the commit pin, --ignore-scripts and the settings removal.
@@ -433,6 +435,7 @@ Install the cloud plugin with a Platform key and leave telemetry on.
 npm install meshline
 - [MicroDuck skill-tree dataset](tools/microduck-skill-tree-dataset.md): YOLO (your own risk): skips nothing extra worth skipping; the .sh rule stays.
 Same download; skip pinning the revision.
+- [microduck_rl (Pollen Robotics)](tools/microduck-rl-pollen-robotics.md): YOLO (your own risk): skips the pinned commit, --locked, offline wandb and the no-cloud rules. git clone https://github.com/pollen-robotics/microduck_rl && cd microduck_rl && uv sync, then uv run train Mjlab-Velocity-Flat-MicroDuck --env.scene.num-envs 4096 (add --hf-jobs to train on Hugging Face Jobs with your HF token and wandb key; uv run publish to upload policies to the Hub).
 - [Microsoft Planetary Computer (STAC API + tiler)](tools/microsoft-planetary-computer-stac-api-tiler.md): YOLO (your own risk): skips the venv and the version pins.
 pip install pystac-client planetary-computer
 - [mitmproxy](tools/mitmproxy.md): YOLO (your own risk): skips removing the CA cert after testing (it keeps the ability to read HTTPS traffic routed through the proxy).
@@ -586,6 +589,7 @@ npx skills add remotion-dev/skills
 - [Remotion Motion Graphics Skills](tools/remotion-motion-graphics-skills.md): YOLO (your own risk): skips the commit pin and the manual copy.
 Run the README one-liner curl ... install.sh | bash in Git Bash or WSL (bash script), which installs both skill sets at HEAD with npx -y.
 - [remotion-qa (GroMarketing)](tools/remotion-qa-gromarketing.md): YOLO (your own risk): skips the commit pin, --ignore-scripts and your own ffmpeg. npm install --save-dev remotion-qa (README.md:52; ffmpeg-static downloads its ffmpeg binary) or plain npx remotion-qa (latest from npm each time); Claude Code plugin: /plugin install remotion-qa@remotion-qa (README.md:198).
+- [remotion-shorts-skill (social-media-skills)](tools/remotion-shorts-skill-social-media-skills.md): YOLO (your own risk): skips the commit pin, the hand copy and leaving WoopSocial off. npx skills add social-media-skills/remotion-shorts-skill -g -a claude-code -y (README.md:62; third-party installer, global, no prompts, moving main branch), then let the agent run setup.mjs and connect WoopSocial with claude mcp add --transport http woopsocial https://api.woopsocial.com/mcp (woopsocial.md:30).
 - [Replay Theater (Anthropic example mod)](tools/replay-theater-anthropic-example-mod.md): YOLO (your own risk): skips the commit pin.
 Install from the repo HEAD as in mods/README.md.
 - [ReVa (reverse-engineering-assistant)](tools/reva-reverse-engineering-assistant.md): YOLO (your own risk): skips Scripting off and the VM.
@@ -632,6 +636,7 @@ pip install "stable-audio-tools[train]" (README.md:37)
 Windows: clone, install and load any checkpoint or config you find; a malicious one runs code on your PC.
 - [Stageshow skill (benjitaylor/skills)](tools/stageshow-skill-benjitaylor-skills.md): YOLO (your own risk): skips the commit pin and the per-command approval.
 npx skills add benjitaylor/skills --skill stageshow (README; unpinned third-party installer), at HEAD, with commands auto-approved.
+- [stickman-video-director (kaomei)](tools/stickman-video-director-kaomei.md): YOLO (your own risk): skips the commit pin, the hand copy and the credit cap. npx skills add kaomei/stickman-video-director --skill directing-stickman-videos (installation-troubleshooting.md:10; third-party installer, moving main branch, asks which agent and scope), or paste the README's "Help me install this skill" prompt and let the agent set up what is missing.
 - [Stitch skills](tools/stitch-skills.md): YOLO (your own risk): skips copying single folders, the SKILL.md key edit and the own-site rule.
 Claude Code (Windows): run the README's npx plugins add command and let upload-to-stitch pull the key from ~/.claude.json.
 - [story-animator](tools/story-animator.md): YOLO (your own risk): skips the commit pin.
