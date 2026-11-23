@@ -105,6 +105,7 @@ npm start with defaults.
 npm install -g canvas-sketch-cli
 - [Cap](tools/cap.md): YOLO (your own risk): skips the --dry-run preview.
 The CLI curl|sh one-liner from https://cap.so/docs/installation.
+- [career-ops](tools/career-ops.md): YOLO (your own risk): skips the pinned checkout, the lockfile and the update no. Claude Code: /plugin marketplace add career-ops-hq/career-ops then /plugin install career-ops@career-ops (README); the SessionStart hook then npm-installs floating ^ versions whenever they change, and you may accept updates.
 - [caveman](tools/caveman.md): YOLO (your own risk): skips the pin, telemetry off and the setup ban.
 curl -fsSL https://raw.githubusercontent.com/JuliusBrussee/caveman/v4.1.0/install.sh | bash and run /caveman-setup.
 - [Chatterbox (Resemble AI)](tools/chatterbox-resemble-ai.md): YOLO (your own risk): skips the venv and version pin.
@@ -409,6 +410,7 @@ npx -y make-sfx-mcp (README), newest npm version on every start.
 pip install manim
 - [manim-skill](tools/manim-skill.md): YOLO (your own risk): skips the commit pin and venv.
 git clone https://github.com/Yusuke710/manim-skill and install the README packages globally (README:15-22).
+- [ManiSkill](tools/maniskill.md): YOLO (your own risk): skips the separate venv, version pin and asset folder: pip install --upgrade mani_skill torch (README.md:34-36) into your main Python, assets in ~/.maniskill.
 - [marketingskills (coreyhaines31)](tools/marketingskills-coreyhaines31.md): YOLO (your own risk): skips picking folders at the reviewed commit.
 /plugin marketplace add coreyhaines31/marketingskills, then install marketing-skills (all 53 skills, README.md:158-166), or npx skills add coreyhaines31/marketingskills -a claude-code (README.md:155).
 - [Mastra](tools/mastra.md): YOLO (your own risk): skips the version pins (gets 1.39.0 / core 1.83.0 from 2026-11-12, unreviewed); telemetry stays off only if you still set MASTRA_TELEMETRY_DISABLED=1.
@@ -468,6 +470,7 @@ pip install numpy
 Turn Restricted mode off and install community plugins without a review.
 - [obsidian-skills (kepano)](tools/obsidian-skills-kepano.md): YOLO (your own risk): skips the commit pin and declining the global npm installs.
 /plugin marketplace add kepano/obsidian-skills, /plugin install obsidian@obsidian-skills, and approve npm install -g defuddle / knap when asked.
+- [oh-my-claudecode (OMC)](tools/oh-my-claudecode-omc.md): YOLO (your own risk): skips the pin, the local setup and the CLI pin. /plugin marketplace add https://github.com/Yeachan-Heo/oh-my-claudecode , /plugin install oh-my-claudecode , /omc-setup (default global overwrites ~/.claude/CLAUDE.md), npm i -g oh-my-claude-sisyphus@latest (README.md:61-90).
 - [oh-my-hermes](tools/oh-my-hermes.md): YOLO (your own risk): skips the pin, script read and test profile.
 curl -fsSL https://omher.app/install | sh with the auto update mode.
 - [oil-ui (oil-oil)](tools/oil-ui-oil-oil.md): YOLO (your own risk): skips the commit pin and OIL_NO_UPDATE_CHECK=1.
@@ -600,6 +603,7 @@ Download the latest release zip and run it on any audio.
 Unzip the latest Windows release and run rizin.exe.
 - [roadmap-skill (shiquda)](tools/roadmap-skill-shiquda.md): YOLO (your own risk): skips the version pin.
 claude mcp add roadmap "npx -y roadmap-skill"
+- [robosuite](tools/robosuite.md): YOLO (your own risk): skips the separate env and version pin: pip install robosuite (docs/installation.md:12) into your main Python.
 - [ROS 2](tools/ros-2.md): YOLO (your own risk): skips the LTS choice and the official-docs-only rule.
 Install the rolling distro from docs.ros.org.
 - [Rune Icons (SVG library and local MCP)](tools/rune-icons-svg-library-and-local-mcp.md): YOLO (your own risk): skips the version pin and the local node path.
@@ -614,6 +618,7 @@ npm install satellite.js
 /plugin marketplace add johnnyvizz/claude-kit then /plugin install savvy-progress@claude-kit (README) at HEAD.
 - [Scenario Agent Skills (scenario-labs)](tools/scenario-agent-skills-scenario-labs.md): YOLO (your own risk): skips the commit pin, the per-run price check and the no-unattended rule.
 Claude Code on Windows: npx skills add scenario-labs/skills (README.md:50-75) plus the hosted Scenario MCP; unattended runs spend credits on the top-ranked model without asking.
+- [Scrapling](tools/scrapling.md): YOLO (your own risk): skips the pin, the lockfile and the manual browser step. pip install "scrapling[all]" then scrapling install --force (agent-skill SKILL.md:43-48), which also runs playwright install-deps (system packages on Linux/WSL).
 - [scroll-craft](tools/scroll-craft.md): YOLO (your own risk): skips the commit pin and the localhost-only preview.
 /plugin marketplace add nateherkai/scroll-craft then /plugin install nateherk-design (README lines 125-129) at HEAD, and serve.mjs --lan.
 - [sgp4 (python-sgp4)](tools/sgp4-python-sgp4.md): YOLO (your own risk): skips the venv and the version pin.
@@ -660,6 +665,8 @@ curl -fsSL https://terminal-browser.sh/install | bash.
 Install Terrain3D from the Godot Asset Library into your main project.
 - [theme-factory (Anthropic)](tools/theme-factory-anthropic.md): YOLO (your own risk): skips copying only the one folder at the reviewed commit.
 /plugin marketplace add anthropics/skills, then /plugin install example-skills@anthropic-agent-skills (installs all 12 example skills at HEAD).
+- [thinking-orbs (Jakub Antalik)](tools/thinking-orbs-jakub-antalik.md): YOLO (your own risk): skips the 0.3.1 pin and --ignore-scripts: npm install thinking-orbs (gets latest 0.3.2, built from a commit on no branch of the repo).
+- [ThinkingOrbs (haplollc)](tools/thinkingorbs-haplollc.md): YOLO (your own risk): skips the exact 1.1.0 pin: README default .package(url: "https://github.com/haplollc/ThinkingOrbs", from: "1.0.0"), which floats to any later 1.x.
 - [three-bvh-csg (with three-mesh-bvh)](tools/three-bvh-csg-with-three-mesh-bvh.md): YOLO (your own risk): skips the exact pins on the reviewed versions.
 `npm install three-bvh-csg three-mesh-bvh`
 - [three.js (three@0.186.1)](tools/three-js-three-0-186-1.md): YOLO (your own risk): skips the exact reviewed pin.
