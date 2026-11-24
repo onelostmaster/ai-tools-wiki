@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** caution
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-16
+- **Last checked:** 2026-11-23
 
 ## Safety reason
 

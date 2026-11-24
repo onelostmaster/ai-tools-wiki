@@ -332,6 +332,7 @@ hermes plugins install TheSmokeDev/hermes-talk --enable (follows main).
 Install from releases and let it update itself hourly.
 - [Hindsight (Hermes memory provider)](tools/hindsight-hermes-memory-provider.md): YOLO (your own risk): skips local mode and the template skip, so every retained turn goes to Hindsight Cloud.
 Accept the setup defaults.
+- [HookLab (CoolerGit)](tools/hooklab-coolergit.md): YOLO (your own risk): skips the venv, the 127.0.0.1 edit, session-only token and declining the Apify MCP server. Windows: git clone the repo, pip install -r requirements.txt, setx APIFY_TOKEN "<token>", open Claude Code in the folder and use /hooklab <url> and /hooklab-dashboard (dashboard reachable from any device on your Wi-Fi, which can delete library rows).
 - [Hugging Face skills (huggingface/skills)](tools/hugging-face-skills-huggingface-skills.md): YOLO (your own risk): skips the pinned pip install, telemetry and update-check opt-outs and the read-only token.
 /plugin marketplace add huggingface/skills; /plugin install hf-cli@huggingface/skills; let it run the curl | bash installer.
 - [HunyuanVideo-Avatar (Tencent)](tools/hunyuanvideo-avatar-tencent.md): YOLO (your own risk): skips CLI-only, torch 2.6 and the Docker trims.
@@ -353,6 +354,7 @@ npx impeccable install with defaults.
 - [Instagram Agent skill](tools/instagram-agent-skill.md): YOLO (your own risk): skips the commit pin and installs for your user in every project.
 /plugin marketplace add Jakeschincariol/instagram-agent-skill
 /plugin install instagram-agent
+- [Isaac Lab (NVIDIA)](tools/isaac-lab-nvidia.md): YOLO (your own risk): skips the pinned commit, the lockfile flag, the greetings switch and the Newton-only choice. Windows: the docs' irm https://astral.sh/uv/install.ps1 | iex, clone main, uv run --extra isaacsim isaaclab train --rl_library rsl_rl --task Isaac-Cartpole-Direct (pulls NVIDIA's closed Isaac Sim 6.2 from pypi.nvidia.com).
 - [jadx](tools/jadx.md): YOLO (your own risk): skips turning off the update check (the GUI keeps contacting GitHub).
 Unzip the latest jadx-gui release and run it.
 - [Jev (TypeSafe)](tools/jev-typesafe.md): YOLO (your own risk): skips the pin and the data rule.
@@ -449,6 +451,7 @@ Windows: one-click package or webui.bat with default config; the API listens on 
 - [Motion (React/JS animation library)](tools/motion-react-js-animation-library.md): YOLO (your own risk): skips the exact version pin.
 npm install motion (README.md:16; latest version).
 - [motion-director (sharbelxyz)](tools/motion-director-sharbelxyz.md): YOLO (your own risk): skips the pinned commit, the one-agent copy and the WSL fix. Inside WSL or Linux: curl -fsSL https://raw.githubusercontent.com/sharbelxyz/motion-director/main/install.sh | bash (README.md:26; installs the moving main branch into every agent folder it finds), then say "set up motion director" to your agent.
+- [motion-explainer (Marwanenoudouar10)](tools/motion-explainer-marwanenoudouar10.md): YOLO (your own risk): skips the pinned commit and the saved lockfile. In WSL2: git clone https://github.com/Marwanenoudouar10/motion-explainer ~/.claude/skills/motion-explainer, then ask Claude Code for an explainer video and let it run npm install in each new project.
 - [motionboard](tools/motionboard.md): YOLO (your own risk): skips the commit pin and the no-keys render folder.
 /plugin marketplace add krisyangdev/motionboard then /plugin install motionboard@motionboard, or npx skills add krisyangdev/motionboard (README), at HEAD.
 - [motionbrief (YahyaLendani/motionbrief-claude-skills)](tools/motionbrief-yahyalendani-motionbrief-claude-skills.md): YOLO (your own risk): skips the commit pin.
@@ -462,6 +465,8 @@ pip install mujoco (README.md:93)
 Install from main and use the hosted n8n-mcp.
 - [Neat Icons (SVG library and paid MCP)](tools/neat-icons-svg-library-and-paid-mcp.md): YOLO (your own risk): skips the free-files-only rule and connects the paid hosted MCP.
 claude mcp add --transport http neat-icons https://mcp.neaticons.com/mcp --header "Authorization: Bearer YOUR_SEAT_KEY"
+- [nihongo](tools/nihongo.md): YOLO (your own risk): skips the release pin, the SHA-256 / attestation check, the ban on `npx skills update`, and leaving the PostToolUse hook off.
+`npx skills add AnIT012/nihongo -g -a claude-code` then `echo '@~/.claude/skills/nihongo/ALWAYS.md' >> ~/.claude/CLAUDE.md` (README.md:31-32). Optional: copy `examples/hooks/claude-code-hook.json` into Claude Code hooks, and `pip install "git+https://github.com/AnIT012/nihongo.git@v3.0.0"`.
 - [notebooklm-py (teng-lin)](tools/notebooklm-py-teng-lin.md): YOLO (your own risk): skips the spare account and the login limits.
 Import cookies from your main browser account.
 - [NumPy](tools/numpy.md): YOLO (your own risk): skips the venv and the version pin.
@@ -591,6 +596,7 @@ rembg s
 npx skills add remotion-dev/skills
 - [Remotion Motion Graphics Skills](tools/remotion-motion-graphics-skills.md): YOLO (your own risk): skips the commit pin and the manual copy.
 Run the README one-liner curl ... install.sh | bash in Git Bash or WSL (bash script), which installs both skill sets at HEAD with npx -y.
+- [remotion-claude-template (jpooksy)](tools/remotion-claude-template-jpooksy.md): YOLO (your own risk): skips the pinned commit, npm ci and the permission prompts. Windows: git clone the repo, open Claude Code in it and let it run npm install and npx remotion studio itself as CLAUDE.md:22 says.
 - [remotion-qa (GroMarketing)](tools/remotion-qa-gromarketing.md): YOLO (your own risk): skips the commit pin, --ignore-scripts and your own ffmpeg. npm install --save-dev remotion-qa (README.md:52; ffmpeg-static downloads its ffmpeg binary) or plain npx remotion-qa (latest from npm each time); Claude Code plugin: /plugin install remotion-qa@remotion-qa (README.md:198).
 - [remotion-shorts-skill (social-media-skills)](tools/remotion-shorts-skill-social-media-skills.md): YOLO (your own risk): skips the commit pin, the hand copy and leaving WoopSocial off. npx skills add social-media-skills/remotion-shorts-skill -g -a claude-code -y (README.md:62; third-party installer, global, no prompts, moving main branch), then let the agent run setup.mjs and connect WoopSocial with claude mcp add --transport http woopsocial https://api.woopsocial.com/mcp (woopsocial.md:30).
 - [Replay Theater (Anthropic example mod)](tools/replay-theater-anthropic-example-mod.md): YOLO (your own risk): skips the commit pin.
@@ -724,6 +730,7 @@ npx skills add vercel-labs/agent-skills
 npm install ai
 - [Vibe Kanban (BloopAI)](tools/vibe-kanban-bloopai.md): YOLO (your own risk): skips the permission-profile change; agents run with --dangerously-skip-permissions or their yolo modes.
 npx vibe-kanban with defaults.
+- [vibe-zhishi (gnipbao)](tools/vibe-zhishi-gnipbao.md): YOLO (your own risk): skips the pinned commit and pinned HyperFrames. In the workspace: git clone https://github.com/gnipbao/vibe-zhishi .claude/skills/vibe-zhishi, run npx hyperframes skills update, and let Claude Code follow the references as written (including hyperframes@latest upgrade).
 - [video-director (win4r)](tools/video-director-win4r.md): YOLO (your own risk): skips the commit pin and the venv.
 git clone https://github.com/win4r/video-director && pip install numpy Pillow
 - [Video2X](tools/video2x.md): YOLO (your own risk): skips the CLI-only route; the Qt6 GUI's source is not in the reviewed repo (no GUI folder or submodule at 7db9c18), so the GUI is unreviewed.

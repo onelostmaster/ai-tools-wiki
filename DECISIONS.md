@@ -214,7 +214,7 @@
 | [ImHex](tools/imhex.md) | Try | safe |
 | [Inspora](tools/inspora.md) | Try | safe |
 | [Instagram Graph API (insights)](tools/instagram-graph-api-insights.md) | Try | safe |
-| [Isaac Lab (NVIDIA)](tools/isaac-lab-nvidia.md) | Try | unreviewed |
+| [Isaac Lab (NVIDIA)](tools/isaac-lab-nvidia.md) | Try | safe |
 | [jadx](tools/jadx.md) | Try | safe |
 | [Jev (TypeSafe)](tools/jev-typesafe.md) | Try | safe |
 | [jmdict-simplified + kanjium](tools/jmdict-simplified-kanjium.md) | Try | safe |
@@ -273,6 +273,7 @@
 | [n8n-skills (czlonkowski/n8n-skills)](tools/n8n-skills-czlonkowski-n8n-skills.md) | Try | safe |
 | [Nano Banana (Google image editor)](tools/nano-banana-google-image-editor.md) | Try | safe |
 | [Neat Icons (SVG library and paid MCP)](tools/neat-icons-svg-library-and-paid-mcp.md) | Try | safe |
+| [nihongo](tools/nihongo.md) | Try | safe |
 | [notebooklm-py (teng-lin)](tools/notebooklm-py-teng-lin.md) | Try | safe |
 | [Nous Portal hosted connectors](tools/nous-portal-hosted-connectors.md) | Try | unreviewed |
 | [NumPy](tools/numpy.md) | Try | safe |
@@ -451,6 +452,7 @@
 | [claude-after-effects-skill (AnmolChandiok)](tools/claude-after-effects-skill-anmolchandiok.md) | Skip | unreviewed |
 | [claude-code-video-studio (lewislf)](tools/claude-code-video-studio-lewislf.md) | Skip | unreviewed |
 | [claude-code-video-toolkit](tools/claude-code-video-toolkit.md) | Skip | safe |
+| [claude-edit (ctskool)](tools/claude-edit-ctskool.md) | Skip | unreviewed |
 | [claude-faceless-shorts-creator](tools/claude-faceless-shorts-creator.md) | Skip | unreviewed |
 | [claude-figma-stack (Ootto)](tools/claude-figma-stack-ootto.md) | Skip | safe |
 | [claude-instagram-autopilot (Ootto)](tools/claude-instagram-autopilot-ootto.md) | Skip | safe |
@@ -498,12 +500,13 @@
 | [Hermes Watch (bruceleroyjr/hermes-watch)](tools/hermes-watch-bruceleroyjr-hermes-watch.md) | Skip | unreviewed |
 | [HibAi-Editing-Studio (HibaBenzahra)](tools/hibai-editing-studio-hibabenzahra.md) | Skip | unreviewed |
 | [Higgsfield Virality Predictor](tools/higgsfield-virality-predictor.md) | Skip | unreviewed |
-| [HookLab (CoolerGit)](tools/hooklab-coolergit.md) | Skip | unreviewed |
+| [HookLab (CoolerGit)](tools/hooklab-coolergit.md) | Skip | safe |
 | [HyperFrames](tools/hyperframes.md) | Skip | safe |
 | [hyperframes-video-polish (rocksstarcode)](tools/hyperframes-video-polish-rocksstarcode.md) | Skip | unreviewed |
 | [hypr-video-skills (superyhee)](tools/hypr-video-skills-superyhee.md) | Skip | unreviewed |
 | [IconPark (ByteDance; archived)](tools/iconpark-bytedance-archived.md) | Skip | safe |
 | [impeccable](tools/impeccable.md) | Skip | safe |
+| [in-your-own-words (Cursor pstack)](tools/in-your-own-words-cursor-pstack.md) | Skip | safe |
 | [javascript-animation-skills (iart-ai)](tools/javascript-animation-skills-iart-ai.md) | Skip | unreviewed |
 | [Jisho MCP](tools/jisho-mcp.md) | Skip | unreviewed |
 | [juzu (syydaniel)](tools/juzu-syydaniel.md) | Skip | unreviewed |
@@ -524,7 +527,7 @@
 | [Molecular_Animation (AmadeusBio-ai)](tools/molecular-animation-amadeusbio-ai.md) | Skip | unreviewed |
 | [motion-3d-por-referencia (Felpborges)](tools/motion-3d-por-referencia-felpborges.md) | Skip | unreviewed |
 | [motion-code (mackswendhell)](tools/motion-code-mackswendhell.md) | Skip | unreviewed |
-| [motion-explainer (Marwanenoudouar10)](tools/motion-explainer-marwanenoudouar10.md) | Skip | unreviewed |
+| [motion-explainer (Marwanenoudouar10)](tools/motion-explainer-marwanenoudouar10.md) | Skip | safe |
 | [motion-palette-15 (liuhaisi2026212-maker)](tools/motion-palette-15-liuhaisi2026212-maker.md) | Skip | unreviewed |
 | [motion-promo-reels (david-d2c2)](tools/motion-promo-reels-david-d2c2.md) | Skip | unreviewed |
 | [motion-reel (10291124jcjc-dotcom)](tools/motion-reel-10291124jcjc-dotcom.md) | Skip | unreviewed |
@@ -562,7 +565,7 @@
 | [Reason (Reason Machines)](tools/reason-reason-machines.md) | Skip | unreviewed |
 | [ReelForge (dan2756)](tools/reelforge-dan2756.md) | Skip | unreviewed |
 | [reelforge (fahmid-juboraj)](tools/reelforge-fahmid-juboraj.md) | Skip | unreviewed |
-| [remotion-claude-template (jpooksy)](tools/remotion-claude-template-jpooksy.md) | Skip | unreviewed |
+| [remotion-claude-template (jpooksy)](tools/remotion-claude-template-jpooksy.md) | Skip | safe |
 | [remotion-shorts-skill (social-media-skills)](tools/remotion-shorts-skill-social-media-skills.md) | Skip | safe |
 | [Renku Studio (GoRenku)](tools/renku-studio-gorenku.md) | Skip | unreviewed |
 | [Replay Theater (Anthropic example mod)](tools/replay-theater-anthropic-example-mod.md) | Skip | safe |
@@ -581,6 +584,7 @@
 | [SupoClip](tools/supoclip.md) | Skip | unreviewed |
 | [sweety-statechart-video (threerocks)](tools/sweety-statechart-video-threerocks.md) | Skip | unreviewed |
 | [T3 Code](tools/t3-code.md) | Skip | safe |
+| [technical-writing (Cursor pstack)](tools/technical-writing-cursor-pstack.md) | Skip | safe |
 | [Terminal Browser](tools/terminal-browser.md) | Skip | safe |
 | [ThinkingOrbs (haplollc)](tools/thinkingorbs-haplollc.md) | Skip | safe |
 | [TokenEconomizer (Microsoft)](tools/tokeneconomizer-microsoft.md) | Skip | safe |
@@ -588,13 +592,14 @@
 | [UI SDK (vercel-labs/ui)](tools/ui-sdk-vercel-labs-ui.md) | Skip | safe |
 | [ui-redline-walkthrough (rjmahesh)](tools/ui-redline-walkthrough-rjmahesh.md) | Skip | unreviewed |
 | [unlimited-reels skill (Gui Paulino guide)](tools/unlimited-reels-skill-gui-paulino-guide.md) | Skip | unreviewed |
+| [unslop (Cursor pstack, prose)](tools/unslop-cursor-pstack-prose.md) | Skip | safe |
 | [vaibhav-video-editor (V413havai)](tools/vaibhav-video-editor-v413havai.md) | Skip | unreviewed |
 | [VBASE (ekanshvcpkg)](tools/vbase-ekanshvcpkg.md) | Skip | unreviewed |
 | [Vercel](tools/vercel.md) | Skip | safe |
 | [vibe-knowledge-video](tools/vibe-knowledge-video.md) | Skip | unreviewed |
 | [vibe-knowledge-video-director (AlbertPine)](tools/vibe-knowledge-video-director-albertpine.md) | Skip | unreviewed |
 | [vibe-science (itwanger)](tools/vibe-science-itwanger.md) | Skip | unreviewed |
-| [vibe-zhishi (gnipbao)](tools/vibe-zhishi-gnipbao.md) | Skip | unreviewed |
+| [vibe-zhishi (gnipbao)](tools/vibe-zhishi-gnipbao.md) | Skip | safe |
 | [video-as-code (zenitlab)](tools/video-as-code-zenitlab.md) | Skip | unreviewed |
 | [video-edit-skill (tenfoldmarc)](tools/video-edit-skill-tenfoldmarc.md) | Skip | unreviewed |
 | [video-effects-pack (neurolena1)](tools/video-effects-pack-neurolena1.md) | Skip | unreviewed |
@@ -620,6 +625,7 @@
 | [zack-d-films generator](tools/zack-d-films-generator.md) | Avoid | avoid |
 | [Anthropic TypeScript SDK](tools/anthropic-typescript-sdk.md) |  | safe |
 | [CADCraft](tools/cadcraft.md) |  | safe |
+| [claude-video-kit (runesleo)](tools/claude-video-kit-runesleo.md) | Later | unreviewed |
 | [coolray-video-qc (ShakeJ)](tools/coolray-video-qc-shakej.md) | Later | safe |
 | [DeckCraft](tools/deckcraft.md) |  | safe |
 | [DesignCraft](tools/designcraft.md) |  | safe |
@@ -637,6 +643,7 @@
 | [PhotoCraft](tools/photocraft.md) |  | safe |
 | [remotion-qa (GroMarketing)](tools/remotion-qa-gromarketing.md) | Later | safe |
 | [Sherlock (username OSINT CLI)](tools/sherlock-username-osint-cli.md) |  | safe |
+| [Shotkit (whystrohm)](tools/shotkit-whystrohm.md) | Later | unreviewed |
 | [SoundCraft](tools/soundcraft.md) |  | safe |
 | [VectorCraft](tools/vectorcraft.md) |  | safe |
 | [WordCraft](tools/wordcraft.md) |  | safe |
