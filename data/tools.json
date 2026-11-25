@@ -1,5 +1,5 @@
 {
- "count": 645,
+ "count": 648,
  "tools": [
   {
    "Name": "/bro skill",
@@ -294,32 +294,32 @@
    "Type": "skill",
    "Category": "generating videos",
    "Official URL": "https://github.com/lisamsung/agent-meme-forge",
-   "GitHub repo": "https://github.com/lisamsung/agent-meme-forge @ 184b06a (MIT)",
+   "GitHub repo": "https://github.com/lisamsung/agent-meme-forge @ 184b06a (v0.1.0, MIT)",
    "Price": "Free, MIT (github.com, checked 2026-11-09)",
    "Decision": "Skip",
-   "Safety verdict": "unreviewed",
-   "Safety basis": "Inferred (unreviewed)",
-   "Safety reason": "Not code-reviewed for safety. A project Tool Scout (Claude, 2026-11-09) rated it ❌ ½☆☆☆☆ 0.5 (off-format). Repo and commit confirmed from github.com metadata, 2026-11-09.",
-   "Safe install": "Safe install (fixes applied):\nUnreviewed: contain it: read it on GitHub first (https://github.com/lisamsung/agent-meme-forge @ 184b06a); if you try it, copy the skill folder at that exact commit into a throwaway Claude Code project or devcontainer (on Windows, not your main %USERPROFILE%\\.claude\\\\skills), no API keys in its env, no network for its scripts unless a step needs it, and do not run its install scripts. Get a review before real use. Android: no.",
-   "YOLO install": "Not offered.",
-   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nNot recommended for a project (scout ❌ 0.5, off-format).",
-   "Last checked": "2026-11-17"
+   "Safety verdict": "safe",
+   "Safety basis": "Code read",
+   "Safety reason": "a review bot read @184b06a (v0.1.0, commit 2026-09-01, still the latest on 2026-11-24; read: pyproject.toml, README.md, skills/generate-meme-gif-pack/SKILL.md, scripts/imagegen_client.py, dense_frames.py, meme_pack.py (network, subprocess and file paths), references/wechat-platform-upload.md; nothing run): safe with these fixes. A Codex skill plus a local Python processor (Pillow, numpy; pyproject.toml) that turns keypose images into WeChat-sized 240x240 GIF sticker packs. No hooks, MCP servers, eval, pickle or shell=True. Verified 1: image generation sends your prompts and reference images with MEME_IMAGE_API_KEY (or OPENAI_API_KEY) to MEME_IMAGE_BASE_URL (or OPENAI_BASE_URL) (imagegen_client.py:64-86), and fetches the result URL the provider returns (imagegen_client.py:107); the key is redacted from error text (imagegen_client.py:78). Fix: set MEME_IMAGE_BASE_URL and MEME_IMAGE_API_KEY explicitly for the one provider you mean, with a spend-capped key. Verified 2: the imagegen-batch command runs Codex's own image_gen.py from ~/.codex/skills/.system/imagegen (or CODEX_HOME / ~/.codex-switcher) with subprocess (meme_pack.py:452-460, 4006-4037); that script is not in this repo; unverified: its behaviour. Fix: use the in-repo imagegen_client.py / dense_frames.py route or Codex's built-in image tool instead of imagegen-batch. Verified 3: the optional WeChat upload runbook drives sticker.weixin.qq.com with a persistent browser profile kept in output/playwright/wechat-sticker-profile (wechat-platform-upload.md:9-21), so your WeChat login stays on disk there. Fix: skip the upload step, or delete that folder after uploading. Other: the README skill install copies into ~/.codex-switcher/skills (README.md:100-101), a non-standard folder; the Claude Code and Hermes variant is a separate skill (generate-meme-gif-pack-ai-studio) not in this repo (SKILL.md:3, 18). Fonts are OFL (assets/fonts/OFL.txt). MIT.",
+   "Safe install": "Safe install (fixes applied):\nWindows + Codex: git clone https://github.com/lisamsung/agent-meme-forge ; cd agent-meme-forge ; git checkout 184b06a4dca82553ccbc9cef3dba659ead930bf7 ; py -m venv .venv ; .venv\\\\Scripts\\\\activate ; pip install -e . (Pillow and numpy only). Copy skills\\\\generate-meme-gif-pack to %USERPROFILE%\\.codex\\\\skills\\. For image generation set MEME_IMAGE_BASE_URL and MEME_IMAGE_API_KEY (a spend-capped key) for the one provider you use; don't use the imagegen-batch command (it runs Codex's own image_gen.py, not in this repo). Skip the WeChat upload runbook, or delete output\\\\playwright\\\\wechat-sticker-profile after using it.\nClaude Code (Windows): copy the same folder to <project>\\.claude\\\\skills\\\\ and run the Python scripts from the venv; the Codex image step needs your own endpoint as above.\nclaude.ai, Hermes, Android: not supported (needs local Python; the Hermes variant is a different, unreviewed skill).",
+   "YOLO install": "YOLO (your own risk): skips the pinned commit, the venv, the explicit endpoint and the imagegen-batch caution. Follow README.md:71-102 (pip install -e '.[dev]', cp -R the skill to ~/.codex-switcher/skills) and let Codex run imagegen-batch and the WeChat upload runbook.",
+   "Install notes": "Safe with fixes: Codex skill + local Python processor that turns one reference image or concept into a 16/24-sticker animated Chinese WeChat GIF pack (keyposes from an image model, frames rendered locally). Pin 184b06a, venv install, explicit spend-capped image endpoint, no imagegen-batch, skip or clean up the WeChat upload profile. Off-format for a project (scout 0.5).",
+   "Last checked": "2026-11-24"
   },
   {
    "Name": "agent-screenplay (gmpetrov)",
    "Type": "skill",
    "Category": "generating videos",
    "Official URL": "https://github.com/gmpetrov/agent-screenplay",
-   "GitHub repo": "https://github.com/gmpetrov/agent-screenplay @ a063478 (MIT)",
+   "GitHub repo": "https://github.com/gmpetrov/agent-screenplay @ b1a5da3 (v0.1.7, MIT)",
    "Price": "Free on GitHub, MIT (github.com, checked 2026-11-04)",
    "Decision": "Skip",
-   "Safety verdict": "unreviewed",
-   "Safety basis": "Inferred (unreviewed)",
-   "Safety reason": "Not code-reviewed for safety. A project Tool Scout (Claude, 2026-11-04) rated it for fit only. Repo and latest commit confirmed from github.com metadata, 2026-11-04.",
-   "Safe install": "Safe install (fixes applied):\nUnreviewed: contain it: read it on GitHub first (https://github.com/gmpetrov/agent-screenplay @ a063478); if you try it, copy the skill folder at that exact commit into a throwaway Claude Code project or devcontainer (on Windows, not your main %USERPROFILE%\\.claude\\\\skills), no API keys in its env, no network for its scripts unless a step needs it, and do not run its install scripts. Get a review before real use. Android: no.",
-   "YOLO install": "Not offered.",
-   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nClaude Code: follow the repo README; on Windows skills go under %USERPROFILE%\\.claude\\\\skills\\.",
-   "Last checked": "2026-11-17"
+   "Safety verdict": "safe",
+   "Safety basis": "Code read",
+   "Safety reason": "a review bot read @b1a5da3: safe with these fixes. It is a CLI plus stdio MCP server (not just a skill) that films websites or desktop apps with Playwright and ffmpeg and edits them into an MP4. No package install scripts of its own (package.json scripts); no shell:true, eval or new Function in src. Verified 1: 'npx agent-screenplay init' registers the MCP server as unpinned 'npx -y agent-screenplay mcp' (init.ts:39) at Claude Code user scope (init.ts:90), and also edits ~/.codex/config.toml and ~/.cursor/mcp.json if those exist (init.ts:97-134) and copies SKILL.md into ~/.claude/skills and ~/.codex/skills (init.ts:146-156); it downloads Chromium through Playwright (init.ts:60-68). Run from a git checkout it registers the local build instead (init.ts:34-36). Fix: clone at b1a5da3, build it, run init from the checkout with --no-mcp, and add the MCP server yourself pointing at that build. Verified 2: the npm package is a separate artifact from the repo; unverified: that the npm 0.1.7 tarball matches this commit. Fix: build from the pinned clone instead of npx. Verified 3: 'login <url>' saves the site session (cookies) to .screenplay/auth.json in the project (README.md:101, cli.ts:125). Fix: add .screenplay/ to the project's .gitignore and delete auth.json when done. Verified 4: voice-over keys (CARTESIA_API_KEY, ELEVENLABS_API_KEY) are sent only to api.cartesia.ai and api.elevenlabs.io (cartesia.ts:6, elevenlabs.ts:4). Fix: none needed; or skip keys and use your own audio files (README.md:117). Verified 5: desktop-app recording drives the computer through agent-desktop, which is not a dependency and must be installed globally (desktop.ts:102-112), not reviewed here. Fix: use web recordings only until agent-desktop has its own review. Other: the style editor listens only on 127.0.0.1 with a token in the URL (editor/server.ts:105-108); the Windows 'recording' pill runs the bundled assets/indicator/windows.ps1 with -ExecutionPolicy Bypass for that one process (indicator.ts:22), SCREENPLAY_INDICATOR=0 turns it off (indicator.ts:28); the browser hides the automation flag and HeadlessChrome user agent so bot checks pass (browser.ts:16, 53). MIT.",
+   "Safe install": "Safe install (fixes applied):\nWindows + Claude Code: install Node 20+ and Git yourself. Then: git clone https://github.com/gmpetrov/agent-screenplay ; cd agent-screenplay ; git checkout b1a5da340898bb9ba56dbf0b1fc496f6557549d8 ; npm ci ; npm run build ; node dist/cli.js init --no-mcp (downloads Chromium once and copies the guide skill to %USERPROFILE%\\.claude\\\\skills\\\\screenplay; leaves Codex and Cursor configs alone). Add the MCP server yourself, pinned to this build: claude mcp add --scope user screenplay -- node <full path>\\\\agent-screenplay\\\\dist\\\\cli.js mcp. Web recordings only (do not install agent-desktop). In each project add .screenplay/ to .gitignore and delete .screenplay\\\\auth.json after a login recording. Voice-over: your own audio files, or a Cartesia/ElevenLabs key in the environment.\nclaude.ai, Hermes, Android: not supported (needs local Node, Chromium and an MCP client or shell).",
+   "YOLO install": "YOLO (your own risk): skips the pinned build and the manual MCP entry. Run npx agent-screenplay init (registers unpinned npx -y agent-screenplay mcp at user scope and edits Codex and Cursor configs if present), and npm install -g agent-desktop for desktop-app recordings.",
+   "Install notes": "Safe with fixes: CLI + MCP server that films a website (or desktop app) from a JSON scenario and edits it into a Screen Studio-style MP4 (smooth cursor, auto-zoom, callouts, voice-over). Build from the clone pinned at b1a5da3, run init --no-mcp, add the MCP server yourself pointing at the local build, web recordings only, keep .screenplay/auth.json out of git. Possible use: screen-demo segments for the faceless video channel.",
+   "Last checked": "2026-11-24"
   },
   {
    "Name": "agent-sprite-forge (0x0funky)",
@@ -1110,16 +1110,16 @@
    "Type": "skill",
    "Category": "generating videos",
    "Official URL": "https://qualixar.com/learn/guides/brief2mp4-guide",
-   "GitHub repo": "https://github.com/qualixar/brief2mp4 @ c262562 (MIT)",
+   "GitHub repo": "https://github.com/qualixar/brief2mp4 @ 9935db4 (v0.8.0, MIT)",
    "Price": "Free, MIT (github.com, checked 2026-11-16)",
    "Decision": "Skip",
-   "Safety verdict": "unreviewed",
-   "Safety basis": "Inferred (unreviewed)",
-   "Safety reason": "Not code-reviewed for safety. A project Tool Scout (Claude, 2026-11-16) read it: 2/5, delivery spec check, mostly covered. Repo and commit confirmed from github.com metadata, 2026-11-16.",
-   "Safe install": "Unreviewed: contain it: use the Claude Code plugin route only (README:69) pinned to commit c262562, install Node 22, ffmpeg and Git via winget yourself instead of running install.ps1 with -ExecutionPolicy Bypass, skip the 3D and edit packs, no keys needed. Get a review before real use.",
-   "YOLO install": "Not offered.",
-   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nREADME:69: Claude Code plugin `/plugin marketplace add qualixar/brief2mp4` then `/plugin install brief2mp4@brief2mp4`. README:72: Windows `install.ps1 -InstallTools` runs with `-ExecutionPolicy Bypass` and installs Node, ffmpeg and Git Bash via winget (README:63,92-94); 3D and edit packs are extra downloads (README:174-206).",
-   "Last checked": "2026-11-16"
+   "Safety verdict": "safe",
+   "Safety basis": "Code read",
+   "Safety reason": "a review bot read @9935db4: safe with these fixes. No hooks or MCP servers in the repo; no API keys used; no shell=True or eval in the Python scripts. Verified 1: the plugin route also installs a second plugin, brief2motion, from the separate repo qualixar/brief2motion (plugin/.claude-plugin/plugin.json:33, .claude-plugin/marketplace.json:46-57; README.md:352), not reviewed here, and the marketplace route is unpinned (README.md:99). install.ps1 does not install brief2motion. Fix: clone this repo at 9935db4 and use the script install (install.ps1 -Claude), not the plugin marketplace. Verified 2: SKILL.md tells the agent to render with npx hyperframes with no version (SKILL.md:159, 3 places), which fetches the newest hyperframes from npm each time, while the scripts pin hyperframes@0.8.216 (film_build.py:24, character_sheet.py:26). Fix: in each project run npm i -D hyperframes@0.8.216 once so npx uses that local pinned copy. Verified 3: install.ps1 is meant to run with -ExecutionPolicy Bypass (install.ps1:3-10; that bypass applies only to that one process) and -InstallTools winget-installs Node, ffmpeg and Git (install.ps1:92). It installs into %USERPROFILE%\\.claude by default (install.ps1:31). Fix: install Node 22+, ffmpeg and Git yourself and run install.ps1 -Claude without -InstallTools. Verified 4: scripts/fetch_music.py searches the Openverse API (fetch_music.py:33) and downloads only https links with size caps (fetch_music.py:16, 94-98); search words leave your machine. Fix: none needed; skip it for private briefs. Other: the optional edit pack verifies downloads against SHA256 (edit/install_edit.ps1:156-160); the optional 3D pack pins pip packages (3d/requirements-core.txt) and uses npm ci with a lockfile (3d/install_3d.ps1:86-87). SKILL.md:152 asks the agent to add one line asking for a GitHub star to the first delivery message (text only, no action). MIT.",
+   "Safe install": "Safe install (fixes applied):\nWindows + Claude Code: install Node 22+ (winget install -e --id OpenJS.NodeJS.LTS), ffmpeg and Git for Windows yourself. Then: git clone https://github.com/qualixar/brief2mp4 ; cd brief2mp4 ; git checkout 9935db44967749f475a3fb6e67abd7f880493293 ; powershell -ExecutionPolicy Bypass -File .\\\\install.ps1 -Claude (no -InstallTools, no plugin marketplace, so brief2motion is not added). In each video project run npm i -D hyperframes@0.8.216 once before the first render. Skip the 3D and edit packs until you need them (both verify or pin their downloads). Keep normal permission prompts on.\nclaude.ai, Hermes, Android: not supported (needs local Node, ffmpeg and Claude Code or Codex).",
+   "YOLO install": "YOLO (your own risk): skips the pinned commit, the pinned hyperframes and leaving out brief2motion. In Claude Code: /plugin marketplace add qualixar/brief2mp4 then /plugin install brief2mp4@brief2mp4 (also installs brief2motion), or run install.ps1 -InstallTools to let winget install Node, ffmpeg and Git.",
+   "Install notes": "Safe with fixes: Claude Code/Codex skill that turns a written brief into a checked MP4 (82 art forms, HyperFrames, Three.js, optional Blender 3D and edit packs). Pin commit 9935db4, script install with install.ps1 -Claude (no plugin marketplace, so no unreviewed brief2motion), install Node/ffmpeg/Git yourself, npm i -D hyperframes@0.8.216 per project. Possible reference for the faceless video channel.",
+   "Last checked": "2026-11-24"
   },
   {
    "Name": "Browser Use",
@@ -2008,14 +2008,14 @@
    "Official URL": "https://github.com/runesleo/claude-video-kit",
    "GitHub repo": "https://github.com/runesleo/claude-video-kit @ 3a908d8 (MIT)",
    "Price": "Free on GitHub, MIT (github.com, checked 2026-11-23); CosyVoice/DashScope and Fish Audio are separate paid services (price not checked)",
-   "Decision": "Later",
-   "Safety verdict": "unreviewed",
-   "Safety basis": "Inferred (unreviewed)",
-   "Safety reason": "Not code-reviewed for safety. README: installs as a Claude Code or Codex plugin from the runesleo/x-reader marketplace or this repo; local rendering needs Node 20+, Python 3.10+, ffmpeg, npm install in remotion/ and pip install -r scripts/requirements.txt; the keyless demo uses the macOS say voice only; production narration sends text to CosyVoice (DASHSCOPE_API_KEY) by default or Fish Audio. Latest tag is a release candidate (v0.3.0-rc). Repo, license and latest commit confirmed from github.com metadata, 2026-11-23.",
-   "Safe install": "Unreviewed: contain it: clone at the pinned commit 3a908d8 inside a devcontainer or sandbox, install Python packages in a venv there, use a separate low-quota DashScope or Fish Audio key only when you need narration, and keep network on only for npm ci / pip and the TTS call. Get a review before real use.",
-   "YOLO install": "Not offered.",
-   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nClaude Code on Windows: /plugin marketplace add runesleo/claude-video-kit then /plugin install video-explainer-kit@video-explainer (README). Rendering: git clone, npm ci --prefix remotion, pip install -r scripts/requirements.txt; needs Node 20+, Python 3.10+, ffmpeg. The no-key demo is macOS-only.",
-   "Last checked": "2026-11-23"
+   "Decision": "Skip",
+   "Safety verdict": "safe",
+   "Safety basis": "Code read",
+   "Safety reason": "a review bot read @3a908d8: safe with these fixes. Plugin manifests declare no hooks and no MCP servers (.claude-plugin/plugin.json); the skill says it never uploads or publishes (SKILL.md:8-10, references/errors-and-privacy.md:17). Verified 1: the production render defaults to the paid CosyVoice cloud backend (scripts/render.sh:68, TTS_BACKEND default cosyvoice; tts_cosyvoice.py:104 reads DASHSCOPE_API_KEY), so your script text goes to Alibaba DashScope; TTS_BACKEND=fish sends it to api.fish.audio (tts.py:36). Fix: set TTS_BACKEND=indextts2 for local narration (README.md:271: nothing leaves the machine), or use a separate low-quota DashScope/Fish key only when you choose cloud narration. Verified 2: the recommended installs are unpinned: npx skills add runesleo/claude-video-kit (SKILL.md:39) and the plugin route through a different repo, runesleo/x-reader (SKILL.md:47, not reviewed here). Fix: clone this repo and check out 3a908d8, then copy skills/video-explainer into .claude/skills yourself (or /plugin marketplace add on that local clone path), never the x-reader marketplace. Verified 3: scripts/requirements.txt uses >= ranges (requests, faster-whisper, python-dotenv, opencc) and align.py:343 loads a faster-whisper model, which downloads from Hugging Face on first run. Fix: pip install inside a venv, pin the versions you get once, and allow network only for that install and first model download. Verified 4: render.sh is bash and the keyless demo needs macOS say (video-explainer.mjs:83). Fix: on Windows run in Git Bash or WSL2; there is no keyless demo on Windows, so use indextts2 or a cloud key. Other: Remotion pinned at 4.0.433 (remotion/package.json:11-16); modal_tts_batch.py is an optional Modal GPU runner that clones index-tts pinned at 830f6f8 (modal_tts_batch.py:56-57) and needs your Modal account: skip it. Child processes use spawn with shell:false (video-explainer.mjs:114,320). No telemetry found. MIT.",
+   "Safe install": "Safe install (fixes applied):\nWindows + Claude Code: install Node 20+, Python 3.10+, ffmpeg and Git from their official sites. In Git Bash or WSL2: git clone https://github.com/runesleo/claude-video-kit ; cd claude-video-kit ; git checkout 3a908d8ae3a59d9f9aee83604665a4180e347111 ; npm ci --prefix remotion ; python -m venv .venv and activate it ; pip install -r scripts/requirements.txt, then pin the installed versions. Copy skills/video-explainer into your project's .claude/skills folder (no npx skills add, no x-reader marketplace). Set TTS_BACKEND=indextts2 for local narration, or add a separate low-quota DASHSCOPE_API_KEY only when you want cloud narration. Skip modal_tts_batch.py. Keep normal permission prompts on (never --dangerously-skip-permissions).\nclaude.ai, Hermes, Android: not supported (needs local Node, Python, ffmpeg and Claude Code or Codex).",
+   "YOLO install": "YOLO (your own risk): skips the pinned commit, pinned Python packages and local narration. In Claude Code: /plugin marketplace add runesleo/x-reader then /plugin install video-explainer-kit@runesleo (or npx skills add runesleo/claude-video-kit --skill video-explainer), clone the repo for rendering, npm ci --prefix remotion, pip install -r scripts/requirements.txt, and use the default CosyVoice backend with your DASHSCOPE_API_KEY.",
+   "Install notes": "Safe with fixes: Claude Code/Codex skill plus Remotion pipeline that turns a brief or script into a reviewed, narrated 9:16 explainer with storyboard, review-receipt and release gates; never uploads. Pin commit 3a908d8, copy the skill folder yourself (no x-reader marketplace), venv for Python, Git Bash or WSL2 on Windows, TTS_BACKEND=indextts2 to keep script text local, skip the Modal runner. Fits the faceless video channel idea.",
+   "Last checked": "2026-11-24"
   },
   {
    "Name": "claude-virality-skill (Ootto)",
@@ -2176,6 +2176,22 @@
    "YOLO install": "YOLO (your own risk): skips the branch and diff check.\n/plugin install code-simplifier@claude-plugins-official, run it on your working tree.",
    "Install notes": "Safe, but ask the user before installing.\nClaude Code: install from Anthropic's official plugin directory (claude-plugins-official); review its diffs before committing.\nWindows: works in Claude Code on Windows. Android: no.",
    "Last checked": "2026-11-16"
+  },
+  {
+   "Name": "code-cartoon (famfamfam)",
+   "Type": "plugin",
+   "Category": "generating videos, voice and audio",
+   "Official URL": "https://github.com/famfamfam/code-cartoon",
+   "GitHub repo": "https://github.com/famfamfam/code-cartoon @ 76ab9f7 (MIT)",
+   "Price": "Free on GitHub, MIT (github.com, checked 2026-11-24); fal.ai is a separate paid service (price not checked)",
+   "Decision": "Later",
+   "Safety verdict": "unreviewed",
+   "Safety basis": "Inferred (unreviewed)",
+   "Safety reason": "Not code-reviewed for safety. README (v1.4.0): needs Node.js 22+, FFmpeg, Python 3.9+ with numpy, scipy and pillow; optional piper-tts for local narration, optional paid fal.ai key or any OpenAI-compatible key for pictures and video; downloads dependencies, headless Chrome and Piper voices on first use; tested on Windows 11 with Git Bash. Bundled three.js, GSAP, fonts and a sample photo keep their own licenses. Repo, license and latest commit confirmed from github.com metadata, 2026-11-24.",
+   "Safe install": "Unreviewed: contain it: clone at the pinned commit 76ab9f7 inside a devcontainer or Windows Sandbox, install Python packages in a venv there, no fal.ai or OpenAI keys (local Piper narration needs none), network on only for the first dependency, Chrome and voice downloads. Get a review before real use.",
+   "YOLO install": "Not offered.",
+   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nClaude Code on Windows (README, use Git Bash): claude plugin marketplace add famfamfam/code-cartoon then claude plugin install code-cartoon@famfamfam; or git clone and copy skills/code-cartoon to ~/.claude/skills/. Check with skills/code-cartoon/scripts/cartoon doctor.",
+   "Last checked": "2026-11-24"
   },
   {
    "Name": "codebase-memory-mcp (DeusData)",
@@ -4623,7 +4639,7 @@
    "Safe install": "Safe install (fixes applied):\nClaude Code (Windows): ask the user first. Copy SKILL.md from https://github.com/cursor/plugins/tree/main/pstack/skills/in-your-own-words at commit 7a58391 into one project's .claude/skills/in-your-own-words/ and type /in-your-own-words. Don't install the whole pstack plugin for it.\nCursor: same single file into the project's skills folder; the full pstack plugin is not reviewed.",
    "YOLO install": "",
    "Install notes": "Ask the user first. Copy SKILL.md into one project's .claude/skills/in-your-own-words/ and type /in-your-own-words. Don't install the whole pstack plugin for it.",
-   "Last checked": "2026-11-23"
+   "Last checked": "2026-11-24"
   },
   {
    "Name": "Inspora",
@@ -6287,7 +6303,7 @@
    "Safe install": "Safe install (fixes applied):\nWindows/Claude Code: download `nihongo-v3.0.0.zip` from github.com/AnIT012/nihongo/releases/tag/v3.0.0, check SHA-256 `34625762a4865de9a1a41a54690e3450d9dbfe23d72024dab839db267d374d19` (`Get-FileHash`), optionally `gh attestation verify nihongo-v3.0.0.zip -R AnIT012/nihongo`, then copy the `nihongo/` folder to `~/.claude/skills/nihongo`. Or clone `--branch v3.0.0` and stay at `15de10bc`. If you want Lite on every chat, add `@~/.claude/skills/nihongo/ALWAYS.md` to CLAUDE.md yourself. Do not run `npx skills add` or `npx skills update`. Run checks with `python3 ~/.claude/skills/nihongo/scripts/cli.py` (Python 3.10+). Leave the PostToolUse hook off. Do not put secrets or personal names in `~/.nihongo/profile.md`. Use the shared settings file github.com/onelostmaster/skills-wiki/blob/main/safe-defaults/claude-settings.json. Re-review before bumping the pin.\nclaude.ai / Android: upload that same verified v3.0.0 zip (not GitHub's Source Download ZIP).\nCodex: copy the same pinned `nihongo/` folder; do not use unpinned `npx skills add`.",
    "YOLO install": "YOLO (your own risk): skips the release pin, the SHA-256 / attestation check, the ban on `npx skills update`, and leaving the PostToolUse hook off.\n`npx skills add AnIT012/nihongo -g -a claude-code` then `echo '@~/.claude/skills/nihongo/ALWAYS.md' >> ~/.claude/CLAUDE.md` (README.md:31-32). Optional: copy `examples/hooks/claude-code-hook.json` into Claude Code hooks, and `pip install \"git+https://github.com/AnIT012/nihongo.git@v3.0.0\"`.",
    "Install notes": "Windows/Claude Code: from a clone at `15de10bc`, or from the official v3.0.0 zip after SHA-256 34625762a4865de9a1a41a54690e3450d9dbfe23d72024dab839db267d374d19, copy the `nihongo/` folder to `~/.claude/skills/nihongo`. If you want Lite on every chat, add `@~/.claude/skills/nihongo/ALWAYS.md` to CLAUDE.md yourself. Do not run `npx skills add` or `npx skills update`. Run the checker with `python3 ~/.claude/skills/nihongo/scripts/cli.py` (Python 3.10+). Leave the PostToolUse hook off unless you want it to run on every Edit|Write of .md/.txt. Keep `~/.nihongo/profile.md` free of secrets and names, and review it before any append. claude.ai / Android (Claude app): upload that same verified v3.0.0 release zip; do not upload GitHub's Code → Download ZIP (README.md:208: SKILL.md is one folder too deep). Paste ALWAYS.md into custom instructions if you want Lite on every chat. Codex: copy the same pinned `nihongo/` folder into the Codex skills directory; do not use unpinned `npx skills add`. Paste ALWAYS.md into AGENTS.md if you want Lite always on. `nihongo-check fix` writes the output path you give it; use a new file.",
-   "Last checked": "2026-11-23"
+   "Last checked": "2026-11-24"
   },
   {
    "Name": "nocodehack-roblox-engine (nocodehack)",
@@ -8098,6 +8114,22 @@
    "Last checked": "2026-11-16"
   },
   {
+   "Name": "rudywizz-motion (Rudywizz)",
+   "Type": "skill",
+   "Category": "generating videos, editing",
+   "Official URL": "https://rudywizz.github.io/rudywizz-motion/",
+   "GitHub repo": "https://github.com/Rudywizz/rudywizz-motion @ 05028e6 (MIT)",
+   "Price": "Free on GitHub and npm, MIT (github.com, checked 2026-11-24)",
+   "Decision": "Skip",
+   "Safety verdict": "unreviewed",
+   "Safety basis": "Inferred (unreviewed)",
+   "Safety reason": "Not code-reviewed for safety. README: needs Node 18+ and ffmpeg; the npm route (npm install -g rudywizz-motion) installs the CLI globally; rendering uses your installed Chrome/Edge or a Playwright Chromium download; also installs as a Claude Code plugin (/plugin marketplace add Rudywizz/rudywizz-motion) or with npx skills add. Repo, license and latest commit confirmed from github.com metadata, 2026-11-24.",
+   "Safe install": "Unreviewed: contain it: skip npm install -g (it installs globally); clone at the pinned commit 05028e6 inside a devcontainer or sandbox, run npm ci there and use npx rudywizz-motion, no API keys (it needs none), network on only for npm and the Chromium download. Get a review before real use.",
+   "YOLO install": "Not offered.",
+   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nClaude Code: /plugin marketplace add Rudywizz/rudywizz-motion then /plugin install rudywizz-motion@rudywizz (README). Windows: winget install ffmpeg; put options in a JSON file instead of quoting JSON on the command line (README).",
+   "Last checked": "2026-11-24"
+  },
+  {
    "Name": "Rune Icons (SVG library and local MCP)",
    "Type": "library",
    "Category": "design, frontend",
@@ -8358,16 +8390,16 @@
    "Type": "plugin",
    "Category": "generating videos, editing",
    "Official URL": "https://whystrohm.com/shotkit",
-   "GitHub repo": "https://github.com/whystrohm/shotkit @ da8edbf (Apache-2.0)",
+   "GitHub repo": "https://github.com/whystrohm/shotkit @ 947959e (v3.8.0, Apache-2.0)",
    "Price": "Free on GitHub, Apache-2.0 (github.com, checked 2026-11-23); fal generation is paid per job (price not checked)",
-   "Decision": "Later",
-   "Safety verdict": "unreviewed",
-   "Safety basis": "Inferred (unreviewed)",
-   "Safety reason": "Not code-reviewed for safety. README: plugin installs with /plugin install shotkit --marketplace whystrohm/shotkit, or ./install.sh which puts tools at ~/.claude/shotkit-tools; Canvas is macOS-only, needs Python 3.10+ and a Claude API key (kept in the macOS Keychain); generation runs paid jobs on fal only after you approve the price; it fetches Google Fonts. Rendering uses Remotion (company use needs a Remotion license). Repo, license and latest commit confirmed from github.com metadata, 2026-11-23.",
-   "Safe install": "Unreviewed: contain it: install the plugin from the pinned commit da8edbf in a test project inside a devcontainer or sandbox, no fal or Claude API keys until reviewed, and skip Canvas (macOS only). Get a review before real use.",
-   "YOLO install": "Not offered.",
-   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nClaude Code: /plugin install shotkit --marketplace whystrohm/shotkit (older Claude Code: /plugin marketplace add whystrohm/shotkit then /plugin install shotkit@shotkit) (README). Canvas is Mac-only, so not for this user (Windows).",
-   "Last checked": "2026-11-23"
+   "Decision": "Skip",
+   "Safety verdict": "safe",
+   "Safety basis": "Code read",
+   "Safety reason": "a review bot read @947959e: safe with these fixes. Plugin manifests declare no hooks and no MCP servers (.claude-plugin/plugin.json). No telemetry found. Verified 1: generation sends your prompts and frames to fal.ai and bills your fal account, but only with --yes; without it, it prints the plan and price link and sends nothing (tools/generate.py:668, 700-705); the key comes from FAL_KEY or a .env file (generate.py:96-106). Fix: run without --yes first, and use a separate fal key with a low credit limit kept in the project .env (never commit it). Verified 2: the plugin and install routes are unpinned (README.md:155-166), and ./install.sh writes to ~/.claude by default (install.sh:41) unless --project (install.sh:50). Fix: clone and check out 947959e, then ./install.sh --project (or /plugin marketplace add on that local clone path). Verified 3: tools/sk installs unpinned pyyaml and jsonschema into tools/.venv on first use (tools/sk:53). Fix: create that venv yourself and pip install pinned versions, or use --no-deps (install.sh:27) and skip the validators. Verified 4: boards, design cards and exports fetch Google Fonts; only font family names are requested. Fix: none needed; allow fonts.googleapis.com or work offline with fallback fonts. Verified 5: design and export render stills with headless Chrome and retry with --no-sandbox if the first try fails (design.py:209-214, export.py:146-155); the page is your own local plan. Fix: render only boards you made yourself. Other: bash scripts (install.sh, tools/sk); Canvas is a separate macOS-only download (README.md:101), so skip it. Apache-2.0.",
+   "Safe install": "Safe install (fixes applied):\nWindows + Claude Code: install Python 3.10+, Git and Chrome from their official sites (ffmpeg only if you export clips). In Git Bash or WSL2: git clone https://github.com/whystrohm/shotkit ; cd shotkit ; git checkout 947959eea6281ad7625d6a011d764428028d8043 ; ./install.sh --project --no-deps (from your project folder) ; then, if you want the validators, run python -m venv .claude/shotkit-tools/.venv and install pinned pyyaml and jsonschema into it (pip install pyyaml==<version> jsonschema==<version>). For generation, run tools/generate.py without --yes to see the plan and price, then add --yes with a separate low-credit FAL_KEY in the project .env. Skip Canvas (macOS only). Keep normal permission prompts on.\nclaude.ai, Hermes, Android: not supported (needs local Python and Claude Code or Codex).",
+   "YOLO install": "YOLO (your own risk): skips the pinned commit, project scope and pinned validators. In Claude Code: /plugin install shotkit --marketplace whystrohm/shotkit (older: /plugin marketplace add whystrohm/shotkit then /plugin install shotkit@shotkit), or clone and ./install.sh (installs to ~/.claude). Put your FAL_KEY in .env and generate with --yes.",
+   "Install notes": "Safe with fixes: Claude Code/Codex plugin that plans on-brand video shot by shot; paid fal generation only after --yes. Pin commit 947959e, ./install.sh --project, pinned validator venv or --no-deps, Git Bash or WSL2 on Windows, separate low-credit fal key, skip the macOS Canvas. Fits the faceless video channel idea.",
+   "Last checked": "2026-11-24"
   },
   {
    "Name": "skill-creator (Anthropic)",
@@ -8895,7 +8927,7 @@
    "Safe install": "Safe install (fixes applied):\nClaude Code (Windows): ask the user first. Copy this SKILL.md and the pstack unslop SKILL.md, both at commit 7a58391, together into one project's .claude/skills/technical-writing/ and .claude/skills/unslop/ (it calls unslop, SKILL.md:67).\nCursor: same two files; the full pstack plugin is not reviewed.",
    "YOLO install": "",
    "Install notes": "Ask the user first. Copy SKILL.md and the pstack unslop SKILL.md together (it calls unslop, SKILL.md:67) into one project's .claude/skills/.",
-   "Last checked": "2026-11-23"
+   "Last checked": "2026-11-24"
   },
   {
    "Name": "Terminal Browser",
@@ -9340,10 +9372,10 @@
    "Safety verdict": "safe",
    "Safety basis": "Code read",
    "Safety reason": "Claude code read @7a58391, 2026-11-23: one 2.4 KB SKILL.md, text only. Verified risk: none. a review bot check 2026-11-23 via the GitHub API at 7a583913: the folder holds only SKILL.md (2380 bytes); pstack plugin.json and .cursor-plugin/plugin.json give version 0.15.46 and license MIT; pstack/LICENSE is MIT. SKILL.md:4 sets disable-model-invocation: true.",
-   "Safe install": "Safe install (fixes applied):\nClaude Code (Windows): ask the user first. Copy SKILL.md from https://github.com/cursor/plugins/tree/main/pstack/skills/unslop at commit 7a58391 into one project's .claude/skills/unslop/. Its rule 24 (SKILL.md:31) allows one hedge (may); in this wiki the fix rule wins: no may about a risk.\nCursor: same single file; the full pstack plugin is not reviewed.",
+   "Safe install": "Safe install (fixes applied):\nClaude Code (Windows): ask the user first. Copy SKILL.md from https://github.com/cursor/plugins/tree/main/pstack/skills/unslop at commit 7a58391 into one project's .claude/skills/unslop/. Its rule 24 (SKILL.md:31) allows one hedge word in prose; in this wiki the fix rule wins: every risk is stated definitely.\nCursor: same single file; the full pstack plugin is not reviewed.",
    "YOLO install": "",
-   "Install notes": "Ask the user first. Copy SKILL.md into one project's .claude/skills/unslop/. Its rule 24 allows one hedge (may); in this wiki the fix rule wins: no may about a risk.",
-   "Last checked": "2026-11-23"
+   "Install notes": "Ask the user first. Copy SKILL.md into one project's .claude/skills/unslop/. Its rule 24 allows one hedge word in prose; in this wiki the fix rule wins: every risk is stated definitely.",
+   "Last checked": "2026-11-24"
   },
   {
    "Name": "Unslop (UI design skill)",
@@ -10256,6 +10288,22 @@
    "YOLO install": "YOLO (your own risk): skips the pin, config and plugin blocks and the no-cookies rule.\npip install -U yt-dlp then yt-dlp --cookies-from-browser chrome URL.",
    "Install notes": "Caution: read the Safety reason and ask the user before installing.\nClaude Code: use a download skill skill (user's account skill): pinned venv with pip install --only-binary=\\:all\\: \"yt-dlp[default,pin,pin-deno,pin-curl-cffi]==2026.10.26\". Cloud projects must allow instagram.com, *.instagram.com, *.cdninstagram.com, *.fbcdn.net (TikTok: tiktok.com, *.tiktok.com, *.tiktokcdn.com, *.tiktokcdn-us.com, *.tiktokv.com; YouTube: youtube.com, *.youtube.com, *.googlevideo.com, *.ytimg.com) under Network access.\nOne Unix user per bot.\nEvery run: YTDLP_NO_PLUGINS=1 yt-dlp --ignore-config --no-config-locations --no-plugin-dirs --no-remote-components --no-cookies --no-cookies-from-browser --no-exec --no-exec-before-download --no-playlist -t sleep -P <own folder> -o \"%(id)s.%(ext)s\" -- URL\nStandalone binary check: sha256sum must equal 767ba9dce7052aa196f8b12652f433d76de128ba168966fa84b6394d5e6c6795 (yt-dlp_linux 2026.10.26) or e51e69e89489f199530f13d32a4342da3ddb2cf34842f364603a066db05afbf3 (zipimport yt-dlp), from the GPG-verified SHA2-256SUMS.\nRules: no -U from agents (a human updates within ~1 week of each stable, at once for Security releases); never a project's or any posting account's cookies; on a bot check, 403 or 429 stop and ask for the file; never re-upload third-party clips; only deno as JS runtime; no apt package. Hermes: not needed (its youtube-content skill uses youtube-transcript-api).\nTip (2026-11-01, from the wiki and a review bot): for captions use `--sub-langs en,en-orig`, not `en.*` (that hits HTTP 429). Private posts, Stories, Saved and DMs need sign-in, which the no-cookies rule rules out, so ask the user for the file.\nTip (2026-11-02, from the wiki): from a cloud container, Instagram and TikTok downloads work (TikTok needs the curl_cffi extra), but YouTube gives only info and captions; the video file itself returns HTTP 403, so ask the user for the file.",
    "Last checked": "2026-11-14"
+  },
+  {
+   "Name": "yumurta-stili (kodlaciz)",
+   "Type": "skill",
+   "Category": "generating videos",
+   "Official URL": "https://github.com/kodlaciz/yumurta-stili",
+   "GitHub repo": "https://github.com/kodlaciz/yumurta-stili @ 0f66ed7 (MIT; reference frames in referans/ excluded)",
+   "Price": "Free on GitHub, MIT except referans/ (github.com, checked 2026-11-24)",
+   "Decision": "Skip",
+   "Safety verdict": "unreviewed",
+   "Safety basis": "Inferred (unreviewed)",
+   "Safety reason": "Not code-reviewed for safety. README: needs Node 18+, Python 3.10+, ffmpeg and Google Chrome (or CHROME_PATH); setup is cd engine && npm install and pip install -r requirements.txt; install by copying the folder to ~/.claude/skills/yumurta-stili/. The reference frames in referans/ belong to their owners and are not MIT; README says use the reference videos only for study and do not republish them. Repo, license and latest commit confirmed from github.com metadata, 2026-11-24.",
+   "Safe install": "Unreviewed: contain it: clone at the pinned commit 0f66ed7 inside a devcontainer or sandbox, Python packages in a venv there, no API keys (it needs none), network on only for npm and pip; do not publish anything from referans/ (not MIT). Get a review before real use.",
+   "YOLO install": "Not offered.",
+   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nClaude Code: copy the repo folder to ~/.claude/skills/yumurta-stili/, then cd engine && npm install and pip install -r requirements.txt (README). Codex and other agents start from AGENTS.md.",
+   "Last checked": "2026-11-24"
   },
   {
    "Name": "zack-d-films generator",

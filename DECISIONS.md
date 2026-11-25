@@ -423,8 +423,8 @@
 | [advisor-orchestrator-worker skill (awesome-llm-apps)](tools/advisor-orchestrator-worker-skill-awesome-llm-apps.md) | Skip | caution |
 | [Agent Blackbox](tools/agent-blackbox.md) | Skip | unreviewed |
 | [Agent Reach](tools/agent-reach.md) | Skip | safe |
-| [agent-meme-forge (lisamsung)](tools/agent-meme-forge-lisamsung.md) | Skip | unreviewed |
-| [agent-screenplay (gmpetrov)](tools/agent-screenplay-gmpetrov.md) | Skip | unreviewed |
+| [agent-meme-forge (lisamsung)](tools/agent-meme-forge-lisamsung.md) | Skip | safe |
+| [agent-screenplay (gmpetrov)](tools/agent-screenplay-gmpetrov.md) | Skip | safe |
 | [AgenticSeek](tools/agenticseek.md) | Skip | safe |
 | [aipacking (zhouyuechuan2025-ui)](tools/aipacking-zhouyuechuan2025-ui.md) | Skip | unreviewed |
 | [AiSOC (beenuar/AiSOC)](tools/aisoc-beenuar-aisoc.md) | Skip | safe |
@@ -438,7 +438,7 @@
 | [Bark (Suno)](tools/bark-suno.md) | Skip | caution |
 | [blueprint-animation (moguzbulbul)](tools/blueprint-animation-moguzbulbul.md) | Skip | unreviewed |
 | [Booking.com connector](tools/booking-com-connector.md) | Skip | safe |
-| [brief2mp4 (qualixar)](tools/brief2mp4-qualixar.md) | Skip | unreviewed |
+| [brief2mp4 (qualixar)](tools/brief2mp4-qualixar.md) | Skip | safe |
 | [Cache Tax](tools/cache-tax.md) | Skip | safe |
 | [cartoon-shorts-skill (Matteoikarieth96)](tools/cartoon-shorts-skill-matteoikarieth96.md) | Skip | unreviewed |
 | [cartoon-skill (artemiimillier)](tools/cartoon-skill-artemiimillier.md) | Skip | unreviewed |
@@ -461,6 +461,7 @@
 | [claude-stickman-shorts (SyedBahjat)](tools/claude-stickman-shorts-syedbahjat.md) | Skip | unreviewed |
 | [claude-video-editing-skills (Viprasol-Tech)](tools/claude-video-editing-skills-viprasol-tech.md) | Skip | unreviewed |
 | [claude-video-effects (Vibha-Ramprakash)](tools/claude-video-effects-vibha-ramprakash.md) | Skip | unreviewed |
+| [claude-video-kit (runesleo)](tools/claude-video-kit-runesleo.md) | Skip | safe |
 | [claude-virality-skill (Ootto)](tools/claude-virality-skill-ootto.md) | Skip | safe |
 | [ClipIt (shasshhaank)](tools/clipit-shasshhaank.md) | Skip | unreviewed |
 | [ClipUGC CLI (clipugc)](tools/clipugc-cli-clipugc.md) | Skip | unreviewed |
@@ -570,7 +571,9 @@
 | [Renku Studio (GoRenku)](tools/renku-studio-gorenku.md) | Skip | unreviewed |
 | [Replay Theater (Anthropic example mod)](tools/replay-theater-anthropic-example-mod.md) | Skip | safe |
 | [revid-skills (Revid MCP plugin)](tools/revid-skills-revid-mcp-plugin.md) | Skip | unreviewed |
+| [rudywizz-motion (Rudywizz)](tools/rudywizz-motion-rudywizz.md) | Skip | unreviewed |
 | [Senpi plugin](tools/senpi-plugin.md) | Skip | unreviewed |
+| [Shotkit (whystrohm)](tools/shotkit-whystrohm.md) | Skip | safe |
 | [skill-video-studio (aaitor)](tools/skill-video-studio-aaitor.md) | Skip | unreviewed |
 | [Slack MCP server (connector)](tools/slack-mcp-server-connector.md) | Skip | safe |
 | [so-vits-svc](tools/so-vits-svc.md) | Skip | unreviewed |
@@ -613,6 +616,7 @@
 | [xiaolin-explainer-packaging (howoneai)](tools/xiaolin-explainer-packaging-howoneai.md) | Skip | unreviewed |
 | [You Should Know (built-in Claude Code mod)](tools/you-should-know-built-in-claude-code-mod.md) | Skip | safe |
 | [youtube-skills](tools/youtube-skills.md) | Skip | unreviewed |
+| [yumurta-stili (kodlaciz)](tools/yumurta-stili-kodlaciz.md) | Skip | unreviewed |
 | [Zapier (connector)](tools/zapier-connector.md) | Skip | safe |
 | [Airbnb MCP (openbnb-org/mcp-server-airbnb)](tools/airbnb-mcp-openbnb-org-mcp-server-airbnb.md) | Avoid | avoid |
 | [Duix Avatar](tools/duix-avatar.md) | Avoid | avoid |
@@ -625,7 +629,7 @@
 | [zack-d-films generator](tools/zack-d-films-generator.md) | Avoid | avoid |
 | [Anthropic TypeScript SDK](tools/anthropic-typescript-sdk.md) |  | safe |
 | [CADCraft](tools/cadcraft.md) |  | safe |
-| [claude-video-kit (runesleo)](tools/claude-video-kit-runesleo.md) | Later | unreviewed |
+| [code-cartoon (famfamfam)](tools/code-cartoon-famfamfam.md) | Later | unreviewed |
 | [coolray-video-qc (ShakeJ)](tools/coolray-video-qc-shakej.md) | Later | safe |
 | [DeckCraft](tools/deckcraft.md) |  | safe |
 | [DesignCraft](tools/designcraft.md) |  | safe |
@@ -643,7 +647,6 @@
 | [PhotoCraft](tools/photocraft.md) |  | safe |
 | [remotion-qa (GroMarketing)](tools/remotion-qa-gromarketing.md) | Later | safe |
 | [Sherlock (username OSINT CLI)](tools/sherlock-username-osint-cli.md) |  | safe |
-| [Shotkit (whystrohm)](tools/shotkit-whystrohm.md) | Later | unreviewed |
 | [SoundCraft](tools/soundcraft.md) |  | safe |
 | [VectorCraft](tools/vectorcraft.md) |  | safe |
 | [WordCraft](tools/wordcraft.md) |  | safe |

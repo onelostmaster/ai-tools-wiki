@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** safe
 - **Safety basis:** Code read
-- **Last checked:** 2026-11-23
+- **Last checked:** 2026-11-24
 
 ## Safety reason
 
@@ -17,7 +17,7 @@ Claude code read @7a58391, 2026-11-23: one 2.4 KB SKILL.md, text only. Verified 
 ## Safe install
 
 Safe install (fixes applied):
-Claude Code (Windows): ask the user first. Copy SKILL.md from https://github.com/cursor/plugins/tree/main/pstack/skills/unslop at commit 7a58391 into one project's .claude/skills/unslop/. Its rule 24 (SKILL.md:31) allows one hedge (may); in this wiki the fix rule wins: no may about a risk.
+Claude Code (Windows): ask the user first. Copy SKILL.md from https://github.com/cursor/plugins/tree/main/pstack/skills/unslop at commit 7a58391 into one project's .claude/skills/unslop/. Its rule 24 (SKILL.md:31) allows one hedge word in prose; in this wiki the fix rule wins: every risk is stated definitely.
 Cursor: same single file; the full pstack plugin is not reviewed.
 
 ## YOLO install
@@ -26,4 +26,4 @@ Not written yet.
 
 ## Install notes
 
-Ask the user first. Copy SKILL.md into one project's .claude/skills/unslop/. Its rule 24 allows one hedge (may); in this wiki the fix rule wins: no may about a risk.
+Ask the user first. Copy SKILL.md into one project's .claude/skills/unslop/. Its rule 24 allows one hedge word in prose; in this wiki the fix rule wins: every risk is stated definitely.

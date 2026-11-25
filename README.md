@@ -1,6 +1,6 @@
 # Skills Wiki (public edition)
 
-645 AI tools (skills, plugins, MCP servers, connectors, apps, libraries, APIs), each with a safety verdict from a code or docs read, and the exact install with every verified fix applied (**Safe install**). An opt-in **YOLO install** gives the tool's own defaults for people who accept the risk.
+648 AI tools (skills, plugins, MCP servers, connectors, apps, libraries, APIs), each with a safety verdict from a code or docs read, and the exact install with every verified fix applied (**Safe install**). An opt-in **YOLO install** gives the tool's own defaults for people who accept the risk.
 
 - Short list: [DECISIONS.md](DECISIONS.md)
 - One tool: [tools/](tools)

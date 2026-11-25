@@ -21,6 +21,8 @@ Install from releases/latest as docs/install.md says and add every channel.
 claude mcp add agentwikis -- npx -y agentwikis-mcp (pulls latest).
 - [agent-browser](tools/agent-browser.md): YOLO (your own risk): skips the pin, --ignore-scripts, AGENT_BROWSER_NO_VERSION_CHECK=1, the domain/action/output limits, and the ban on attach modes and plugins.
 `npm install -g agent-browser`, then `agent-browser install` (README / agent-browser.dev/installation).
+- [agent-meme-forge (lisamsung)](tools/agent-meme-forge-lisamsung.md): YOLO (your own risk): skips the pinned commit, the venv, the explicit endpoint and the imagegen-batch caution. Follow README.md:71-102 (pip install -e '.[dev]', cp -R the skill to ~/.codex-switcher/skills) and let Codex run imagegen-batch and the WeChat upload runbook.
+- [agent-screenplay (gmpetrov)](tools/agent-screenplay-gmpetrov.md): YOLO (your own risk): skips the pinned build and the manual MCP entry. Run npx agent-screenplay init (registers unpinned npx -y agent-screenplay mcp at user scope and edits Codex and Cursor configs if present), and npm install -g agent-desktop for desktop-app recordings.
 - [agent-sprite-forge (0x0funky)](tools/agent-sprite-forge-0x0funky.md): YOLO (your own risk): skips the single key and the budget cap.
 Claude Code on Windows: add the skills folder with all your provider keys set; it spends on any of them with no cap and no question.
 - [AgenticSeek](tools/agenticseek.md): YOLO (your own risk): skips Docker, so model-written shell runs as you.
@@ -84,6 +86,7 @@ Install from the repo HEAD as in mods/README.md.
 Installer from blockbench.net, any plugins.
 - [brand-guidelines (Anthropic)](tools/brand-guidelines-anthropic.md): YOLO (your own risk): skips copying only the one folder at the reviewed commit.
 /plugin marketplace add anthropics/skills, then /plugin install example-skills@anthropic-agent-skills (installs all 12 example skills at HEAD, .claude-plugin/marketplace.json).
+- [brief2mp4 (qualixar)](tools/brief2mp4-qualixar.md): YOLO (your own risk): skips the pinned commit, the pinned hyperframes and leaving out brief2motion. In Claude Code: /plugin marketplace add qualixar/brief2mp4 then /plugin install brief2mp4@brief2mp4 (also installs brief2motion), or run install.ps1 -InstallTools to let winget install Node, ffmpeg and Git.
 - [Browser Use](tools/browser-use.md): YOLO (your own risk): skips the version pin, the telemetry switch and the separate profile.
 Windows: uv add browser-use with defaults in your normal browser; telemetry stays on and the agent can act on every site you are signed in to.
 - [Bubblewrap](tools/bubblewrap.md): YOLO (your own risk): skips the exact pin, the lockfile install, the checked JDK/SDK downloads (you get the unchecked 32-bit JDK on Windows) and the Gradle checksum. npm i -g @bubblewrap/cli, then bubblewrap init --manifest https://<your-site>/manifest.json and accept the downloads, then bubblewrap build (README).
@@ -152,6 +155,7 @@ Claude Code: /plugin marketplace add thedotmack/claude-mem, then /plugin install
 Install from the marketplace and use Apply all.
 - [claude-seo (AgriciDaniel)](tools/claude-seo-agricidaniel.md): YOLO (your own risk): skips the pin and scope limit.
 Run the curl install script and grant Indexing.
+- [claude-video-kit (runesleo)](tools/claude-video-kit-runesleo.md): YOLO (your own risk): skips the pinned commit, pinned Python packages and local narration. In Claude Code: /plugin marketplace add runesleo/x-reader then /plugin install video-explainer-kit@runesleo (or npx skills add runesleo/claude-video-kit --skill video-explainer), clone the repo for rendering, npm ci --prefix remotion, pip install -r scripts/requirements.txt, and use the default CosyVoice backend with your DASHSCOPE_API_KEY.
 - [claude-virality-skill (Ootto)](tools/claude-virality-skill-ootto.md): YOLO (your own risk): skips the commit pin.
 git clone https://github.com/Ootto-AI/claude-virality-skill && copy claude-virality-skill\\virality to %USERPROFILE%\.claude\\skills\\ (follows main).
 - [claudeweaver (statico)](tools/claudeweaver-statico.md): YOLO (your own risk): skips the commit pin.
@@ -635,6 +639,7 @@ npx shadcn@latest init, and npx shadcn@latest mcp for Claude Code
 `pip install shazamio`
 - [Sherlock (username OSINT CLI)](tools/sherlock-username-osint-cli.md): YOLO (your own risk): skips the proxy, manifest and consent rules.
 pipx install sherlock-project and look anyone up from your IP.
+- [Shotkit (whystrohm)](tools/shotkit-whystrohm.md): YOLO (your own risk): skips the pinned commit, project scope and pinned validators. In Claude Code: /plugin install shotkit --marketplace whystrohm/shotkit (older: /plugin marketplace add whystrohm/shotkit then /plugin install shotkit@shotkit), or clone and ./install.sh (installs to ~/.claude). Put your FAL_KEY in .env and generate with --yes.
 - [SkillEvaluator (NVIDIA)](tools/skillevaluator-nvidia.md): YOLO (your own risk): skips the version pin, --no-llm and the key unsetting.
 `uv tool install skillevaluator` then `skillevaluator tier1 ./skill` (sends skill text to whichever model key is set).
 - [Social Media Skills (charlie947)](tools/social-media-skills-charlie947.md): YOLO (your own risk): skips the commit pin and the folder copy.
