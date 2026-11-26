@@ -4,26 +4,26 @@
 - **Category:** generating videos
 - **Official URL:** https://github.com/huypham85/app-3d-video-skill
 - **GitHub repo:** https://github.com/huypham85/app-3d-video-skill @ 0661ec0 (license unclear (github.com reported NOASSERTION))
-- **Price:** Free on GitHub, license unclear (github.com reported NOASSERTION) (github.com, checked 2026-11-12)
+- **Price:** Free, MIT (LICENSE file @0661ec0; GitHub shows NOASSERTION), checked 2026-11-25
 - **Decision:** Skip
-- **Safety verdict:** unreviewed
-- **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-17
+- **Safety verdict:** safe
+- **Safety basis:** Code read
+- **Last checked:** 2026-11-25
 
 ## Safety reason
 
-Not code-reviewed for safety. Repo, license and latest commit confirmed from github.com metadata, 2026-11-12.
+a review bot read @0661ec0: safe with these fixes. Two Claude Code skills (app-3d-video and motion-video) that render a 20-second vertical 3D promo for an iOS app with Swift (SceneKit, CoreGraphics, AVFoundation) compiled locally by swiftc. No network calls, no keys, no hooks or MCP server; the only URL is a sample video link in README.md:8. MIT (LICENSE; GitHub shows NOASSERTION only because of its detection). Verified 1: it runs only on macOS with Xcode command line tools (README.md:18-19; mv3d.sh:14 swiftc), so it does not run on Windows, Android, claude.ai or Hermes. No fix for your platforms. Verified 2: README.md:28 clones main with no pin. Fix: check out commit 0661ec0. Verified 3: mv3d.sh:10 and mv.sh:52 load project.env as shell code (source), and mv3d.sh:27 / mv.sh:70 paste the stills beat list into a python -c command. Fix: keep project.env to the five number settings (BPM, DURATION, W, H, FPS) and pass beats as plain numbers only. Verified 4: the renderer deletes an existing file at the output path before writing (video_main.swift:56) and mv3d.sh:28, 36 delete the project's stills/ and check/ folders on each run. Fix: give each render a new output name and keep nothing of your own in those folders.
 
 ## Safe install
 
 Safe install (fixes applied):
-Unreviewed: contain it: read it on GitHub first (https://github.com/huypham85/app-3d-video-skill @ 0661ec0); if you try it, copy the skill folder at that exact commit into a throwaway Claude Code project or devcontainer (on Windows, not your main %USERPROFILE%\.claude\\skills), no API keys in its env, no network for its scripts unless a step needs it, and do not run its install scripts. Get a review before real use. Android: no.
+Not installable on your platforms: it needs macOS with Xcode command line tools (README.md:18-19).
+Claude Code (Windows), claude.ai, Hermes, Android: not supported.
 
 ## YOLO install
 
-Not offered.
+YOLO (your own risk): skips the pinned commit (README.md:27-31 clones main and copies both folders into the skills folder). Same platform limit: no Windows or Android install exists.
 
 ## Install notes
 
-Not code-reviewed yet: ask a review bot or Claude to review it before installing.
-Claude Code: follow the repo README; on Windows skills go under %USERPROFILE%\.claude\\skills\.
+Safe with fixes, but macOS-only (Swift, SceneKit, Xcode tools), so it does not run on Windows or Android. If ever used elsewhere: pin 0661ec0, keep project.env to number settings, plain beat numbers, a new output name per render. Decision Skip kept; reference only for the faceless video channel idea.

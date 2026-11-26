@@ -5,6 +5,7 @@ The tool's own defaults: no fixes, no sandbox, at your own risk. Never offered f
 - [/bro skill](tools/bro-skill.md): YOLO (your own risk): skips the manual copy.
 The README curl one-liner or ./install.sh.
 - [2d-character-sketch (yenceesanjeev)](tools/2d-character-sketch-yenceesanjeev.md): YOLO (your own risk): skips the commit pin, the manual Rhubarb checksum and the WSL-only openvoice rule. Copy the skill folder into %USERPROFILE%\.claude\\skills\\ (or ~/.claude/skills), then let Claude run bash scripts/install-rhubarb.sh and bash scripts/install-openvoice.sh when it asks (SKILL.md:35,149).
+- [3d-video-studio (codewithsiddique-04)](tools/3d-video-studio-codewithsiddique-04.md): YOLO (your own risk): skips the pinned commit, the pinned pip versions and the sandbox. README.md\:39-43\: git clone into ~/.claude/skills/3d-video-studio and bash setup.sh, or let Claude install and run setup for you.
 - [Ace Data Cloud plugin](tools/ace-data-cloud-plugin.md): YOLO (your own risk): skips the key limits and toolset choice, so the model spends credits freely.
 Install from the catalog with your general key and all 17 toolsets.
 - [advisor-orchestrator-worker skill (awesome-llm-apps)](tools/advisor-orchestrator-worker-skill-awesome-llm-apps.md): YOLO (your own risk): skips the VM.
@@ -39,6 +40,7 @@ git clone https://github.com/aliangSSS/aliang-knowledge-video && python scripts/
 npx skills add wheresryan22/anatomy -g -a claude-code (sends install telemetry to skills.sh unless DISABLE_TELEMETRY=1 is set).
 - [angr](tools/angr.md): YOLO (your own risk): skips the version pin (10.0.7 from 2026-11-13, unreviewed) and the venv.
 pip install angr
+- [animation-styles (deenukhan)](tools/animation-styles-deenukhan.md): YOLO (your own risk): skips the pinned commit and npm ci. SETUP.md\:7-16\: ask Claude to 'Install this skill for me: https://github.com/deenukhan/animation-styles' and let it clone main, npm install and git pull later.
 - [Anime.js](tools/anime-js.md): YOLO (your own risk): skips the version pin.
 npm install animejs
 - [Anthropic TypeScript SDK](tools/anthropic-typescript-sdk.md): YOLO (your own risk): skips the version pin, telemetry off, debug-log and secret-scrubbing steps and the spend limit.
@@ -47,6 +49,8 @@ Windows: npm install @anthropic-ai/sdk in your project and call the API with you
 npx @apify/actors-mcp-server with defaults.
 - [Apktool](tools/apktool.md): YOLO (your own risk): skips the pinned version.
 Download the newest apktool jar and run java -jar apktool.jar.
+- [app-3d-video-skill (huypham85)](tools/app-3d-video-skill-huypham85.md): YOLO (your own risk): skips the pinned commit (README.md:27-31 clones main and copies both folders into the skills folder). Same platform limit: no Windows or Android install exists.
+- [Aria (Abhinav-murugan1)](tools/aria-abhinav-murugan1.md): YOLO (your own risk): skips the pinned commit and the manual raea install. INSTALL.md:13-16 and 31-34: git clone (main), ./install.ps1 -EngineOnly -Voice (runs irm https://raea.io/install.ps1 | iex, which installs the newest raea and its skills), then /plugin marketplace add Abhinav-murugan1/Aria and /plugin install aria@aria.
 - [Arize Phoenix](tools/arize-phoenix.md): YOLO (your own risk): skips telemetry off and the pin.
 pip install -U arize-phoenix with the pixel on.
 - [Astryx](tools/astryx.md): YOLO (your own risk): skips the pinned version, --ignore-scripts, NO_UPDATE_NOTIFIER=1, the deny rule against global npm, and staying off the hosted MCP and `astryx init --user`.
@@ -170,6 +174,7 @@ npx skills add https://github.com/cloudflare/security-audit-skill --skill securi
 /code-review --comment (posts its review on the PR).
 - [Code Simplifier (Anthropic plugin)](tools/code-simplifier-anthropic-plugin.md): YOLO (your own risk): skips the branch and diff check.
 /plugin install code-simplifier@claude-plugins-official, run it on your working tree.
+- [code-cartoon (famfamfam)](tools/code-cartoon-famfamfam.md): YOLO (your own risk): skips the pinned commit, the venv and the key limits. README: claude plugin marketplace add famfamfam/code-cartoon then claude plugin install code-cartoon@famfamfam, pip install numpy scipy pillow piper-tts, and put any Cloudflare, fal or OpenAI-compatible keys in keys.env.
 - [codebase-memory-mcp (DeusData)](tools/codebase-memory-mcp-deusdata.md): YOLO (your own risk): skips reading the script, the hook check and the no-self-update rule.
 Windows: run the README's one-line installer and keep the hooks it writes; update with its self-update command (latest release).
 - [Codex CLI (OpenAI)](tools/codex-cli-openai.md): YOLO (your own risk): skips the version pin and reading the installer.

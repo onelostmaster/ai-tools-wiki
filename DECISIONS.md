@@ -417,7 +417,7 @@
 | [zero-dollar-studio](tools/zero-dollar-studio.md) | Try | safe |
 | [2d-character-sketch (yenceesanjeev)](tools/2d-character-sketch-yenceesanjeev.md) | Skip | safe |
 | [2hongo](tools/2hongo.md) | Skip | unreviewed |
-| [3d-video-studio (codewithsiddique-04)](tools/3d-video-studio-codewithsiddique-04.md) | Skip | unreviewed |
+| [3d-video-studio (codewithsiddique-04)](tools/3d-video-studio-codewithsiddique-04.md) | Skip | safe |
 | [Abracadabrax thumbnail maker](tools/abracadabrax-thumbnail-maker.md) | Skip | unreviewed |
 | [Ace Data Cloud plugin](tools/ace-data-cloud-plugin.md) | Skip | safe |
 | [advisor-orchestrator-worker skill (awesome-llm-apps)](tools/advisor-orchestrator-worker-skill-awesome-llm-apps.md) | Skip | caution |
@@ -428,10 +428,11 @@
 | [AgenticSeek](tools/agenticseek.md) | Skip | safe |
 | [aipacking (zhouyuechuan2025-ui)](tools/aipacking-zhouyuechuan2025-ui.md) | Skip | unreviewed |
 | [AiSOC (beenuar/AiSOC)](tools/aisoc-beenuar-aisoc.md) | Skip | safe |
-| [animation-styles (deenukhan)](tools/animation-styles-deenukhan.md) | Skip | unreviewed |
-| [app-3d-video-skill (huypham85)](tools/app-3d-video-skill-huypham85.md) | Skip | unreviewed |
+| [animation-styles (deenukhan)](tools/animation-styles-deenukhan.md) | Skip | safe |
+| [app-3d-video-skill (huypham85)](tools/app-3d-video-skill-huypham85.md) | Skip | safe |
+| [app-launch-video (renthelautomations)](tools/app-launch-video-renthelautomations.md) | Skip | unreviewed |
 | [AppFlowy](tools/appflowy.md) | Skip | safe |
-| [Aria (Abhinav-murugan1)](tools/aria-abhinav-murugan1.md) | Skip | unreviewed |
+| [Aria (Abhinav-murugan1)](tools/aria-abhinav-murugan1.md) | Skip | safe |
 | [AutoGen (Microsoft)](tools/autogen-microsoft.md) | Skip | caution |
 | [autoRecording (OrrrGE)](tools/autorecording-orrrge.md) | Skip | unreviewed |
 | [Ayrshare Claude plugin + MCP](tools/ayrshare-claude-plugin-mcp.md) | Skip | safe |
@@ -467,6 +468,7 @@
 | [ClipUGC CLI (clipugc)](tools/clipugc-cli-clipugc.md) | Skip | unreviewed |
 | [Codex plugin for Claude Code](tools/codex-plugin-for-claude-code.md) | Skip | safe |
 | [Composio Instagram MCP](tools/composio-instagram-mcp.md) | Skip | unreviewed |
+| [Content Skills (Blotato)](tools/content-skills-blotato.md) | Skip | unreviewed |
 | [Content-Agent-Kit (XuHo-IT)](tools/content-agent-kit-xuho-it.md) | Skip | unreviewed |
 | [Coqui TTS](tools/coqui-tts.md) | Skip | caution |
 | [css.gg (current restricted license)](tools/css-gg-current-restricted-license.md) | Skip | safe |
@@ -502,6 +504,7 @@
 | [HibAi-Editing-Studio (HibaBenzahra)](tools/hibai-editing-studio-hibabenzahra.md) | Skip | unreviewed |
 | [Higgsfield Virality Predictor](tools/higgsfield-virality-predictor.md) | Skip | unreviewed |
 | [HookLab (CoolerGit)](tools/hooklab-coolergit.md) | Skip | safe |
+| [html-to-mp4 (Universaljojo)](tools/html-to-mp4-universaljojo.md) | Skip | unreviewed |
 | [HyperFrames](tools/hyperframes.md) | Skip | safe |
 | [hyperframes-video-polish (rocksstarcode)](tools/hyperframes-video-polish-rocksstarcode.md) | Skip | unreviewed |
 | [hypr-video-skills (superyhee)](tools/hypr-video-skills-superyhee.md) | Skip | unreviewed |
@@ -511,6 +514,7 @@
 | [javascript-animation-skills (iart-ai)](tools/javascript-animation-skills-iart-ai.md) | Skip | unreviewed |
 | [Jisho MCP](tools/jisho-mcp.md) | Skip | unreviewed |
 | [juzu (syydaniel)](tools/juzu-syydaniel.md) | Skip | unreviewed |
+| [Kanban Motion (Kanban Studios)](tools/kanban-motion-kanban-studios.md) | Skip | unreviewed |
 | [keeran.ai skills (kjagsadvisors)](tools/keeran-ai-skills-kjagsadvisors.md) | Skip | unreviewed |
 | [lanshu-animated-architecture-diagram (cclank)](tools/lanshu-animated-architecture-diagram-cclank.md) | Skip | unreviewed |
 | [last30days skill](tools/last30days-skill.md) | Skip | safe |
@@ -556,6 +560,7 @@
 | [Playwright MCP](tools/playwright-mcp.md) | Skip | safe |
 | [plotbeat (DbgKinggg)](tools/plotbeat-dbgkinggg.md) | Skip | unreviewed |
 | [pocketworld (Tu-Zhenzhao)](tools/pocketworld-tu-zhenzhao.md) | Skip | unreviewed |
+| [postiz-content-skills (Postiz)](tools/postiz-content-skills-postiz.md) | Skip | unreviewed |
 | [Posty](tools/posty.md) | Skip | unreviewed |
 | [pro-motion-editor-skill (iamajmeena)](tools/pro-motion-editor-skill-iamajmeena.md) | Skip | unreviewed |
 | [Puppeteer](tools/puppeteer.md) | Skip | safe |
@@ -629,7 +634,7 @@
 | [zack-d-films generator](tools/zack-d-films-generator.md) | Avoid | avoid |
 | [Anthropic TypeScript SDK](tools/anthropic-typescript-sdk.md) |  | safe |
 | [CADCraft](tools/cadcraft.md) |  | safe |
-| [code-cartoon (famfamfam)](tools/code-cartoon-famfamfam.md) | Later | unreviewed |
+| [code-cartoon (famfamfam)](tools/code-cartoon-famfamfam.md) | Later | safe |
 | [coolray-video-qc (ShakeJ)](tools/coolray-video-qc-shakej.md) | Later | safe |
 | [DeckCraft](tools/deckcraft.md) |  | safe |
 | [DesignCraft](tools/designcraft.md) |  | safe |
@@ -642,11 +647,13 @@
 | [LightCraft](tools/lightcraft.md) |  | safe |
 | [Motion (React/JS animation library)](tools/motion-react-js-animation-library.md) |  | safe |
 | [motion-director (sharbelxyz)](tools/motion-director-sharbelxyz.md) | Later | safe |
+| [motion-graphics (Barty-Bart)](tools/motion-graphics-barty-bart.md) | Later | unreviewed |
 | [motlab (staryone)](tools/motlab-staryone.md) | Later | safe |
 | [PdfCraft](tools/pdfcraft.md) |  | safe |
 | [PhotoCraft](tools/photocraft.md) |  | safe |
 | [remotion-qa (GroMarketing)](tools/remotion-qa-gromarketing.md) | Later | safe |
 | [Sherlock (username OSINT CLI)](tools/sherlock-username-osint-cli.md) |  | safe |
 | [SoundCraft](tools/soundcraft.md) |  | safe |
+| [SoundKit (Soundza)](tools/soundkit-soundza.md) | Later | unreviewed |
 | [VectorCraft](tools/vectorcraft.md) |  | safe |
 | [WordCraft](tools/wordcraft.md) |  | safe |
