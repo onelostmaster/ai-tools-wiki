@@ -1,5 +1,5 @@
 {
- "count": 655,
+ "count": 662,
  "tools": [
   {
    "Name": "/bro skill",
@@ -48,6 +48,22 @@
    "YOLO install": "Not offered.",
    "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nContain it: do not install until its official URL is recorded and reviewed.",
    "Last checked": "2026-11-15"
+  },
+  {
+   "Name": "3D Engineering Video skills (davidalfasunarna)",
+   "Type": "skill",
+   "Category": "generating videos, voice and audio",
+   "Official URL": "https://github.com/davidalfasunarna/3d-engineering-video-claude-skills",
+   "GitHub repo": "https://github.com/davidalfasunarna/3d-engineering-video-claude-skills @ 8978568 (GPL-3.0)",
+   "Price": "Free on GitHub, GPL-3.0 (github.com, checked 2026-11-26); Higgsfield credits are a separate paid service (price not checked)",
+   "Decision": "Skip",
+   "Safety verdict": "unreviewed",
+   "Safety basis": "Inferred (unreviewed)",
+   "Safety reason": "Not code-reviewed for safety. README: needs Claude with skills and code execution, plus a paid Higgsfield account with credits connected as an MCP connector (voice, audio sandbox, GPU); on first use the skill clones the repo and installs Blender as a Python module (about 1 GB) in Claude's workspace; a ~70 s video costs about 75–85 GPU credits plus ~6 per voice take; tested only in the Claude app, not Claude Code. Repo contains no credentials. Repo, license and latest commit confirmed from github.com metadata, 2026-11-26.",
+   "Safe install": "Unreviewed: contain it: upload only from the pinned commit 8978568 in claude.ai (its cloud workspace is the sandbox), set a low Higgsfield credit cap before the first render, no other connectors on that chat. Get a review before real use.",
+   "YOLO install": "Not offered.",
+   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nclaude.ai: upload the skill ZIPs (skills/) in Settings → Capabilities → Skills and connect the Higgsfield connector (README).",
+   "Last checked": "2026-11-26"
   },
   {
    "Name": "3d-video-studio (codewithsiddique-04)",
@@ -160,6 +176,22 @@
    "YOLO install": "YOLO (your own risk): skips the VM.\nCopy the skill into your main Claude Code and let workers run with skip-permissions.",
    "Install notes": "Caution: read the Safety reason and ask the user before installing.\nClaude Code: only in a throwaway folder or VM; needs the Antigravity CLI (not reviewed). Hermes: same. Android: no.",
    "Last checked": "2026-11-18"
+  },
+  {
+   "Name": "AE-MCP (ishu86 after-effects-mcp)",
+   "Type": "MCP",
+   "Category": "editing, generating videos",
+   "Official URL": "https://github.com/ishu86/after-effects-mcp",
+   "GitHub repo": "https://github.com/ishu86/after-effects-mcp @ 5223c17 (MIT)",
+   "Price": "Free on GitHub, MIT (github.com, checked 2026-11-26); needs a paid Adobe After Effects plan (price not checked)",
+   "Decision": "Skip",
+   "Safety verdict": "unreviewed",
+   "Safety basis": "Inferred (unreviewed)",
+   "Safety reason": "Not code-reviewed for safety. README: needs After Effects 2024+ (paid Adobe app) on Windows or macOS; npm install, npm run build, then scripts\\\\install-cep.bat. Verified in scripts/install-cep.bat: it sets HKCU\\\\SOFTWARE\\\\Adobe\\\\CSXS.10/11/12 PlayerDebugMode=1, which lets After Effects load any unsigned CEP extension, and symlinks (or copies) the panel into %APPDATA%\\\\Adobe\\\\CEP\\\\extensions\\\\com.aemcp.panel. Repo, license and latest commit confirmed from github.com metadata, 2026-11-26.",
+   "Safe install": "Unreviewed: contain it: clone at the pinned commit 5223c17, build in a sandbox, only install the CEP panel on a machine where you accept unsigned After Effects extensions (install-cep.bat turns that on; undo with the reg delete lines in Install notes), no API keys (it needs none). Get a review before real use.",
+   "YOLO install": "Not offered.",
+   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nWindows: npm install, npm run build, scripts\\\\install-cep.bat, then add the server to %APPDATA%\\\\Claude\\\\claude_desktop_config.json (README). Fix for the debug flag: after removing the panel, reg delete HKCU\\\\SOFTWARE\\\\Adobe\\\\CSXS.12 /v PlayerDebugMode /f (and CSXS.11, CSXS.10).",
+   "Last checked": "2026-11-26"
   },
   {
    "Name": "AG-UI protocol",
@@ -370,6 +402,22 @@
    "Last checked": "2026-11-14"
   },
   {
+   "Name": "agents-video-editing-skills (iamaanahmad)",
+   "Type": "skill",
+   "Category": "editing, generating videos",
+   "Official URL": "https://github.com/iamaanahmad/agents-video-editing-skills",
+   "GitHub repo": "https://github.com/iamaanahmad/agents-video-editing-skills @ 981466b (MIT)",
+   "Price": "Free on GitHub, MIT (github.com, checked 2026-11-26)",
+   "Decision": "Skip",
+   "Safety verdict": "unreviewed",
+   "Safety basis": "Inferred (unreviewed)",
+   "Safety reason": "Not code-reviewed for safety. README: npx agents-video-editing-skills --agent claude --rules writes skills and instruction files into the current project; --scope user writes them for every project on the machine; --dry-run shows the files first; a clone install uses python scripts/install.py (Python 3.9+, standard library only); Windows PowerShell supported. Skills use FFmpeg and some need Node.js or Python packages (each skill says which). Repo, license and latest commit confirmed from github.com metadata, 2026-11-26.",
+   "Safe install": "Unreviewed: contain it: clone at the pinned commit 981466b, run python scripts/install.py --agent claude --project <sandbox project> --dry-run first, then the same without --dry-run; never --scope user or --rules (they write outside the skill folder); no API keys. Get a review before real use.",
+   "YOLO install": "Not offered.",
+   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nClaude Code (Windows): python scripts/install.py --agent claude --project \"C:\\\\path\\\\to\\\\project\" --dry-run, then without --dry-run (README).",
+   "Last checked": "2026-11-26"
+  },
+  {
    "Name": "Agno",
    "Type": "library",
    "Category": "developer tools, automation",
@@ -406,16 +454,16 @@
    "Type": "skill",
    "Category": "editing, generating videos",
    "Official URL": "https://github.com/zhouyuechuan2025-ui/aipacking",
-   "GitHub repo": "https://github.com/zhouyuechuan2025-ui/aipacking @ aa9d620 (MIT)",
+   "GitHub repo": "https://github.com/zhouyuechuan2025-ui/aipacking @ 0a0e914 (MIT)",
    "Price": "Free on GitHub, MIT (github.com, checked 2026-11-13)",
    "Decision": "Skip",
-   "Safety verdict": "unreviewed",
-   "Safety basis": "Inferred (unreviewed)",
-   "Safety reason": "Not code-reviewed for safety. Repo, license and latest commit confirmed from github.com metadata, 2026-11-13.",
-   "Safe install": "Safe install (fixes applied):\nUnreviewed: contain it: read it on GitHub first (https://github.com/zhouyuechuan2025-ui/aipacking @ aa9d620); if you try it, copy the skill folder at that exact commit into a throwaway Claude Code project or devcontainer (on Windows, not your main %USERPROFILE%\\.claude\\\\skills), no API keys in its env, no network for its scripts unless a step needs it, and do not run its install scripts. Get a review before real use.",
-   "YOLO install": "Not offered.",
-   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nClaude Code: follow the repo README; on Windows skills go under %USERPROFILE%\\.claude\\\\skills\\.",
-   "Last checked": "2026-11-17"
+   "Safety verdict": "safe",
+   "Safety basis": "Code read",
+   "Safety reason": "a review bot read @0a0e914: safe with these fixes. The skill is a Chinese-language workflow plus Node scripts that copy Remotion components into an existing 'Motion Studio / Remotion' job project. No network calls, no eval, no hooks, no MCP server, no keys; ffmpeg and ffprobe are called without a shell (mix-audio.mjs:9, 26). Verified 1: Codex's skill-installer line in docs/AIPACKING.md:10 installs from main, not a fixed commit. Fix: copy skills/aipacking from the pinned commit 0a0e914.; it keeps copies of changed files in .skill-backups/ (:7). Fix: use it only on a copy of the job project committed to git, run the --check step first, then review git diff and reword or delete the added AGENTS.md section before your agent reads it. Verified 3: the root package.json pins exact versions with a package-lock, and .npmrc keeps the npm cache in the repo; npm install is only needed for the repo's own demo, not for the skill. Fix: don't npm install the repo; the skill uses the job project's dependencies. Unverified: scripts/reference-matte.py needs an RVM ONNX model and Python packages that are not in the repo, and no skill file calls it. Contain: don't run it unless you fetch the model yourself from its official project. MIT (LICENSE); bundled workbench code under Apache-2.0 (licenses/Shotcraft.txt).",
+   "Safe install": "Safe install (fixes applied):\nClaude Code (Windows): git clone https://github.com/zhouyuechuan2025-ui/aipacking ; cd aipacking ; git checkout 0a0e9144180b394a2ad526676e2d701ab3532502 ; copy the whole skills\\\\aipacking folder (keep its subfolders) into %USERPROFILE%\\.claude\\\\skills\\\\aipacking. Don't npm install the repo. Before the skill's installer runs, commit your Motion Studio / Remotion job project to git (or use a copy), let it run 'node <skill>\\\\original\\\\aipacking\\\\scripts\\\\apply-aipacking.mjs <absolute job path> --check' first, then the real install, then review git diff: reword or delete the appended AGENTS.md section and check the validate.mjs change. Don't run reference-matte.py. Needs Node 20+, ffmpeg and ffprobe.\nclaude.ai, Hermes, Android: not supported (local Node, ffmpeg and a Remotion project).",
+   "YOLO install": "YOLO (your own risk): skips the pinned commit and the git-diff review. Codex: '$skill-installer' from https://github.com/zhouyuechuan2025-ui/aipacking/tree/main/skills/aipacking (docs/AIPACKING.md:10).",
+   "Install notes": "Safe with fixes: copy skills/aipacking from the pinned commit 0a0e914; run its installer only on a git-committed job project, --check first, then review the diff (it appends an AGENTS.md section worded as your request and edits validate.mjs and the render preflight); no npm install of the repo; don't run reference-matte.py. Chinese-language docs; needs an existing Motion Studio / Remotion job project, so it is a reference more than a drop-in.",
+   "Last checked": "2026-11-26"
   },
   {
    "Name": "Airbnb MCP (openbnb-org/mcp-server-airbnb)",
@@ -633,13 +681,13 @@
    "GitHub repo": "https://github.com/renthelautomations/app-launch-video @ 6d0776b (MIT)",
    "Price": "Free on GitHub, MIT (github.com, checked 2026-11-25); Remotion has its own company license",
    "Decision": "Skip",
-   "Safety verdict": "unreviewed",
-   "Safety basis": "Inferred (unreviewed)",
-   "Safety reason": "Not code-reviewed for safety. README: copy app-launch-video/ into ~/.claude/skills/ (or a project's .claude/skills/, or zip and upload in claude.ai Settings → Capabilities → Skills); needs Node 18+ or Bun, ffmpeg/ffprobe, Chrome (Remotion fetches a headless shell), Python 3.10+ with numpy scipy pillow h5py, and potrace; downloaded assets keep their own licenses. Repo, license and latest commit confirmed from github.com metadata, 2026-11-25.",
-   "Safe install": "Unreviewed: contain it: copy the skill from the pinned commit 6d0776b, run its Remotion project inside a devcontainer or sandbox with Python packages in a venv, no API keys (it needs none), network on only for npm/pip and the headless shell download. Get a review before real use.",
-   "YOLO install": "Not offered.",
-   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nClaude Code: copy the app-launch-video folder into ~/.claude/skills/. claude.ai: zip the folder and upload it in Settings → Capabilities → Skills (README).",
-   "Last checked": "2026-11-25"
+   "Safety verdict": "safe",
+   "Safety basis": "Code read",
+   "Safety reason": "a review bot read @6d0776b: safe with these fixes. A Claude Code skill that builds an app launch video as a Remotion project; it needs no API keys, the template code makes no web calls of its own, and every subprocess call passes a fixed argument list to ffmpeg, ffprobe or potrace (audio.py:209, :349; qa/_video.py:9, :34; trace_logo.py:32). Verified 1: SKILL.md:78 tells Claude to copy template/ and run bun install (or npm); package.json pins its five direct packages exactly (Remotion 4.0.546, React 19.3.1) but the repo ships no lockfile, so the rest of the dependency tree resolves to whatever is newest that day. Fix: run the install yourself, keep the package-lock.json it writes, and use npm ci from then on. Verified 2: fetch_kenney.sh:7-10 downloads three sound zips from opengameart.org and fetch_hrtf.sh:6 downloads kemar.sofa from sofacoustics.org, both over https with no checksum; they are audio data, not programs. Fix: run them once, note the sha256 of sfx/kenney and hrtf/kemar.sofa, and reuse those files. Verified 3: Film.jsx:5-10 loads the Inter font through @remotion/google-fonts, so renders fetch it from Google Fonts. Fix: none needed; to render offline, swap in a local font file. Verified 4: deliver.sh:13 and :17 delete only its own intermediate renders inside out/. The bash scripts (deliver.sh, fetch_*.sh) need WSL or Git Bash on Windows. Remotion's own license terms apply (see the Remotion row). MIT (LICENSE).",
+   "Safe install": "Safe install (fixes applied):\nClaude Code (Windows): git clone https://github.com/renthelautomations/app-launch-video ; cd app-launch-video ; git checkout 6d0776b59aa7a10476907af9cfba7037f501017e ; copy the app-launch-video folder into %USERPROFILE%\\.claude\\\\skills\\\\ . In each video project, run npm install yourself in the copied template, keep the package-lock.json and use npm ci after that; install ffmpeg, potrace and Node yourself; Python packages (numpy scipy pillow h5py) go in a venv. Run fetch_kenney.sh and fetch_hrtf.sh once (WSL or Git Bash), note the files' sha256 and reuse them.\nclaude.ai: zip the app-launch-video folder from the pinned commit and upload it in Settings → Capabilities → Skills (README:93); rendering needs a local Node, ffmpeg and Python, so use Claude Code for real renders.\nHermes, Android: not supported (local Remotion and ffmpeg pipeline).",
+   "YOLO install": "YOLO (your own risk): skips the pinned commit, the kept lockfile and the asset checksums. README: git clone https://github.com/renthelautomations/app-launch-video.git ; cp -R app-launch-video/app-launch-video ~/.claude/skills/ , then let Claude run bun install and the fetch scripts.",
+   "Install notes": "Safe with fixes: copy the skill from pinned commit 6d0776b; no API keys needed; run the template's npm install yourself and keep the lockfile (the repo has none); fetch the CC0 sounds and HRTF file once and keep their sha256; renders load Inter from Google Fonts. Bash scripts need WSL or Git Bash on Windows. Fits launch/promo videos; for the faceless channel it is a Remotion reference rather than a direct fit.",
+   "Last checked": "2026-11-26"
   },
   {
    "Name": "AppFlowy",
@@ -3298,6 +3346,22 @@
    "Last checked": "2026-11-14"
   },
   {
+   "Name": "ffmpeg-mcp (yubraaj11)",
+   "Type": "MCP",
+   "Category": "editing, generating videos",
+   "Official URL": "https://github.com/yubraaj11/ffmpeg-mcp",
+   "GitHub repo": "https://github.com/yubraaj11/ffmpeg-mcp @ dcb591e (MIT)",
+   "Price": "Free on GitHub, MIT (github.com, checked 2026-11-26)",
+   "Decision": "Skip",
+   "Safety verdict": "unreviewed",
+   "Safety basis": "Inferred (unreviewed)",
+   "Safety reason": "Not code-reviewed for safety. README: needs Python 3.12+ and FFmpeg/ffprobe on PATH; runs with uvx ffmpeg-mcp-studio (PyPI package, unpinned) added to your MCP client config; tools check that input paths exist before FFmpeg runs. unverified: which folders it writes output to. Repo, license and latest commit confirmed from github.com metadata, 2026-11-26.",
+   "Safe install": "Unreviewed: contain it: run it from a clone at the pinned commit dcb591e (not the unpinned PyPI package) inside a devcontainer or sandbox, give it one working folder of copies of your clips, no API keys (it needs none), network off after install. Get a review before real use.",
+   "YOLO install": "Not offered.",
+   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nClaude Code (Windows): winget install ffmpeg, then add an MCP server that runs uvx ffmpeg-mcp-studio (README Quick Start).",
+   "Last checked": "2026-11-26"
+  },
+  {
    "Name": "fframes (dmtrKovalenko)",
    "Type": "library",
    "Category": "generating videos",
@@ -4447,7 +4511,7 @@
    "Safe install": "Unreviewed: contain it: clone at the pinned commit ce5aea0 inside a devcontainer or sandbox, npm ci there, no API keys (it needs none), network on only for npm and the Chromium download. Get a review before real use.",
    "YOLO install": "Not offered.",
    "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nWindows: winget install ffmpeg; in an example folder: npm install, npx playwright install chromium, node record.mjs (README).",
-   "Last checked": "2026-11-25"
+   "Last checked": "2026-11-26"
   },
   {
    "Name": "Hugging Face skills (huggingface/skills)",
@@ -4992,6 +5056,22 @@
    "YOLO install": "YOLO (your own risk): skips the SHA-256 check and the parser setting. git clone https://github.com/KanjiVG/kanjivg and point the app at the kanji/ folder (README).",
    "Install notes": "Ask the user before adding it. Safe with the fixes in Safe install applied. Data only: kanji stroke-order SVGs for a project lessons; credit KanjiVG (CC BY-SA 3.0).\nOfficial docs: https://kanjivg.tagaini.net",
    "Last checked": "2026-11-18"
+  },
+  {
+   "Name": "KapeCut (BrewedOps)",
+   "Type": "app",
+   "Category": "generating videos, editing",
+   "Official URL": "https://github.com/brewed-ops/KapeCut",
+   "GitHub repo": "https://github.com/brewed-ops/KapeCut @ 06d9708 (MIT, except icons in src/renderer/icons.ts)",
+   "Price": "Free on GitHub, MIT (github.com, checked 2026-11-26)",
+   "Decision": "Skip",
+   "Safety verdict": "unreviewed",
+   "Safety basis": "Inferred (unreviewed)",
+   "Safety reason": "Not code-reviewed for safety. README: Windows 10/11 installer KapeCut-Setup-<version>.exe from GitHub releases is not code-signed (SmartScreen shows \"Windows protected your PC\"); it updates itself from Settings > Updates; a Setup window checks for ffmpeg, Claude Code, the KapeCut skill (installed to ~/.claude/skills/kapecut) and Chrome/Edge and shows install commands without running them. From source: Node 24 or 26+, npm ci, npm run dev. Icons (Jiggicons) are licensed for KapeCut only. Repo, license and latest commit confirmed from github.com metadata, 2026-11-26.",
+   "Safe install": "Unreviewed: contain it: build from source at the pinned commit 06d9708 (npm ci, npm run dev) inside a Windows Sandbox or VM instead of the unsigned .exe, turn off its self-update, no API keys (it needs none). Get a review before real use.",
+   "YOLO install": "Not offered.",
+   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nWindows: KapeCut-Setup-<version>.exe from the latest GitHub release (unsigned), or from source with Node 24: npm ci, npm run dev (README).",
+   "Last checked": "2026-11-26"
   },
   {
    "Name": "Kapso agent skills",
@@ -6088,14 +6168,14 @@
    "Official URL": "https://github.com/Barty-Bart/motion-graphics",
    "GitHub repo": "https://github.com/Barty-Bart/motion-graphics @ 3d83d98 (MIT per LICENSE)",
    "Price": "Free on GitHub, MIT; bundled sounds CC0 (github.com, checked 2026-11-25)",
-   "Decision": "Later",
-   "Safety verdict": "unreviewed",
-   "Safety basis": "Inferred (unreviewed)",
-   "Safety reason": "Not code-reviewed for safety. README: install with npx skills add Barty-Bart/motion-graphics. skills/sound-effects/SKILL.md: the default kit is bundled CC0 .ogg files; the typing sound (Mixkit #1392) is downloaded at runtime into <out>/sound-effects-cache/ under the Mixkit licence (not CC0, do not commit it). Repo, license and latest commit confirmed from github.com metadata, 2026-11-25.",
-   "Safe install": "Unreviewed: contain it: copy only skills/sound-effects from the pinned commit 3d83d98 into a devcontainer or sandbox project, no API keys (it needs none), network off except the one Mixkit typing download; keep Mixkit files out of anything you publish or commit. Get a review before real use.",
-   "YOLO install": "Not offered.",
-   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nClaude Code: npx skills add Barty-Bart/motion-graphics (README); or copy one skill folder (e.g. skills/sound-effects) to ~/.claude/skills/.",
-   "Last checked": "2026-11-25"
+   "Decision": "Skip",
+   "Safety verdict": "safe",
+   "Safety basis": "Code read",
+   "Safety reason": "a review bot read @3d83d98: safe with these fixes. Six Claude Code skills (explainer-default, explainer-engaging, explainer-high-energy, motion-broll, object-separation, sound-effects): prompt files plus local Python/Node scripts that render HTML animations to video with Playwright Chromium and ffmpeg. No hooks, no MCP server, no API keys, no pickle or shell=True; the only network use is the installs and downloads below. Verified 1: motion-broll/scripts/setup.sh:11 installs numpy with pip --user, and if that fails with pip --break-system-packages into your system Python; setup.sh:15 runs 'npm install playwright' (no version) and 'npx playwright install chromium' in ./motion. Fix: don't run setup.sh; make a venv and install numpy there, and install a pinned playwright yourself in ./motion (npm install playwright@<version>, then npx playwright install chromium) inside the devcontainer or sandbox. The explainer skills ask for the same unpinned 'npm i playwright' (explainer-default/SKILL.md:133); pin it the same way. Verified 2: object-separation installs torch, transformers, opencv-python-headless, pillow and numpy unpinned into its own venv (object-separation/SKILL.md:17-18) and downloads a facebook/sam2.1 model of 156-898 MB from Hugging Face on first run into ~/.cache/huggingface (SKILL.md:29-31, 57, 161); after that it runs offline and uploads nothing (SKILL.md:8, 168). Fix: pin the pip versions in that venv and do the first run with network on in the sandbox. Verified 3: sound-effects downloads Mixkit preview MP3s with curl from assets.mixkit.co when a cue uses a runtime sound (sound_pass.py:58-66; manifest.json:1227-1671) into <out>/sound-effects-cache; those files are under the Mixkit licence, not CC0 (LICENSES.md). Fix: use only the bundled CC0 kit (pass bundled picks with --swaps) or keep Mixkit files out of anything you commit or publish. Other: sound_pass.py:24 eval()s ffprobe's frame-rate output (a number like 30000/1001 that ffprobe computes, not text from the video), so it is not a code path for the video's contents. 'npx skills add' (README:21) installs all six skills and tracks the repo's main branch, not a pinned commit. Fonts are OFL (engine/fonts/OFL-Geist.txt). MIT.",
+   "Safe install": "Safe install (fixes applied):\nClaude Code (Windows, Git Bash, inside a devcontainer or sandbox for the first run): git clone https://github.com/Barty-Bart/motion-graphics ; cd motion-graphics ; git checkout 3d83d987d658601d8a1269eb691622bdcd427335 ; copy only the skill folders you want from skills/ to <project>/.claude/skills/ (instead of npx skills add, which tracks main). Needs Node.js, ffmpeg and Python 3. Don't run motion-broll/scripts/setup.sh: py -m venv .venv ; .venv\\\\Scripts\\\\activate ; pip install numpy==<version> ; then in ./motion: npm install playwright@<version> ; npx playwright install chromium. object-separation: its own venv with pinned torch, transformers, opencv-python-headless, pillow and numpy; first run with network on to fetch the SAM 2.1 model, then offline. sound-effects: use the bundled CC0 kit only, or keep downloaded Mixkit files out of commits and published videos. No keys needed.\nclaude.ai, Hermes, Android: not supported (needs local Node, ffmpeg and Python).",
+   "YOLO install": "YOLO (your own risk): skips the pinned commit, the venv, the version pins and the Mixkit rule. README: npx skills add Barty-Bart/motion-graphics, then run motion-broll/scripts/setup.sh (pip --user or --break-system-packages numpy, latest playwright) and the skills' own pip and npm lines.",
+   "Install notes": "Safe with fixes: six Claude Code skills for explainer videos, motion b-roll over talking-head clips, SAM 2 object separation and a measured sound-effects pass with a bundled CC0 kit. Pin 3d83d98, copy only the skills you want, skip setup.sh (venv + pinned playwright instead), pin object-separation's pip installs, keep Mixkit downloads out of published work. Fits the faceless video channel idea and a project reels.",
+   "Last checked": "2026-11-26"
   },
   {
    "Name": "motion-pack (ANVEAI)",
@@ -7042,6 +7122,22 @@
    "Last checked": "2026-11-19"
   },
   {
+   "Name": "OrenCut (OrenFang)",
+   "Type": "skill",
+   "Category": "generating videos, editing",
+   "Official URL": "https://orenfang.github.io/orencut/",
+   "GitHub repo": "https://github.com/OrenFang/orencut @ 4aac9b3 (MIT)",
+   "Price": "Free on GitHub, MIT (github.com, checked 2026-11-26)",
+   "Decision": "Skip",
+   "Safety verdict": "unreviewed",
+   "Safety basis": "Inferred (unreviewed)",
+   "Safety reason": "Not code-reviewed for safety. README: for Codex, put the whole repo folder as .agents/skills/orencut/ in a project or ~/.agents/skills/orencut/ for all projects; the Studio runs in the browser at orenfang.github.io and exports MP4 locally; single components download as ZIPs from GitHub releases. Code MIT; locally imported fonts and third-party visuals keep their own licenses. Repo, license and latest commit confirmed from github.com metadata, 2026-11-26.",
+   "Safe install": "Unreviewed: contain it: copy the folder from the pinned commit 4aac9b3 into one sandbox project (project scope, not ~/.agents), no API keys (it needs none), network off except the npm install for the Remotion scenes. Get a review before real use.",
+   "YOLO install": "Not offered.",
+   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nCodex: copy the repo folder to <project>/.agents/skills/orencut/ (README). No Claude Code install documented; the Remotion scenes are in src/scenes/.",
+   "Last checked": "2026-11-26"
+  },
+  {
    "Name": "Originkit",
    "Type": "app",
    "Category": "design, building a site",
@@ -7104,6 +7200,22 @@
    "YOLO install": "YOLO (your own risk): skips the version pin, the own-icon flag and the ask-first rule.\nWindows: npm install -g pake-cli; answer yes to 'Rust not detected. Install now?' (winget install Rustlang.Rustup).",
    "Install notes": "Code-reviewed by a review bot @8163adf (caution; see Safety reason). Claude Code on Windows: needs Node 20.9+, Rust (rustup) and the Visual Studio C++ Build Tools plus WebView2; install those yourself first, then pnpm install -g pake-cli@3.18.0 (pins the reviewed version; npm works too). The plugin (/plugin marketplace add tw93/Pake, then /plugin install pake@pake) adds only a skill: no hooks, no MCP server. Its SKILL.md tells the agent to npm install -g pake-cli (unpinned) when missing and, on ENV_MISSING, to 'install and rerun': tell Claude to ask you before installing anything. If Rust is missing, an interactive run asks 'Rust not detected. Install now?' and on yes runs winget install Rustlang.Rustup; --json runs never install. Without --icon, Pake sends the site's domain to icon services (logo.dev, Brandfetch, Clearbit, Google favicons); pass --icon with your own file to avoid that. The built app gives the wrapped site's own origin (only) access to Pake's app commands such as downloads, notifications and opening links; wrap only sites you trust. claude.ai and Android: not a fit (builds desktop apps on a local computer).",
    "Last checked": "2026-11-18"
+  },
+  {
+   "Name": "papertalk (AmirMakir)",
+   "Type": "plugin",
+   "Category": "generating videos, voice and audio, research",
+   "Official URL": "https://github.com/AmirMakir/papertalk",
+   "GitHub repo": "https://github.com/AmirMakir/papertalk @ 036cfb6 (MIT)",
+   "Price": "Free on GitHub, MIT (github.com, checked 2026-11-26); Remotion license applies to rendering; ElevenLabs optional (price not checked)",
+   "Decision": "Skip",
+   "Safety verdict": "unreviewed",
+   "Safety basis": "Inferred (unreviewed)",
+   "Safety reason": "Not code-reviewed for safety. README: /plugin install papertalk --marketplace AmirMakir/papertalk; setup asks for a voice and, only if you pick ElevenLabs, your ElevenLabs key; first run installs Remotion and the local voice (about 1 GB, Node 20+) and the plugin works in ~/papertalk; the plugin starts its MCP server (mcp/server.mjs). Remotion has its own license (free up to 3 people). Repo, license and latest commit confirmed from github.com metadata, 2026-11-26.",
+   "Safe install": "Unreviewed: contain it: clone at the pinned commit 036cfb6 and load it with claude --plugin-dir . inside a devcontainer or sandbox, pick the local Kokoro voice (no ElevenLabs key), leave marketplace auto-update off, network on only for the first ~1 GB engine download. Get a review before real use.",
+   "YOLO install": "Not offered.",
+   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nClaude Code: /plugin install papertalk --marketplace AmirMakir/papertalk, choose the free local voice (README).",
+   "Last checked": "2026-11-26"
   },
   {
    "Name": "parallax-doc (sanskarprajapati)",
@@ -7481,13 +7593,13 @@
    "GitHub repo": "https://github.com/gitroomhq/postiz-content-skills @ 70fcc01 (MIT)",
    "Price": "Free on GitHub, MIT (github.com, checked 2026-11-25); README list prices per Short about $16 of Seedance clips plus HeyGen and ElevenLabs credits (provider prices not checked)",
    "Decision": "Skip",
-   "Safety verdict": "unreviewed",
-   "Safety basis": "Inferred (unreviewed)",
-   "Safety reason": "Not code-reviewed for safety. README: macOS or Linux (Windows only through WSL); ./install.sh installs ffmpeg, jq, the Postiz, agent-browser, DataForSEO and ElevenLabs CLIs, a Python environment, third-party skills, the claude-seo plugin and a Remotion template (via content-setup/scripts/install-deps.sh, not read); API keys stored in ~/.content-skills/.env; publishes posts through Postiz. unverified: whether the CLIs install globally. Repo, license and latest commit confirmed from github.com metadata, 2026-11-25.",
-   "Safe install": "Unreviewed: contain it: run ./install.sh --skills-only from the pinned commit 70fcc01 inside a WSL devcontainer or sandbox, no real Postiz/HeyGen/ElevenLabs keys, no connected social accounts, network on only for install downloads. Get a review before real use.",
-   "YOLO install": "Not offered.",
-   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nWindows: WSL only (README). Claude Code: ./install.sh (or --skills-only to copy the skills without the software).",
-   "Last checked": "2026-11-25"
+   "Safety verdict": "safe",
+   "Safety basis": "Code read",
+   "Safety reason": "a review bot read @70fcc01: safe with these fixes. Seven Claude Code skills plus helper scripts that call HeyGen (generate-video.js:50), EvoLink/Seedance (seedance.js:37) and OpenAI images with your own keys from ~/.content-skills/.env (chmod 600, install-deps.sh:157). load-env.sh:15 uses eval only on names already checked to be letters, digits and _ (:11). Verified 1: install.sh without --skills-only runs install-deps.sh (install.sh:49), which installs unpinned software globally: sudo apt-get ffmpeg and jq (install-deps.sh:66), npm install -g postiz, agent-browser, dataforseo-cli and @elevenlabs/cli (:90-93) plus agent-browser's Chromium (:102), latest openai and pillow into a venv (:84), six third-party skill repos with npx skills add -g (:113-121) and the claude-seo plugin at user scope (:123-124). Fix: run only ./install.sh --skills-only (install.sh:44-46) from the pinned commit and install each tool you actually need yourself at a fixed version after its own review. Verified 2: install.sh moves any existing skill with the same name to <name>.bak-<time> (install.sh:30-35). Fix: check %USERPROFILE%\\.claude\\\\skills for these 7 names first. Verified 3: video-shorts Step 8 schedules the Short to your connected Postiz channels (video-shorts/SKILL.md:184-195), gated on your yes (:178); seo-builder creates WordPress posts with the status from brand.md, default draft (seo-builder-skill/SKILL.md:124). Fix: keep brand.md status 'draft', connect no social channels to Postiz until you choose to, and answer no at the schedule step to keep the file local. Verified 4: seedance.js uploads local reference images to your Postiz media library to get a public URL (seedance.js:99-110). Fix: only pass images you are fine making public, or pass an https URL. Windows only through WSL (README:28). MIT (LICENSE).",
+   "Safe install": "Safe install (fixes applied):\nClaude Code (Windows, inside WSL; README:28): git clone https://github.com/gitroomhq/postiz-content-skills ; cd postiz-content-skills ; git checkout 70fcc011b65635c4d38f2a021a7adda8d2432409 ; check ~/.claude/skills has no folders named content-setup, gpt-image, heygen-avatar-video, remotion-shorts, seedance-video, seo-builder-skill or video-shorts ; ./install.sh --skills-only . Don't run install.sh or install-deps.sh without --skills-only; install ffmpeg yourself and any CLI you need (postiz, elevenlabs, dataforseo-cli) at a fixed version after its own review. Keys go only in ~/.content-skills/.env. In brand.md keep the WordPress status 'draft'; say no at the Postiz schedule step until you want to post; only give seedance images you'd make public.\nclaude.ai, Hermes, Android: not supported (local Claude Code skills with shell scripts).",
+   "YOLO install": "YOLO (your own risk): skips the pinned commit, the --skills-only limit and the version pins. README: ./install.sh (installs ffmpeg/jq with sudo, four global npm CLIs, Chromium, six third-party skills and the claude-seo plugin, all latest), then /content-setup to enter keys.",
+   "Install notes": "Safe with fixes: ./install.sh --skills-only from the pinned commit 70fcc01 inside WSL; no full installer (it does sudo apt, npm -g and npx skills add -g of unpinned third-party tools); keep WordPress status draft and say no at the Postiz schedule step; seedance uploads local images to Postiz to make public URLs. Needs paid HeyGen, EvoLink and OpenAI keys; marketing pipeline, not a fit for the current projects.",
+   "Last checked": "2026-11-26"
   },
   {
    "Name": "Posty",
@@ -7967,7 +8079,7 @@
    "Safe install": "Safe install (fixes applied):\nWindows/Claude Code: in the project folder `npm install -E --no-fund --no-audit remotion@4.0.539 @remotion/cli@4.0.539 @remotion/three@4.0.539 @remotion/media-utils@4.0.539 react@19 react-dom@19 three@0.186.1 @react-three/fiber@9.8.2 typescript @types/react @types/three` (a project's pinned set, about 340 MB), never `npm install -g`. Unverified: the framework code (not reviewed): keep it local to the project folder, no API keys in its env. Cloud renders use software WebGL (set in remotion.config.ts). Licence: free for individuals and companies of up to 3 people. Android: not used.",
    "YOLO install": "YOLO (your own risk): skips the exact pins.\n`npx create-video@latest`",
    "Install notes": "Claude Code: new project: `npx create-video@latest` (Remotion docs).\nClaude Code: a project's pinned install: `npm install --no-fund --no-audit remotion@4.0.539 @remotion/cli@4.0.539 @remotion/three@4.0.539 @remotion/media-utils@4.0.539 react@19 react-dom@19 three@0.186.1 @react-three/fiber@9.8.2 typescript @types/react @types/three` (rubber-short commands, a project Resources; about 340 MB of `node_modules`).\nClaude Code: no GPU in the cloud, so renders use software WebGL (SwiftShader, set in `remotion.config.ts`).\nClaude Code: for agent help, add the Remotion agent skills or the Remotion Claude Code plugin (separate rows).",
-   "Last checked": "2026-11-18"
+   "Last checked": "2026-11-26"
   },
   {
    "Name": "Remotion agent skills (official)",
@@ -8646,16 +8758,16 @@
    "Type": "skill",
    "Category": "voice and audio, generating videos",
    "Official URL": "https://soundza.com/soundkit",
-   "GitHub repo": "https://github.com/soundza/soundkit @ 6d59c27 (code MIT, audio CC0)",
+   "GitHub repo": "https://github.com/soundza/soundkit @ c9ec55f (code MIT, audio CC0)",
    "Price": "Free on GitHub, MIT code + CC0 audio (github.com, checked 2026-11-25); Soundza account features: price unknown",
-   "Decision": "Later",
-   "Safety verdict": "unreviewed",
-   "Safety basis": "Inferred (unreviewed)",
-   "Safety reason": "Not code-reviewed for safety. README: sounds install with npx shadcn add @soundza/<name> (or the full soundza.com/r/<name>.json URL); music beds print a curl download into public/sounds/; skill installs with npx skills add soundza/soundkit; the helper (Node 18+) has signin, search, add and generate commands against the wider Soundza library, whose sounds come under the Soundza License (not CC0). Repo, license and latest commit confirmed from github.com metadata, 2026-11-25.",
-   "Safe install": "Unreviewed: contain it: use only the CC0 files from registry/soundza/sounds/ at the pinned commit 6d59c27 inside a devcontainer or sandbox project; skip the helper's signin and generate commands (they need a Soundza account); network on only for the shadcn/curl downloads. Get a review before real use.",
-   "YOLO install": "Not offered.",
-   "Install notes": "Not code-reviewed yet: ask a review bot or Claude to review it before installing.\nClaude Code: npx skills add soundza/soundkit (README). Single sound: npx shadcn add @soundza/air-whoosh in a Remotion project.",
-   "Last checked": "2026-11-25"
+   "Decision": "Skip",
+   "Safety verdict": "safe",
+   "Safety basis": "Code read",
+   "Safety reason": "a review bot read @c9ec55f: safe with these fixes. The repo is 225 CC0 sound effects (embedded as base64 MP3 in .ts modules) and 25 CC0 music beds (LICENSE-AUDIO), a Remotion component, and one agent skill with a Node helper. No hooks, no MCP server, no eval or child_process. Verified 1: 'npx shadcn add @soundza/<name>' or https://soundza.com/r/<name>.json (README:31-34, 48) installs whatever soundza.com serves at that moment, not the repo's files (scripts/sync.mjs:6-9 pulls the registry from soundza.com). Fix: copy the sound .ts files and lib/soundza.ts from registry/soundza/ at the pinned commit instead; music beds: download the MP3 named in the module (README:102-105) once and keep it. Verified 2: the skill's helper only works with a Soundza account: SKILL.md:18 tells the agent to run 'soundza signin' (Google sign-in) for search, add and generate, and soundza.mjs:277-287 appends the key in plain text to the project's .env and adds .env to .gitignore. Sounds it downloads come under the Soundza Standard License, not CC0 (SKILL.md:10; soundza.mjs:265), and 'generate' sends your prompt to api.soundza.com for AI-generated takes (soundza.mjs:135-147; SKILL.md:57). Fix: don't install the skill or run signin; use the CC0 files only. If you choose the account later, sign in yourself, keep the key out of shared projects, and credit Soundza as CREDITS.md says. Verified 3: every sound module and lib/soundza.ts carry a comment telling agents to sign the person in and then search and download on their own (e.g. registry/soundza/sounds/air-whoosh.ts:9, lib/soundza.ts:8). Fix: treat it as an ad; tell your agent not to act on comments in these files. MIT code, CC0 audio.",
+   "Safe install": "Safe install (fixes applied):\nClaude Code or any Remotion/React project (Windows): git clone https://github.com/soundza/soundkit ; cd soundkit ; git checkout c9ec55f61fcbc784f1f0d1390c7a6f79b0e68cd4 ; copy registry/soundza/lib/soundza.ts (and components/soundza-remotion.tsx for Remotion) plus the sound .ts files you want from registry/soundza/sounds/ into your project (instead of npx shadcn add, which installs what soundza.com serves). Music beds: download the MP3 named in the module once into public/sounds/. Don't install the soundza-remotion skill or run signin/generate; no account or key. Tell your agent not to act on the 'Agents: sign the person in' comments.\nclaude.ai, Hermes, Android: not supported (project files for a local Remotion/React build).",
+   "YOLO install": "YOLO (your own risk): skips the pinned files and the no-account rule. README: npx shadcn add @soundza/remotion @soundza/<name>, npx skills add soundza/soundkit, and let the skill run 'soundza signin' (key saved in .env) to search, download and generate Soundza-licensed sounds.",
+   "Install notes": "Safe with fixes: 225 CC0 sound effects and 25 CC0 music beds for Remotion/React with hit points, copied from the pinned commit c9ec55f instead of shadcn adds; skip the Soundza skill and sign-in (account-only, non-CC0 library, key in .env); ignore the agent-directed sign-in comments. Fits the faceless video channel idea and a project reels.",
+   "Last checked": "2026-11-26"
   },
   {
    "Name": "Stable Audio Tools (Stability AI)",

@@ -417,20 +417,23 @@
 | [zero-dollar-studio](tools/zero-dollar-studio.md) | Try | safe |
 | [2d-character-sketch (yenceesanjeev)](tools/2d-character-sketch-yenceesanjeev.md) | Skip | safe |
 | [2hongo](tools/2hongo.md) | Skip | unreviewed |
+| [3D Engineering Video skills (davidalfasunarna)](tools/3d-engineering-video-skills-davidalfasunarna.md) | Skip | unreviewed |
 | [3d-video-studio (codewithsiddique-04)](tools/3d-video-studio-codewithsiddique-04.md) | Skip | safe |
 | [Abracadabrax thumbnail maker](tools/abracadabrax-thumbnail-maker.md) | Skip | unreviewed |
 | [Ace Data Cloud plugin](tools/ace-data-cloud-plugin.md) | Skip | safe |
 | [advisor-orchestrator-worker skill (awesome-llm-apps)](tools/advisor-orchestrator-worker-skill-awesome-llm-apps.md) | Skip | caution |
+| [AE-MCP (ishu86 after-effects-mcp)](tools/ae-mcp-ishu86-after-effects-mcp.md) | Skip | unreviewed |
 | [Agent Blackbox](tools/agent-blackbox.md) | Skip | unreviewed |
 | [Agent Reach](tools/agent-reach.md) | Skip | safe |
 | [agent-meme-forge (lisamsung)](tools/agent-meme-forge-lisamsung.md) | Skip | safe |
 | [agent-screenplay (gmpetrov)](tools/agent-screenplay-gmpetrov.md) | Skip | safe |
 | [AgenticSeek](tools/agenticseek.md) | Skip | safe |
-| [aipacking (zhouyuechuan2025-ui)](tools/aipacking-zhouyuechuan2025-ui.md) | Skip | unreviewed |
+| [agents-video-editing-skills (iamaanahmad)](tools/agents-video-editing-skills-iamaanahmad.md) | Skip | unreviewed |
+| [aipacking (zhouyuechuan2025-ui)](tools/aipacking-zhouyuechuan2025-ui.md) | Skip | safe |
 | [AiSOC (beenuar/AiSOC)](tools/aisoc-beenuar-aisoc.md) | Skip | safe |
 | [animation-styles (deenukhan)](tools/animation-styles-deenukhan.md) | Skip | safe |
 | [app-3d-video-skill (huypham85)](tools/app-3d-video-skill-huypham85.md) | Skip | safe |
-| [app-launch-video (renthelautomations)](tools/app-launch-video-renthelautomations.md) | Skip | unreviewed |
+| [app-launch-video (renthelautomations)](tools/app-launch-video-renthelautomations.md) | Skip | safe |
 | [AppFlowy](tools/appflowy.md) | Skip | safe |
 | [Aria (Abhinav-murugan1)](tools/aria-abhinav-murugan1.md) | Skip | safe |
 | [AutoGen (Microsoft)](tools/autogen-microsoft.md) | Skip | caution |
@@ -483,6 +486,7 @@
 | [explainer-skill (jdrurka)](tools/explainer-skill-jdrurka.md) | Skip | unreviewed |
 | [explainer-video (manoletre)](tools/explainer-video-manoletre.md) | Skip | unreviewed |
 | [explainer-video (SpeedPainter)](tools/explainer-video-speedpainter.md) | Skip | unreviewed |
+| [ffmpeg-mcp (yubraaj11)](tools/ffmpeg-mcp-yubraaj11.md) | Skip | unreviewed |
 | [fframes (dmtrKovalenko)](tools/fframes-dmtrkovalenko.md) | Skip | unreviewed |
 | [Figma MCP server](tools/figma-mcp-server.md) | Skip | safe |
 | [Filetree (claude-code-filetree)](tools/filetree-claude-code-filetree.md) | Skip | safe |
@@ -515,6 +519,7 @@
 | [Jisho MCP](tools/jisho-mcp.md) | Skip | unreviewed |
 | [juzu (syydaniel)](tools/juzu-syydaniel.md) | Skip | unreviewed |
 | [Kanban Motion (Kanban Studios)](tools/kanban-motion-kanban-studios.md) | Skip | unreviewed |
+| [KapeCut (BrewedOps)](tools/kapecut-brewedops.md) | Skip | unreviewed |
 | [keeran.ai skills (kjagsadvisors)](tools/keeran-ai-skills-kjagsadvisors.md) | Skip | unreviewed |
 | [lanshu-animated-architecture-diagram (cclank)](tools/lanshu-animated-architecture-diagram-cclank.md) | Skip | unreviewed |
 | [last30days skill](tools/last30days-skill.md) | Skip | safe |
@@ -533,6 +538,7 @@
 | [motion-3d-por-referencia (Felpborges)](tools/motion-3d-por-referencia-felpborges.md) | Skip | unreviewed |
 | [motion-code (mackswendhell)](tools/motion-code-mackswendhell.md) | Skip | unreviewed |
 | [motion-explainer (Marwanenoudouar10)](tools/motion-explainer-marwanenoudouar10.md) | Skip | safe |
+| [motion-graphics (Barty-Bart)](tools/motion-graphics-barty-bart.md) | Skip | safe |
 | [motion-palette-15 (liuhaisi2026212-maker)](tools/motion-palette-15-liuhaisi2026212-maker.md) | Skip | unreviewed |
 | [motion-promo-reels (david-d2c2)](tools/motion-promo-reels-david-d2c2.md) | Skip | unreviewed |
 | [motion-reel (10291124jcjc-dotcom)](tools/motion-reel-10291124jcjc-dotcom.md) | Skip | unreviewed |
@@ -552,6 +558,8 @@
 | [OpenMausBot](tools/openmausbot.md) | Skip | safe |
 | [OpenMontage](tools/openmontage.md) | Skip | safe |
 | [openmotion (nexu-io)](tools/openmotion-nexu-io.md) | Skip | unreviewed |
+| [OrenCut (OrenFang)](tools/orencut-orenfang.md) | Skip | unreviewed |
+| [papertalk (AmirMakir)](tools/papertalk-amirmakir.md) | Skip | unreviewed |
 | [parallax-doc (sanskarprajapati)](tools/parallax-doc-sanskarprajapati.md) | Skip | unreviewed |
 | [PeakCut](tools/peakcut.md) | Skip | safe |
 | [Perplexity (MCP server + API)](tools/perplexity-mcp-server-api.md) | Skip | safe |
@@ -560,7 +568,7 @@
 | [Playwright MCP](tools/playwright-mcp.md) | Skip | safe |
 | [plotbeat (DbgKinggg)](tools/plotbeat-dbgkinggg.md) | Skip | unreviewed |
 | [pocketworld (Tu-Zhenzhao)](tools/pocketworld-tu-zhenzhao.md) | Skip | unreviewed |
-| [postiz-content-skills (Postiz)](tools/postiz-content-skills-postiz.md) | Skip | unreviewed |
+| [postiz-content-skills (Postiz)](tools/postiz-content-skills-postiz.md) | Skip | safe |
 | [Posty](tools/posty.md) | Skip | unreviewed |
 | [pro-motion-editor-skill (iamajmeena)](tools/pro-motion-editor-skill-iamajmeena.md) | Skip | unreviewed |
 | [Puppeteer](tools/puppeteer.md) | Skip | safe |
@@ -583,6 +591,7 @@
 | [Slack MCP server (connector)](tools/slack-mcp-server-connector.md) | Skip | safe |
 | [so-vits-svc](tools/so-vits-svc.md) | Skip | unreviewed |
 | [Social media studio](tools/social-media-studio.md) | Skip | unreviewed |
+| [SoundKit (Soundza)](tools/soundkit-soundza.md) | Skip | safe |
 | [stickman-director (rocketmandrey)](tools/stickman-director-rocketmandrey.md) | Skip | unreviewed |
 | [stickman-skill (krishnagoswami52)](tools/stickman-skill-krishnagoswami52.md) | Skip | unreviewed |
 | [stickman-video-director (kaomei)](tools/stickman-video-director-kaomei.md) | Skip | safe |
@@ -647,13 +656,11 @@
 | [LightCraft](tools/lightcraft.md) |  | safe |
 | [Motion (React/JS animation library)](tools/motion-react-js-animation-library.md) |  | safe |
 | [motion-director (sharbelxyz)](tools/motion-director-sharbelxyz.md) | Later | safe |
-| [motion-graphics (Barty-Bart)](tools/motion-graphics-barty-bart.md) | Later | unreviewed |
 | [motlab (staryone)](tools/motlab-staryone.md) | Later | safe |
 | [PdfCraft](tools/pdfcraft.md) |  | safe |
 | [PhotoCraft](tools/photocraft.md) |  | safe |
 | [remotion-qa (GroMarketing)](tools/remotion-qa-gromarketing.md) | Later | safe |
 | [Sherlock (username OSINT CLI)](tools/sherlock-username-osint-cli.md) |  | safe |
 | [SoundCraft](tools/soundcraft.md) |  | safe |
-| [SoundKit (Soundza)](tools/soundkit-soundza.md) | Later | unreviewed |
 | [VectorCraft](tools/vectorcraft.md) |  | safe |
 | [WordCraft](tools/wordcraft.md) |  | safe |

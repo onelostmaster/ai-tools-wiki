@@ -8,7 +8,7 @@
 - **Decision:** Skip
 - **Safety verdict:** unreviewed
 - **Safety basis:** Inferred (unreviewed)
-- **Last checked:** 2026-11-25
+- **Last checked:** 2026-11-26
 
 ## Safety reason
 

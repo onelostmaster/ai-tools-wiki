@@ -8,7 +8,7 @@
 - **Decision:** Install
 - **Safety verdict:** safe
 - **Safety basis:** Official vendor
-- **Last checked:** 2026-11-18
+- **Last checked:** 2026-11-26
 
 ## Safety reason
 

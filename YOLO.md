@@ -30,6 +30,7 @@ Claude Code on Windows: add the skills folder with all your provider keys set; i
 python3 cli.py on the host with WORK_DIR set to your files.
 - [Agno](tools/agno.md): YOLO (your own risk): skips telemetry off and the pin.
 pip install -U agno with defaults.
+- [aipacking (zhouyuechuan2025-ui)](tools/aipacking-zhouyuechuan2025-ui.md): YOLO (your own risk): skips the pinned commit and the git-diff review. Codex: '$skill-installer' from https://github.com/zhouyuechuan2025-ui/aipacking/tree/main/skills/aipacking (docs/AIPACKING.md:10).
 - [AiSOC (beenuar/AiSOC)](tools/aisoc-beenuar-aisoc.md): YOLO (your own risk): skips the clone route.
 Run the iwr | iex one-liner from the README.
 - [algorithmic-art (Anthropic)](tools/algorithmic-art-anthropic.md): YOLO (your own risk): skips copying only the one folder at the reviewed commit.
@@ -50,6 +51,7 @@ npx @apify/actors-mcp-server with defaults.
 - [Apktool](tools/apktool.md): YOLO (your own risk): skips the pinned version.
 Download the newest apktool jar and run java -jar apktool.jar.
 - [app-3d-video-skill (huypham85)](tools/app-3d-video-skill-huypham85.md): YOLO (your own risk): skips the pinned commit (README.md:27-31 clones main and copies both folders into the skills folder). Same platform limit: no Windows or Android install exists.
+- [app-launch-video (renthelautomations)](tools/app-launch-video-renthelautomations.md): YOLO (your own risk): skips the pinned commit, the kept lockfile and the asset checksums. README: git clone https://github.com/renthelautomations/app-launch-video.git ; cp -R app-launch-video/app-launch-video ~/.claude/skills/ , then let Claude run bun install and the fetch scripts.
 - [Aria (Abhinav-murugan1)](tools/aria-abhinav-murugan1.md): YOLO (your own risk): skips the pinned commit and the manual raea install. INSTALL.md:13-16 and 31-34: git clone (main), ./install.ps1 -EngineOnly -Voice (runs irm https://raea.io/install.ps1 | iex, which installs the newest raea and its skills), then /plugin marketplace add Abhinav-murugan1/Aria and /plugin install aria@aria.
 - [Arize Phoenix](tools/arize-phoenix.md): YOLO (your own risk): skips telemetry off and the pin.
 pip install -U arize-phoenix with the pixel on.
@@ -461,6 +463,7 @@ Windows: one-click package or webui.bat with default config; the API listens on 
 npm install motion (README.md:16; latest version).
 - [motion-director (sharbelxyz)](tools/motion-director-sharbelxyz.md): YOLO (your own risk): skips the pinned commit, the one-agent copy and the WSL fix. Inside WSL or Linux: curl -fsSL https://raw.githubusercontent.com/sharbelxyz/motion-director/main/install.sh | bash (README.md:26; installs the moving main branch into every agent folder it finds), then say "set up motion director" to your agent.
 - [motion-explainer (Marwanenoudouar10)](tools/motion-explainer-marwanenoudouar10.md): YOLO (your own risk): skips the pinned commit and the saved lockfile. In WSL2: git clone https://github.com/Marwanenoudouar10/motion-explainer ~/.claude/skills/motion-explainer, then ask Claude Code for an explainer video and let it run npm install in each new project.
+- [motion-graphics (Barty-Bart)](tools/motion-graphics-barty-bart.md): YOLO (your own risk): skips the pinned commit, the venv, the version pins and the Mixkit rule. README: npx skills add Barty-Bart/motion-graphics, then run motion-broll/scripts/setup.sh (pip --user or --break-system-packages numpy, latest playwright) and the skills' own pip and npm lines.
 - [motionboard](tools/motionboard.md): YOLO (your own risk): skips the commit pin and the no-keys render folder.
 /plugin marketplace add krisyangdev/motionboard then /plugin install motionboard@motionboard, or npx skills add krisyangdev/motionboard (README), at HEAD.
 - [motionbrief (YahyaLendani/motionbrief-claude-skills)](tools/motionbrief-yahyalendani-motionbrief-claude-skills.md): YOLO (your own risk): skips the commit pin.
@@ -562,6 +565,7 @@ claude mcp add playwright npx @playwright/mcp@latest (package README on npm).
 hermes profile install github.com/notwitcheer/portal-coder-premium --alias and keep its config.yaml as shipped (package installs and feature-branch pushes run without asking).
 - [Postiz agent (MCP + CLI + skill)](tools/postiz-agent-mcp-cli-skill.md): YOLO (your own risk): skips the pin, key auth and post approval.
 npm install -g postiz, postiz auth:login, let the agent post.
+- [postiz-content-skills (Postiz)](tools/postiz-content-skills-postiz.md): YOLO (your own risk): skips the pinned commit, the --skills-only limit and the version pins. README: ./install.sh (installs ffmpeg/jq with sudo, four global npm CLIs, Chromium, six third-party skills and the claude-seo plugin, all latest), then /content-setup to enter keys.
 - [pressure-field-experiment (Govcraft)](tools/pressure-field-experiment-govcraft.md): YOLO (your own risk): skips the commit pin, the container and the kept lock file.
 git clone https://github.com/Govcraft/pressure-field-experiment; cargo build; cargo run -p schedule-experiment
 - [print3d](tools/print3d.md): YOLO (your own risk): skips the container.
@@ -651,6 +655,7 @@ pipx install sherlock-project and look anyone up from your IP.
 /plugin marketplace add charlie947/social-media-skills then /plugin install social-media-skills (README lines 113-122) at HEAD.
 - [SoundCraft](tools/soundcraft.md): YOLO (your own risk): skips working on copies and backups and the update containment.
 Windows: download from https://getartcraft.com/apps/soundcraft, open your real files, connect its MCP in Claude Code and accept in-app updates.
+- [SoundKit (Soundza)](tools/soundkit-soundza.md): YOLO (your own risk): skips the pinned files and the no-account rule. README: npx shadcn add @soundza/remotion @soundza/<name>, npx skills add soundza/soundkit, and let the skill run 'soundza signin' (key saved in .env) to search, download and generate Soundza-licensed sounds.
 - [Stable Audio Tools (Stability AI)](tools/stable-audio-tools-stability-ai.md): YOLO (your own risk): skips the commit pin, the Python 3.10 venv and the inference-only extras.
 pip install "stable-audio-tools[train]" (README.md:37)
 - [Stable Video Diffusion / generative-models (Stability AI)](tools/stable-video-diffusion-generative-models-stability-ai.md): YOLO (your own risk): skips the official-weights-and-configs-only rule.
