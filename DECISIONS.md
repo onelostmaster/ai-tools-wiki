@@ -417,18 +417,18 @@
 | [zero-dollar-studio](tools/zero-dollar-studio.md) | Try | safe |
 | [2d-character-sketch (yenceesanjeev)](tools/2d-character-sketch-yenceesanjeev.md) | Skip | safe |
 | [2hongo](tools/2hongo.md) | Skip | unreviewed |
-| [3D Engineering Video skills (davidalfasunarna)](tools/3d-engineering-video-skills-davidalfasunarna.md) | Skip | unreviewed |
+| [3D Engineering Video skills (davidalfasunarna)](tools/3d-engineering-video-skills-davidalfasunarna.md) | Skip | safe |
 | [3d-video-studio (codewithsiddique-04)](tools/3d-video-studio-codewithsiddique-04.md) | Skip | safe |
 | [Abracadabrax thumbnail maker](tools/abracadabrax-thumbnail-maker.md) | Skip | unreviewed |
 | [Ace Data Cloud plugin](tools/ace-data-cloud-plugin.md) | Skip | safe |
 | [advisor-orchestrator-worker skill (awesome-llm-apps)](tools/advisor-orchestrator-worker-skill-awesome-llm-apps.md) | Skip | caution |
-| [AE-MCP (ishu86 after-effects-mcp)](tools/ae-mcp-ishu86-after-effects-mcp.md) | Skip | unreviewed |
+| [AE-MCP (ishu86 after-effects-mcp)](tools/ae-mcp-ishu86-after-effects-mcp.md) | Skip | safe |
 | [Agent Blackbox](tools/agent-blackbox.md) | Skip | unreviewed |
 | [Agent Reach](tools/agent-reach.md) | Skip | safe |
 | [agent-meme-forge (lisamsung)](tools/agent-meme-forge-lisamsung.md) | Skip | safe |
 | [agent-screenplay (gmpetrov)](tools/agent-screenplay-gmpetrov.md) | Skip | safe |
 | [AgenticSeek](tools/agenticseek.md) | Skip | safe |
-| [agents-video-editing-skills (iamaanahmad)](tools/agents-video-editing-skills-iamaanahmad.md) | Skip | unreviewed |
+| [agents-video-editing-skills (iamaanahmad)](tools/agents-video-editing-skills-iamaanahmad.md) | Skip | safe |
 | [aipacking (zhouyuechuan2025-ui)](tools/aipacking-zhouyuechuan2025-ui.md) | Skip | safe |
 | [AiSOC (beenuar/AiSOC)](tools/aisoc-beenuar-aisoc.md) | Skip | safe |
 | [animation-styles (deenukhan)](tools/animation-styles-deenukhan.md) | Skip | safe |
@@ -437,7 +437,7 @@
 | [AppFlowy](tools/appflowy.md) | Skip | safe |
 | [Aria (Abhinav-murugan1)](tools/aria-abhinav-murugan1.md) | Skip | safe |
 | [AutoGen (Microsoft)](tools/autogen-microsoft.md) | Skip | caution |
-| [autoRecording (OrrrGE)](tools/autorecording-orrrge.md) | Skip | unreviewed |
+| [autoRecording (OrrrGE)](tools/autorecording-orrrge.md) | Skip | safe |
 | [Ayrshare Claude plugin + MCP](tools/ayrshare-claude-plugin-mcp.md) | Skip | safe |
 | [Bark (Suno)](tools/bark-suno.md) | Skip | caution |
 | [blueprint-animation (moguzbulbul)](tools/blueprint-animation-moguzbulbul.md) | Skip | unreviewed |
@@ -486,7 +486,7 @@
 | [explainer-skill (jdrurka)](tools/explainer-skill-jdrurka.md) | Skip | unreviewed |
 | [explainer-video (manoletre)](tools/explainer-video-manoletre.md) | Skip | unreviewed |
 | [explainer-video (SpeedPainter)](tools/explainer-video-speedpainter.md) | Skip | unreviewed |
-| [ffmpeg-mcp (yubraaj11)](tools/ffmpeg-mcp-yubraaj11.md) | Skip | unreviewed |
+| [ffmpeg-mcp (yubraaj11)](tools/ffmpeg-mcp-yubraaj11.md) | Skip | safe |
 | [fframes (dmtrKovalenko)](tools/fframes-dmtrkovalenko.md) | Skip | unreviewed |
 | [Figma MCP server](tools/figma-mcp-server.md) | Skip | safe |
 | [Filetree (claude-code-filetree)](tools/filetree-claude-code-filetree.md) | Skip | safe |

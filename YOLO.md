@@ -5,11 +5,13 @@ The tool's own defaults: no fixes, no sandbox, at your own risk. Never offered f
 - [/bro skill](tools/bro-skill.md): YOLO (your own risk): skips the manual copy.
 The README curl one-liner or ./install.sh.
 - [2d-character-sketch (yenceesanjeev)](tools/2d-character-sketch-yenceesanjeev.md): YOLO (your own risk): skips the commit pin, the manual Rhubarb checksum and the WSL-only openvoice rule. Copy the skill folder into %USERPROFILE%\.claude\\skills\\ (or ~/.claude/skills), then let Claude run bash scripts/install-rhubarb.sh and bash scripts/install-openvoice.sh when it asks (SKILL.md:35,149).
+- [3D Engineering Video skills (davidalfasunarna)](tools/3d-engineering-video-skills-davidalfasunarna.md): YOLO (your own risk): skips the pinned commit in the skill clone lines and the low credit limit. README: upload the three ZIPs from dist/ in Customize > Skills and connect Higgsfield.
 - [3d-video-studio (codewithsiddique-04)](tools/3d-video-studio-codewithsiddique-04.md): YOLO (your own risk): skips the pinned commit, the pinned pip versions and the sandbox. README.md\:39-43\: git clone into ~/.claude/skills/3d-video-studio and bash setup.sh, or let Claude install and run setup for you.
 - [Ace Data Cloud plugin](tools/ace-data-cloud-plugin.md): YOLO (your own risk): skips the key limits and toolset choice, so the model spends credits freely.
 Install from the catalog with your general key and all 17 toolsets.
 - [advisor-orchestrator-worker skill (awesome-llm-apps)](tools/advisor-orchestrator-worker-skill-awesome-llm-apps.md): YOLO (your own risk): skips the VM.
 Copy the skill into your main Claude Code and let workers run with skip-permissions.
+- [AE-MCP (ishu86 after-effects-mcp)](tools/ae-mcp-ishu86-after-effects-mcp.md): YOLO (your own risk): skips the pinned commit and lockfile install, the project copy, closing the panel and resetting PlayerDebugMode. README: git clone https://github.com/ishu86/after-effects-mcp.git ; cd after-effects-mcp ; npm install ; npm run build ; scripts\\install-cep.bat , then add node dist/index.js as an MCP server.
 - [AG-UI protocol](tools/ag-ui-protocol.md): YOLO (your own risk): skips the version pins and runs the unpinned CopilotKit CLI.
 npx create-ag-ui-app my-agent-app
 - [AG2](tools/ag2.md): YOLO (your own risk): skips the version pin (gets 1.3.2 from 2026-11-15, unreviewed) and the venv.
@@ -28,6 +30,7 @@ claude mcp add agentwikis -- npx -y agentwikis-mcp (pulls latest).
 Claude Code on Windows: add the skills folder with all your provider keys set; it spends on any of them with no cap and no question.
 - [AgenticSeek](tools/agenticseek.md): YOLO (your own risk): skips Docker, so model-written shell runs as you.
 python3 cli.py on the host with WORK_DIR set to your files.
+- [agents-video-editing-skills (iamaanahmad)](tools/agents-video-editing-skills-iamaanahmad.md): YOLO (your own risk): skips the pinned commit, the dry run and the permission-prompt and key rules. README: npx agents-video-editing-skills --agent claude --rules
 - [Agno](tools/agno.md): YOLO (your own risk): skips telemetry off and the pin.
 pip install -U agno with defaults.
 - [aipacking (zhouyuechuan2025-ui)](tools/aipacking-zhouyuechuan2025-ui.md): YOLO (your own risk): skips the pinned commit and the git-diff review. Codex: '$skill-installer' from https://github.com/zhouyuechuan2025-ui/aipacking/tree/main/skills/aipacking (docs/AIPACKING.md:10).
@@ -65,6 +68,7 @@ Install on Windows with defaults.
 Latest auto-editor-windows-x86_64.exe from the releases page, then npx skills add WyattBlue/auto-editor
 - [AutoGen (Microsoft)](tools/autogen-microsoft.md): YOLO (your own risk): skips moving to a maintained fork.
 pip install autogen-agentchat and build on it.
+- [autoRecording (OrrrGE)](tools/autorecording-orrrge.md): YOLO (your own risk): skips the pinned commit, pinned packages, Python 3.12 extraction filter and the key rule. README: git clone into ~/.claude/skills/autoDemoRecordingSkill, then python3 scripts/demo_env.py setup --models --kokoro
 - [Awesome DESIGN.md (VoltAgent)](tools/awesome-design-md-voltagent.md): YOLO (your own risk): skips the commit pin.
 Download the DESIGN.md from the main branch (newer files are not reviewed).
 - [awesome-ai-reverse-engineering (zhuyansen)](tools/awesome-ai-reverse-engineering-zhuyansen.md): YOLO (your own risk): skips ignoring the list's third-party grades. Trust an entry's SAFE badge (README.md:5, agentskillshub.top) and install the listed tool without a wiki review.
@@ -261,6 +265,7 @@ pip install f5-tts
 `pip install faster-whisper`
 - [feathericon (not Feather Icons)](tools/feathericon-not-feather-icons.md): YOLO (your own risk): skips the version pin and --ignore-scripts.
 npm install feathericon --save
+- [ffmpeg-mcp (yubraaj11)](tools/ffmpeg-mcp-yubraaj11.md): YOLO (your own risk): skips the pinned commit and lockfile, the dedicated output folder and offline model. README: claude mcp add ffmpeg-mcp -- uvx ffmpeg-mcp-studio
 - [figma-shaders (official Figma skill)](tools/figma-shaders-official-figma-skill.md): YOLO (your own risk): skips the pinned hand copy and per-write approval.
 claude plugin install figma@claude-plugins-official
 - [file-search skill (Netresearch)](tools/file-search-skill-netresearch.md): YOLO (your own risk): skips the commit pin and avoiding the unreviewed marketplace repo.
